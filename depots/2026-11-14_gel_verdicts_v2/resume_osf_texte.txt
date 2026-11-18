@@ -1,0 +1,72 @@
+Earned autonomy for AI agents: freeze of the confirmed verdicts
+
+This registration freezes, by their SHA-256 fingerprints, every input of the final confirmatory computation of the study preregistered at https://osf.io/vycge/ (OSF Preregistration, submitted on 10 November 2026). It is made after the last data-collection wave and before the public random draw that splits the reserved tasks between the calibration and confirmation sets (plan, section 3.4). The data themselves are not part of this registration. They will be published with the results, and anyone can check them against the fingerprints listed here.
+
+IT REPLACES AN EARLIER REGISTRATION, BEING WITHDRAWN
+
+A first registration of this freeze, https://osf.io/u26kr/ (submitted on 14 November 2026 at 06:44:26 UTC), was meant to be cancelled within OSF's 48-hour approval window, but its embargo was approved by mistake. It is therefore being withdrawn, with a justification that points here. This registration is submitted before the random number designated by u26kr exists (the first NIST pulse at or after 17 November 2026, 06:44:26 UTC), so the choice between the two cannot depend on any draw. An independent audit made the same day found three problems:
+1. One defective-task removal (retail task 98) rested on its consequences, not on the frozen criterion. Under the criterion, the defect (case a3) is not proven, so in doubt the alerts are confirmed: the author now opposes that removal, and its 23 alerts become confirmed errors.
+2. The exact command of the final replay was not fixed.
+3. The reference timestamp was ambiguous.
+
+This registration fixes all three. Only one registration of the verdict freeze counts: this one. The draw designated by u26kr is never run.
+
+FILES
+
+- manifeste_verdicts.txt: one line "sha256  path" per file, sorted, with paths relative to the experiment folder. It lists 68,990 files:
+  - the complete output of both waves: episode traces, typed actions, per-action verdicts, costs, attempt logs, game plans, task success;
+  - the review of every automated alert: 2,529 alerts in wave 2 and 232 in wave 1, with decisions, alert maps, review journals, blind-review draws and agreement files (13/15 kept in both waves);
+  - the defective-task removals with the author's oppositions: 14 tasks proposed, 12 removed, 2 kept (WorkBench multi_domain:179 and retail 98);
+  - the audit of tasks without alerts: 20 tasks, no removal.
+
+  SHA-256 of manifeste_verdicts.txt: 904aa8d3829b890c147d548718fe3ae78cd088b9f4402b3af1d2aff3487ff88d
+- gel_plan.json: the repository commit at which this manifest was written (17415d9a6b834c735652da0650099037d0e92acb) and the SHA-256 of the frozen plan manifest gel/MANIFESTE_SHA256.txt (88715a0d790cd5228b6a247b8e10b74d2c1c1ea022d47fbc9386949e263b9600), identical to the fingerprint deposited with the preregistration (tag gel-2026-11-09).
+
+THE RANDOM DRAW THAT THIS REGISTRATION FIXES
+
+- Reference timestamp. The date_registered field of this registration as returned by the OSF API v2 (https://api.osf.io/v2/registrations/{id}/), to the second, read as UTC. The minute shown on the web page is not used.
+- Designated number. The first pulse of the NIST Randomness Beacon 2.0 whose timestamp is at least 72 hours after the reference timestamp.
+- Fallback. If the NIST beacon publishes no pulse within the hour after that designated time, the first round of drand (League of Entropy, quicknet network, chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971) published at or after the designated time is used. The draw is run at the earliest one hour after the designated time.
+- Seed and split. The seed is the SHA-256 of the fixed label autonomie-meritee/partage/v1, of the SHA-256 of manifeste_verdicts.txt given above, and of the published random value, each field preceded by its length on 4 bytes. Within each stratum, the frozen pairs of tasks are split by rank: the lower rank goes to calibration, the other to confirmation, and an unpaired task goes to confirmation (plan, sections 3.2 and 3.4).
+- Frozen scripts (fingerprints listed in the frozen plan manifest):
+  - banc/tirage/tirage_public.py, SHA-256 6970dfd932490b6d2af6c1aac4229266cdd27c4f9162ea43831a567702efe027;
+  - banc/tirage/paires.py, SHA-256 d218d7050e277f8a022ef2b5fc5f9fc0b97c096ba6767c752e4fc388458b1081.
+
+EXACT COMMANDS (ROOT = REPOSITORY ROOT; EXPERIENCE = ROOT/EXPERIENCE)
+
+Draw, run once, into a new folder:
+
+    cd ROOT; simulation/.venv/bin/python banc/tirage/tirage_public.py tirer --manifeste ROOT/experience/manifeste_verdicts.txt --depot [reference timestamp, ISO 8601 with +00:00] --osf [id of this registration] --sortie ROOT/experience/tirage
+
+Final confirmatory replay, run once, with all inputs below and no others:
+
+    cd ROOT/simulation; .venv/bin/python -m rejeu.bout_en_bout --experience \
+      --dossier ROOT/experience/vague1/2026-11-10_06-19-06 \
+      --dossier ROOT/experience/vague2/2026-11-10_19-53-13 \
+      --partage ROOT/experience/tirage/partage.json \
+      --vague 1=ROOT/experience/vague1/2026-11-10_06-19-06/relecture/decisions.csv,ROOT/experience/vague1/2026-11-10_06-19-06/relecture/alertes.json,ROOT/experience/vague1/2026-11-10_06-19-06/relecture/accord.json \
+      --vague 2=ROOT/experience/vague2/2026-11-10_19-53-13/relecture/decisions.csv,ROOT/experience/vague2/2026-11-10_19-53-13/relecture/alertes.json,ROOT/experience/vague2/2026-11-10_19-53-13/relecture/accord.json \
+      --retirees ROOT/experience/audit_sans_alerte/taches_retirees_audit.json \
+      --oppositions ROOT/experience/retraits_motif_a/oppositions_motif_a.json \
+      --manifeste-verdicts ROOT/experience/manifeste_verdicts.txt \
+      --sortie ROOT/experience/rejeu_final --processus 12
+
+R0, B and K take their frozen values (they are not passed). If this command fails for a technical reason, the failure and its fix are logged and the same command is run again. Any other run is exploratory and labelled as such.
+
+EXPLORATORY ANALYSIS FIXED IN ADVANCE (NO EFFECT ON THE LABEL)
+
+Episodes excluded after two technical failures may remove agent errors and bias towards delegation (82 excluded episodes in wave 2, 69 of them Haiku in banking). The failures have two causes, read in the episode logs: an empty agent message (207 of the 226 failed attempts in wave 2; all 19 in wave 1) and an empty message of the simulated client (19 in wave 2), which is a simulator failure, not an agent error. Exploratory sensitivity analysis: per configuration, each excluded episode whose failed attempts are empty agent messages is counted as one confirmed error, at the highest stakes level among the writes expected by its task, and the delegation-gap table (rates and their ratio to the bar) is recomputed with these errors added. Episodes excluded for an empty client message are left out of this count. It is published next to the confirmatory table and marked exploratory.
+
+DEVIATIONS RECORDED SINCE THE PREREGISTRATION
+
+They are listed, dated, in JOURNAL_CHANGEMENTS.md in the repository and will be declared in the paper. The main ones:
+- the simplified page used for the author's blind review in both waves (same sheets, same draw);
+- two levées by the author in wave 1 for a reason outside the four frozen motives, which count under the frozen rule;
+- an empty agent message classed as an infrastructure error and excluded, which biases towards delegation;
+- tool names absent from the typing table (banking coverage 0.925; 0.985 overall);
+- an incident when resuming wave 2, with no effect on verdicts;
+- the wave-2 alert review run with Claude Opus 5.5, model noted per batch, whereas the wave-1 model was not recorded, with different batching;
+- the reading of the banking knowledge base, as quoted in a sheet's conversation, as part of the rules for defect case a1;
+- the replacement and withdrawal of the first freeze registration described above.
+
+Author: Otsoa Dubief (independent researcher), ORCID 0009-0002-7322-7575. Prepared with the help of Claude (Anthropic).

@@ -1,0 +1,18 @@
+# AVERTISSEMENT : bout en bout sur les 120 parties de développement du pilote (pilote/etape2/2026-11-05_07-50-58/), avec un partage fictif calculé par banc/tirage/tirage_public.py à partir d'une valeur de balise de test (aucune balise réelle interrogée). Ces chiffres n'ont AUCUNE valeur de preuve et ne sont pas des résultats de l'expérience (PLAN_EXPERIENCE.md, 3.1 et 5.16, point 6).
+analyse,type_suite,environnement,modele,modele_Y,mode,regle,type,niveau,lecture,n_rep,n_promus,part_non_retire,delai_med,delai_p95,erreurs_passees_moy,part_autonomies_nouvelles,part_temps_p3_apres
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,principal,2000,0,,,,,0.0,0.0
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,principal,2000,0,,,,,0.0,0.0

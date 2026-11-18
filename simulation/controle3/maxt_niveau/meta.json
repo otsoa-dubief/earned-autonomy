@@ -1,0 +1,52 @@
+{
+ "statut": "terminé",
+ "debut": "2026-11-07 23:16:23",
+ "graine": 2026110705,
+ "regimes": [
+  [
+   "N1",
+   "A",
+   200,
+   true
+  ],
+  [
+   "N2",
+   "E-fort",
+   100,
+   true
+  ],
+  [
+   "P2",
+   "B-seuil-1.40",
+   120,
+   false
+  ],
+  [
+   "P1",
+   "B-seuil",
+   60,
+   false
+  ],
+  [
+   "P4",
+   "B",
+   30,
+   false
+  ]
+ ],
+ "python": "3.14.9",
+ "numpy": "2.5.4",
+ "empreintes": {
+  "METHODE.md": "ba1f52eca77a9c86faff0374469e27db32c1dad6f1bcb4f191b53eed967d6943",
+  "maxt_niveau.py": "550d78986e2084d6c3a9429b4451ac8716114a0152e0947b495703983e8a83dc"
+ },
+ "donnees": {
+  "N1": "52912efb0339bdb8031d635fd4cb9ea0588df0387d946721f9d38dbe4dbe8fed",
+  "N2": "674044700311c7151224a564bdfea68255ea915ac8ee097dc6e54f0c48b7ae94",
+  "P2": "f1ec675c3054df37f92d2fb8cea6bb733c63dc5dcbe945f734e5377e3e34f297",
+  "P1": "120aa72863ef842a6ca4558abdd41145e9bcc57da72e7de62bbbe2064137ad84",
+  "P4": "0b273ffdffe5f76e5f7d80b88815132d355e8dafa04611e5378acfdec0c65326"
+ },
+ "fin": "2026-11-08 01:22:31",
+ "duree_s": 7567.4
+}

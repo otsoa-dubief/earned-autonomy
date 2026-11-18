@@ -1,0 +1,13 @@
+{
+  "title": "Earned Autonomy for AI Agents: code of the pre-registered study",
+  "upload_type": "software",
+  "creators": [{"name": "Dubief, Otsoa", "orcid": "0009-0002-7322-7575", "affiliation": "Independent researcher"}],
+  "license": "MIT",
+  "keywords": ["AI agents", "delegation", "earned autonomy", "error budget", "continuous sampling", "pre-registration"],
+  "related_identifiers": [
+    {"identifier": "10.5281/zenodo.24321214", "relation": "isSupplementTo", "scheme": "doi"},
+    {"identifier": "10.5281/zenodo.24331245", "relation": "isSupplementedBy", "scheme": "doi"},
+    {"identifier": "https://osf.io/vycge/", "relation": "isDocumentedBy", "scheme": "url"}
+  ],
+  "notes": "Use of AI tools: Claude models (Anthropic), through Claude Code, were used under the author's direction to write this code. The author takes full responsibility for all contents. Funding and competing interests: the API costs of the study were covered by credits from Anthropic's startup programme (Claude for Startups), granted to the author's micro-enterprise, which builds AI-agent services and uses Claude models among others; Anthropic had no role in the study."
+}

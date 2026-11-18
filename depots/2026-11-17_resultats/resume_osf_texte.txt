@@ -1,0 +1,7 @@
+Results deposit of the pre-registered study "Earned Autonomy for AI Agents: A Pre-registered Error-Budget Test of Per-Action-Type Delegation" (priority record 7ju3c, preregistration vycge, verdict freeze cusv6).
+
+Pre-registered label: R4. None of the twelve configurations (three Claude 5.5 models on four public benchmarks: tau-bench airline, retail and banking, and WorkBench) reached the pre-registered level of evidence required for delegation. Only one configuration had enough volume to be judged; its error rate, 8.6 percent (lower bound 4.1 percent), is established above its 0.76 percent threshold. The other eleven had too little volume to conclude either way. The rule was not refuted, but it was hardly put to the test, and its usefulness could not be judged.
+
+The package holds the outputs of the final replay, the exploratory analyses run after the verdict (dated 17 November 2026, no effect on the label), the files and log of the public draw (NIST beacon pulse 2031457), the replay log, SHA-256 fingerprints of every file, the logs of both replay runs with a note on the in-memory fix of a formatting function after the first run crashed (the label does not depend on it), and the frozen inputs needed to redo the draw. The paper is not included; it will be posted on OSF Preprints with a link to this registration. Check with: shasum -a 256 -c SHA256SUMS.txt
+
+Text and data under CC BY 4.0. Contact: Otsoa Dubief, otsoa.dubief@gmail.com.

@@ -1,0 +1,65 @@
+[
+  {
+    "task": "Delete my last email from nadia",
+    "steps": [
+      {
+        "llm_input": "Delete my last email from nadia\n\nThought:",
+        "llm_output": "Action:```{\"action\": \"company_directory.find_email_address\", \"action_input\": {\"name\": \"nadia\"}}```",
+        "action": "company_directory.find_email_address",
+        "action_input": {
+          "name": "nadia"
+        },
+        "observation": "[\"nadia.moreau@atlas.com\"]"
+      },
+      {
+        "llm_input": "Delete my last email from nadia\n\nThought:Action:```{\"action\": \"company_directory.find_email_address\", \"action_input\": {\"name\": \"nadia\"}}```\nObservation: [\"nadia.moreau@atlas.com\"]\nThought:",
+        "llm_output": "Action:```{\"action\": \"Final Answer\", \"action_input\": \"fait (r\u00e9ponse factice)\"}```",
+        "action": "Final Answer",
+        "action_input": "fait (r\u00e9ponse factice)",
+        "observation": ""
+      }
+    ]
+  },
+  {
+    "task": "Delete my last email from sofia",
+    "steps": [
+      {
+        "llm_input": "Delete my last email from sofia\n\nThought:",
+        "llm_output": "Action:```{\"action\": \"company_directory.find_email_address\", \"action_input\": {\"name\": \"nadia\"}}```",
+        "action": "company_directory.find_email_address",
+        "action_input": {
+          "name": "nadia"
+        },
+        "observation": "[\"nadia.moreau@atlas.com\"]"
+      },
+      {
+        "llm_input": "Delete my last email from sofia\n\nThought:Action:```{\"action\": \"company_directory.find_email_address\", \"action_input\": {\"name\": \"nadia\"}}```\nObservation: [\"nadia.moreau@atlas.com\"]\nThought:",
+        "llm_output": "Action:```{\"action\": \"Final Answer\", \"action_input\": \"fait (r\u00e9ponse factice)\"}```",
+        "action": "Final Answer",
+        "action_input": "fait (r\u00e9ponse factice)",
+        "observation": ""
+      }
+    ]
+  },
+  {
+    "task": "Delete my last email from anaya",
+    "steps": [
+      {
+        "llm_input": "Delete my last email from anaya\n\nThought:",
+        "llm_output": "Action:```{\"action\": \"company_directory.find_email_address\", \"action_input\": {\"name\": \"nadia\"}}```",
+        "action": "company_directory.find_email_address",
+        "action_input": {
+          "name": "nadia"
+        },
+        "observation": "[\"nadia.moreau@atlas.com\"]"
+      },
+      {
+        "llm_input": "Delete my last email from anaya\n\nThought:Action:```{\"action\": \"company_directory.find_email_address\", \"action_input\": {\"name\": \"nadia\"}}```\nObservation: [\"nadia.moreau@atlas.com\"]\nThought:",
+        "llm_output": "Action:```{\"action\": \"Final Answer\", \"action_input\": \"fait (r\u00e9ponse factice)\"}```",
+        "action": "Final Answer",
+        "action_input": "fait (r\u00e9ponse factice)",
+        "observation": ""
+      }
+    ]
+  }
+]

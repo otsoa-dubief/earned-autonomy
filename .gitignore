@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+externe/
+
+# Essais à blanc du pilote : pas des données, reproductibles
+pilote/*/*-blanc/
+# Essais à blanc du lanceur de l'expérience (banc/lanceur.py) : idem
+experience/*/*-blanc/
+
+# Dépôts OSF : le zip et les fichiers extraits se refont depuis le commit ; on versionne la fiche, le README et le manifeste
+depots/*/*.zip
+depots/*/contenu/*
+!depots/*/contenu/README_DEPOT.md
+!depots/*/contenu/MANIFEST_SHA256.txt
+!depots/*/contenu/LICENSE-CODE.txt
+!depots/*/contenu/THIRD_PARTY_NOTICES.txt
+
+# Contrôle 3 : sortie brute de l'étude de délégabilité (45 Mo), reproductible ; empreinte dans le fichier .sha256 voisin
+simulation/controle3/resultats/delegabilite.jsonl
+simulation/controle3/resultats_v2/delegabilite.jsonl
+simulation/controle3/resultats_v3/delegabilite.jsonl
+simulation/controle3/resultats_v4/delegabilite.jsonl
+simulation/controle3/resultats_v4/critiques.jsonl
+simulation/controle3/options_r4/tirages.csv
+simulation/controle3/passage5_r4/tirages.csv
+simulation/controle3/maxt_niveau/donnees/
+article/arxiv/src/

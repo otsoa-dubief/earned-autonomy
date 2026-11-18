@@ -1,0 +1,5 @@
+# EXPLORATOIRE : analyse après le verdict, sans effet sur l'étiquette préenregistrée (R4). Écrite par outils/analyses_exploratoires.py le 17/11/2026.
+version,environnement,modele,type,niveau,n,x,compte_pour_la_delegabilite,jugeable
+calibration et confirmation,WorkBench,claude-opus-5-5,MSG,faible,120,0,True,True
+calibration et confirmation,WorkBench,claude-sonnet-5-5,MSG,faible,120,0,True,True
+calibration et confirmation,commerce,claude-sonnet-5-5,ECR,faible,258,0,True,True

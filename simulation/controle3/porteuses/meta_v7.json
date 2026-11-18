@@ -1,0 +1,19 @@
+{
+ "statut": "terminé",
+ "debut": "2026-11-08 01:43:29",
+ "graine": 2026110704,
+ "B": 2000,
+ "G": 20,
+ "tirages": 10000,
+ "tirages_puissance": 2000,
+ "processus": 12,
+ "python": "3.14.9",
+ "numpy": "2.5.4",
+ "empreintes": {
+  "METHODE.md": "65904172d8493aad51decafffb60da6fd6d0d9e0db55519c76d47ca91227517c",
+  "porteuses.py": "7ed805829cf1f1d3c36d406b5158c3de43ae590be7157487c2642391897328f7",
+  "maxt.py": "a31fb26b82f0f6665bece8c67f9caa5276d0ca18121c57039f35156d60da520b"
+ },
+ "fin": "2026-11-08 01:43:42",
+ "duree_s": 12.9
+}

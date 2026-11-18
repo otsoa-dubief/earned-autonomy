@@ -1,0 +1,14 @@
+# EXPLORATOIRE : analyse après le verdict, sans effet sur l'étiquette préenregistrée (R4). Écrite par outils/analyses_exploratoires.py le 17/11/2026.
+environnement,modele,taches,rho_chapeau,ic95_bas,ic95_haut,part_bootstrap_au_dessus_0_885
+WorkBench,claude-haiku-5-5,225,0.8,0.66,0.924,0.096
+WorkBench,claude-opus-5-5,209,1.0,1.0,1.0,1.0
+WorkBench,claude-sonnet-5-5,209,1.0,1.0,1.0,1.0
+aviation,claude-haiku-5-5,10,0.151,0.019,0.321,0.0
+aviation,claude-opus-5-5,10,0.231,0.007,0.31,0.0
+aviation,claude-sonnet-5-5,9,0.384,0.0,0.516,0.0
+banque,claude-haiku-5-5,30,0.227,0.135,0.303,0.0
+banque,claude-opus-5-5,29,0.294,0.19,0.354,0.0
+banque,claude-sonnet-5-5,30,0.279,0.135,0.41,0.0
+commerce,claude-haiku-5-5,39,0.342,0.134,0.463,0.0
+commerce,claude-opus-5-5,37,0.407,0.028,0.544,0.0
+commerce,claude-sonnet-5-5,38,0.443,0.021,0.678,0.0

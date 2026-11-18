@@ -1,0 +1,53 @@
+{
+ "nature": "audit des tâches sans alerte",
+ "retraits": [],
+ "oppositions": [],
+ "mesure": {
+  "par_environnement": {
+   "WorkBench": {
+    "fiches": 5,
+    "ecritures": 8,
+    "erreurs_invisibles": 0,
+    "taches_sans_alerte": 476,
+    "taux": 0.0
+   },
+   "aviation": {
+    "fiches": 5,
+    "ecritures": 3,
+    "erreurs_invisibles": 0,
+    "taches_sans_alerte": 18,
+    "taux": 0.0
+   },
+   "banque": {
+    "fiches": 5,
+    "ecritures": 4,
+    "erreurs_invisibles": 0,
+    "taches_sans_alerte": 14,
+    "taux": 0.0
+   },
+   "commerce": {
+    "fiches": 5,
+    "ecritures": 6,
+    "erreurs_invisibles": 0,
+    "taches_sans_alerte": 30,
+    "taux": 0.0
+   }
+  },
+  "poids": {
+   "WorkBench": 0.8847583643122676,
+   "aviation": 0.03345724907063197,
+   "banque": 0.026022304832713755,
+   "commerce": 0.055762081784386616
+  },
+  "taux_pondere": 0.0,
+  "hors_mesure": {
+   "fiches": 0,
+   "ecritures": 0,
+   "erreurs_invisibles": 0
+  }
+ },
+ "erreurs_invisibles": [],
+ "ecarts_de_compte": [],
+ "tirage_sha256": "efe21e60bcfe0055af15c509d7ba7d7a9b8e3883a71ff2c5e4c8e344f516b5ba",
+ "reponses_sha256": "1ec6cebc29a464e82810eb496a84b506e2df95c064e65c9ae3182a1680054f83"
+}

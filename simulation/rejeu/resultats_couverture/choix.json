@@ -1,0 +1,48 @@
+{
+ "methode_retenue": "ii",
+ "nom": "bootstrap-t par grappes",
+ "repli": true,
+ "seuil": 0.93,
+ "G_sur": 90,
+ "zone_echec": [
+  20,
+  40
+ ],
+ "pire_couverture": {
+  "i": 0.588,
+  "ii": 0.721,
+  "iii": 0.5494
+ },
+ "methode_seconde": "iii",
+ "taux_critere": 0.05,
+ "rapportes_sans_effet": {
+  "0.01": {
+   "methode": "i",
+   "repli": true,
+   "pire": {
+    "i": 0.2256,
+    "ii": 0.2254,
+    "iii": 0.2256
+   },
+   "G_sur": "inf",
+   "zone_echec": [
+    20,
+    40,
+    90
+   ],
+   "seuil": 0.93
+  },
+  "0.2": {
+   "methode": "ii",
+   "repli": false,
+   "pire": {
+    "i": 0.8488,
+    "ii": 0.937,
+    "iii": 0.829
+   },
+   "G_sur": 20,
+   "zone_echec": [],
+   "seuil": 0.93
+  }
+ }
+}

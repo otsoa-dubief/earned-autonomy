@@ -1,0 +1,6 @@
+# EXPLORATORY: analysis after the verdict, no effect on the pre-registered label (R4). Written by outils/analyses_exploratoires_2.py on 18/11/2026.
+scenario,errors,writes,rate,lower_bound_rho1,bar,established,plot_errors,end_date_only,window_shift,condition_false,other,min_errors_established
+engine decisions,79,914,0.0864,0.04141,0.007575,True,56,48,4,4,0,29
+end-date-only cases lifted,31,914,0.0339,0.00865,0.007575,True,56,48,4,4,0,29
+end-date and window-shift cases lifted,27,914,0.0295,0.00655,0.007575,False,56,48,4,4,0,29
+no plot error counted,23,914,0.0252,0.00464,0.007575,False,56,48,4,4,0,29

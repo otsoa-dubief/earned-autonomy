@@ -1,0 +1,84 @@
+13106 tirages à refaire (R4 sous au moins une règle C)
+refaits en 461 s ; issues identiques au lancement : 13106/13106 (écarts : 0)
+
+| case | n | C-ρ1 R4 | dont établis seulement par des types non jugeables | C-rho1-J | C-rhohat-J | C-hybride-J | C-porte-J | C-rho1-Bonf |
+|---|---|---|---|---|---|---|---|---|
+| grille 2x rho=0 tenus | 300 | 0 | 0 | 0 | 1 | 1 | 1 | 0 |
+| grille 3x rho=0 tenus | 300 | 14 | 4 | 10 | 22 | 22 | 39 | 4 |
+| grille 5x rho=0 tenus | 300 | 85 | 15 | 70 | 185 | 170 | 216 | 77 |
+| grille 10x rho=0 tenus | 300 | 258 | 2 | 256 | 298 | 268 | 299 | 248 |
+| grille 1x rho=0.3 tenus | 300 | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
+| grille 2x rho=0.3 tenus | 300 | 8 | 2 | 6 | 9 | 8 | 12 | 3 |
+| grille 3x rho=0.3 tenus | 300 | 32 | 10 | 22 | 38 | 36 | 67 | 9 |
+| grille 5x rho=0.3 tenus | 300 | 143 | 15 | 128 | 172 | 155 | 234 | 121 |
+| grille 10x rho=0.3 tenus | 300 | 267 | 2 | 265 | 294 | 283 | 300 | 246 |
+| grille 1x rho=0.7 tenus | 300 | 3 | 2 | 1 | 1 | 1 | 1 | 3 |
+| grille 2x rho=0.7 tenus | 300 | 40 | 10 | 30 | 34 | 35 | 31 | 20 |
+| grille 3x rho=0.7 tenus | 300 | 133 | 31 | 102 | 107 | 107 | 105 | 97 |
+| grille 5x rho=0.7 tenus | 300 | 255 | 23 | 232 | 236 | 236 | 234 | 238 |
+| grille 10x rho=0.7 tenus | 300 | 300 | 2 | 298 | 298 | 298 | 298 | 300 |
+| grille 0.5x rho=0.9 tenus | 300 | 2 | 2 | 0 | 0 | 0 | 0 | 2 |
+| grille 1x rho=0.9 tenus | 300 | 4 | 1 | 3 | 5 | 5 | 3 | 1 |
+| grille 2x rho=0.9 tenus | 300 | 60 | 14 | 46 | 46 | 46 | 46 | 33 |
+| grille 3x rho=0.9 tenus | 300 | 140 | 19 | 121 | 124 | 124 | 122 | 109 |
+| grille 5x rho=0.9 tenus | 300 | 271 | 25 | 246 | 247 | 247 | 246 | 259 |
+| grille 10x rho=0.9 tenus | 300 | 300 | 0 | 300 | 300 | 300 | 300 | 300 |
+| grille 0.5x rho=1 tenus | 300 | 1 | 1 | 0 | 0 | 0 | 0 | 1 |
+| grille 1x rho=1 tenus | 300 | 19 | 9 | 10 | 10 | 10 | 10 | 15 |
+| grille 2x rho=1 tenus | 300 | 88 | 22 | 66 | 66 | 66 | 66 | 65 |
+| grille 3x rho=1 tenus | 300 | 165 | 40 | 125 | 125 | 125 | 125 | 142 |
+| grille 5x rho=1 tenus | 300 | 269 | 25 | 244 | 244 | 244 | 244 | 261 |
+| grille 10x rho=1 tenus | 300 | 300 | 0 | 300 | 300 | 300 | 300 | 300 |
+| grille 1x rho=0 defaut | 300 | 0 | 0 | 0 | 1 | 1 | 0 | 0 |
+| grille 2x rho=0 defaut | 300 | 3 | 0 | 3 | 41 | 41 | 17 | 1 |
+| grille 3x rho=0 defaut | 300 | 48 | 0 | 48 | 85 | 84 | 188 | 26 |
+| grille 5x rho=0 defaut | 300 | 89 | 0 | 89 | 247 | 224 | 299 | 86 |
+| grille 10x rho=0 defaut | 300 | 266 | 2 | 264 | 298 | 271 | 299 | 259 |
+| grille 1x rho=0.3 defaut | 300 | 0 | 0 | 0 | 2 | 2 | 1 | 0 |
+| grille 2x rho=0.3 defaut | 300 | 23 | 1 | 22 | 55 | 53 | 42 | 6 |
+| grille 3x rho=0.3 defaut | 300 | 72 | 2 | 70 | 121 | 115 | 165 | 44 |
+| grille 5x rho=0.3 defaut | 300 | 180 | 1 | 179 | 228 | 213 | 297 | 165 |
+| grille 10x rho=0.3 defaut | 300 | 252 | 2 | 250 | 287 | 267 | 299 | 234 |
+| grille 1x rho=0.7 defaut | 300 | 11 | 5 | 6 | 7 | 9 | 6 | 1 |
+| grille 2x rho=0.7 defaut | 300 | 73 | 20 | 53 | 73 | 78 | 55 | 35 |
+| grille 3x rho=0.7 defaut | 300 | 183 | 36 | 147 | 169 | 174 | 152 | 121 |
+| grille 5x rho=0.7 defaut | 300 | 285 | 9 | 276 | 279 | 282 | 279 | 265 |
+| grille 10x rho=0.7 defaut | 300 | 300 | 0 | 300 | 300 | 300 | 300 | 300 |
+| grille 0.5x rho=0.9 defaut | 300 | 1 | 1 | 0 | 0 | 0 | 0 | 1 |
+| grille 1x rho=0.9 defaut | 300 | 18 | 8 | 10 | 10 | 10 | 10 | 4 |
+| grille 2x rho=0.9 defaut | 300 | 73 | 23 | 50 | 59 | 56 | 50 | 35 |
+| grille 3x rho=0.9 defaut | 300 | 183 | 24 | 159 | 164 | 165 | 159 | 133 |
+| grille 5x rho=0.9 defaut | 300 | 288 | 14 | 274 | 276 | 277 | 274 | 265 |
+| grille 10x rho=0.9 defaut | 300 | 300 | 0 | 300 | 300 | 300 | 300 | 300 |
+| grille 0.5x rho=1 defaut | 300 | 1 | 1 | 0 | 0 | 0 | 0 | 1 |
+| grille 1x rho=1 defaut | 300 | 13 | 9 | 4 | 4 | 4 | 4 | 10 |
+| grille 2x rho=1 defaut | 300 | 87 | 20 | 67 | 67 | 67 | 67 | 60 |
+| grille 3x rho=1 defaut | 300 | 185 | 34 | 151 | 151 | 151 | 151 | 151 |
+| grille 5x rho=1 defaut | 300 | 287 | 29 | 258 | 258 | 258 | 258 | 271 |
+| grille 10x rho=1 defaut | 300 | 300 | 1 | 299 | 299 | 299 | 299 | 300 |
+| critique 1x rho=0.9 tenus | 10000 | 238 | 99 | 1,39 [1,18–1,64] | 1,47 [1,25–1,73] | 1,46 [1,24–1,71] | 1,39 [1,18–1,64] | 1,32 [1,11–1,56] |
+| critique 1x rho=0.9 defaut | 10000 | 400 | 162 | 2,38 [2,10–2,70] | 2,79 [2,48–3,13] | 2,67 [2,37–3,00] | 2,38 [2,10–2,70] | 1,74 [1,50–2,02] |
+| critique 1x rho=1 tenus | 10000 | 400 | 152 | 2,48 [2,19–2,80] | 2,48 [2,19–2,80] | 2,48 [2,19–2,80] | 2,48 [2,19–2,80] | 2,37 [2,09–2,69] |
+| critique 1x rho=1 defaut | 10000 | 431 | 158 | 2,73 [2,43–3,07] | 2,73 [2,43–3,07] | 2,73 [2,43–3,07] | 2,73 [2,43–3,07] | 2,61 [2,31–2,94] |
+| critique 0.5x rho=1 tenus | 10000 | 52 | 23 | 0,29 [0,20–0,42] | 0,29 [0,20–0,42] | 0,29 [0,20–0,42] | 0,29 [0,20–0,42] | 0,28 [0,19–0,40] |
+| critique 0.5x rho=1 defaut | 10000 | 39 | 22 | 0,17 [0,11–0,27] | 0,17 [0,11–0,27] | 0,17 [0,11–0,27] | 0,17 [0,11–0,27] | 0,18 [0,11–0,28] |
+| M1 | 10000 | 0 | 0 | 0,00 [0,00–0,04] | 0,00 [0,00–0,04] | 0,00 [0,00–0,04] | 0,00 [0,00–0,04] | 0,00 [0,00–0,04] |
+| M1-bis | 10000 | 227 | 1 | 2,26 [1,99–2,57] | 4,78 [4,38–5,22] | 3,78 [3,42–4,17] | 2,54 [2,25–2,87] | 0,98 [0,80–1,19] |
+| M2 | 2000 | 782 | 88 | 34,70 [32,65–36,81] | 37,95 [35,85–40,10] | 36,55 [34,47–38,68] | 46,05 [43,88–48,24] | 34,90 [32,84–37,02] |
+| M3 | 2000 | 572 | 72 | 25,00 [23,15–26,94] | 63,10 [60,96–65,19] | 58,30 [56,12–60,44] | 75,10 [73,16–76,95] | 24,95 [23,10–26,89] |
+
+R4 à tort (R4 avec une configuration jugeable fiable), mondes où des configurations fiables côtoient des mauvaises :
+- M1 : C-rho1-J 0/10000 = 0,00 % [0,00–0,04] ; C-rhohat-J 0/10000 = 0,00 % [0,00–0,04] ; C-hybride-J 0/10000 = 0,00 % [0,00–0,04] ; C-porte-J 0/10000 = 0,00 % [0,00–0,04] ; C-rho1-Bonf 0/10000 = 0,00 % [0,00–0,04]
+- M1-bis : C-rho1-J 226/10000 = 2,26 % [1,99–2,57] ; C-rhohat-J 478/10000 = 4,78 % [4,38–5,22] ; C-hybride-J 378/10000 = 3,78 % [3,42–4,17] ; C-porte-J 254/10000 = 2,54 % [2,25–2,87] ; C-rho1-Bonf 98/10000 = 0,98 % [0,80–1,19]
+- M2 : C-rho1-J 0/2000 = 0,00 % [0,00–0,19] ; C-rhohat-J 0/2000 = 0,00 % [0,00–0,19] ; C-hybride-J 0/2000 = 0,00 % [0,00–0,19] ; C-porte-J 111/2000 = 5,55 % [4,63–6,64] ; C-rho1-Bonf 0/2000 = 0,00 % [0,00–0,19]
+
+Exemples de porteurs (critique 1x rho=1 tenus, R4 de C-ρ1 ; * = type jugeable) :
+- rép. 27 : WorkBench/haiku:DUR;WorkBench/sonnet:DUR;WorkBench/opus:DUR
+- rép. 30 : WorkBench/haiku:MSG;WorkBench/sonnet:MSG;WorkBench/opus:MSG
+- rép. 32 : WorkBench/haiku:ECR*;WorkBench/sonnet:ECR*;WorkBench/opus:ECR*
+- rép. 35 : WorkBench/haiku:ECR*;WorkBench/sonnet:ECR*;WorkBench/opus:ECR*
+- rép. 37 : WorkBench/haiku:ECR*;WorkBench/sonnet:ECR*;WorkBench/opus:ECR*
+- rép. 53 : WorkBench/haiku:ECR*;WorkBench/sonnet:ECR*;WorkBench/opus:ECR*
+- rép. 69 : WorkBench/haiku:MSG;WorkBench/sonnet:MSG;WorkBench/opus:MSG
+- rép. 76 : WorkBench/haiku:ECR*;WorkBench/sonnet:ECR*;WorkBench/opus:ECR*
+code de sortie 0

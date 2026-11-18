@@ -1,0 +1,30 @@
+# AVERTISSEMENT : bout en bout sur les 120 parties de développement du pilote (pilote/etape2/2026-11-05_07-50-58/), avec un partage fictif calculé par banc/tirage/tirage_public.py à partir d'une valeur de balise de test (aucune balise réelle interrogée). Ces chiffres n'ont AUCUNE valeur de preuve et ne sont pas des résultats de l'expérience (PLAN_EXPERIENCE.md, 3.1 et 5.16, point 6).
+mode,type_suite,regle,echecs,pire_rapport_hi,alerte
+e = 0,bilan du mode,B-tout,0,0.0,False
+e = 0,bilan du mode,B-régulier,0,0.0,
+e = 0,bilan du mode,A½,0,0.0,
+e = 0,bilan du mode,A¼,0,0.0,
+e = 0.02,bilan du mode,B-tout,0,0.0,False
+e = 0.02,bilan du mode,B-régulier,0,0.0,
+e = 0.02,bilan du mode,A½,0,0.0,
+e = 0.02,bilan du mode,A¼,0,0.0,
+e = 0.1,bilan du mode,B-tout,0,0.0,False
+e = 0.1,bilan du mode,B-régulier,0,0.0,
+e = 0.1,bilan du mode,A½,0,0.0,
+e = 0.1,bilan du mode,A¼,0,0.0,
+verdicts bruts,bilan du mode,B-tout,0,0.0,False
+verdicts bruts,bilan du mode,B-régulier,0,0.0,
+verdicts bruts,bilan du mode,A½,0,0.0,
+verdicts bruts,bilan du mode,A¼,0,0.0,
+rate10,bilan du mode,B-tout,0,0.0,False
+rate10,bilan du mode,B-régulier,0,0.0,
+rate10,bilan du mode,A½,0,0.0,
+rate10,bilan du mode,A¼,0,0.0,
+retard10,bilan du mode,B-tout,0,0.0,False
+retard10,bilan du mode,B-régulier,0,0.0,
+retard10,bilan du mode,A½,0,0.0,
+retard10,bilan du mode,A¼,0,0.0,
+groupees,bilan du mode,B-tout,0,0.0,False
+groupees,bilan du mode,B-régulier,0,0.0,
+groupees,bilan du mode,A½,0,0.0,
+groupees,bilan du mode,A¼,0,0.0,

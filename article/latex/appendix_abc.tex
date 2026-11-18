@@ -1,0 +1,378 @@
+\subsection{A Deviations from the pre-registration}\label{a-deviations-from-the-pre-registration}
+
+The plan was frozen at git tag \texttt{gel-2026-11-09} (commit a8eb1aae) and registered on OSF on 10 November 2026. Changes made before the freeze are declared in the registration itself: the two rule corrections, the redefinition of R4, the max-T formula, and others. They are listed in full in \texttt{JOURNAL\_\allowbreak{}CHANGEMENTS.\allowbreak{}md}. We list here what happened at or after the freeze. None of it changes the frozen files, the rule or the labels.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{D0 (9 November, night, at the freeze): aborted freeze.} A first freeze commit (7e951f2) and its local tag, never published, were abandoned. A test of the frozen perimeter still checked the pre-freeze state (``G0 not drawn'') and failed once G0 was drawn. The test was corrected, the aborted outputs were removed by a new commit without rewriting history, and the freeze was redone with the same master seed G0. Already declared in the registration.
+\item
+  \textbf{D1 (10 November, evening): simplified page for the author's blind review, wave 1} (presentation, with effects on the task). The author found the frozen review page very hard to approach: too long, unclear about what to judge, in English and technical, as in the pilot. A simplified page, generated outside the frozen perimeter (\texttt{outils/\allowbreak{}relecture\_\allowbreak{}simple.\allowbreak{}py}) from the same blind sheets and the same draw, shows one sheet at a time, puts the field-by-field difference first, asks the four lift reasons as guided yes/no questions and folds the English evidence; it reads only the sheet number and alert ID from the draw, so no first-reviewer opinion appears, and its CSV output is read by the unchanged agreement script. It is not only a change of presentation: (i) the page computes the verdict from the four answers; (ii) it asks the reasons in the order b, c, a, d, with the default ``when in doubt, a real error''; (iii) question (a) omits three of the frozen rules for a defective task; (iv) question (d) is worded more loosely than the frozen reason. The frozen review page was never used by the author. No code in the frozen \texttt{banc/} directory was modified.
+\item
+  \textbf{D2 (10 November, evening): reading outside the pre-written list of between-wave checks, and a newly identified exclusion bias.} At the author's request, before launching wave 2, the error lines (\texttt{ERROR}, \texttt{Infra\ Errors}) of the logs of failed banking attempts were read, without any conversation content. All 19 failures had the same cause: τ-bench rejects an agent message that is empty, with neither text nor tool call, and classes it as an infrastructure error. This is agent behaviour counted as a technical failure. Under the frozen launcher such attempts are relaunched once, then excluded. This probably removes agent errors (banking, mostly Haiku) and biases results toward delegation, like the WorkBench bias already declared. Nothing was corrected, since the code is frozen. Recurrent \texttt{get\_\allowbreak{}response\_\allowbreak{}cost} messages (``LLM Provider NOT provided'') appear in all episodes, successful ones included, and have no effect. Final count: 91 episodes excluded, all for an empty agent message, 89 of them on banking (Table 3; D10).
+\item
+  \textbf{D3 (10 November, evening): wave-2 launch incident} (no effect on verdicts). Wave 2 was first launched outside a terminal multiplexer and interrupted within a minute (exit code 130). Two episodes were interrupted and replayed. It was resumed and then stopped by the launcher's guard (``incomplete or unreadable usage, cost marked up''). The cause: the resume path was given as a relative path, as in the launch notes. The launcher does not resolve it, so the per-episode usage file path became relative, while τ-bench runs in its own directory, and the cost counter wrote nothing. One finished episode (retail, Sonnet) has an upper-bounded cost of 0.174 USD; one attempt (airline, Haiku) became a technical failure (``usage absent'') and was replayed. The cumulated cost of the two attempts is 0.257 USD. Because the code is frozen, the launcher was not changed. Resumption uses absolute paths, tested in a dry run, and the launch notes were corrected accordingly.
+\item
+  \textbf{D4 (10 and 14 November): author's lifts outside any written reason.} In wave 1, the author lifted two sheets under reason (d) because the simulated client departed from its own instruction. No frozen reason covers this case ((d) is reserved for defects of our comparison code). Under the frozen rule the author's decision prevails and a reason is never rewritten, so these lifts enter the confirmed verdicts (the engine counts 3 alerts as lifted by the author without a written reason; the third, from wave 2, is not described here; no sensitivity analysis reconfirming these 3 of 2,761 alerts was run; Section C.6.1). This points to a real limitation of the benchmarks: a simulated client that drifts makes the agent who follows it look wrong (Appendix E).
+\item
+  \textbf{D5 (13 November): cost above the announced interval.} API spend reached 837.19 USD against a preregistered estimate of 595.73 USD (517 to 674 USD at 95 \%). Banking cost two to three times more per episode than in the pilot. No pass-count reduction was triggered (Section C.6.1).
+\item
+  \textbf{D6 (13 November): tools missing from the tool table} (instrument). The wave-2 report lists 27 banking tool names absent from the frozen tool table: 19 real tools, present in the frozen tool definitions but never mapped, and 8 \texttt{\_\allowbreak{}placeholder} names invented by the agent; 2 invented names appear on retail. Their writes stay without a verdict (\texttt{unknown}, tier 1) and explain banking's coverage (92.5 \% in wave 2; 98.5 \% overall in that wave, above the threshold). Nothing was corrected, since the code is frozen.
+\item
+  \textbf{D7 (13--14 November): alert review procedure for wave 2.} The 2,529 wave-2 alerts were reviewed in 1,428 batches by a script outside the frozen perimeter (\texttt{outils/\allowbreak{}relecture\_\allowbreak{}lots.\allowbreak{}py}), with the wave-1 prompt word for word. Each batch went to a fresh headless Claude Code instance on a subscription (no API key), without the author's personal settings, with the model recorded: Claude Opus 5.5. The wave-1 reviewing model and batching rule were not recorded. Wave-2 batches held at most 120 kB and 15 sheets; all 1,428 closed at the first attempt (about 2 h 05 with six instances in parallel). Reviewers could technically open the alert file, which the prompt forbade; no transcript was kept, so blindness rests on the instruction, not on a technical barrier. Opus 5.5 reviewed episodes played in part by Opus 5.5 (Appendix E, limitation 9). The harness of the wave-1 review was not recorded either, so the two waves were not reviewed under documented identical conditions. The analyses suggested by the audit of 14 November (lifts broken down by agent model, a review of a sample by another provider, re-reviewing wave 1 with the wave-2 harness) were not done.
+\item
+  \textbf{D8 (13 November): simplified review page reused in wave 2.} The simplified page of D1 also served for the author's wave-2 blind review, with the four guided questions in the order b, c, a, d and the default ``when in doubt, a real error''. The page computes the answer from four yes/no questions and invites the reader not to read everything, which may steer the reviewer; both wave-1 disagreements concerned question (d).
+\item
+  \textbf{D9 (14 November): audit of alert-free tasks.} The 20 audit sheets were read by a script outside the frozen perimeter (\texttt{outils/\allowbreak{}audit\_\allowbreak{}relecture.\allowbreak{}py}): one fresh Opus 5.5 instance per sheet, on the subscription, with the frozen instruction; the model is recorded. Result: 0 removals, 0 invisible errors in 21 writes.
+\item
+  \textbf{D10 (14 November): wave-2 exclusion diagnosis.} Reading only the error lines of the failed attempts' logs: of 226 technical failures in wave 2, 207 came from an empty agent message and 19 from an empty simulated-client message, a simulator failure (in wave 1, all 19 came from the agent). The exploratory analysis fixed in the verdict-freeze deposit counts only the former as errors. Final count of excluded episodes: 91 (Table 3).
+\item
+  \textbf{D11 (14 November): opposition on retail task 98, and a replaced verdict-freeze registration.} A first verdict-freeze registration (OSF u26kr, 06:44:26 UTC) was submitted. An audit by a separate Claude instance then found, before any draw, that retail task 98 had been removed on a consequence-based argument outside the frozen criterion (a recommendation error by the AI assistant, acknowledged), that the exact final-replay command was not fixed anywhere, and that the reference timestamp was ambiguous. The author opposed the removal of task 98, whose 23 alerts lifted for reason (a) became confirmed errors. u26kr could no longer be cancelled: its embargo had already been approved by the author on the assistant's instruction. The author chose to deposit a new registration (OSF cusv6, \texttt{date\_\allowbreak{}registered} 2026-11-14T08:17:47 UTC) declaring that it replaces u26kr and is the only one that counts, before the number designated by u26kr existed, then to withdraw u26kr (done). The draw designated by u26kr was never run. The three banking removals based on the knowledge base were kept; reading the policy's pointer to the knowledge base as part of the task's files is an interpretation of the frozen instruction, declared here. No sensitivity analysis keeping these three tasks was run. Banking task\_082, removed for case a3, was the least clear-cut removal.
+\item
+  \textbf{D12 (17 November): final replay, a code defect and its in-memory fix.} The final replay launched with the deposited command failed after 4,614 s while writing the stress-test table (\texttt{resistance.\allowbreak{}csv}): the frozen function \texttt{lignes\_\allowbreak{}resistance} passed two \texttt{mode} keys to the same record, a case that never arose in the pilot because no stress-test cell was judged there. The frozen code was not edited, since the engine refuses to run if the repository differs from the frozen manifest. Instead, a wrapper script (\texttt{outils/\allowbreak{}rejeu\_\allowbreak{}final\_\allowbreak{}correctif.\allowbreak{}py}) replaced that single function in memory, renaming the second field \texttt{mode\_\allowbreak{}scenario}, and called the engine's entry point with exactly the deposited arguments. Strictly speaking, this is therefore not the same command. The run metadata (\texttt{meta.\allowbreak{}json}) records the fingerprint of the frozen \texttt{sorties.\allowbreak{}py} and says nothing about the in-memory replacement; a separate note documents it. The replaced function only formats \texttt{resistance.\allowbreak{}csv}, which therefore has one extra column, and it is called after the label has been computed, so the label does not depend on it. No output of the first run was read before the second run; the six tables written by both runs are byte-identical, as checked by comparing SHA-256 fingerprints only (\texttt{revues/\allowbreak{}2026-11-17\_\allowbreak{}identite\_\allowbreak{}six\_\allowbreak{}tables.\allowbreak{}md}).
+\item
+  \textbf{D13 (17 November): tools and analyses after the verdict.} Presentation scripts outside the frozen perimeter were corrected or added after an audit of the results: \texttt{outils/\allowbreak{}tables\_\allowbreak{}article.\allowbreak{}py} (tables 3, 5, 6, 8, 9; only simple derived quantities such as counts, ratios and n\_eff × bar, never a new test), \texttt{outils/\allowbreak{}tables\_\allowbreak{}exploratoires.\allowbreak{}py} and a figure register (\texttt{article/\allowbreak{}sources\_\allowbreak{}chiffres.\allowbreak{}csv}). The exploratory analyses of Appendix D (\texttt{outils/\allowbreak{}analyses\_\allowbreak{}exploratoires.\allowbreak{}py}, A to G) were run after the verdict, read the frozen engine's outputs and functions without modifying them, are dated 17 November 2026, and have no effect on the label.
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{B Rule and setup in detail}\label{b-rule-and-setup-in-detail}
+
+\subsubsection{B.3 The earned-autonomy rule}\label{b.3-the-earned-autonomy-rule}
+
+The rule is written in nine pieces (REGLE.md, frozen). We summarise the pieces that matter for the experiment. Where this summary and the frozen texts differ, the frozen texts prevail.
+
+\paragraph{B.3.1 Unit of evidence: the action type and its stakes}\label{b.3.1-unit-of-evidence-the-action-type-and-its-stakes}
+
+Actions are classified by what they do, not by the tool that performs them, through a frozen table that maps each benchmark tool to a type, a stakes level and reversibility (\texttt{banc/\allowbreak{}table\_\allowbreak{}outils.\allowbreak{}json}, v1). Each type has a single stakes level:
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}ll@{}}
+\toprule\noalign{}
+Stakes & Types \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Low & read (no effect); reversible write; internal message \\
+Medium & durable write; execution and delegation \\
+High & external output; money; guardrail or rights; illegible effect \\
+\end{longtable}
+}
+
+An action with two effects takes the higher stakes (cancelling an order also refunds it, so it counts as money). A tool absent from the table is treated as ``illegible effect'', at high stakes. Evidence stays within its type: successes on one type never count for another, and an error on one type does not freeze the others. Doubts raised by the agent (asking to transfer to a human) are neutral: they cost a validation but are neither a success nor an error.
+
+Reads are autonomous from the start and enter neither the load nor the damage count; the instrument gives them no verdict. The budget is counted per \emph{write}. This is a declared second correction of the rule, made after the pilot showed that reads were 85--89 \% of actions in customer service. Counting per action made the bars absurd where writes are rare, and let an agent widen its own bar by reading more. Results are reported under both definitions (per write, primary; per action including reads, secondary).
+
+\paragraph{B.3.2 Caps}\label{b.3.2-caps}
+
+Some actions are always validated, whatever the evidence: modifying a guardrail or the agent's own rights, attesting the human's consent, revealing a secret. Money above a per-environment amount is also capped (2,500 USD in airline, 500 USD in retail, 400 USD in banking, roughly the top quarter of expected amounts), as is a first message to an unknown recipient. Only the human changes a cap, by a dated decision. The idea of a ceiling that evidence cannot lift follows Zhang and Zhang (2026); the amounts and the first-message cap are ours.
+
+\paragraph{B.3.3 Tiers, promotion and withdrawal}\label{b.3.3-tiers-promotion-and-withdrawal}
+
+There are three tiers: (1) \emph{ask before}: the write is validated before execution; (2) \emph{act then notify}: it executes, and the same validator can correct it afterwards (reversible types only); (3) \emph{act alone}. Irreversible types go directly from tier 1 to tier 3.
+
+The main rule, \textbf{B-all} (named B-tout in the frozen plan), is applied per type, in the order of the sequence:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  tier 3 is reached after N consecutive verified successes on the type;
+\item
+  any error, at any tier, resets the run counter to 0;
+\item
+  an error at tier 3 withdraws autonomy. At medium or high stakes the type returns to tier 1 and a \emph{trial} opens; at low stakes it drops to tier 2 if reversible, tier 1 otherwise. Any medium- or high-stakes error opens a trial;
+\item
+  after a medium- or high-stakes error, the next climb requires ⌈1.25 N⌉ successes (``the error stays''); the lengthening does not accumulate;
+\item
+  the counter is frozen while a trial is open; a trial consists of three variants of the faulty case, and in the offline replay a variant is another recorded episode of the same task played by the current model. Trials are played ``dry'': they cause no damage and their validation load is counted separately. A failed trial imposes a wait of 50 writes of the type;
+\item
+  the counter is capped at the required length;
+\item
+  a model change (or extended rights) resets the counter. Remembered medium- and high-stakes errors become trials for the new configuration; low-stakes errors are dropped;
+\item
+  unverifiable writes and doubts are neutral: no success is ever assumed.
+\end{enumerate}
+
+Below tier 3, tier 2 of reversible types follows a Wald (1945) sequential score with fixed starting settings. Its parameters are (p\_good, p\_bad) = (0.10, 0.30) at low stakes and (0.05, 0.20) at medium stakes, with α = β = 5 \%.
+
+An automated check judges each write; the agent never judges itself. An automated alert becomes an error only after confirmation (Section B.4.3).
+
+\paragraph{B.3.4 From an error budget to N, and the guarantee}\label{b.3.4-from-an-error-budget-to-n-and-the-guarantee}
+
+\textbf{Budget.} Blind, before seeing whether the corrected rule passed the synthetic simulation, the author fixed the extra errors he would accept relative to ``validate everything'', in exchange for fewer validations: 0.5 per 100 writes at low stakes, 0.05 at medium and 0.005 at high. Each level is ten times stricter than the one below. The order of magnitude was anchored, qualitatively, on human error rates for routine tasks in human reliability analysis (HEART, Williams, 1985; THERP, Swain and Guttmann, 1983), whose data are old and debated. We state no range from these sources.
+
+\textbf{Bar.} The budget B\_ℓ of level ℓ is converted into a per-type error rate, the \emph{bar}, for each environment e:
+
+bar(ℓ, e) = B\_ℓ / (0.95 × 100 × q(ℓ, e)),
+
+where 0.95 is the share of errors the simulated validator stops (it misses 5 \%). q(ℓ, e) is the expected share of level-ℓ writes, computed from the expected actions of all tasks of the environment: the numerator excludes capped writes, the denominator includes all typed expected writes. A level with no expected write keeps a fallback bar from the synthetic exploration profile.
+
+\textbf{Run length.} With d = 0.95 the assumed share of errors that the automated check detects, B-all uses
+
+N = ⌈1 / (d × bar)⌉ − 1,
+
+computed in exact fractions. A secondary rule, B-regular, uses the smallest N such that \(N^N/(N+1)^{N+1} \le d \times \mathrm{bar}\), which is enough for an agent with a constant error rate but not for arbitrary behaviour.
+
+\textbf{Table 1. Bars and run lengths per environment} (frozen; bars rounded for reading; the configuration file holds exact fractions). Cell: bar (N for B-all; N for B-regular).
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+Environment
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Low stakes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+Medium stakes
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+High stakes
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Airline & 1/12 (12; 5) & 1/194 (204; 75) & 1/12,020 (12,653; 4,655) \\
+Retail & 1/38 (39; 15) & 1/697, fallback (733; 270) & 1/11,335 (11,931; 4,389) \\
+Banking & 1/86 (90; 33) & 1/637 (670; 247) & 1/2,453 (2,582; 950) \\
+WorkBench & 1/132 (138; 51) & 1/580 (610; 225) & 1/4,698, fallback (4,945; 1,819) \\
+\end{longtable}
+}
+
+\textbf{Guarantee.} Consider one type at tier 3. Each autonomy period is preceded by at least N verified successes of that type and ends at the first detected error. Let d be the share of errors that the automated check detects after execution, independently of the agent's choices. Count in cycles: N successes, then errors until the first detected one, which takes 1/d errors on average, all executed. The expected number of errors executed at tier 3 per write of the type is then at most 1/(1 + N d), whatever the sequence of errors. This is the cycle argument of the unrestricted AOQL (1 − f)/(1 + if) of Lieberman (1953), with i = N and f read as d, without the factor (1 − f) in the numerator, because a detected error is not prevented: detection follows execution. If d = 1, the bound is deterministic: at most one executed error per N + 1 writes. If d \textless{} 1, it is a ratio of expectations per cycle, hence a long-run bound; on a finite sequence, the last, incomplete cycle is not covered by this statement. It falls if the errors the check misses are targeted. The preregistered N, drawn from N + 1 ≥ 1/(d × bar), is slightly conservative: since d ≤ 1, 1/(1 + N d) ≤ 1/(d (N + 1)) ≤ bar, so the simplification never weakens the guarantee. Summing over the types of a level, let s be the real share of non-capped writes of the level among the denominator writes, and q the expected share used for the bar. Two 0.95 factors must be kept apart: the validator's stop rate (1 − e, inside the bar) and the detection share d (inside N). With immediate and complete detection (d = 1 in the bound), the errors executed at tier 3 stay below budget × s/q per 100 writes, and, averaged over validator draws, the extra errors relative to ``validate everything'' stay below 0.95 × budget × s/q. This is the construction bound published for every cell (plan, 1.4). If only a share d = 0.95 of errors is detected, as assumed when N was computed, the expected executed errors stay below budget × s/(0.95 q) and the extra errors below budget × s/q: the budget still holds whenever s ≤ q, which is what the factor d in N buys.
+
+\textbf{Assumptions.} The bound holds (i) for errors that the check detects, (ii) when detection is immediate, and (iii) relative to a validator that never rejects a correct write. If detection arrives k writes late, the bound becomes roughly (1 + k)/(N + 1) per write. An error that the check never sees is not covered: it counts as a success. N was computed with d = 0.95, and the bound holds in expectation over misses that are independent of the agent's choices; if misses are targeted (the agent errs exactly where the check is blind), no bound holds. The guarantee also does not cover tolerant variants, where a cycle may contain several detected errors. Finally, the bound is relative to the \emph{expected} mix q. If the real share s of a level exceeds q, the bound grows by s/q. For banking at low stakes, the pilot mix gives s/q ≈ 2.2, so the construction bound there is about 2.1 times the budget.
+
+\textbf{Choice of B-all.} B-all was chosen over B-regular by the author on 4 November 2026, before the freeze. A synthetic exploration (E1, exploratory and deposited) had selected B-regular by a pre-written choice rule: lower validation load (63.8 against 72.7 per 100 non-read actions). But E1's robustness alert fired. With 10 \% of errors missed by the automated check, B-regular exceeded the budget in 9 cells (up to 1.05 times); with hard cases always missed, in 75 cells (up to 2.26 times). B-all's figures were 0 and 6 cells (up to 1.22 times). B-regular, and two Wald-based rules with p\_bad = bar and p\_good = bar/2 or bar/4 (A½, A¼), are replayed as secondary rules.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{B.4 Experimental setup}\label{b.4-experimental-setup}
+
+\paragraph{B.4.1 Environments and tasks}\label{b.4.1-environments-and-tasks}
+
+We use four environments from two public benchmarks: τ-bench 2.0 (\texttt{airline}, \texttt{retail}, \texttt{banking\_\allowbreak{}knowledge}; commit 033bf08) and WorkBench (commit 49c7dfd). Airline is graded with substring matching for communication and retail with forced state evaluation, so that no LLM judge is used. Banking uses BM25/grep retrieval without third-party calls. WorkBench uses all tools, structured outputs and logged traces, and has no simulated user. A development set of 20 \% of the tasks of each environment (stratified by file for WorkBench) was drawn on 5 November 2026. It was used for a pilot and for engine tests only; no development task enters the verdict. The reserved tasks are 40 (airline), 91 (retail), 77 (banking) and 552 (WorkBench).
+
+\paragraph{B.4.2 Models and settings}\label{b.4.2-models-and-settings}
+
+The agents are \texttt{claude-haiku-5-5}, \texttt{claude-sonnet-5-5} and \texttt{claude-opus-5-5}, called through the provider API with default settings. No temperature is set, since the API rejects it for these models. Default effort is medium for Haiku and Opus and high for Sonnet. The τ-bench simulated user is \texttt{claude-haiku-5-5} for all configurations. Prompt caching is enabled for τ-bench and unavailable for WorkBench's client. Each τ-bench episode is limited to 100 turns and 30 minutes. For each call, the launcher records the model name returned by the API and the tool definitions received by the agent; a change stops the run.
+
+\textbf{Table 1 bis. Planned episodes} (frozen). A \emph{configuration} is one model in one environment (12 configurations).
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}llllll@{}}
+\toprule\noalign{}
+Model & Airline & Retail & Banking & WorkBench & Episodes \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+Haiku & 50 passes & 50 & 10 & 5 & 10,080 \\
+Sonnet & 10 & 10 & 3 & 1 & 2,093 \\
+Opus & 10 & 10 & 3 & 1 & 2,093 \\
+\textbf{Total} & & & & & \textbf{14,266} \\
+\end{longtable}
+}
+
+The estimated cost is 595.73 USD (approximate 95 \% interval 517--674 USD, reflecting pilot dispersion only), within a total research budget of 1,100 USD, pilot included. The independent unit is the task, not the episode.
+
+\paragraph{B.4.3 The instrument: per-action verdicts and alert review}\label{b.4.3-the-instrument-per-action-verdicts-and-alert-review}
+
+\textbf{Automated check.} Every write made with a tool of the frozen table is judged by exact comparison with the task's expected actions (\texttt{banc/\allowbreak{}verdicts.\allowbreak{}py}), without any LLM judge. A write is \emph{correct}, a \emph{duplicate}, \emph{refused} or \emph{wrong}. A duplicate with no extra effect on an idempotent tool is neutral; a duplicate that changes the state is an error. A write absent from the expected list is an error. A refused write is an error for the agent's record but not damage. A small number of comparison rules were adjusted on the pilot before the freeze, all logged. For example, payment\_id is compared only when a payment is actually recorded, and only the tool's name is compared when the agent gives a tool to the user. Task success rates, from each benchmark's final-state check, are reported alongside, because the check does not see work left undone.
+
+\textbf{Alert confirmation.} An \emph{alert} is a write marked wrong, duplicate or refused. Every alert is reviewed by fresh Claude instances on blind sheets: no model name, episode number, rank or task identifier, only an opaque alert ID. Blindness holds for the sheets and is enforced by instruction, not by a technical barrier on the reading environment. In wave 2, the 2,529 alerts were reviewed in 1,428 batches by fresh Claude Opus 5.5 instances run headless through Claude Code on a subscription (each batch in its own instance, with only the project settings); the reviewing model was not recorded for the 232 alerts of wave 1. Coverage is published per environment. An alert can be lifted only for one of four reasons written in advance, with proof: (a) defective task; (b) mere rephrasing of a free-text field; (c) another path allowed by the policy that produces the user's intended effect; (d) a defect in our comparison code. Any other alert is confirmed. A task is \emph{defective}, and removed for all models and rules, only if its own files contradict each other: policy, initial data, simulated user's instruction, expected actions (four cases, a1--a4). An episode can signal a defect but never prove it. The author may oppose a removal before the verdict freeze; the task then stays and its alerts become confirmed errors.
+
+\textbf{Blind human review.} In each wave, the author blind-reviews 15 alerts drawn at random (10 lifted, 5 confirmed, at most one per conversation), without the first reviewer's opinion. Agreement of at least 13 out of 15 keeps the review. Otherwise a second round of 15 is judged on both rounds (at least 26 out of 30). If that fails, the disagreement is persistent: no reason is rewritten after the freeze, and the label is computed twice, with retained decisions and with raw verdicts, keeping the less favourable one. If the first review lifted a real high-stakes error, all lifted high-stakes alerts are re-reviewed (plan 4.4).
+
+\textbf{Audit of tasks without alerts.} After the last wave, five alert-free tasks per environment are read in full by blind Claude instances. Any write judged correct that the policy or the user's request contradicts is recorded as an ``invisible error''. This changes no verdict. It is published as a measure of what exact comparison misses.
+
+\paragraph{B.4.4 Waves and spending caps}\label{b.4.4-waves-and-spending-caps}
+
+Episodes are interleaved by relative rank, environment and model in an order drawn with a recorded seed, so that a stop leaves balanced coverage. Wave 1 is about 10 \% of each configuration (1,430 episodes, 60.53 USD estimated at pilot costs). It stops before any new episode at 80 \% of its cap, which is 1.5 times the wave estimate. Wave 2's cap is 1.25 times an estimate recomputed on wave 1, within the remaining budget. It stops at the smaller of 95 \% of the cap and the cap minus 15 USD. If 1.25 times the recomputed total exceeds the remaining budget, all pass counts are multiplied by the same factor, rounded down, with at least one pass per task and model. Technical failures are relaunched once, then excluded. Episodes stopped without a usable trace (WorkBench tool exception, context overflow, 35-minute kill) are excluded without relaunch and counted by configuration and reason. No episode is added in view of results. Between waves, only a pre-written list of checks is allowed (cost, run health, instrument coverage, alert review, defective tasks, returned model name). No rule replay, load, damage or error rate is computed before the final replay.
+
+\paragraph{B.4.5 Calibration, confirmation and the public draw}\label{b.4.5-calibration-confirmation-and-the-public-draw}
+
+The reserve is split by task, half and half, stratified by environment (and by file for WorkBench), within task pairs frozen before registration. The pairs are computed without randomness from expected actions, so that rare types are balanced. The \emph{calibration} half measures each configuration's confirmed error rate by type (Q2), supplies the oracle's rates and decides which configurations are delegable; the rule is never replayed on it. The \emph{confirmation} half is where the frozen rule is replayed, once, and where the verdict is read.
+
+During collection the split does not exist, so no one can know which half a task belongs to. After the last wave, the confirmed verdicts and removed tasks are frozen, and their manifest is registered on OSF. The split seed is the SHA-256 of a fixed label, the manifest's hash and the first NIST Randomness Beacon pulse dated at least 72 hours after submission of that registration (an OSF registration can be withdrawn within 48 hours), with drand as a written fallback. Anyone can redo the draw from the public pulse and the registered hashes. The final replay then runs once, from one script, which refuses to start if the repository differs from the frozen manifest.
+
+\paragraph{B.4.6 Offline replay}\label{b.4.6-offline-replay}
+
+The rule and its comparators are replayed on the recorded episodes. For a configuration and a task set, episodes are shuffled, their write actions laid end to end, and reads and preparations removed. Every rule then sees the same sequence and the same validator draws (one uniform draw per write). At tier 1 an error passes if the draw falls below e = 5 \%; at tier 2 it executes and is corrected unless the draw falls below e; at tier 3 every error is damage. \emph{Extra errors} are errors executed at tier 3 that ``validate everything'' would have stopped, per 100 writes, per stakes level. The \emph{validation load} counts tier-1 validations (capped writes included), tier-2 corrections and doubts, per 100 actions excluding reads and preparations. Point estimates are means over R0 = 2,000 replays without resampling. Model-change scenarios concatenate the confirmation sequence of model X with that of model Y. There are 6 ordered pairs per environment, each in two modes: \emph{announced} (reset at the junction) or \emph{silent} (no event, which also serves as the ``no reset'' comparator). This gives 48 sequences. All sub-seeds derive from one master seed drawn at the freeze.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{C Pre-registered analysis and results in detail}\label{c-pre-registered-analysis-and-results-in-detail}
+
+\subsubsection{C.5 Preregistered analysis}\label{c.5-preregistered-analysis}
+
+This section restates the registered analysis plan. It adds nothing to it.
+
+\paragraph{C.5.1 Cells and comparators}\label{c.5.1-cells-and-comparators}
+
+A \emph{cell} is a configuration or a model-change sequence at one stakes level: (12 + 48) × 3 = 180 cells. The mandatory comparators are: \textbf{validate everything} (every write at tier 1; the reference for extra errors); the \textbf{fixed list} (reads and reversible writes at tier 3, everything else at tier 1); and \textbf{risk-based triage} (all low-stakes types at tier 3, the rest at tier 1). Reported without effect on the label: approve everything; autonomy after three successes; random delegation at the same rate as the rule, type by type; an oracle that delegates a type if its median calibration rate is at most the bar; a retrospective oracle; and the secondary rules (B-regular, A½, A¼).
+
+\paragraph{C.5.2 Criteria and labels}\label{c.5.2-criteria-and-labels}
+
+\textbf{Point 0, instrument validity.} Each wave ended with its blind review kept, or followed the persistent-disagreement rule. The coverage of the instrument (share of writes with a verdict) must be at least 0.95. Otherwise the label is R5, and everything is still computed and published.
+
+\textbf{H1, safety (eliminatory).} B-all keeps the budget in every cell. A cell fails only if its excess is \emph{established} by the max-T procedure (Section C.5.3). Cells where B-all never reaches tier 3 in any of the R0 replays are ``held, not put to the test'' and leave the max-T family. A failure gives R1. The withdrawal criterion (at most one detected error before withdrawal at medium and high stakes) holds by construction under immediate detection. It is checked as a code control, not as a route to refutation; its delayed-detection version is reported.
+
+\textbf{Delegable configuration.} A configuration is delegable if at least one earned type has a median calibration rate at most its bar. The median rate is the one-sided 50 \% Clopper--Pearson bound on the effective size. A type is \emph{judgeable} if zero errors would bring its median rate under its bar.
+
+\textbf{No delegable configuration.} If no configuration is delegable, the label is R4 (preregistered name: ``nothing to delegate: unreliability established''; Section 7 and limitation 21 state what it means here) only if (i) at least one type is judgeable, and (ii) every configuration with a judgeable type has at least one judgeable type whose one-sided 95 \% Clopper--Pearson lower bound at ρ = 1 lies above its bar. Otherwise it is ``insufficient evidence'', with its reason: no judgeable type; excess not established; or excess established only under the configuration's own estimated correlation, not at ρ = 1.
+
+\textbf{H2, utility.} With the budget kept, B-all must beat each mandatory comparator. ``Validate everything'' is beaten only on load: B-all's mean load over delegable configurations (equal weights) must be lower, with the paired-difference interval entirely and strictly below 0. The fixed list and the triage are beaten either by an established budget excess in at least one cell, or on load in the same way. Otherwise the label is R2. A rule that delegates nothing therefore cannot be confirmed: a competitor's fault is never a win.
+
+\textbf{Final label}, in order of precedence: \textbf{R5} (instrument insufficient), \textbf{R1} (rule refuted), \textbf{insufficient evidence}, \textbf{R4} (preregistered name ``nothing to delegate''; see Section C.6.2), \textbf{R2} (safe but not useful), \textbf{confirmed} (H1 and H2 hold, with at least one delegable configuration).
+
+\textbf{What R1 and ``confirmed'' can and cannot mean (plan 1.4).} With immediate detection, B-all's bound holds for any sequence: every error executed at tier 3 follows at least N successes of the same type, so at a given level the executed errors stay below budget × s/q per 100 writes, and the extra errors, averaged over validator draws, below 0.95 × budget × s/q. H1 can therefore hardly fail through the data. R1 can mean a mix gap (s above about 1.05 × q at a level where B-all reaches tier 3); it cannot mean, on its own, that the agents are unreliable, since B-all withdraws autonomy at the first error. The withdrawal criterion holds by construction and cannot refute the rule. ``Confirmed'' requires that B-all delegate in an established way with fewer validations than ``validate everything'', and that the risk triage be beaten by an established excess (where the triage keeps the budget, it necessarily asks for fewer validations than B-all); it cannot mean that B-all is safe at levels where it delegated nothing (``held, not put to the test''), nor beyond these benchmarks, models and settings. The part of the study that can really fail through the data is H2, together with the measured delegation gap.
+
+\textbf{Q2, delegation gap (descriptive).} For each configuration and type, on the calibration half, we report: the error rate p = x/n (confirmed errors, refused included, over verifiable non-neutral writes); p/bar and upper bound/bar; the class (below the bar, above, indeterminate) at ρ = 1 and under the estimated \ensuremath{\hat{\rho}}; the median rate; whether the type is judgeable; and the certification volume. Under R4 or insufficient evidence, the delegation gap becomes the main result.
+
+\textbf{Random delegation (separate conclusion).} If B-all lets through fewer extra errors than random delegation at the same rate at one level at least and more at none, autonomy is called \emph{earned}. If the difference is not shown, it is only \emph{distributed}. If neither has extra errors, the comparison is \emph{without object}. This comparison does not affect the label.
+
+\paragraph{C.5.3 Intervals and multiplicity}\label{c.5.3-intervals-and-multiplicity}
+
+The independent unit is the task. Intervals on load differences, on means over delegable configurations, on the comparison with random delegation and on proportions use a task-level jackknife-t (Student quantile with G − 1 degrees of freedom). It was selected before the freeze by a coverage simulation over ρ ∈ \{0, 0.1, 0.3, 0.5, 0.7, 0.9\} and G ∈ \{20, 40, 90\} task clusters, with a worst coverage of 0.933 against a 0.93 threshold. That coverage was measured on paired load differences (Monte-Carlo error about 0.35 point); on the budget cells, an earlier simulation had given the jackknife-t a worst coverage of 0.549, which is why the safety test uses max-T (plan 5.13). Intervals on extra errors are therefore nominal 95 \% intervals, read descriptively.
+
+An \emph{established excess} uses a Westfall--Young max-T over the family of testable cells. It is fed by a stratified task-cluster bootstrap with B = 2,000 replicates, each averaged over K = 10 orders and validator draws. The statistic T*\_c is centred on the bootstrap mean and standardised by the cell's bootstrap SD. The critical value c* is the 97.5th percentile of the maximum over testable cells, floored at 0 (formula F3). An excess is established in cell c if estimate\_c − c* × SD\_c exceeds the budget. A cell is not testable if it has fewer than two carrying tasks, an undefined estimate, an undefined bootstrap SD, or a zero SD (within four float32 epsilons). Non-testable cells establish nothing and are published with their reason.
+
+The nominal family-wise level is 5 \%, one-sided. The level measured before the freeze is 4.7 \% cumulated (28/600, Wilson 3.2--6.7 \%). It was measured in a synthetic world with all testable cells at their budget boundary, the least favourable configuration measured, not the worst possible world. Its interval exceeds 5 \%, so the measurement does not show that F3 holds 5 \%. It was measured with B = 200, not 2,000, and is not measured for the comparators. Tested alone, the worst low-stakes WorkBench cell is falsely declared in excess in 27 of 200 replicates. If the family has one or two testable cells, the max-T is almost an uncorrected test, and the output says so. The nominal risk of declaring the fixed list beaten wrongly can reach 7.5 \% (5 \% max-T plus 2.5 \% load interval). The choice of F3 is itself a declared deviation. The pre-set formula-choice rule, applied to the measurement draws only, designated F1, which over-rejected when all draws of the same quantity were counted (6.7 \%, 40/600); the rule was then applied to all draws and retained F3.
+
+A cell is ``demonstrated'' if its one-sided 95 \% Clopper--Pearson upper bound on the effective sample size at ρ = 1 is at most the budget. At the planned volumes we expect few or no such cells. At zero damage, demonstrating 0.5 per 100 writes needs at least 598 independent writes, and errors cluster within tasks. The experiment can therefore refute the budget for B-all, but cannot demonstrate it configuration by configuration. Where no excess of B-all is established, its compliance rests on the construction bound and on the absence of an established excess.
+
+\paragraph{C.5.4 Secondary and stress analyses (no effect on the label)}\label{c.5.4-secondary-and-stress-analyses-no-effect-on-the-label}
+
+These analyses are: safety on the whole reserve; role swap (two-fold cross-validation); the secondary rules; the pre-freeze choice rule reapplied on the confirmation half; and raw verdicts (a verdict that changes between raw and confirmed is marked \emph{fragile}). Stress tests: 10 \% of confirmed errors unseen (miss10); evidence delayed by 10 writes (delay10); all errors of 10 \% of tasks unseen; and validator miss rates e = 0, 2 and 10 \%. We also report the budget per action (reads included), load with trials, and sensitivity to episode order. If plan text and frozen code diverge, the frozen code performs the confirmatory computation, and the text-based computation is published as exploratory.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{C.6 Results}\label{c.6-results}
+
+\paragraph{C.6.1 Data collection and instrument}\label{c.6.1-data-collection-and-instrument}
+
+\textbf{Episodes.} The plan called for 14,266 episodes; all were played, and 13,623 are analysed after exclusions and task removals (\texttt{reussite\_\allowbreak{}taches.\allowbreak{}csv}). Wave 1 stopped as designed at 80 \% of its cap (72.10 \$ cumulative when the stop triggered, against a 72.00 \$ stop; the cap was 90.00 \$, the amount the author approved, within the 90.78 \$ the plan allowed), after 1,185 episodes; the 13,081 not yet played moved to wave 2, which played all of them without any stop (wave reports, \texttt{rapport\_\allowbreak{}vague.\allowbreak{}txt}). No pass-count reduction was needed: 1.25 times the wave-2 estimate fitted in the remaining budget. Episodes stopped at the 100-turn guard were kept (4 in wave 1, 15 in wave 2, 10 of them Opus on banking).
+
+\textbf{Exclusions (Table 3).} 91 episodes were excluded after one relaunch, all for the same cause: an empty agent message that τ-bench records as \texttt{infrastructure\_\allowbreak{}error} (9 in wave 1, 82 in wave 2). 77 of them are Haiku on banking (about 10 \% of Haiku's banking episodes), 10 Sonnet on banking, 2 Opus on banking and 2 Sonnet on airline. No episode was excluded for a WorkBench tool exception, a context overflow, the 35-minute guard or a change of the returned model name; that name never changed (about 209,000 calls in wave 2, none without a name in wave 1). These exclusions remove agent failures and therefore favour delegation; Appendix D counts them as errors (exploratory; established excesses go from 20 to 21).
+
+\textbf{Cost.} API spend was 837.19 \$ (wave 1: 72.13 \$ once the episodes running at the stop had finished; wave 2: 765.07 \$), above the preregistered estimate of 595.73 \$ (517 to 674 \$ at 95 \%). The excess comes from banking, two to three times more expensive per episode than in the pilot. The pilot cost 14.77 \$. Alert review and the audit of alert-free tasks ran on a subscription, not on the API key (API-equivalent cost of the wave-2 alert review: 883.50 \$).
+
+\textbf{Instrument coverage (point 0).} 98.68 \% of writes received a verdict, against a threshold of 95 \% on the whole set; every unverifiable write is an \texttt{unknown} write on banking, whose effect cannot be read. Coverage on banking alone was 93.0 \% in wave 1 and 92.5 \% in wave 2, below 95 \%; it is published per environment and listed as a limitation (Appendix E). In wave 2, the banking agent called 27 tool names missing from the tool table (19 real tools, 8 invented \texttt{\_\allowbreak{}placeholder} names); they stayed at tier 1, without a verdict.
+
+\textbf{Alerts.} 2,761 alerts were reviewed one by one, none left without a decision: 1,991 confirmed as errors and 770 lifted, by reason a (defective task) 75, b 78, c 331, d 283, plus 3 lifted by the author outside any written reason (\texttt{decision.\allowbreak{}csv}). Twelve defective tasks were removed with all their actions (6 retail, 5 banking, 1 airline); the author opposed two candidate removals (WorkBench \texttt{multi\_\allowbreak{}domain:179}, retail \texttt{98}), whose alerts therefore count as confirmed errors.
+
+\textbf{Blind human review.} In each wave the author re-reviewed 15 alerts drawn blind (10 lifted, 5 confirmed): agreement 13 of 15 in wave 1 and 13 of 15 in wave 2, at the threshold of 13; the review was kept both times and no second round was needed. In the four disagreements the author's decision replaced the first review; in the one where the author confirmed a lifted alert, the alert was not high-stakes, so the full re-review of lifted high-stakes alerts was not triggered (\texttt{accord.\allowbreak{}json} of each wave). Wave-2 alerts were first reviewed by fresh Claude Opus 5.5 instances, in 1,428 batches.
+
+\textbf{Audit of alert-free tasks.} 20 alert-free tasks (5 per environment) were read by fresh reviewers: 0 invisible errors in 21 writes read (WorkBench 0/8, airline 0/3, banking 0/4, retail 0/6) and no defective task. With 21 writes, the upper bound stays near 13 \%; this audit is weak evidence.
+
+\textbf{Symmetry between halves (Table 4).} The two halves hold the same number of tasks in each environment, within one task (WorkBench 276/276, airline 20/20, banking 38/39, retail 45/46). Removed tasks fall on both halves (calibration 6, confirmation 6). Writes per stakes level differ more: on airline, the confirmation half has 1,166 high-stakes writes against 542.
+
+\textbf{Task success.} Task success varies far more by environment than by half: from 94.9 \% to 99.3 \% on WorkBench, 81.7 \% to 92.5 \% on airline, 84.0 \% to 92.8 \% on retail, and 18.3 \% to 50.9 \% on banking (per model and half; full table in Appendix C).
+
+\textbf{Public draw.} The verdict freeze was registered on OSF (cusv6) on 14 November 2026 at 08:17:47 UTC. The designated NIST beacon pulse, the first at or after 72 hours later, is pulse 2031457 (17 November 2026, 08:18:00 UTC); its value seeded the task split, and the split file records the hash of the frozen manifest (\texttt{904aa8d3…f88d}). The split was recomputed and checked before the replay (Appendix F).
+
+\paragraph{C.6.2 Preregistered label}\label{c.6.2-preregistered-label}
+
+\textbf{Label R4.} No configuration reached the pre-registered level of evidence required for delegation. Only one of the twelve configurations had enough volume to be judged (Haiku on WorkBench, reversible writes, ECR); its confirmed error rate, 8.6 \% (914 writes, 79 errors; one-sided 95 \% Clopper--Pearson lower bound 4.1 \% at ρ = 1), is established above its 0.76 \% bar. The other eleven configurations have no judgeable type: their volume does not allow a conclusion either way. The lower bound is computed per action type, without correction for the twelve configurations (frozen rule); the gap with the bar, more than fivefold, makes chance an unlikely explanation, but no multiplicity correction was applied.
+
+The judgeability of that single type is narrow: n\_eff × bar = 0.740 against a threshold of 0.6905 (about ln 2), with \ensuremath{\hat{\rho}} = 0.819; the type would stop being judgeable above \ensuremath{\hat{\rho}} = 0.885, and the label would then become ``insufficient evidence'' (Appendix D, Table X6, exploratory, gives an approximate bootstrap interval; it uses a simpler estimator than the engine's, pooled over types, so its share of draws above 0.885 likely understates the risk). At ρ = 1 the type would not be judgeable (n\_eff = 81.6, product 0.618): the judgeability rests on \ensuremath{\hat{\rho}}, as the plan specifies (5.13, N3).
+
+\textbf{Decision table (Table 2, from \texttt{decision.\allowbreak{}csv}).}
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}
+  >{\raggedright\arraybackslash}p{(\linewidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+point
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+result
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+0. Instrument validity & held: coverage 0.9868 (threshold 0.95); blind review kept in both waves \\
+1. Eliminatory criterion (B-all, established excess by max-T) & held: 180 cells, 51 judged (6 of them non-testable: 5 with fewer than 2 carrying tasks, 1 without bootstrap variation), 108 held but not put to the test, 21 without object; 0 established excesses; 0 cells demonstrated below budget \\
+Code control: withdrawal criterion of decision 5 & held: 0 periods with more than one confirmed error \\
+2. Witnesses & not judged (no delegable configuration). For reference, ``validate everything'' has no cell at risk; the fixed list and the risk-sorted list have an established excess in 9 and 18 of 60 cells \\
+3. Chance at the same pace & not computable (no delegable configuration) \\
+4. Delegable configurations & none; in the only configuration with a judgeable type, its excess is established (R4) \\
+6. Secondary analyses & raw verdicts: R4; whole reserve, point 1: held; role swap: R4; original letter (Q8 A), point 1: held; 0 cell disagreements in each \\
+\end{longtable}
+}
+
+\textbf{``Fragile'' mentions.} 27 cells carry the ``fragile'' mention because they rest on fewer than 30 carrying tasks: five configurations (airline/Haiku, the three retail configurations, banking/Sonnet) and 22 model-change scenarios on airline and retail. The type that carries R4 rests on 134 carrying tasks.
+
+\paragraph{C.6.3 Safety (H1)}\label{c.6.3-safety-h1}
+
+\textbf{What ``held'' means here.} Point 1 is held in the sense of ``not refuted'', with almost no power: no established excess; the test could establish almost nothing (c* = 7.0, so an estimate would have had to lie more than seven standard errors above the budget); no cell demonstrated. H1 can hardly fail through the data. In the replay, every confirmed error at tier 3 is noticed at once, so the bound is deterministic (at most one executed error per N + 1 writes of the type), and the budget can only be exceeded if the actual share s of the type's writes exceeds the expected share q by about 5 \% (plan 1.4). That condition (s/q above 1/0.95) holds for the point estimate in 24 of the 51 judged cells, on WorkBench and banking. Of the two hypotheses, the one the data could really refute is H2, measured by the delegation gap (Section C.6.4).
+
+\textbf{Table 5 (summary; full table with the result tables).} Of the 180 cells (12 configurations and 48 model-change scenarios, × 3 stakes levels), 21 are without object, 108 held but not put to the test, and 51 judged, all at low stakes. All max-T bounds are negative. In the 51 judged cells, the central estimate of extra errors stays at most 0.38 times the budget; a single descriptive upper bound lies above the budget (1.67 times; airline, Sonnet replaced silently by Opus, 2 carrying tasks).
+
+\textbf{Figure 1} (\texttt{article/\allowbreak{}figures/\allowbreak{}fig1\_\allowbreak{}budget.\allowbreak{}pdf}) plots the extra errors per 100 writes against the budget for the 51 judged cells (filled: configurations; hollow: model-change scenarios), by environment and model.
+
+\textbf{Withdrawal criterion.} As a code control, the withdrawal criterion of decision 5 passed in all 100 B-all rows of the main analysis in \texttt{derive.\allowbreak{}csv}: no period had more than one confirmed error (the maximum observed was 0). The delay10 version (detection delayed by ten writes) gives the same result.
+
+\paragraph{C.6.4 Delegation gap (Q2)}\label{c.6.4-delegation-gap-q2}
+
+The delegation gap compares, per configuration and action type, the confirmed error rate on the calibration half with the type's bar. Classes are computed at ρ = 1, conservative under an exchangeable within-task correlation and under the effective-size approximation (non-integer effective size and a beta law); a simulation run on the engine before any data found that this rule returns R4 wrongly at most 2.8 \% of the time at the bar (\texttt{REGLE.\allowbreak{}md}, amendment of 7 November). No multiplicity correction is made over the 40 types. At these volumes the table can only return ``above the bar'' or ``undetermined'': the plan stated in advance (5.13) that no type could be proven below its bar, so the count ``20 above, 0 below'' is partly built in. Only one type is judgeable (judgeability uses n\_eff under \ensuremath{\hat{\rho}}, Section C.6.2), and only that type bears on the label; the other classes are descriptive. Full table: Table 6, with the result tables; Figure 2 (\texttt{article/\allowbreak{}figures/\allowbreak{}fig2\_\allowbreak{}gap.\allowbreak{}pdf}) shows rate/bar with the ρ = 1 interval on a log scale; zero rates are drawn hollow at 0.001, and types with fewer than 5 writes (banking/Haiku ILL, 2 writes; banking/Opus GAR, 3) are marked.
+
+\textbf{Overview.} 40 types have data. 20 are above their bar at ρ = 1, 20 undetermined, none below. Of the 20 undetermined types, 13 have no observed error: on WorkBench, Opus and Sonnet internal messages (MSG, 0 of 58 each) and medium-stakes writes (DUR, 0 of 106 each); on airline, reversible writes (ECR) for Haiku (0 of 67), Opus and Sonnet (0 of 20 each), and medium-stakes writes for Opus and Sonnet (0 of 20 each); on banking, irreversible high-stakes writes (GAR) for all three models (0 of 10, 3 and 6); on retail, Sonnet's reversible writes (0 of 122). Absence of observed errors on so few writes says nothing in favour of delegation.
+
+Rates and their ρ = 1 bounds come first below, then the ratios, level by level. The ratio ``lower bound ÷ bar'' is the proven quantity; ratios of the rate itself to the bar mostly reflect how low the bar is.
+
+\textbf{Low stakes, outside banking.} On WorkBench, reversible writes have an error rate established above the 0.76 \% bar for all three models: Haiku 8.6 \% {[}4.1 ; 15.6{]} (two one-sided 95 \% bounds, a 90 \% interval; 914 writes; lower bound ÷ bar 5.5; the judgeable type), Sonnet 6.1 \% {[}2.4 ; 12.5{]} (181 writes; 3.1) and Opus 5.5 \% {[}2.0 ; 11.7{]} (182 writes; 2.7). Low-stakes types on airline and retail are undetermined: retail reversible writes run at 3.2 \% (Haiku, 632 writes) and 3.8 \% (Opus, 132) against a 2.6 \% bar, with lower bounds at zero.
+
+\textbf{High stakes, outside banking.} On airline, money-moving writes (ARG) have a rate established above the 0.0083 \% bar for the three models: Haiku 13.3 \% {[}0.6 ; 50.7{]} (308 writes; lower bound ÷ bar 70), Sonnet 11.1 \% {[}0.3 ; 47.3{]} (72; 39) and Opus 8.5 \% {[}0.1 ; 44.6{]} (71; 10). For Opus the excess is thin: 6 errors in 9 carrying tasks, lower bound 0.09 \%. On retail, the same type is established above its 0.0088 \% bar for Haiku 9.2 \% {[}2.2 ; 23.6{]} (2,511 writes; 248), Sonnet 6.7 \% {[}1.0 ; 20.5{]} (496; 118) and Opus 6.5 \% {[}1.0 ; 20.5{]} (492; 109). At these bars a single error in 500 writes already gives a rate/bar ratio of about 20, and certifying the type would take 33,956 to 36,009 consecutive verified successes (plan 1.4): the high-stakes ratios are a fact about the budget chosen as much as about the agents. The rates themselves are the informative quantity, but they come from the calibration half: on the confirmation half the same types err 1.2 \% to 7.7 \% (3.8 \% to 8.0 \% on the whole reserve), the two halves differing by up to a factor of five, and the intervals above are wide.
+
+\textbf{Banking, apart.} Banking rates are high: established above the bar for money-moving writes at 53.5 \% (Haiku, 202 writes), 47.5 \% (Opus, 80) and 56.0 \% (Sonnet, 75); for medium-stakes writes at 44.9 \%, 28.5 \% and 41.4 \%; for internal messages at 27.7 \% (Haiku), 8.1 \% (Opus) and 11.3 \% (Sonnet); and for Sonnet's reversible writes at 32.6 \%. They are consistent with task success of 18 \% to 51 \% on this benchmark, but banking is also where attribution to the agent is weakest: coverage 0.925, 19 real tools missing from the tool table, a knowledge base not shown to reviewers (so defective tasks could not be lifted), high stakes carried by the simulated client, and 89 of the 91 excluded episodes. These rates therefore do not separate agent error from setup error. Two banking excesses are marginal: Opus internal messages are established by 0.3 \% (lower bound 1.165 \% against a 1.161 \% bar), and Haiku's ILL type rests on 2 errors in 2 writes.
+
+\textbf{Correlation.} The estimated within-task correlation \ensuremath{\hat{\rho}} (stratified Fleiss--Cuzick) is 0.819 for WorkBench/Haiku, 1.0 for WorkBench Opus and Sonnet, 0.40 on airline, 0.40 to 0.47 on banking and 0.40 to 0.43 on retail; it is the larger of a floor (0.3) and the value pooled over all configurations, unless a configuration with at least 10 errors in at least 5 tasks has a larger value of its own (plan 5.13, N3). Every type established at ρ = 1 stays established under \ensuremath{\hat{\rho}}. One type changes class under \ensuremath{\hat{\rho}}: banking/Opus reversible writes (16.2 \%, 74 writes) would be established above its bar for any ρ ≤ 0.924, against \ensuremath{\hat{\rho}} = 0.431 (21 types above under \ensuremath{\hat{\rho}}).
+
+\textbf{Delegable configurations.} None. The only configuration with a judgeable type, WorkBench/Haiku, has that type established above its bar; the label is R4 (Section C.6.2).
+
+\textbf{Whole reserve (descriptive, not a label).} The preregistered label is computed on the calibration half; pooling both halves can only be descriptive (Table 6 bis: 22 of 41 types above, none below). With roughly twice the volume, three configurations would have had a delegable type, all with zero observed errors: internal messages for Opus and Sonnet on WorkBench (0 errors in 120 writes each) and reversible writes for Sonnet on retail (0 in 258). Elsewhere the pooled rates can differ from the calibration rates by a factor of one to five; for instance, Haiku's reversible writes on retail show 31 errors in 1,286 writes (2.4 \%, below a 2.6 \% bar but not provably so). This pooled view shows where more volume could have changed the picture; it does not change the label, which the preregistration ties to the calibration half.
+
+\textbf{Exploratory, dated 17 November 2026 (not preregistered; Appendix D).} Counting the 91 excluded episodes as errors adds 24 errors on the calibration half, all on banking, and one more established type (21 instead of 20), resting on 5 writes (Table X1). Allowing a share of the confirmed errors to be false alerts, the judgeable WorkBench/Haiku type stays above its bar with up to 63 \% false confirmations, while banking/Opus internal messages would not withstand a single one (Table X2).
+
+\textbf{Exploratory, dated 18 November 2026 (not preregistered; Appendix D, Tables X7 and X8).} A second exploratory pass read every confirmed plot error (\texttt{analytics.\allowbreak{}create\_\allowbreak{}plot}) of the judged type: 56 of its 79 errors are plots, and 48 of them differ from the expected action only by the end date (the agent plots up to 30 November, ``today'', where the benchmark expects 29 November). Across the study, the reviewing instances decided that end-date case both ways (177 such plot alerts lifted, 144 confirmed, all models and both halves). Lifting it throughout leaves 31 errors (3.4 \%, lower bound 0.86 \%), still established, but by two errors (29 are needed); lifting also four plots whose window is shifted by one day would leave 27, not established, and the label would become ``insufficient evidence''. The label R4 therefore depends on how one recurring, arguably acceptable discrepancy is judged. Task success and action correctness also disagree: on WorkBench, 64 \% to 82 \% of episodes with a confirmed action error are successful tasks, and in every environment 47 \% to 77 \% of failed episodes have no confirmed action error (Table X7, exploratory). Failed episodes without a confirmed action error fail through reads, omissions or answers, which the action check does not count; on WorkBench, most errors inside successful tasks are the plot end-date case above, so this gap partly reflects the expected-path convention.
+
+\paragraph{C.6.5 Utility (H2)}\label{c.6.5-utility-h2}
+
+\textbf{Point 2 is not judged.} Under R4 the plan does not judge point 2 (5.14, Q15): the comparison with the witnesses is defined as an equal-weight mean over delegable configurations, and there are none. For the same reason the reduction of validations against ``validate everything'' as a share of the oracle's gain, and the paired differences, are not computable. ``Validate everything'' is not beaten. (The detail of the ``point 2: success'' line in \texttt{decision.\allowbreak{}csv}, ``the three witnesses beaten'', is the wording of the criterion written into the engine's output, not a result.) Figure 3 (\texttt{article/\allowbreak{}figures/\allowbreak{}fig3\_\allowbreak{}load.\allowbreak{}pdf}) is therefore descriptive: per configuration, validation load against extra errors at low stakes for B-all and the three comparators, with no mean over delegable configurations; Table 7 gives the loads with intervals.
+
+\textbf{What the rule did (Table 7, per 100 non-read actions).} B-all asked for 65.5 validations with Haiku on WorkBench, 54.9 with Sonnet and 55.1 with Opus; 84 to 86 on retail; 90 to 94 on banking; 98 to 100 on airline. The reduction on WorkBench comes almost entirely from tier 2 on reversible writes (63 \%, 81 \% and 81 \% of those writes at tier 2): at tier 2 a write is executed, then corrected if the validator sees it, and it never counts as an extra error (plan 5.8). This is consistent with the definitions but must be read with care: tier 2 was granted on a type whose error rate is established above its bar. By an exploratory approximation, about 4.6 to 6.2 errors per 100 such writes were executed and then flagged on WorkBench (Appendix D, Table X5). On retail the reduction comes from tier 3 on reversible writes, granted with 1 to 5 promotions per replay.
+
+\textbf{The witnesses' excesses, as an illustration of the gap.} The fixed list has an established excess (max-T) in one configuration, Haiku on WorkBench (5.5 extra errors per 100 writes, 11 times the budget); risk triage in two, Haiku on WorkBench (5.8, 12 times) and Haiku on banking (10.2, 20 times), all at low stakes. The 9 and 18 cells counted in Table 2 add model-change scenarios that replay the same episodes; they are repetitions, not new evidence. Sonnet and Opus on WorkBench sit at 6.6 and 6.1 times the budget under both witnesses without an established excess (c* = 3.77). The witnesses' excesses are true by construction once the delegation gap is known: B-all almost never grants tier 3 to WorkBench reversible writes at 5.5 \% to 8.6 \% errors (at most 0.2 \% of replays), because it requires N consecutive verified successes of the type (Appendix B), whereas a list without error feedback delegates them. This does not hold for every type above its bar: banking/Opus internal messages reached tier 3 in 4.3 \% of replays (Section C.6.6, guarantee measure). The witnesses' excesses are therefore not a success of B-all. Where both kinds of rule delegate (retail reversible writes), nothing separates them: extra errors 0.31, 0 and 0.70 per 100 for the witnesses against 0.13, 0 and 0.14 for B-all, none established, with slightly fewer validations for the witnesses (83.4, 82.5 and 81.9 against 84.4, 84.1 and 85.8). The witnesses have no tier 2; a fixed list putting reversible writes at tier 2 would, under the same accounting, have no extra errors and fewer validations than B-all (Appendix E).
+
+\paragraph{C.6.6 Model changes}\label{c.6.6-model-changes}
+
+\textbf{Withdrawal criterion and scenarios (Table 8).} Across the 48 model-change scenarios (announced and silent), the withdrawal criterion of decision 5 passed in every scenario × type row, in the main analysis and in the delay10 version. At these levels (medium and high stakes, the scope of decision 5) the pass is empty: no tier-3 period followed any junction (\texttt{derive.\allowbreak{}csv}). At low stakes, autonomy did cross junctions (\texttt{retrait.\allowbreak{}csv}). On retail, Sonnet's reversible writes were at tier 3 at the junction in all 2,000 replays. When Sonnet was silently replaced by Haiku or Opus (3.2 \% and 3.8 \% errors against a 2.6 \% bar; ``became bad'' in the secondary reading only, point estimate above the bar), withdrawal took a median of 61 and 40 writes of the type (95th percentile 226 and 108), with one error let through on average, and autonomy was granted again afterwards in 85 \% to 100 \% of replays. With an announced change, the reset withdrew autonomy at once. In the primary reading (interval entirely above the bar), no type that became bad held autonomy. The scenario cells of Table 5 (144 of the 180) were judged only at low stakes: 10 on WorkBench, 12 on banking, 10 on airline and 12 on retail; the 22 on airline and retail are ``fragile'' (fewer than 30 carrying tasks); none has an established excess.
+
+\textbf{Guarantee measure (no threshold; plan 5.12).} Types classed above their bar on the calibration half still reached tier 3 in some replays (\texttt{garantie.\allowbreak{}csv}): banking/Opus internal messages (8.1 \% errors) in 4.3 \% of replays as a constant configuration and in up to 11.8 \% after a silent change from Sonnet; banking/Sonnet internal messages in 8.3 \% of replays after a silent change from Opus; banking/Haiku internal messages in at most 0.4 \%; WorkBench reversible writes in at most 0.2 \%.
+
+\textbf{Trials.} Trials were opened most often on banking and retail with Haiku (168 and 106 per replay on average) and rarely passed: on banking, 0.2 to 0.4 passed per replay for 3.0 to 9.4 failed; on retail, 2.0 to 3.8 passed for 4.8 to 39.0 failed; on airline, 0.5 to 3.6 passed for 2.1 to 9.2 failed. On WorkBench only Haiku opened trials (2 per replay, 0.5 passed). Trials cost 8 to 127 validations per replay.
+
+\paragraph{C.6.7 Random delegation and secondary analyses}\label{c.6.7-random-delegation-and-secondary-analyses}
+
+\textbf{Chance at the same pace (point 3).} Not computable: it compares the rule with a random delegation of the same volume in delegable configurations, and there are none. It has no effect on the label.
+
+\textbf{Secondary rules.} B-regular, A½ and A¼ had no established excess (0 failures; 78, 10 and 13 judged cells against 51 for B-all); their worst upper bounds reached 2.21, 0.39 and 0.43 times the budget, against 1.67 for B-all. The choice rule, reapplied descriptively on the confirmation half, retains no rule: its tie-breaker is the mean load over delegable configurations, which cannot be computed.
+
+\textbf{Whole reserve, role swap, raw verdicts.} Point 1 on the whole reserve is held; the role swap gives R4 (a configuration would count as delegable if it were so in either fold), and raw verdicts give R4; no cell disagrees with the main analysis in any of the three. These are not three independent confirmations: under raw verdicts, WorkBench/Opus reversible writes become judgeable at 0.6930 against 0.6905, a margin of 0.4 \%, so all three analyses sit at the edge of the same judgeability threshold.
+
+\textbf{Stress tests (Table 9; plan 5.11; no effect on the label).} The preregistered stress-test alert fired in all seven modes (e = 0, 2 \% and 10 \%, raw verdicts, miss10, delay10, grouped misses). In no mode did B-all have an established budget excess (0 failures), but its worst upper bound reached 1.65 to 1.68 times the budget (2.34 under delay10), against 0.23 to 0.65 for A½ and 0.43 to 1.06 for A¼ (\texttt{resistance.\allowbreak{}csv}, mode-summary rows). The alert compares these worst upper bounds, so it is driven by the most uncertain cell rather than by an observed excess: a model-change scenario in airline at low stakes (Sonnet then Opus, silent change), carried by only 2 tasks, whose point estimate (0.19 extra errors per 100 writes) is below the 0.5 budget but whose interval is wide. We report the alert as a sign of fragility under thin data, not as evidence that B-all exceeds its budget.
+
+\textbf{Other secondary outputs (no effect on the label).} ``Approve everything'' lets through up to 10.2 extra errors per 100 writes at low stakes and up to 5.8 at high stakes, with a load of 0 to 34 validations per 100 non-read actions; ``autonomy after three successes'' up to 4.6 and 2.0, with a load of 11 to 72; the retrospective oracle has no extra errors by construction, with a load of 45 to 97. B-all's load including trials is 55 to 103 (against 55 to 100 without). Replaying the episodes by pass or in their real order instead of shuffled gives no established excess for B-all (central estimates at most 0.28 times the budget). All in \texttt{budget.\allowbreak{}csv} and \texttt{charges.\allowbreak{}csv}.
+
+\textbf{Budget per action, reads included (original wording of the rule, Q8 A).} Point 1 is held under this wording too; it has no effect on the label.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}

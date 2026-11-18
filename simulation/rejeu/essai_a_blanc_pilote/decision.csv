@@ -1,0 +1,24 @@
+# AVERTISSEMENT : essai à blanc du rejeu final sur les parties de développement du pilote, partage fictif tiré d'une valeur de balise de test, graine de développement. Ces chiffres n'ont AUCUNE valeur de preuve (PLAN_EXPERIENCE.md, 5.16, point 6).
+element,valeur,detail
+étiquette finale,R5,étiquette de l'analyse principale
+point 0 : validité de l'instrument,non tenu,couverture 1.0000 (seuil 0.95) ; vagues : pilote-2 : non relue à l'aveugle (aucun bilan d'accord)
+"point 1 : éliminatoire (B-tout, dépassement établi par max-T, Q13)",tenu,"180 cellules : 0 jugées, dont 0 non testables (hors du max-T, 5.14), 90 tenues non mises à l'épreuve, 90 sans objet ; dépassements établis : 0 ; démontrées : 0 ; garantie hors hypothèse : 0"
+contrôle du code : critère de retrait de la décision 5 (scénarios),tenu,0 période(s) à plus d'une erreur constatée
+point 2 : témoin tout_valider,non battu,"dépassement établi (max-T) : 0 sur 0 cellules (0 suites distinctes), dont 0 non testable(s), c* = nan ; différence de charge moyenne nan [nan ; nan] ; seconde méthode [nan ; nan]"
+point 2 : témoin liste_fixe,non battu,"dépassement établi (max-T) : 0 sur 45 cellules (27 suites distinctes), dont 45 non testable(s), c* = nan ; différence de charge moyenne nan [nan ; nan] ; seconde méthode [nan ; nan]"
+point 2 : témoin tri_risque,non battu,"dépassement établi (max-T) : 0 sur 45 cellules (27 suites distinctes), dont 45 non testable(s), c* = nan ; différence de charge moyenne nan [nan ; nan] ; seconde méthode [nan ; nan]"
+"point 2 : réussite (Q15 : « tout faire valider », puis les deux autres témoins)","non jugé (aucune configuration délégable, point 4)","les trois témoins battus (dépassement établi, ou charge moyenne inférieure)"
+point 3 : hasard au même rythme (sans effet sur l'étiquette),non calculable (aucune configuration délégable),
+point 4 : configurations délégables,aucune,
+point 4 : dépassement établi dans chaque configuration jugeable (R4),non : aucun type jugeable,
+"point 6 : étiquette, verdicts bruts",R5,sans effet sur le verdict
+"point 6 : étiquette, toute la réserve (point 1)",tenu,sans effet sur le verdict
+"point 6 : étiquette, échange des rôles",R5,sans effet sur le verdict
+"point 6 : étiquette, lettre d'origine (Q8 A), point 1",tenu,sans effet sur le verdict
+"point 6 : désaccords de cellules, verdicts bruts",0,
+"point 6 : désaccords de cellules, toute la réserve",0,
+"point 6 : désaccords de cellules, échange des rôles",0,
+alerte des tests de résistance (5.11),non,
+"instrument : alertes (5.12, point 11)",7,confirmées 7 ; levées 0 () ; décisions obsolètes 1 ; sans décision 0
+instrument : couverture (part d'écritures vérifiables ; ce n'est pas d),1.0,hors effet illisible : 1.0
+instrument : tâches retirées (motif a et liste),0,

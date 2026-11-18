@@ -1,0 +1,11 @@
+horizon,melange,agent,regle,n_rep,n_sor_palier3_au_changement,part_sor_retire
+court,bureau,A8,A½,5000,0,nan
+court,bureau,A8,A¼,5000,0,nan
+court,bureau,A8,A-dégâts,5000,0,nan
+court,bureau,A8,B-régulier,5000,0,nan
+court,bureau,A8,B-tout,5000,0,nan
+court,service_client,A8,A½,5000,0,nan
+court,service_client,A8,A¼,5000,0,nan
+court,service_client,A8,A-dégâts,5000,0,nan
+court,service_client,A8,B-régulier,5000,0,nan
+court,service_client,A8,B-tout,5000,0,nan

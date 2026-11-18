@@ -1,0 +1,41 @@
+{
+ "objet": "scénarios presque nuls (5.16, point 9)",
+ "graine": 2026110641,
+ "G": 20,
+ "ks": [
+  1,
+  2,
+  3,
+  4,
+  5
+ ],
+ "mu": 0.5,
+ "rhos": [
+  0.0,
+  0.1,
+  0.3,
+  0.5,
+  0.7,
+  0.9
+ ],
+ "tailles": [
+  1,
+  2,
+  3,
+  4,
+  6,
+  8,
+  12,
+  16,
+  24,
+  32
+ ],
+ "n_jeux": 2000,
+ "B": 2000,
+ "empreinte_code": {
+  "controle_presque_nul.py": "3c536bf7fb81fba05bc6b2ef8a721845c77cee2706e73731fb0958333245deb8",
+  "couverture.py": "5bef357f67a38c92ec7239f8db34b750686e806c0b32ae1e8f0b9dfd252d04cb",
+  "intervalles.py": "96a224592969cf9c10baa4f84554de35e277cc076865351bc57351ae1eb5a9a4"
+ },
+ "duree_s": 4.0
+}

@@ -1,0 +1,80 @@
+{
+ "calibration": {
+  "WorkBench:analytics": [],
+  "WorkBench:calendar": [
+   "calendar:10"
+  ],
+  "WorkBench:customer_relationship_manager": [
+   "customer_relationship_manager:25"
+  ],
+  "WorkBench:email": [
+   "email:0"
+  ],
+  "WorkBench:multi_domain": [],
+  "WorkBench:project_management": [
+   "project_management:11"
+  ],
+  "aviation": [
+   "13",
+   "21",
+   "32",
+   "41",
+   "5"
+  ],
+  "banque": [
+   "task_016",
+   "task_017",
+   "task_018",
+   "task_020",
+   "task_024"
+  ],
+  "commerce": [
+   "102",
+   "12",
+   "15",
+   "27",
+   "29"
+  ]
+ },
+ "confirmation": {
+  "WorkBench:analytics": [
+   "analytics:10"
+  ],
+  "WorkBench:calendar": [
+   "calendar:105"
+  ],
+  "WorkBench:customer_relationship_manager": [
+   "customer_relationship_manager:15"
+  ],
+  "WorkBench:email": [
+   "email:13"
+  ],
+  "WorkBench:multi_domain": [
+   "multi_domain:10"
+  ],
+  "WorkBench:project_management": [
+   "project_management:13"
+  ],
+  "aviation": [
+   "11",
+   "23",
+   "31",
+   "39",
+   "46"
+  ],
+  "banque": [
+   "task_003",
+   "task_006",
+   "task_019",
+   "task_034",
+   "task_035"
+  ],
+  "commerce": [
+   "0",
+   "17",
+   "24",
+   "25",
+   "3"
+  ]
+ }
+}

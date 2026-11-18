@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table X6. Uncertainty on $\hat\rho$ (Exploratory, dated 17 November 2026; \texttt{G\_intervalle\_rho.csv})}
+\label{tab:exp_table_x6}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llllll}
+\toprule
+environment & model & tasks & $\hat\rho$ (reconstructed) & 95 \% interval & share of draws above 0.885 \\
+\midrule
+WorkBench & haiku-5-5 & 225 & 0.8 & [0.66 ; 0.924] & 9.6 \% \\
+WorkBench & opus-5-5 & 209 & 1.0 & [1.0 ; 1.0] & 100.0 \% \\
+WorkBench & sonnet-5-5 & 209 & 1.0 & [1.0 ; 1.0] & 100.0 \% \\
+airline & haiku-5-5 & 10 & 0.151 & [0.019 ; 0.321] & 0.0 \% \\
+airline & opus-5-5 & 10 & 0.231 & [0.007 ; 0.31] & 0.0 \% \\
+airline & sonnet-5-5 & 9 & 0.384 & [0.0 ; 0.516] & 0.0 \% \\
+banking & haiku-5-5 & 30 & 0.227 & [0.135 ; 0.303] & 0.0 \% \\
+banking & opus-5-5 & 29 & 0.294 & [0.19 ; 0.354] & 0.0 \% \\
+banking & sonnet-5-5 & 30 & 0.279 & [0.135 ; 0.41] & 0.0 \% \\
+retail & haiku-5-5 & 39 & 0.342 & [0.134 ; 0.463] & 0.0 \% \\
+retail & opus-5-5 & 37 & 0.407 & [0.028 ; 0.544] & 0.0 \% \\
+retail & sonnet-5-5 & 38 & 0.443 & [0.021 ; 0.678] & 0.0 \% \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny Task-level bootstrap, 2,000 draws, seed 20261117, estimator \texttt{classes.rho\_anova} pooled over types, not the engine's stratified Fleiss--Cuzick estimator, so the share of draws above 0.885 likely understates the risk. The reconstruction of clusters is approximate (0.800 here against 0.819 in the engine); the engine's value is the one of record. The single type that carries R4 stays judgeable while $\hat\rho$ $\leq$ 0.885.}
+\end{table}

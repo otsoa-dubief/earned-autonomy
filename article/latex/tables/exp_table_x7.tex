@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table X7. Task success and confirmed action errors, both directions (Exploratory, dated 18 November 2026; \texttt{exploratoire\_2/I\_success\_and\_action\_errors.csv})}
+\label{tab:exp_table_x7}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+environment & model & episodes & with $\geq$1 confirmed error & of which successful tasks & failed episodes & of which without confirmed error \\
+\midrule
+WorkBench & haiku-5-5 & 2760 & 155 & 63.9 \% & 112 & 50.0 \% \\
+WorkBench & opus-5-5 & 552 & 19 & 78.9 \% & 10 & 60.0 \% \\
+WorkBench & sonnet-5-5 & 552 & 22 & 81.8 \% & 10 & 60.0 \% \\
+airline & haiku-5-5 & 1950 & 77 & 10.4 \% & 294 & 76.5 \% \\
+airline & opus-5-5 & 390 & 18 & 5.6 \% & 34 & 50.0 \% \\
+airline & sonnet-5-5 & 388 & 16 & 12.5 \% & 37 & 62.2 \% \\
+banking & haiku-5-5 & 657 & 280 & 0.4 \% & 527 & 47.1 \% \\
+banking & opus-5-5 & 214 & 59 & 0.0 \% & 116 & 49.1 \% \\
+banking & sonnet-5-5 & 210 & 63 & 1.6 \% & 136 & 54.4 \% \\
+retail & haiku-5-5 & 4250 & 316 & 14.2 \% & 575 & 52.9 \% \\
+retail & opus-5-5 & 850 & 41 & 0.0 \% & 92 & 55.4 \% \\
+retail & sonnet-5-5 & 850 & 38 & 0.0 \% & 87 & 56.3 \% \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny Whole reserve, kept episodes, removed tasks excluded. Task-level and action-level scores disagree in both directions.}
+\end{table}

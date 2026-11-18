@@ -1,0 +1,148 @@
+[   176 s] 1/120 rep=7 confirmée
+[   181 s] 2/120 rep=0 confirmée
+[   183 s] 3/120 rep=11 confirmée
+[   184 s] 4/120 rep=10 confirmée
+[   185 s] 5/120 rep=6 confirmée
+[   185 s] 6/120 rep=4 confirmée
+[   186 s] 7/120 rep=1 confirmée
+[   187 s] 8/120 rep=3 confirmée
+[   188 s] 9/120 rep=8 confirmée
+[   189 s] 10/120 rep=2 confirmée
+[   190 s] 11/120 rep=5 confirmée
+[   192 s] 12/120 rep=9 confirmée
+[   353 s] 13/120 rep=14 confirmée
+[   359 s] 14/120 rep=16 confirmée
+[   361 s] 15/120 rep=15 confirmée
+[   361 s] 16/120 rep=23 confirmée
+[   362 s] 17/120 rep=12 confirmée
+[   362 s] 18/120 rep=13 confirmée
+[   364 s] 19/120 rep=17 confirmée
+[   367 s] 20/120 rep=18 confirmée
+[   374 s] 21/120 rep=22 confirmée
+[   375 s] 22/120 rep=20 confirmée
+[   377 s] 23/120 rep=21 confirmée
+[   380 s] 24/120 rep=19 confirmée
+[   528 s] 25/120 rep=27 confirmée
+[   529 s] 26/120 rep=24 confirmée
+[   533 s] 27/120 rep=26 confirmée
+[   534 s] 28/120 rep=29 confirmée
+[   534 s] 29/120 rep=28 confirmée
+[   543 s] 30/120 rep=34 confirmée
+[   545 s] 31/120 rep=30 confirmée
+[   548 s] 32/120 rep=33 confirmée
+[   548 s] 33/120 rep=31 confirmée
+[   551 s] 34/120 rep=25 confirmée
+[   554 s] 35/120 rep=35 confirmée
+[   560 s] 36/120 rep=32 confirmée
+[   701 s] 37/120 rep=37 confirmée
+[   702 s] 38/120 rep=36 confirmée
+[   709 s] 39/120 rep=40 confirmée
+[   713 s] 40/120 rep=39 confirmée
+[   720 s] 41/120 rep=42 confirmée
+[   721 s] 42/120 rep=41 confirmée
+[   725 s] 43/120 rep=43 confirmée
+[   727 s] 44/120 rep=38 confirmée
+[   732 s] 45/120 rep=46 confirmée
+[   732 s] 46/120 rep=44 confirmée
+[   739 s] 47/120 rep=45 confirmée
+[   739 s] 48/120 rep=47 confirmée
+[   870 s] 49/120 rep=48 confirmée
+[   887 s] 50/120 rep=49 confirmée
+[   887 s] 51/120 rep=50 confirmée
+[   896 s] 52/120 rep=53 confirmée
+[   900 s] 53/120 rep=56 confirmée
+[   901 s] 54/120 rep=51 confirmée
+[   906 s] 55/120 rep=55 confirmée
+[   910 s] 56/120 rep=52 confirmée
+[   911 s] 57/120 rep=54 confirmée
+[   916 s] 58/120 rep=57 confirmée
+[   924 s] 59/120 rep=58 confirmée
+[   928 s] 60/120 rep=59 confirmée
+[  1048 s] 61/120 rep=60 confirmée
+[  1063 s] 62/120 rep=62 confirmée
+[  1070 s] 63/120 rep=61 confirmée
+[  1071 s] 64/120 rep=66 confirmée
+[  1073 s] 65/120 rep=63 confirmée
+[  1079 s] 66/120 rep=65 confirmée
+[  1085 s] 67/120 rep=68 confirmée
+[  1085 s] 68/120 rep=67 confirmée
+[  1090 s] 69/120 rep=64 confirmée
+[  1093 s] 70/120 rep=69 confirmée
+[  1094 s] 71/120 rep=70 confirmée
+[  1111 s] 72/120 rep=71 confirmée
+[  1236 s] 73/120 rep=72 confirmée
+[  1240 s] 74/120 rep=74 confirmée
+[  1243 s] 75/120 rep=73 confirmée
+[  1247 s] 76/120 rep=76 confirmée
+[  1254 s] 77/120 rep=77 confirmée
+[  1255 s] 78/120 rep=75 confirmée
+[  1261 s] 79/120 rep=80 confirmée
+[  1266 s] 80/120 rep=78 confirmée
+[  1269 s] 81/120 rep=79 confirmée
+[  1274 s] 82/120 rep=81 confirmée
+[  1277 s] 83/120 rep=82 confirmée
+[  1301 s] 84/120 rep=83 confirmée
+[  1418 s] 85/120 rep=85 confirmée
+[  1422 s] 86/120 rep=86 confirmée
+[  1427 s] 87/120 rep=84 confirmée
+[  1428 s] 88/120 rep=88 confirmée
+[  1432 s] 89/120 rep=90 confirmée
+[  1433 s] 90/120 rep=89 confirmée
+[  1439 s] 91/120 rep=94 confirmée
+[  1440 s] 92/120 rep=87 confirmée
+[  1444 s] 93/120 rep=92 confirmée
+[  1448 s] 94/120 rep=91 confirmée
+[  1456 s] 95/120 rep=93 confirmée
+[  1487 s] 96/120 rep=95 confirmée
+[  1594 s] 97/120 rep=102 confirmée
+[  1596 s] 98/120 rep=99 confirmée
+[  1601 s] 99/120 rep=96 confirmée
+[  1602 s] 100/120 rep=98 confirmée
+[  1603 s] 101/120 rep=97 confirmée
+[  1607 s] 102/120 rep=100 confirmée
+[  1620 s] 103/120 rep=104 confirmée
+[  1620 s] 104/120 rep=103 confirmée
+[  1623 s] 105/120 rep=101 confirmée
+[  1633 s] 106/120 rep=106 confirmée
+[  1638 s] 107/120 rep=105 confirmée
+[  1672 s] 108/120 rep=107 confirmée
+[  1772 s] 109/120 rep=108 confirmée
+[  1778 s] 110/120 rep=110 confirmée
+[  1781 s] 111/120 rep=109 confirmée
+[  1787 s] 112/120 rep=111 confirmée
+[  1788 s] 113/120 rep=114 confirmée
+[  1789 s] 114/120 rep=112 confirmée
+[  1790 s] 115/120 rep=116 confirmée
+[  1794 s] 116/120 rep=115 confirmée
+[  1798 s] 117/120 rep=113 confirmée
+[  1802 s] 118/120 rep=117 confirmée
+[  1815 s] 119/120 rep=118 confirmée
+[  1828 s] 120/120 rep=119 confirmée
+# Monde B-seuil, seconde mesure (sorties de `seconde_mesure.py`)
+
+Dérive 1.4, graine 2026110703, 120 répétitions sur 120.
+
+Étiquettes : confirmée 120.
+
+R1 (point 1 non tenu) : 0 sur 120 (0.0 %, IC 95 % de Wilson 0.0–3.1 %).
+
+| Cellule jugée (commerce, enjeu faible) | répétitions | valeur centrale ÷ budget (moyenne) | ± 1,96 erreur type | dépassement établi |
+|---|---|---|---|---|
+| scenario/commerce/claude-sonnet-5-5/claude-haiku-5-5/silencieux | 120 | 1.006 | 0.010 | 0 |
+| scenario/commerce/claude-opus-5-5/claude-haiku-5-5/silencieux | 120 | 1.005 | 0.010 | 0 |
+| scenario/commerce/claude-haiku-5-5/claude-opus-5-5/silencieux | 120 | 1.005 | 0.010 | 0 |
+| scenario/commerce/claude-haiku-5-5/claude-sonnet-5-5/silencieux | 120 | 1.005 | 0.010 | 0 |
+| config/commerce/claude-haiku-5-5 | 120 | 1.003 | 0.010 | 0 |
+| scenario/commerce/claude-sonnet-5-5/claude-haiku-5-5/annoncé | 120 | 0.995 | 0.010 | 0 |
+| scenario/commerce/claude-opus-5-5/claude-haiku-5-5/annoncé | 120 | 0.995 | 0.010 | 0 |
+| scenario/commerce/claude-haiku-5-5/claude-opus-5-5/annoncé | 120 | 0.994 | 0.010 | 0 |
+| scenario/commerce/claude-haiku-5-5/claude-sonnet-5-5/annoncé | 120 | 0.994 | 0.010 | 0 |
+| scenario/commerce/claude-opus-5-5/claude-sonnet-5-5/silencieux | 120 | 0.988 | 0.011 | 0 |
+| scenario/commerce/claude-sonnet-5-5/claude-opus-5-5/silencieux | 120 | 0.986 | 0.011 | 0 |
+| config/commerce/claude-opus-5-5 | 120 | 0.957 | 0.011 | 0 |
+| scenario/commerce/claude-opus-5-5/claude-sonnet-5-5/annoncé | 120 | 0.957 | 0.011 | 0 |
+| config/commerce/claude-sonnet-5-5 | 120 | 0.956 | 0.013 | 0 |
+| scenario/commerce/claude-sonnet-5-5/claude-opus-5-5/annoncé | 120 | 0.955 | 0.011 | 0 |
+
+Plus haute : scenario/commerce/claude-sonnet-5-5/claude-haiku-5-5/silencieux, 1.006 ± 0.010. Lecture fixée d'avance (0.98 à 1.02) : au seuil : la part de R1 se lit comme le niveau du max-T au seuil (attendu au plus 5 %).
+code de sortie 0

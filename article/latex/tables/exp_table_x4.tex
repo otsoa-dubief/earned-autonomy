@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table X4. Refused writes among confirmed errors (Exploratory, dated 17 November 2026; \texttt{E\_refusees\_parmi\_erreurs.csv})}
+\label{tab:exp_table_x4}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+environment & model & type & level & confirmed errors & of which refused & share \\
+\midrule
+WorkBench & haiku-5-5 & DUR & medium & 2 & 0 & 0.0 \% \\
+WorkBench & haiku-5-5 & ECR & low & 79 & 5 & 6.3 \% \\
+WorkBench & haiku-5-5 & MSG & low & 2 & 0 & 0.0 \% \\
+WorkBench & opus-5-5 & ECR & low & 10 & 0 & 0.0 \% \\
+WorkBench & sonnet-5-5 & ECR & low & 11 & 0 & 0.0 \% \\
+airline & haiku-5-5 & ARG & high & 41 & 7 & 17.1 \% \\
+airline & haiku-5-5 & DUR & medium & 1 & 0 & 0.0 \% \\
+airline & opus-5-5 & ARG & high & 6 & 0 & 0.0 \% \\
+airline & sonnet-5-5 & ARG & high & 8 & 0 & 0.0 \% \\
+banking & haiku-5-5 & ARG & high & 108 & 2 & 1.9 \% \\
+banking & haiku-5-5 & DUR & medium & 141 & 41 & 29.1 \% \\
+banking & haiku-5-5 & ECR & low & 3 & 0 & 0.0 \% \\
+banking & haiku-5-5 & ILL & high & 2 & 2 & 100.0 \% \\
+banking & haiku-5-5 & MSG & low & 99 & 2 & 2.0 \% \\
+banking & opus-5-5 & ARG & high & 38 & 0 & 0.0 \% \\
+banking & opus-5-5 & DUR & medium & 35 & 3 & 8.6 \% \\
+banking & opus-5-5 & ECR & low & 12 & 0 & 0.0 \% \\
+banking & opus-5-5 & MSG & low & 10 & 0 & 0.0 \% \\
+banking & sonnet-5-5 & ARG & high & 42 & 0 & 0.0 \% \\
+banking & sonnet-5-5 & DUR & medium & 53 & 14 & 26.4 \% \\
+banking & sonnet-5-5 & ECR & low & 29 & 0 & 0.0 \% \\
+banking & sonnet-5-5 & MSG & low & 14 & 0 & 0.0 \% \\
+retail & haiku-5-5 & ARG & high & 231 & 28 & 12.1 \% \\
+retail & haiku-5-5 & ECR & low & 20 & 0 & 0.0 \% \\
+retail & opus-5-5 & ARG & high & 32 & 0 & 0.0 \% \\
+retail & opus-5-5 & ECR & low & 5 & 0 & 0.0 \% \\
+retail & sonnet-5-5 & ARG & high & 33 & 0 & 0.0 \% \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny 104 of 1067 confirmed errors (9.7 \%) are writes refused by the tool, which the frozen rule counts as errors without damage.}
+\end{table}

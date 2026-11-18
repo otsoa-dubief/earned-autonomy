@@ -1,0 +1,5 @@
+melange,agent,n_rep,n_sor_palier3_a_1500,part_sor_retire,part_sor_retire_lo,part_sor_retire_hi,part_jamais_revenu,part_jamais_revenu_lo,part_jamais_revenu_hi,delai_retour_med,delai_retour_med_lo,delai_retour_med_hi
+bureau,A2,5000,421,0,8.67362e-19,0.0090421,,,,,,
+bureau,A8,5000,414,1,0.990806,1,0.335749,0.291953,0.382565,217,206,222
+service_client,A2,5000,303,0,0,0.0125194,,,,,,
+service_client,A8,5000,290,1,0.986927,1,0.437931,0.38201,0.495475,169,159.975,178

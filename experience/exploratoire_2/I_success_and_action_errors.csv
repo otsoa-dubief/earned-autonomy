@@ -1,0 +1,14 @@
+# EXPLORATORY: analysis after the verdict, no effect on the pre-registered label (R4). Written by outils/analyses_exploratoires_2.py on 18/11/2026.
+environment,model,episodes,successful,with_confirmed_error,with_error_but_successful,share_successful_among_with_error,failed,failed_without_confirmed_error,share_without_error_among_failed,share_errors_in_successful_tasks
+WorkBench,claude-haiku-5-5,2760,2648,155,99,0.639,112,56,0.5,0.562
+WorkBench,claude-opus-5-5,552,542,19,15,0.789,10,6,0.6,0.727
+WorkBench,claude-sonnet-5-5,552,542,22,18,0.818,10,6,0.6,0.792
+aviation,claude-haiku-5-5,1950,1656,77,8,0.104,294,225,0.765,0.1
+aviation,claude-opus-5-5,390,356,18,1,0.056,34,17,0.5,0.048
+aviation,claude-sonnet-5-5,388,351,16,2,0.125,37,23,0.622,0.125
+banque,claude-haiku-5-5,657,130,280,1,0.004,527,248,0.471,0.002
+banque,claude-opus-5-5,214,98,59,0,0.0,116,57,0.491,0.0
+banque,claude-sonnet-5-5,210,74,63,1,0.016,136,74,0.544,0.011
+commerce,claude-haiku-5-5,4250,3675,316,45,0.142,575,304,0.529,0.122
+commerce,claude-opus-5-5,850,758,41,0,0.0,92,51,0.554,0.0
+commerce,claude-sonnet-5-5,850,763,38,0,0.0,87,49,0.563,0.0

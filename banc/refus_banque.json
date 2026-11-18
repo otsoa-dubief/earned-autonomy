@@ -1,0 +1,1706 @@
+{
+ "source": {
+  "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+  "commit": "033bf08",
+  "genere_par": "banc/verdicts.py extraire_refus_banque (lecture AST, aucun import du banc)"
+ },
+ "outils": {
+  "activate_debit_card_8291": [
+   {
+    "modele": "Error: PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Missing required parameters. Required: card_id, last_4_digits, expiration_date, cvv, pin.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 251,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 259,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: CVV must be exactly 3 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 263,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Last 4 digits must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 267,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 271,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Wrong activation tool. This card has issue_reason='{}'. Please use {} instead of {}.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 290,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' is already active.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 297,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' cannot be activated. Current status: {}. Only PENDING cards can be activated.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 300,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Card verification failed. The last 4 digits do not match our records.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 307,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: The linked checking account '{}' is no longer open. Card cannot be activated.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 317,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   }
+  ],
+  "activate_debit_card_8292": [
+   {
+    "modele": "Error: PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Missing required parameters. Required: card_id, last_4_digits, expiration_date, cvv, pin.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 251,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 259,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: CVV must be exactly 3 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 263,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Last 4 digits must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 267,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 271,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Wrong activation tool. This card has issue_reason='{}'. Please use {} instead of {}.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 290,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' is already active.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 297,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' cannot be activated. Current status: {}. Only PENDING cards can be activated.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 300,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Card verification failed. The last 4 digits do not match our records.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 307,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: The linked checking account '{}' is no longer open. Card cannot be activated.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 317,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   }
+  ],
+  "activate_debit_card_8293": [
+   {
+    "modele": "Error: PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Missing required parameters. Required: card_id, last_4_digits, expiration_date, cvv, pin.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 251,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 259,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: CVV must be exactly 3 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 263,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Last 4 digits must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 267,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 271,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Wrong activation tool. This card has issue_reason='{}'. Please use {} instead of {}.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 290,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' is already active.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 297,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' cannot be activated. Current status: {}. Only PENDING cards can be activated.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 300,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Card verification failed. The last 4 digits do not match our records.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 307,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: The linked checking account '{}' is no longer open. Card cannot be activated.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 317,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   }
+  ],
+  "apply_checking_account_credit_5829": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2747,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid credit amount. Must be a number.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2753,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit amount must be positive.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2756,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid credit_type. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2760,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2763,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' is not a checking account. Credits can only be applied to checking accounts.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2770,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' is not active.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2774,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "apply_credit_card_account_flag_6147": [
+   {
+    "modele": "Error: Missing required parameters (credit_card_account_id, user_id, flag_type, expiration_date, reason).",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1781,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid flag_type. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1790,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid reason. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1800,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1810,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Failed to apply account flag. Flag ID '{}' may already exist.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1835,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ],
+  "apply_savings_account_credit_6831": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2832,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid credit amount. Must be a number.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2838,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit amount must be positive.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2841,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid credit_type. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2845,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2848,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' is not a savings account. This tool only applies to savings accounts.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2855,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' is not active.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2859,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "apply_statement_credit_8472": [
+   {
+    "modele": "Error: Missing required parameters (user_id, credit_card_account_id, amount, reason).",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1686,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit amount must be positive.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1689,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid reason. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1704,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1713,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Failed to apply statement credit. Transaction ID '{}' may already exist.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1740,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ],
+  "approve_credit_limit_increase_5847": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2190,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2194,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' does not belong to user '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2198,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit limit increase request cannot be approved at this time.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2249,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "call_discoverable_agent_tool": [
+   {
+    "modele": "Error: Unknown agent tool '{}'. This tool is not available.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 661,
+    "regle": "avant-modification",
+    "portee": "direct"
+   },
+   {
+    "modele": "Error: Tool '{}' has not been unlocked. You must first use `unlock_discoverable_agent_tool` to unlock this tool before calling it.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 665,
+    "regle": "avant-modification",
+    "portee": "direct"
+   },
+   {
+    "modele": "Error: Invalid JSON in arguments: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 677,
+    "regle": "avant-modification",
+    "portee": "direct"
+   },
+   {
+    "modele": "Error: Invalid arguments: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 684,
+    "regle": "avant-modification",
+    "portee": "direct"
+   }
+  ],
+  "change_debit_card_pin_6285": [
+   {
+    "modele": "Error: PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Missing required parameters. Required: card_id, current_pin, new_pin.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3896,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Current PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3900,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3904,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: New PIN must be different from current PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3908,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3911,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Cannot change PIN. Card status is {}. Only ACTIVE cards can have their PIN changed.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3917,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "change_user_email": [
+   {
+    "modele": "Error: User with ID '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 437,
+    "regle": "echec-ecriture",
+    "portee": "direct"
+   }
+  ],
+  "clear_debit_card_fraud_alert_4892": [
+   {
+    "modele": "Error: Missing required parameter: card_id.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3756,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Missing required parameter: reason.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3759,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid reason '{}'. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3763,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3766,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' does not have an active velocity block.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3773,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' does not have an active fraud alert.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3792,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: BANK_INITIATED_ALERT - This fraud alert was initiated by the bank's fraud detection system and cannot be cleared by customer service agents. Please transfer the customer to the security team using transfer_to_human_agents.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3797,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Unexpected error processing the request.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3816,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "close_bank_account_7392": [
+   {
+    "modele": "Error: Missing required parameter (account_id).",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2549,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2552,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' is already closed.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2557,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account unable to be closed.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2585,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account balance must be $0.00 before closing. Current balance: ${}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2594,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "close_credit_card_account_7834": [
+   {
+    "modele": "Error: Missing required parameters (credit_card_account_id, user_id).",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1867,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1878,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Failed to close credit card account '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1892,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ],
+  "close_debit_card_4721": [
+   {
+    "modele": "Error: Missing required parameters. Required: card_id, reason.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3588,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid reason. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3599,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3603,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' cannot be closed. Current status: {}. Only ACTIVE or PENDING cards can be closed.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3609,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "deny_credit_limit_increase_5848": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2321,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid denial_reason. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2335,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2339,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "file_credit_card_transaction_dispute_4829": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 852,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid card_action. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 857,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid dispute_reason. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 870,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid resolution_requested. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 875,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: partial_refund_amount is required when resolution_requested is 'partial_refund'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 880,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Dispute may have already been filed for this transaction.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 914,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ],
+  "file_debit_card_transaction_dispute_6281": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 999,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: customer_max_liability_amount is required.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1002,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: card_in_possession, contacted_merchant, police_report_filed, and written_statement_provided are required boolean fields.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1010,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid dispute_category. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1025,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid transaction_type. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1040,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid pin_compromised. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1045,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid card_action. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1056,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: disputed_amount must be a positive number.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1060,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Dispute may have already been filed for this transaction.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1109,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ],
+  "freeze_debit_card_3892": [
+   {
+    "modele": "Error: Missing required parameter: card_id.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3662,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3665,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' is already frozen.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3671,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' cannot be frozen. Current status: {}. Only ACTIVE cards can be frozen.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3674,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "log_credit_card_closure_reason_4521": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1592,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid closure_reason. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1604,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "log_verification": [
+   {
+    "modele": "Failed to log verification: Record may already exist.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 524,
+    "regle": "echec-ecriture",
+    "portee": "direct"
+   }
+  ],
+  "open_bank_account_4821": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2392,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid account_type. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2396,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account eligibility requirements not met.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2431,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account eligibility requirements not met.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2440,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account eligibility requirements not met.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2449,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account eligibility requirements not met.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2459,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account eligibility requirements not met.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2471,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Failed to open account: Account ID '{}' may already exist.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2492,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ],
+  "order_debit_card_5739": [
+   {
+    "modele": "Error: delivery_fee must be a number.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3080,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: design_fee must be a number.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3085,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Missing required parameters. Required: account_id, user_id, delivery_option, delivery_fee, card_design, design_fee, shipping_address.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3103,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid delivery_option. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3107,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid card_design. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3112,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3117,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit cards can only be ordered for checking accounts. Account '{}' is a {} account.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3122,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account must be OPEN. Account '{}' has status: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3125,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' does not belong to user '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3128,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account must have a minimum balance of $25. Current balance: ${}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3139,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: There is already a pending debit card order for account '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3147,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' already has an active debit card. Maximum 1 active card per checking account.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3156,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Insufficient funds for fees. Total fees: ${}. Current balance: ${}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3163,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Failed to create debit card order. Order may already exist.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3196,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ],
+  "order_replacement_credit_card_7291": [
+   {
+    "modele": "Error: Missing required parameters (credit_card_account_id, user_id, shipping_address, reason).",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1422,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid reason. Must be one of: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1433,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1443,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Order may have already been placed for this card replacement.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1467,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ],
+  "pay_credit_card_from_checking_9182": [
+   {
+    "modele": "Error: Missing required parameters (user_id, checking_account_id, credit_card_account_id, amount).",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1926,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Payment amount must be a positive number.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1932,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid payment amount. Must be a positive number.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1934,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Checking account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1938,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Checking account '{}' does not belong to user '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1942,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' is not a checking account.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1945,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Insufficient funds in checking account. Available balance: ${}, requested payment: ${}.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1951,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1955,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' does not belong to user '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1959,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Payment amount (${}) exceeds credit card balance (${}). Please specify an amount up to the outstanding balance.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1969,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "request_temporary_debit_card_limit_increase_8374": [
+   {
+    "modele": "Error: Missing required parameter: card_id.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4005,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Missing required parameter: limit_type.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4008,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid limit_type '{}'. Must be 'atm' or 'purchase'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4011,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Missing required parameter: new_limit.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4014,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: new_limit must be an integer, got '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4021,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: new_limit must be an integer, got '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4023,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: new_limit must be a positive amount.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4027,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4031,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' is not active. Current status: {}. Only ACTIVE cards can have limit increases.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4037,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Could not find linked account for debit card '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4042,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: The linked account '{}' is not in good standing. Account status: {}.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4048,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account must be at least 60 days old for a temporary limit increase. Account age: {} days.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4058,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Light Green Account (teen checking) cards have policy-based limits that cannot be modified. The daily ATM withdrawal limit of $150 is fixed by account policy for safety reasons. The customer may request the parent/guardian to withdraw cash from their own account if needed.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4085,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Could not determine the default ATM limit for account type '{}'. Please verify the account type.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4089,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: The card does not have a {} configured. This may be a restricted account type where limits are set by account policy and cannot be modified.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4096,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Requested limit ${} exceeds the maximum allowed temporary increase. Maximum temporary limit is ${} (150% of current ${} limit).",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4101,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Requested limit ${} is not higher than the current limit of ${}.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 4105,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "reset_debit_card_pin_6284": [
+   {
+    "modele": "Error: PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 205,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be sequential (e.g., 1234). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 225,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "PIN cannot be all the same digit (e.g., 1111). Please choose a more secure PIN.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 229,
+    "regle": "validation-partagee",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Missing required parameters. Required: card_id, last_4_digits, new_pin.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3836,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Last 4 digits must be exactly 4 digits.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3840,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: {}",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3844,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3847,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Card verification failed. The last 4 digits do not match our records.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3853,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Cannot reset PIN. Card status is {}. Only ACTIVE cards can have their PIN reset.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3857,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "set_debit_card_recurring_block_7382": [
+   {
+    "modele": "Error: Missing required parameter: card_id",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1158,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1163,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Cannot update recurring block settings for a card with status '{}'. Card must be ACTIVE.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 1168,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "submit_credit_limit_increase_request_7392": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2015,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid requested_increase_amount. Must be a whole number.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2023,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid requested_increase_amount. Must be a whole number of dollars.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2025,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Requested increase amount must be positive.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2029,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2033,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Credit card account '{}' does not belong to user '{}'.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2037,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: A similar request may already exist.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2059,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ],
+  "submit_interest_discrepancy_report_7294": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2929,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: expected_apy, actual_apy, and amount_difference must be numbers.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2937,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2942,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: User '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2947,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "transfer_funds_between_bank_accounts_7291": [
+   {
+    "modele": "Error: Missing required parameters (source_account_id, destination_account_id, amount).",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2678,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Invalid amount '{}'. Must be a number.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2683,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Transfer amount must be positive.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2686,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Source and destination accounts cannot be the same.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2689,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Source account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2692,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Destination account '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2695,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Source account '{}' is not active.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2699,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Destination account '{}' is not active.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2703,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Insufficient funds. Source account balance is ${}, but transfer amount is ${}.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 2709,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "unfreeze_debit_card_3893": [
+   {
+    "modele": "Error: Missing required parameter: card_id.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3708,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3711,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' is already active.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3716,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Debit card '{}' cannot be unfrozen. Current status: {}. Only FROZEN cards can be unfrozen.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3719,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: The linked checking account '{}' is no longer open. Card cannot be unfrozen.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 3726,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   }
+  ],
+  "update_transaction_rewards_3847": [
+   {
+    "modele": "Error: Missing required parameters.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 750,
+    "regle": "avant-modification",
+    "portee": "decouvrable"
+   },
+   {
+    "modele": "Error: Transaction '{}' not found.",
+    "fichier": "src/tau2/domains/banking_knowledge/tools.py",
+    "ligne": 760,
+    "regle": "echec-ecriture",
+    "portee": "decouvrable"
+   }
+  ]
+ }
+}

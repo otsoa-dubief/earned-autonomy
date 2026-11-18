@@ -1,0 +1,24 @@
+[   202 s] 1/12 d=1.56 rep=1 1.038 confirmée
+[   203 s] 2/12 d=1.56 rep=11 0.936 confirmée
+[   208 s] 3/12 d=1.56 rep=7 0.907 confirmée
+[   213 s] 4/12 d=1.56 rep=9 1.036 confirmée
+[   214 s] 5/12 d=1.56 rep=8 1.058 confirmée
+[   219 s] 6/12 d=1.56 rep=10 1.066 confirmée
+[   220 s] 7/12 d=1.56 rep=0 0.878 confirmée
+[   221 s] 8/12 d=1.56 rep=6 1.088 confirmée
+[   222 s] 9/12 d=1.56 rep=4 0.916 confirmée
+[   223 s] 10/12 d=1.56 rep=3 1.079 confirmée
+[   229 s] 11/12 d=1.56 rep=2 1.003 confirmée
+[   229 s] 12/12 d=1.56 rep=5 0.959 confirmée
+# Monde B-seuil : étalonnage (sorties de `etalonnage.py`)
+
+| d | rang | répétitions | valeur centrale ÷ budget (moyenne) | ± 1,96 erreur type | R1 |
+|---|---|---|---|---|---|
+| 1 | 0 | 6 | 0.806 | 0.034 | 0 |
+| 1.56 | 10 | 12 | 0.997 | 0.042 | 0 |
+| 1.75 | 1 | 6 | 1.066 | 0.044 | 3 |
+| 2.5 | 2 | 6 | 1.209 | 0.024 | 6 |
+| 3.25 | 3 | 6 | 1.314 | 0.037 | 6 |
+
+Interpolation linéaire entre d = 1 et d = 1.75 : d* = 1.5602, arrondi 1.56.
+code de sortie 0

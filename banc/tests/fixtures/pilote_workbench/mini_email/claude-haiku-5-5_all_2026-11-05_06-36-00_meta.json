@@ -1,0 +1,21 @@
+{
+  "model_name": "claude-haiku-5-5",
+  "model_id": "claude-haiku-5-5",
+  "provider": "hors-ligne",
+  "base_url": "hors-ligne",
+  "supports_temperature": false,
+  "tool_selection": "all",
+  "tasks_path": "mini_email_tasks_and_outcomes.csv",
+  "ground_truth_version": "v2",
+  "num_tasks": 3,
+  "num_to_run_this_invocation": 3,
+  "num_resumed_from_prior_run": 0,
+  "workers": 1,
+  "log_traces": true,
+  "act_without_confirmation": false,
+  "structured_outputs": false,
+  "datetime_prefix": "Today's date is Thursday, 2023-11-30 and the current time is 00:00:00. Remember the current date and time when completing tasks. Meetings must not start before 9am or end after 6pm.",
+  "sample_system_prompt": "(retire de la fixture : 30 Ko)",
+  "started_at": "2026-11-05T06:36:00.816613",
+  "finished_at": "2026-11-05T06:36:00.825834"
+}

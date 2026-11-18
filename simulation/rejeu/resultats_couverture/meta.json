@@ -1,0 +1,52 @@
+{
+ "objet": "simulation de couverture des méthodes d'intervalle (PLAN_EXPERIENCE.md, 5.13 ; 5.16, point 5)",
+ "donnees": "synthétiques seulement",
+ "graine": 2026110521,
+ "rhos": [
+  0.0,
+  0.1,
+  0.3,
+  0.5,
+  0.7,
+  0.9
+ ],
+ "G": [
+  20,
+  40,
+  90
+ ],
+ "taux_critere": 0.05,
+ "taux_rapportes": [
+  0.01,
+  0.2
+ ],
+ "tailles": [
+  1,
+  2,
+  3,
+  4,
+  6,
+  8,
+  12,
+  16,
+  24,
+  32
+ ],
+ "n_jeux": 5000,
+ "B": 2000,
+ "K": 10,
+ "e": 0.05,
+ "paquet": 10,
+ "seuil": 0.93,
+ "empreinte_code": {
+  "couverture.py": "5bef357f67a38c92ec7239f8db34b750686e806c0b32ae1e8f0b9dfd252d04cb",
+  "intervalles.py": "96a224592969cf9c10baa4f84554de35e277cc076865351bc57351ae1eb5a9a4"
+ },
+ "python": "3.14.9",
+ "numpy": "2.5.4",
+ "scipy": "1.18.1",
+ "machine": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+ "debut": "2026-11-05 19:00:24 +0100",
+ "duree_s": 72.9,
+ "travailleurs": 14
+}

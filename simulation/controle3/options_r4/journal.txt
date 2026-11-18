@@ -1,0 +1,214 @@
+METHODE.md sha256 be3a17e570c1a898c863ef4e58576af68fe785ccf9f547a7257de964b3b152a6 (modifié le 2026-11-06 20:19:10)
+[     83 s] grille : 2000/21000 tirages ; écarts 0
+[    159 s] grille : 4000/21000 tirages ; écarts 0
+[    237 s] grille : 6000/21000 tirages ; écarts 0
+[    319 s] grille : 8000/21000 tirages ; écarts 0
+[    394 s] grille : 10000/21000 tirages ; écarts 0
+[    471 s] grille : 12000/21000 tirages ; écarts 0
+[    549 s] grille : 14000/21000 tirages ; écarts 0
+[    625 s] grille : 16000/21000 tirages ; écarts 0
+[    703 s] grille : 18000/21000 tirages ; écarts 0
+[    779 s] grille : 20000/21000 tirages ; écarts 0
+[    816 s] grille : 21000/21000 tirages ; écarts 0
+validation de la grille : 0 écart {"v4_grille_tirages": 18000, "v4_grille_ecarts_estimes": 0, "v4_grille_ecarts_delegables": 0, "v4_grille_ecarts_faibles": 0, "v4_grille_absents": 0, "moteur_tirages": 3000, "moteur_ecarts_estimes": 0, "moteur_ecarts_delegables": 0, "moteur_ecarts_faibles": 0, "v4_critiques_tirages": 0, "v4_critiques_ecarts_faibles": 0, "v4_critiques_absents": 0, "controles_internes": 0, "rho1_tirages": 4200, "rho1_taches_partielles": 0}
+[     71 s] critiques et mixtes : 2000/84000 tirages ; écarts 0
+[    136 s] critiques et mixtes : 4000/84000 tirages ; écarts 0
+[    201 s] critiques et mixtes : 6000/84000 tirages ; écarts 0
+[    271 s] critiques et mixtes : 8000/84000 tirages ; écarts 0
+[    337 s] critiques et mixtes : 10000/84000 tirages ; écarts 0
+[    403 s] critiques et mixtes : 12000/84000 tirages ; écarts 0
+[    471 s] critiques et mixtes : 14000/84000 tirages ; écarts 0
+[    538 s] critiques et mixtes : 16000/84000 tirages ; écarts 0
+[    605 s] critiques et mixtes : 18000/84000 tirages ; écarts 0
+[    671 s] critiques et mixtes : 20000/84000 tirages ; écarts 0
+[    739 s] critiques et mixtes : 22000/84000 tirages ; écarts 0
+[    805 s] critiques et mixtes : 24000/84000 tirages ; écarts 0
+[    874 s] critiques et mixtes : 26000/84000 tirages ; écarts 0
+[    942 s] critiques et mixtes : 28000/84000 tirages ; écarts 0
+[   1008 s] critiques et mixtes : 30000/84000 tirages ; écarts 0
+[   1075 s] critiques et mixtes : 32000/84000 tirages ; écarts 0
+[   1142 s] critiques et mixtes : 34000/84000 tirages ; écarts 0
+[   1209 s] critiques et mixtes : 36000/84000 tirages ; écarts 0
+[   1276 s] critiques et mixtes : 38000/84000 tirages ; écarts 0
+[   1344 s] critiques et mixtes : 40000/84000 tirages ; écarts 0
+[   1410 s] critiques et mixtes : 42000/84000 tirages ; écarts 0
+[   1478 s] critiques et mixtes : 44000/84000 tirages ; écarts 0
+[   1546 s] critiques et mixtes : 46000/84000 tirages ; écarts 0
+[   1612 s] critiques et mixtes : 48000/84000 tirages ; écarts 0
+[   1679 s] critiques et mixtes : 50000/84000 tirages ; écarts 0
+[   1747 s] critiques et mixtes : 52000/84000 tirages ; écarts 0
+[   1813 s] critiques et mixtes : 54000/84000 tirages ; écarts 0
+[   1880 s] critiques et mixtes : 56000/84000 tirages ; écarts 0
+[   1948 s] critiques et mixtes : 58000/84000 tirages ; écarts 0
+[   2015 s] critiques et mixtes : 60000/84000 tirages ; écarts 0
+[   2083 s] critiques et mixtes : 62000/84000 tirages ; écarts 0
+[   2148 s] critiques et mixtes : 64000/84000 tirages ; écarts 0
+[   2216 s] critiques et mixtes : 66000/84000 tirages ; écarts 0
+[   2283 s] critiques et mixtes : 68000/84000 tirages ; écarts 0
+[   2351 s] critiques et mixtes : 70000/84000 tirages ; écarts 0
+[   2418 s] critiques et mixtes : 72000/84000 tirages ; écarts 0
+[   2484 s] critiques et mixtes : 74000/84000 tirages ; écarts 0
+[   2553 s] critiques et mixtes : 76000/84000 tirages ; écarts 0
+[   2620 s] critiques et mixtes : 78000/84000 tirages ; écarts 0
+[   2687 s] critiques et mixtes : 80000/84000 tirages ; écarts 0
+[   2754 s] critiques et mixtes : 82000/84000 tirages ; écarts 0
+[   2821 s] critiques et mixtes : 84000/84000 tirages ; écarts 0
+validation complète : 0 écart {"v4_grille_tirages": 18000, "v4_grille_ecarts_estimes": 0, "v4_grille_ecarts_delegables": 0, "v4_grille_ecarts_faibles": 0, "v4_grille_absents": 0, "moteur_tirages": 3000, "moteur_ecarts_estimes": 0, "moteur_ecarts_delegables": 0, "moteur_ecarts_faibles": 0, "v4_critiques_tirages": 40000, "v4_critiques_ecarts_faibles": 0, "v4_critiques_absents": 0, "controles_internes": 0, "rho1_tirages": 64200, "rho1_taches_partielles": 0}
+
+## R4 par règle : grille (300 tirages), plus petite et plus grande part sur ρ × témoins
+| règle | 0.2 × | 0.5 × | 1 × | 2 × | 3 × | 5 × | 10 × |
+|---|---|---|---|---|---|---|---|
+| A | 0,0–23,7 (max ρ=1 defaut) | 0,7–53,0 (max ρ=1 defaut) | 27,7–79,7 (max ρ=1 tenus) | 79,0–97,0 (max ρ=0 defaut) | 91,3–100,0 (max ρ=0 defaut) | 99,3–100,0 (max ρ=1 defaut) | 100,0–100,0 (max ρ=1 defaut) |
+| C-rho1 | 0,0–0,0 (max ρ=1 defaut) | 0,0–0,7 (max ρ=0.9 tenus) | 0,0–6,3 (max ρ=1 tenus) | 0,0–29,3 (max ρ=1 tenus) | 4,7–61,7 (max ρ=1 defaut) | 28,3–96,0 (max ρ=0.9 defaut) | 84,0–100,0 (max ρ=1 defaut) |
+| C-rhohat | 0,0–0,0 (max ρ=1 defaut) | 0,0–0,7 (max ρ=0.9 tenus) | 0,0–6,3 (max ρ=1 tenus) | 0,7–34,0 (max ρ=0.7 defaut) | 11,3–68,0 (max ρ=0.7 defaut) | 64,7–96,3 (max ρ=0.7 defaut) | 96,7–100,0 (max ρ=1 defaut) |
+| C-hybride | 0,0–0,0 (max ρ=1 defaut) | 0,0–0,7 (max ρ=0.9 tenus) | 0,0–6,3 (max ρ=1 tenus) | 0,7–36,3 (max ρ=0.7 defaut) | 11,3–70,0 (max ρ=0.7 defaut) | 58,3–98,0 (max ρ=0.7 defaut) | 89,7–100,0 (max ρ=1 defaut) |
+| C-porte | 0,0–0,0 (max ρ=1 defaut) | 0,0–0,7 (max ρ=0.9 tenus) | 0,0–6,3 (max ρ=1 tenus) | 0,3–29,3 (max ρ=1 tenus) | 19,7–62,7 (max ρ=0.7 defaut) | 86,0–99,7 (max ρ=0 defaut) | 100,0–100,0 (max ρ=1 defaut) |
+
+## Délégable (identique pour toutes les règles), grille
+| ρ \ multiple | 0.2 × | 0.5 × | 1 × | 2 × | 3 × | 5 × | 10 × |
+|---|---|---|---|---|---|---|---|
+| 0 tenus | 100 | 99 | 68 | 15 | 3 | 0 | 0 |
+| 0.3 tenus | 99 | 95 | 72 | 20 | 9 | 0 | 0 |
+| 0.7 tenus | 89 | 75 | 52 | 21 | 4 | 1 | 0 |
+| 0.9 tenus | 83 | 61 | 37 | 12 | 2 | 0 | 0 |
+| 1 tenus | 76 | 50 | 20 | 7 | 1 | 0 | 0 |
+| 0 defaut | 100 | 91 | 37 | 3 | 0 | 0 | 0 |
+| 0.3 defaut | 98 | 90 | 60 | 19 | 6 | 0 | 0 |
+| 0.7 defaut | 84 | 75 | 43 | 10 | 4 | 0 | 0 |
+| 0.9 defaut | 80 | 57 | 28 | 5 | 3 | 0 | 0 |
+| 1 defaut | 76 | 47 | 24 | 7 | 1 | 0 | 0 |
+
+## Cases critiques et mondes mixtes : R4 [Wilson 95 %] ; délégable ; preuves insuffisantes
+| case | n | délégable | A | C-rho1 | C-rhohat | C-hybride | C-porte |
+|---|---|---|---|---|---|---|---|
+| critique 1x rho=0.9 tenus | 10000 | 34,4 | 65,56 [64,62–66,49] ; PI 0,0 | 2,38 [2,10–2,70] ; PI 63,2 | 2,46 [2,17–2,78] ; PI 63,1 | 2,46 [2,17–2,78] ; PI 63,1 | 2,38 [2,10–2,70] ; PI 63,2 |
+| critique 1x rho=0.9 defaut | 10000 | 31,2 | 68,84 [67,93–69,74] ; PI 0,0 | 4,00 [3,63–4,40] ; PI 64,8 | 4,67 [4,27–5,10] ; PI 64,2 | 4,43 [4,04–4,85] ; PI 64,4 | 4,00 [3,63–4,40] ; PI 64,8 |
+| critique 1x rho=1 tenus | 10000 | 25,2 | 74,79 [73,93–75,63] ; PI 0,0 | 4,00 [3,63–4,40] ; PI 70,8 | 4,00 [3,63–4,40] ; PI 70,8 | 4,00 [3,63–4,40] ; PI 70,8 | 4,00 [3,63–4,40] ; PI 70,8 |
+| critique 1x rho=1 defaut | 10000 | 24,9 | 75,06 [74,20–75,90] ; PI 0,0 | 4,31 [3,93–4,73] ; PI 70,8 | 4,31 [3,93–4,73] ; PI 70,8 | 4,31 [3,93–4,73] ; PI 70,8 | 4,31 [3,93–4,73] ; PI 70,8 |
+| critique 0.5x rho=1 tenus | 10000 | 50,7 | 49,29 [48,31–50,27] ; PI 0,0 | 0,52 [0,40–0,68] ; PI 48,8 | 0,52 [0,40–0,68] ; PI 48,8 | 0,52 [0,40–0,68] ; PI 48,8 | 0,52 [0,40–0,68] ; PI 48,8 |
+| critique 0.5x rho=1 defaut | 10000 | 49,1 | 50,93 [49,95–51,91] ; PI 0,0 | 0,39 [0,29–0,53] ; PI 50,5 | 0,39 [0,29–0,53] ; PI 50,5 | 0,39 [0,29–0,53] ; PI 50,5 | 0,39 [0,29–0,53] ; PI 50,5 |
+| M1 | 10000 | 97,3 | 2,73 [2,43–3,07] ; PI 0,0 | 0,00 [0,00–0,04] ; PI 2,7 | 0,00 [0,00–0,04] ; PI 2,7 | 0,00 [0,00–0,04] ; PI 2,7 | 0,00 [0,00–0,04] ; PI 2,7 |
+| M1-bis | 10000 | 59,1 | 40,86 [39,90–41,83] ; PI 0,0 | 2,27 [2,00–2,58] ; PI 38,6 | 4,80 [4,40–5,24] ; PI 36,1 | 3,79 [3,43–4,18] ; PI 37,1 | 2,55 [2,26–2,88] ; PI 38,3 |
+| M2 | 2000 | 40,0 | 60,05 [57,89–62,18] ; PI 0,0 | 39,10 [36,98–41,26] ; PI 20,9 | 43,70 [41,54–45,88] ; PI 16,4 | 41,90 [39,76–44,08] ; PI 18,1 | 51,95 [49,76–54,13] ; PI 8,1 |
+| M3 | 2000 | 0,1 | 99,85 [99,56–99,95] ; PI 0,0 | 28,60 [26,66–30,62] ; PI 71,2 | 74,80 [72,85–76,65] ; PI 25,1 | 69,45 [67,40–71,43] ; PI 30,4 | 86,80 [85,25–88,21] ; PI 13,1 |
+
+## R4 à tort (R4 avec une configuration jugeable fiable) dans M2
+A 7,25 % [6,19–8,47] ; C-rho1 0,00 % [0,00–0,19] ; C-rhohat 0,00 % [0,00–0,19] ; C-hybride 0,00 % [0,00–0,19] ; C-porte 6,30 % [5,32–7,45]
+
+## Cibles (METHODE.md, 7)
+- A : barre ÉCHOUE (critiques : borne haute max 75,90 % [critique 1x rho=1 defaut] ; grille : max 79,7 % [grille 1x rho=1 tenus]) ; 0,5 × ÉCHOUE (critiques : borne haute max 51,91 % [critique 0.5x rho=1 defaut] ; grille : max 53,0 % [grille 0.5x rho=1 defaut]) ; M1-bis : borne haute 41,83 % (échoue)
+- C-rho1 : barre ÉCHOUE (critiques : borne haute max 4,73 % [critique 1x rho=1 defaut] ; grille : max 6,3 % [grille 1x rho=1 tenus]) ; 0,5 × TIENT (critiques : borne haute max 0,68 % [critique 0.5x rho=1 tenus] ; grille : max 0,7 % [grille 0.5x rho=0.9 tenus]) ; M1-bis : borne haute 2,58 % (tient)
+- C-rhohat : barre ÉCHOUE (critiques : borne haute max 5,10 % [critique 1x rho=0.9 defaut] ; grille : max 6,3 % [grille 1x rho=1 tenus]) ; 0,5 × TIENT (critiques : borne haute max 0,68 % [critique 0.5x rho=1 tenus] ; grille : max 0,7 % [grille 0.5x rho=0.9 tenus]) ; M1-bis : borne haute 5,24 % (échoue)
+- C-hybride : barre ÉCHOUE (critiques : borne haute max 4,85 % [critique 1x rho=0.9 defaut] ; grille : max 6,3 % [grille 1x rho=1 tenus]) ; 0,5 × TIENT (critiques : borne haute max 0,68 % [critique 0.5x rho=1 tenus] ; grille : max 0,7 % [grille 0.5x rho=0.9 tenus]) ; M1-bis : borne haute 4,18 % (tient)
+- C-porte : barre ÉCHOUE (critiques : borne haute max 4,73 % [critique 1x rho=1 defaut] ; grille : max 6,3 % [grille 1x rho=1 tenus]) ; 0,5 × TIENT (critiques : borne haute max 0,68 % [critique 0.5x rho=1 tenus] ; grille : max 0,7 % [grille 0.5x rho=0.9 tenus]) ; M1-bis : borne haute 2,88 % (tient)
+
+## Puissance : R4 à 3 et 5 × la barre (grille, min–max sur ρ × témoins) et M3
+- A : 3 × : 91–100 % ; 5 × : 99–100 % ; M3 : 99,9 % [99,6–99,9]
+- C-rho1 : 3 × : 5–62 % ; 5 × : 28–96 % ; M3 : 28,6 % [26,7–30,6]
+- C-rhohat : 3 × : 11–68 % ; 5 × : 65–96 % ; M3 : 74,8 % [72,9–76,7]
+- C-hybride : 3 × : 11–70 % ; 5 × : 58–98 % ; M3 : 69,5 % [67,4–71,4]
+- C-porte : 3 × : 20–63 % ; 5 × : 86–100 % ; M3 : 86,8 % [85,2–88,2]
+
+## R4 par case de la grille (ρ, témoins × multiple), règle par règle
+
+### A
+| ρ \ multiple | 0.2 × | 0.5 × | 1 × | 2 × | 3 × | 5 × | 10 × |
+|---|---|---|---|---|---|---|---|
+| 0 tenus | 0,0 | 0,7 | 32,0 | 84,7 | 97,3 | 100,0 | 100,0 |
+| 0.3 tenus | 1,0 | 5,0 | 27,7 | 80,0 | 91,3 | 100,0 | 100,0 |
+| 0.7 tenus | 11,0 | 24,7 | 48,0 | 79,0 | 95,7 | 99,3 | 100,0 |
+| 0.9 tenus | 16,7 | 39,0 | 62,7 | 88,0 | 97,7 | 100,0 | 100,0 |
+| 1 tenus | 23,7 | 49,7 | 79,7 | 93,3 | 99,0 | 100,0 | 100,0 |
+| 0 defaut | 0,0 | 8,7 | 62,7 | 97,0 | 100,0 | 100,0 | 100,0 |
+| 0.3 defaut | 1,7 | 9,7 | 40,0 | 80,7 | 94,3 | 100,0 | 100,0 |
+| 0.7 defaut | 16,3 | 25,0 | 57,0 | 89,7 | 95,7 | 100,0 | 100,0 |
+| 0.9 defaut | 19,7 | 42,7 | 72,0 | 95,3 | 97,0 | 100,0 | 100,0 |
+| 1 defaut | 23,7 | 53,0 | 76,0 | 93,3 | 98,7 | 100,0 | 100,0 |
+
+### C-rho1
+| ρ \ multiple | 0.2 × | 0.5 × | 1 × | 2 × | 3 × | 5 × | 10 × |
+|---|---|---|---|---|---|---|---|
+| 0 tenus | 0,0 | 0,0 | 0,0 | 0,0 | 4,7 | 28,3 | 86,0 |
+| 0.3 tenus | 0,0 | 0,0 | 0,7 | 2,7 | 10,7 | 47,7 | 89,0 |
+| 0.7 tenus | 0,0 | 0,0 | 1,0 | 13,3 | 44,3 | 85,0 | 100,0 |
+| 0.9 tenus | 0,0 | 0,7 | 1,3 | 20,0 | 46,7 | 90,3 | 100,0 |
+| 1 tenus | 0,0 | 0,3 | 6,3 | 29,3 | 55,0 | 89,7 | 100,0 |
+| 0 defaut | 0,0 | 0,0 | 0,0 | 1,0 | 16,0 | 29,7 | 88,7 |
+| 0.3 defaut | 0,0 | 0,0 | 0,0 | 7,7 | 24,0 | 60,0 | 84,0 |
+| 0.7 defaut | 0,0 | 0,0 | 3,7 | 24,3 | 61,0 | 95,0 | 100,0 |
+| 0.9 defaut | 0,0 | 0,3 | 6,0 | 24,3 | 61,0 | 96,0 | 100,0 |
+| 1 defaut | 0,0 | 0,3 | 4,3 | 29,0 | 61,7 | 95,7 | 100,0 |
+
+### C-rhohat
+| ρ \ multiple | 0.2 × | 0.5 × | 1 × | 2 × | 3 × | 5 × | 10 × |
+|---|---|---|---|---|---|---|---|
+| 0 tenus | 0,0 | 0,0 | 0,0 | 0,7 | 11,3 | 71,3 | 99,7 |
+| 0.3 tenus | 0,0 | 0,0 | 0,7 | 3,7 | 19,7 | 64,7 | 99,0 |
+| 0.7 tenus | 0,0 | 0,0 | 1,0 | 14,7 | 46,0 | 86,0 | 100,0 |
+| 0.9 tenus | 0,0 | 0,7 | 2,0 | 20,0 | 47,7 | 90,3 | 100,0 |
+| 1 tenus | 0,0 | 0,3 | 6,3 | 29,3 | 55,0 | 89,7 | 100,0 |
+| 0 defaut | 0,0 | 0,0 | 0,3 | 13,7 | 28,3 | 83,0 | 99,7 |
+| 0.3 defaut | 0,0 | 0,0 | 0,7 | 20,0 | 42,7 | 77,7 | 96,7 |
+| 0.7 defaut | 0,0 | 0,0 | 4,0 | 34,0 | 68,0 | 96,3 | 100,0 |
+| 0.9 defaut | 0,0 | 0,3 | 6,0 | 28,7 | 64,3 | 96,0 | 100,0 |
+| 1 defaut | 0,0 | 0,3 | 4,3 | 29,0 | 61,7 | 95,7 | 100,0 |
+
+### C-hybride
+| ρ \ multiple | 0.2 × | 0.5 × | 1 × | 2 × | 3 × | 5 × | 10 × |
+|---|---|---|---|---|---|---|---|
+| 0 tenus | 0,0 | 0,0 | 0,0 | 0,7 | 11,3 | 66,0 | 89,7 |
+| 0.3 tenus | 0,0 | 0,0 | 0,7 | 3,3 | 17,7 | 58,3 | 94,7 |
+| 0.7 tenus | 0,0 | 0,0 | 1,0 | 15,0 | 46,0 | 86,0 | 100,0 |
+| 0.9 tenus | 0,0 | 0,7 | 2,0 | 20,0 | 47,7 | 90,3 | 100,0 |
+| 1 tenus | 0,0 | 0,3 | 6,3 | 29,3 | 55,0 | 89,7 | 100,0 |
+| 0 defaut | 0,0 | 0,0 | 0,3 | 13,7 | 28,0 | 75,0 | 90,3 |
+| 0.3 defaut | 0,0 | 0,0 | 0,7 | 20,3 | 40,7 | 72,3 | 89,7 |
+| 0.7 defaut | 0,0 | 0,0 | 4,7 | 36,3 | 70,0 | 98,0 | 100,0 |
+| 0.9 defaut | 0,0 | 0,3 | 6,0 | 27,7 | 64,3 | 96,0 | 100,0 |
+| 1 defaut | 0,0 | 0,3 | 4,3 | 29,0 | 61,7 | 95,7 | 100,0 |
+
+### C-porte
+| ρ \ multiple | 0.2 × | 0.5 × | 1 × | 2 × | 3 × | 5 × | 10 × |
+|---|---|---|---|---|---|---|---|
+| 0 tenus | 0,0 | 0,0 | 0,0 | 0,3 | 19,7 | 86,0 | 100,0 |
+| 0.3 tenus | 0,0 | 0,0 | 0,7 | 5,0 | 30,0 | 88,7 | 100,0 |
+| 0.7 tenus | 0,0 | 0,0 | 1,0 | 13,7 | 46,7 | 86,0 | 100,0 |
+| 0.9 tenus | 0,0 | 0,7 | 1,3 | 20,0 | 47,0 | 90,3 | 100,0 |
+| 1 tenus | 0,0 | 0,3 | 6,3 | 29,3 | 55,0 | 89,7 | 100,0 |
+| 0 defaut | 0,0 | 0,0 | 0,0 | 5,7 | 62,7 | 99,7 | 100,0 |
+| 0.3 defaut | 0,0 | 0,0 | 0,7 | 15,0 | 56,3 | 99,0 | 100,0 |
+| 0.7 defaut | 0,0 | 0,0 | 3,7 | 25,0 | 62,7 | 96,3 | 100,0 |
+| 0.9 defaut | 0,0 | 0,3 | 6,0 | 24,3 | 61,0 | 96,0 | 100,0 |
+| 1 defaut | 0,0 | 0,3 | 4,3 | 29,0 | 61,7 | 95,7 | 100,0 |
+
+## Monotonie (R4 ne baisse pas quand les agents empirent ; z > 2 sur deux multiples voisins)
+- A : aucune baisse significative
+- C-rho1 : aucune baisse significative
+- C-rhohat : aucune baisse significative
+- C-hybride : aucune baisse significative
+- C-porte : aucune baisse significative
+
+## Diagnostics par case non-grille : ρ̂ commun, Haiku WorkBench (écriture réversible), porte, taux
+| case | ρ̂ commun médian | ρ̂ Haiku WB médian | source propre | ρ hybride Haiku WB médian | configurations détectables (moyenne) | WB Haiku x/n ÷ barre | WB Sonnet ÷ barre | commerce Haiku ÷ barre |
+|---|---|---|---|---|---|---|---|---|
+| grille 1x rho=0.9 tenus | 0.896 | 0.889 | 2,3 % | 1.000 | 3.00 | 0.960 | 0.978 | 1.036 |
+| grille 1x rho=1 tenus | 1.000 | 1.000 | 0,0 % | 1.000 | 3.00 | 1.041 | 1.042 | 0.959 |
+| grille 1x rho=0.9 defaut | 0.916 | 0.914 | 2,7 % | 1.000 | 3.00 | 1.040 | 9.978 | 1.119 |
+| grille 1x rho=1 defaut | 1.000 | 1.000 | 0,0 % | 1.000 | 3.00 | 0.986 | 10.016 | 0.963 |
+| critique 1x rho=0.9 tenus | 0.912 | 0.911 | 2,9 % | 1.000 | 3.00 | 0.986 | 0.982 | 1.034 |
+| critique 1x rho=0.9 defaut | 0.916 | 0.914 | 2,8 % | 1.000 | 3.00 | 1.000 | 10.009 | 0.958 |
+| critique 1x rho=1 tenus | 1.000 | 1.000 | 0,0 % | 1.000 | 3.00 | 1.014 | 1.015 | 0.991 |
+| critique 1x rho=1 defaut | 1.000 | 1.000 | 0,0 % | 1.000 | 3.00 | 0.991 | 10.035 | 0.997 |
+| critique 0.5x rho=1 tenus | 1.000 | 1.000 | 0,0 % | 1.000 | 3.00 | 0.503 | 0.502 | 0.471 |
+| critique 0.5x rho=1 defaut | 1.000 | 1.000 | 0,0 % | 1.000 | 3.00 | 0.503 | 10.073 | 0.512 |
+| M1 | 0.492 | 0.494 | 5,2 % | 1.000 | 3.00 | 1.012 | 0.200 | 0.202 |
+| M1-bis | 0.029 | 0.300 | 33,0 % | 1.000 | 3.00 | 1.001 | 10.046 | 10.013 |
+| M2 | 0.285 | 0.321 | 34,2 % | 0.300 | 3.00 | 4.974 | 4.951 | 0.186 |
+| M3 | 0.000 | 0.300 | 0,0 % | 0.300 | 3.00 | 4.997 | 4.975 | 5.010 |
+
+## Porte : part des tirages où chaque configuration est détectable (grille, tous ρ et témoins réunis ; M2)
+- grille : WorkBench/haiku 100,0 % ; WorkBench/sonnet 100,0 % ; WorkBench/opus 100,0 % ; détectable sans jugeable : 0 tirages
+  jugeables : aviation/haiku 5,5 % ; aviation/sonnet 5,2 % ; aviation/opus 5,2 % ; commerce/haiku 25,7 % ; commerce/sonnet 18,7 % ; commerce/opus 18,6 % ; banque/haiku 6,4 % ; WorkBench/haiku 100,0 % ; WorkBench/sonnet 100,0 % ; WorkBench/opus 100,0 %
+- M2 : WorkBench/haiku 100,0 % ; WorkBench/sonnet 100,0 % ; WorkBench/opus 100,0 % ; détectable sans jugeable : 0 tirages
+  jugeables : aviation/haiku 9,6 % ; aviation/sonnet 8,1 % ; aviation/opus 8,1 % ; commerce/haiku 47,0 % ; commerce/sonnet 33,4 % ; commerce/opus 33,4 % ; banque/haiku 9,8 % ; WorkBench/haiku 100,0 % ; WorkBench/sonnet 100,0 % ; WorkBench/opus 100,0 %
+code de sortie 0

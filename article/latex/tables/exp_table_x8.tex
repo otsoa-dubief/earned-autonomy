@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table X8. WorkBench plots: inconsistent alert review and sensitivity of the judged type (Exploratory, dated 18 November 2026; \texttt{exploratoire\_2/M\_plots\_review.csv}, \texttt{M\_plots\_sensitivity.csv})}
+\label{tab:exp_table_x8}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+scenario & confirmed errors & writes & rate & lower bound ($\rho$ = 1) & bar & established \\
+\midrule
+engine decisions & 79 & 914 & 8.6 \% & 4.14 \% & 0.76 \% & yes \\
+end-date-only cases lifted & 31 & 914 & 3.4 \% & 0.86 \% & 0.76 \% & yes \\
+end-date and window-shift cases lifted & 27 & 914 & 2.9 \% & 0.66 \% & 0.76 \% & no \\
+no plot error counted & 23 & 914 & 2.5 \% & 0.46 \% & 0.76 \% & no \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny \texttt{analytics.create\_plot} alerts often differ from the expected action only by the end date (the agent plots up to 30 November, "today", where the benchmark expects 29 November). The reviewing instances decided that case both ways: confirmed, end on 30 Nov: 144; confirmed, other: 11; lifted, end on 30 Nov: 177; lifted, other: 19; 40 of 46 plot tasks had alerts decided both ways. Below, the judged type (WorkBench/Haiku, reversible writes, calibration half; every confirmed plot error read and classified) under consistent decisions; lower bound at $\rho$ = 1 as in Table X2.}
+\end{table}

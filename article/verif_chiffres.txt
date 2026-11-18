@@ -1,0 +1,82 @@
+Contrôle des chiffres (77 lignes du registre ; texte : abstract.tex, appendix_abc.tex, appendix_ef.tex, body.tex, decision_table_plan_5_14_as_written_b.tex, exp.tex, exp_table_x1.tex, exp_table_x2.tex, exp_table_x3.tex, exp_table_x4.tex, exp_table_x5.tex, exp_table_x6.tex, secondary_rules_and_choice_rule_choix.tex, table_3.tex, table_4.tex, table_5.tex, table_6.tex, table_6_bis.tex, table_7.tex, table_7_bis.tex, table_8.tex, table_9.tex, table_g.tex, task_success_rate_per_model_and_environm.tex, trials_b_tout_configurations_epreuve.tex)
+OK  etiquette: recalculé R4
+OK  couverture_instrument: source non recalculée (valeur textuelle ou fichier hors script)
+OK  R4_ecritures: recalculé 914
+OK  R4_erreurs: recalculé 79
+OK  R4_taux: recalculé 0.08643
+OK  R4_barre: recalculé 0.007575
+OK  R4_borne_basse_rho1: recalculé 0.04141
+OK  R4_neff_rho1: recalculé 81.61
+OK  R4_neff_fois_barre: source non recalculée (valeur textuelle ou fichier hors script)
+OK  R4_rho_chapeau: recalculé 0.8190040900476975
+OK  R4_taches_porteuses: recalculé 134
+OK  types_observes: recalculé 40
+OK  types_etablis: recalculé 20
+OK  types_zero_erreur: recalculé 13
+OK  erreurs_confirmees_calibration: recalculé 1067
+OK  cellules_budget_btout: source non recalculée (valeur textuelle ou fichier hors script)
+OK  temoin_liste_fixe: source non recalculée (valeur textuelle ou fichier hors script)
+OK  temoin_tri_risque: source non recalculée (valeur textuelle ou fichier hors script)
+OK  accord_vague1: source non recalculée (valeur textuelle ou fichier hors script)
+OK  accord_vague2: source non recalculée (valeur textuelle ou fichier hors script)
+OK  alertes_relues_total: source non recalculée (valeur textuelle ou fichier hors script)
+OK  taches_retirees: source non recalculée (valeur textuelle ou fichier hors script)
+OK  exclusions_message_vide: recalculé 91
+OK  etablis_avec_exclusions: source non recalculée (valeur textuelle ou fichier hors script)
+OK  sensibilite_R4: source non recalculée (valeur textuelle ou fichier hors script)
+OK  sensibilite_banque_opus_msg: source non recalculée (valeur textuelle ou fichier hors script)
+OK  refusees_parmi_erreurs: source non recalculée (valeur textuelle ou fichier hors script)
+OK  rho_intervalle_R4: source non recalculée (valeur textuelle ou fichier hors script)
+OK  depense_vague2_usd: source non recalculée (valeur textuelle ou fichier hors script)
+OK  parties_vague2: source non recalculée (valeur textuelle ou fichier hors script)
+OK  exclusions_banque_haiku: recalculé 77
+OK  exclusions_total: recalculé 91
+OK  parties_prevues: source non recalculée (valeur textuelle ou fichier hors script)
+OK  parties_vague1: source non recalculée (valeur textuelle ou fichier hors script)
+OK  cout_total_usd: source non recalculée (valeur textuelle ou fichier hors script)
+OK  cout_estime_usd: source non recalculée (valeur textuelle ou fichier hors script)
+OK  couverture_banque_vagues: source non recalculée (valeur textuelle ou fichier hors script)
+OK  alertes_confirmees: source non recalculée (valeur textuelle ou fichier hors script)
+OK  alertes_levees: source non recalculée (valeur textuelle ou fichier hors script)
+OK  audit_sans_alerte: source non recalculée (valeur textuelle ou fichier hors script)
+OK  impulsion_nist: recalculé 2031457
+OK  reussite_plages: source non recalculée (valeur textuelle ou fichier hors script)
+OK  cellules_jugees: recalculé 51
+OK  cellules_non_eprouvees: recalculé 108
+OK  cellules_sans_objet: recalculé 21
+OK  c_etoile_btout: source non recalculée (valeur textuelle ou fichier hors script)
+OK  rapport_max_budget: source non recalculée (valeur textuelle ou fichier hors script)
+OK  borne_haute_max_budget: source non recalculée (valeur textuelle ou fichier hors script)
+OK  mentions_fragile: recalculé 27
+OK  retrait_periodes: recalculé 0
+OK  types_indetermines: recalculé 20
+OK  etablis_par_niveau: source non recalculée (valeur textuelle ou fichier hors script)
+OK  borne_basse_sur_barre_faible_hors_banque: source non recalculée (valeur textuelle ou fichier hors script)
+OK  borne_basse_sur_barre_fort_hors_banque: source non recalculée (valeur textuelle ou fichier hors script)
+OK  banque_opus_msg_marge: source non recalculée (valeur textuelle ou fichier hors script)
+OK  etablis_sous_rho_chapeau: recalculé 21
+OK  banque_opus_ecr_rho_bascule: source non recalculée (valeur textuelle ou fichier hors script)
+OK  reserve_entiere_au_dessus: source non recalculée (valeur textuelle ou fichier hors script)
+OK  volume_certification_fort: source non recalculée (valeur textuelle ou fichier hors script)
+OK  charge_workbench: source non recalculée (valeur textuelle ou fichier hors script)
+OK  part_palier2_ecr_workbench: source non recalculée (valeur textuelle ou fichier hors script)
+OK  palier2_executees_puis_signalees_wb: source non recalculée (valeur textuelle ou fichier hors script)
+OK  temoins_exces_wb_haiku: source non recalculée (valeur textuelle ou fichier hors script)
+OK  temoins_exces_banque_haiku_tri: source non recalculée (valeur textuelle ou fichier hors script)
+OK  derive_periodes_autonomie: recalculé 0
+OK  regles_secondaires_pire_borne: source non recalculée (valeur textuelle ou fichier hors script)
+OK  alerte_resistance: source non recalculée (valeur textuelle ou fichier hors script)
+OK  parties_analysees: recalculé 13623
+OK  retrait_commerce_delai: source non recalculée (valeur textuelle ou fichier hors script)
+OK  retrait_commerce_autonomies_nouvelles: source non recalculée (valeur textuelle ou fichier hors script)
+OK  scenarios_juges: source non recalculée (valeur textuelle ou fichier hors script)
+OK  borne_construction_au_dessus: source non recalculée (valeur textuelle ou fichier hors script)
+OK  garantie_banque_msg: source non recalculée (valeur textuelle ou fichier hors script)
+OK  garantie_workbench_ecr: source non recalculée (valeur textuelle ou fichier hors script)
+OK  types_avec_erreurs_non_etablis: recalculé 7
+OK  sensibilite_fort: source non recalculée (valeur textuelle ou fichier hors script)
+OK  seuil_jugeabilite: source non recalculée (valeur textuelle ou fichier hors script)
+
+Écarts : 0
+
+Test de détection (17/11) : copie du texte où 2 761 est remplacé par 2 716 → « ÉCART alertes_relues_total … absent du texte : 2761 », Écarts : 1.

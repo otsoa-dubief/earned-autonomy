@@ -1,0 +1,16 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table 3. Episodes excluded after two failed attempts, per configuration and cause (91 in total; \texttt{experience/exploratoire/A\_parties\_exclues.csv}, causes read from the error lines of the episode logs)}
+\label{tab:table_3}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llll}
+\toprule
+environment & model & cause & excluded episodes \\
+\midrule
+airline & sonnet-5-5 & empty agent message & 2 \\
+banking & haiku-5-5 & empty agent message & 77 \\
+banking & opus-5-5 & empty agent message & 2 \\
+banking & sonnet-5-5 & empty agent message & 10 \\
+\bottomrule
+\end{tabular}}
+\end{table}

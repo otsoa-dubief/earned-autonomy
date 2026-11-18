@@ -1,0 +1,25 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table X3. Confirmed action errors and task success (Exploratory, dated 17 November 2026; \texttt{D\_erreurs\_et\_reussite.csv})}
+\label{tab:exp_table_x3}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllllll}
+\toprule
+environment & model & episodes & successful & with $\geq$1 confirmed error & of which successful & share successful among those \\
+\midrule
+WorkBench & haiku-5-5 & 2760 & 2648 & 155 & 99 & 63.9 \% \\
+WorkBench & opus-5-5 & 552 & 542 & 19 & 15 & 78.9 \% \\
+WorkBench & sonnet-5-5 & 552 & 542 & 22 & 18 & 81.8 \% \\
+airline & haiku-5-5 & 1950 & 1656 & 77 & 8 & 10.4 \% \\
+airline & opus-5-5 & 390 & 356 & 18 & 1 & 5.6 \% \\
+airline & sonnet-5-5 & 388 & 351 & 16 & 2 & 12.5 \% \\
+banking & haiku-5-5 & 657 & 130 & 280 & 1 & 0.4 \% \\
+banking & opus-5-5 & 214 & 98 & 59 & 0 & 0.0 \% \\
+banking & sonnet-5-5 & 210 & 74 & 63 & 1 & 1.6 \% \\
+retail & haiku-5-5 & 4250 & 3675 & 316 & 45 & 14.2 \% \\
+retail & opus-5-5 & 850 & 758 & 41 & 0 & 0.0 \% \\
+retail & sonnet-5-5 & 850 & 763 & 38 & 0 & 0.0 \% \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny Whole reserve (calibration and confirmation halves), kept episodes, removed tasks excluded. An action error does not always mean a failed task, especially on WorkBench, which scores the final state only.}
+\end{table}

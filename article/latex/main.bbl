@@ -1,0 +1,129 @@
+\begin{thebibliography}{10}
+
+\bibitem{anthropic2026}
+Anthropic (2026). Measuring AI agent autonomy in practice. Anthropic Research, 18 February 2026. \url{https://www.anthropic.com/research/measuring-agent-autonomy}.
+
+\bibitem{arora2026}
+Arora, D., Kezhukoot, M., and Prabakaran, S. K. (2026). Closing the AI agent trust gap with graduated autonomy. AWS Architecture Blog, 26 August 2026. \url{https://aws.amazon.com/blogs/architecture/closing-the-ai-agent-trust-gap-with-graduated-autonomy/}.
+
+\bibitem{barres2025}
+Barres, V., Dong, H., Ray, S., Si, X., and Narasimhan, K. (2025). τ²-Bench: Evaluating Conversational Agents in a Dual-Control Environment. arXiv:2506.07982.
+
+\bibitem{clopper1934}
+Clopper, C. J., and Pearson, E. S. (1934). The use of confidence or fiducial limits illustrated in the case of the binomial. \emph{Biometrika} 26(4), 404-413. doi:10.1093/biomet/26.4.404.
+
+\bibitem{cuadron2025}
+Cuadron, A., Yu, P., Liu, Y., and Gupta, A. (2025). SABER: Small Actions, Big Errors - Safeguarding Mutating Steps in LLM Agents. arXiv:2512.07850.
+
+\bibitem{derman1959}
+Derman, C., Johns, M. V., Jr., and Lieberman, G. J. (1959). Continuous sampling procedures without control. \emph{Annals of Mathematical Statistics} 30(4), 1175-1191. doi:10.1214/aoms/1177706103.
+
+\bibitem{derman1957}
+Derman, C., Littauer, S. B., and Solomon, H. (1957). Tightened multi-level continuous sampling plans. \emph{Annals of Mathematical Statistics} 28(2), 395-404. doi:10.1214/aoms/1177706967.
+
+\bibitem{dodge1943}
+Dodge, H. F. (1943). A sampling inspection plan for continuous production. \emph{Annals of Mathematical Statistics} 14(3), 264-279. doi:10.1214/aoms/1177731420.
+
+\bibitem{dodge1951}
+Dodge, H. F., and Torrey, M. N. (1951). Additional continuous sampling inspection plans. \emph{Industrial Quality Control} 7(5), 7-12. {[}not read; volume and pages as given by Hryniewicz (2011); reprint in \emph{Journal of Quality Technology} 9(3), 1977, 125-130, doi:10.1080/00224065.1977.11980783{]}.
+
+\bibitem{elyaniv2010}
+El-Yaniv, R., and Wiener, Y. (2010). On the foundations of noise-free selective classification. \emph{JMLR} 11. \url{https://www.jmlr.org/papers/volume11/el-yaniv10a/el-yaniv10a.pdf}.
+
+\bibitem{feng2025}
+Feng, K. J. K., McDonald, D. W., and Zhang, A. X. (2025). Levels of Autonomy for AI Agents. arXiv:2506.12469 (v2). Knight First Amendment Institute, ``AI and Democratic Freedoms'' essay series.
+
+\bibitem{fleiss1979}
+Fleiss, J. L., and Cuzick, J. (1979). The reliability of dichotomous judgments: unequal numbers of judges per subject. \emph{Applied Psychological Measurement} 3(4), 537-542. doi:10.1177/014662167900300410.
+
+\bibitem{geifman2017}
+Geifman, Y., and El-Yaniv, R. (2017). Selective classification for deep neural networks. arXiv:1705.08500.
+
+\bibitem{greenblatt2023}
+Greenblatt, R., Shlegeris, B., Sachan, K., and Roger, F. (2023). AI Control: Improving Safety Despite Intentional Subversion. arXiv:2312.06942. ICML 2024.
+
+\bibitem{hillier1964}
+Hillier, F. S. (1964). New criteria for selecting continuous sampling plans. \emph{Technometrics} 6(2), 161-178. doi:10.1080/00401706.1964.10490161.
+
+\bibitem{hryniewicz2011}
+Hryniewicz, O. (2011). Acceptance sampling of discrete continuous processes. \emph{Zeszyty Naukowe Wydzialu Informatycznych Technik Zarzadzania WIT}, no. 1/2011. \url{https://www.wit.edu.pl/dokumenty/wydawnictwa_naukowe/zeszyty_naukowe_WITZ_04/002_Hryniewicz-WITZ-jwo.pdf}.
+
+\bibitem{kapoor2025}
+Kapoor, S., Stroebl, B., Kirgis, P., Nadgir, N., Siegel, Z. S., Wei, B., et al.~(2025). Holistic Agent Leaderboard: The Missing Infrastructure for AI Agent Evaluation. arXiv:2510.11977.
+
+\bibitem{lieberman1953}
+Lieberman, G. J. (1953). A note on Dodge's continuous inspection plan. \emph{Annals of Mathematical Statistics} 24(3), 480-484. doi:10.1214/aoms/1177728988.
+
+\bibitem{lieberman1955}
+Lieberman, G. J., and Solomon, H. (1955). Multi-level continuous sampling plans. \emph{Annals of Mathematical Statistics} 26(4), 686-704. doi:10.1214/aoms/1177728428.
+
+\bibitem{liu2026}
+Liu, X., Zhang, Y. E., Kasprova, V., Rabbani, P., Zahraei, P. S., Zhang, T., Ebrahimpour-Boroojeny, A., and Chandrasekaran, V. (2026). AgentAbstain: Do LLM Agents Know When Not to Act? arXiv:2607.10059.
+
+\bibitem{miller2024}
+Miller, E. (2024). Adding Error Bars to Evals: A Statistical Approach to Language Model Evaluations. arXiv:2411.00640.
+
+\bibitem{nistintero}
+NIST. Interoperable Randomness Beacons, applications. \url{https://csrc.nist.gov/projects/interoperable-randomness-beacons/apps}.
+
+\bibitem{ou2026}
+Ou, C. (2026). Progressive Autonomy as Preference Learning: A Formalization of Trust Calibration for Agentic Tool Use. arXiv:2605.19151.
+
+\bibitem{pan2026a}
+Pan, T. (2026a). Earned Autonomy: How to Graduate AI Agents from Supervised to Independent Operation. tianpan.co, 17 April 2026. \url{https://tianpan.co/blog/2026-04-17-earned-autonomy-ai-agents-progressive-supervision}.
+
+\bibitem{pan2026b}
+Pan, T. (2026b). Acceptance Sampling for Agent Output: What Manufacturing QA Knows That Code Review Doesn't. tianpan.co, 2 July 2026. \url{https://tianpan.co/blog/2026-07-02-acceptance-sampling-for-agent-output-manufacturing-qa}.
+
+\bibitem{panossian2026}
+Panossian, A. (2026). Does the way we write a theory change the program an LLM builds from it? A prospective randomized study of renderer format in LLM theory-to-program translation. arXiv:2608.10314.
+
+\bibitem{parasuraman2000}
+Parasuraman, R., Sheridan, T. B., and Wickens, C. D. (2000). A model for types and levels of human interaction with automation. \emph{IEEE Transactions on Systems, Man, and Cybernetics - Part A: Systems and Humans} 30(3), 286-297. doi:10.1109/3468.844354.
+
+\bibitem{rodriguez2018}
+Rodriguez, M., and Jeske, D. R. (2018). Short-run contexts and imperfect testing for continuous sampling plans. \emph{Algorithms} 11(4), 46. doi:10.3390/a11040046.
+
+\bibitem{shi2026}
+Shi, Q., Zytek, A., Razavi, P., Narasimhan, K., and Barres, V. (2026). τ-Knowledge: Evaluating Conversational Agents over Unstructured Knowledge. arXiv:2603.04370. (Source of the τ-Banking domain, \texttt{banking\_\allowbreak{}knowledge} in the repository.).
+
+\bibitem{shi2025}
+Shi, T., He, J., Wang, Z., Li, H., Wu, L., Guo, W., and Song, D. (2025). Progent: Securing AI Agents with Privilege Control. arXiv:2504.11703 (v3; v1 title: Progent: Programmable Privilege Control for LLM Agents).
+
+\bibitem{styles2024}
+Styles, O., Miller, S., Cerda-Mardini, P., Guha, T., Sanchez, V., and Vidgen, B. (2024). WorkBench: a Benchmark Dataset for Agents in a Realistic Workplace Setting. arXiv:2405.00823; COLM 2024.
+
+\bibitem{swain1983}
+Swain, A. D., and Guttmann, H. E. (1983). \emph{Handbook of Human Reliability Analysis with Emphasis on Nuclear Power Plant Applications. Final Report.} NUREG/CR-1278, Sandia National Laboratories. doi:10.2172/5752058.
+
+\bibitem{telukunta2026}
+Telukunta, S., Lilis, G. N., and Baron, L. (2026). The CASE Framework: A Multi-Disciplinary Control Architecture for Governing Enterprise Agentic AI. arXiv:2608.10153.
+
+\bibitem{thomas2019}
+Thomas, P. S., Castro da Silva, B., Barto, A. G., Giguere, S., Brun, Y., and Brunskill, E. (2019). Preventing undesirable behavior of intelligent machines. \emph{Science} 366(6468), 999-1004. doi:10.1126/science.aag3311.
+
+\bibitem{wald1945}
+Wald, A. (1945). Sequential tests of statistical hypotheses. \emph{Annals of Mathematical Statistics} 16(2), 117-186. doi:10.1214/aoms/1177731118.
+
+\bibitem{wald1945x}
+Wald, A., and Wolfowitz, J. (1945). Sampling inspection plans for continuous production which insure a prescribed limit on the outgoing quality. \emph{Annals of Mathematical Statistics} 16(1), 30-49. doi:10.1214/aoms/1177731169.
+
+\bibitem{weber2026}
+Weber, T., and Taneja, R. (2026). The Digital Apprentice: A Framework for Human-Directed Agentic AI Development. arXiv:2606.04321. ACM AI Leadership Summit 2026 (visionary track).
+
+\bibitem{westfall1993}
+Westfall, P. H., and Young, S. S. (1993). \emph{Resampling-Based Multiple Testing: Examples and Methods for P-Value Adjustment.} New York: Wiley.
+
+\bibitem{williams1985}
+Williams, J. C. (1985). HEART - A proposed method for achieving high reliability in process operation by means of human factors engineering technology. \emph{Proceedings of the Symposium on the Achievement of Reliability in Operating Plant}, Safety and Reliability Society, vol.~16, 5/1-5/15.
+
+\bibitem{yao2024}
+Yao, S., Shinn, N., Razavi, P., and Narasimhan, K. (2024). τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains. arXiv:2406.12045.
+
+\bibitem{zhang2026}
+Zhang, Z., and Zhang, X. (2026). Are You Still the Agent I Authorized? Earned Authority under a Fixed Ceiling for Evolving Agents. arXiv:2607.23586 (preprint).
+
+\bibitem{projectmate}
+Project materials: preregistration \url{https://osf.io/vycge/}; OSF project \url{https://osf.io/bd4g5/}; priority record \url{https://osf.io/7ju3c/}; frozen plan \texttt{PLAN\_\allowbreak{}EXPERIENCE.\allowbreak{}md} and rule \texttt{REGLE.\allowbreak{}md} (French, binding), tag \texttt{gel-2026-11-09}.
+
+\end{thebibliography}

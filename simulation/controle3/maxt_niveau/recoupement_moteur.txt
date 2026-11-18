@@ -1,0 +1,7 @@
+Formule mesurée : F3 ; tolérance du moteur 4.768e-07, de la mesure 1.490e-08
+N1 : 200 répétitions ; au moins un dépassement établi : mesure 6, moteur 6 ; écarts de décision : 0 répétitions, 0 cellules ; testabilité différente : 0 cellules
+N2 : 100 répétitions ; au moins un dépassement établi : mesure 0, moteur 0 ; écarts de décision : 0 répétitions, 0 cellules ; testabilité différente : 0 cellules
+P3 : 100 répétitions ; au moins un dépassement établi : mesure 100, moteur 100 ; écarts de décision : 0 répétitions, 0 cellules ; testabilité différente : 0 cellules
+P2 : 120 répétitions ; au moins un dépassement établi : mesure 0, moteur 0 ; écarts de décision : 0 répétitions, 0 cellules ; testabilité différente : 0 cellules
+P1 : 60 répétitions ; au moins un dépassement établi : mesure 1, moteur 1 ; écarts de décision : 0 répétitions, 0 cellules ; testabilité différente : 0 cellules
+P4 : 30 répétitions ; au moins un dépassement établi : mesure 30, moteur 30 ; écarts de décision : 0 répétitions, 0 cellules ; testabilité différente : 0 cellules

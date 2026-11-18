@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table X2. Sensitivity of established excesses to false confirmations (Exploratory, dated 17 November 2026; \texttt{C\_sensibilite\_fausses\_confirmations.csv})}
+\label{tab:exp_table_x2}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llllllll}
+\toprule
+environment & model & type & level & writes & confirmed errors & bar & max share of false confirmations \\
+\midrule
+banking & opus-5-5 & MSG & low & 124 & 10 & 1.161 \% & 0 \% \\
+banking & sonnet-5-5 & MSG & low & 124 & 14 & 1.161 \% & 30 \% \\
+airline & opus-5-5 & ARG & high & 71 & 6 & 0.008319 \% & 31 \% \\
+WorkBench & opus-5-5 & ECR & low & 182 & 10 & 0.7575 \% & 41 \% \\
+banking & sonnet-5-5 & ECR & low & 89 & 29 & 1.161 \% & 45 \% \\
+WorkBench & sonnet-5-5 & ECR & low & 181 & 11 & 0.7575 \% & 47 \% \\
+airline & sonnet-5-5 & ARG & high & 72 & 8 & 0.008319 \% & 48 \% \\
+airline & haiku-5-5 & ARG & high & 308 & 41 & 0.008319 \% & 55 \% \\
+WorkBench & haiku-5-5 & ECR & low & 914 & 79 & 0.7575 \% & 63 \% \\
+retail & opus-5-5 & ARG & high & 492 & 32 & 0.008822 \% & 70 \% \\
+retail & sonnet-5-5 & ARG & high & 496 & 33 & 0.008822 \% & 71 \% \\
+banking & haiku-5-5 & MSG & low & 358 & 99 & 1.161 \% & 73 \% \\
+banking & haiku-5-5 & ILL & high & 2 & 2 & 0.04076 \% & 77 \% \\
+banking & opus-5-5 & DUR & medium & 123 & 35 & 0.157 \% & 79 \% \\
+retail & haiku-5-5 & ARG & high & 2511 & 231 & 0.008822 \% & 79 \% \\
+banking & sonnet-5-5 & DUR & medium & 128 & 53 & 0.157 \% & 84 \% \\
+banking & haiku-5-5 & DUR & medium & 314 & 141 & 0.157 \% & 85 \% \\
+banking & opus-5-5 & ARG & high & 80 & 38 & 0.04076 \% & 89 \% \\
+banking & haiku-5-5 & ARG & high & 202 & 108 & 0.04076 \% & 90 \% \\
+banking & sonnet-5-5 & ARG & high & 75 & 42 & 0.04076 \% & 91 \% \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny Largest share of confirmed errors that could be false alerts while the excess stays established (same $\rho$ = 1 bound as the engine). For reference, in the author's blind review, agreement with the first reviewer was 13 of 15 in each wave, and 3 of the 10 confirmed alerts he reviewed were lifted.}
+\end{table}

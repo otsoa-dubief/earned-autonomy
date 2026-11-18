@@ -1,0 +1,91 @@
+
+### D1 rho=0 : erreurs en petites grappes (p=.10) ; 2 strates grandes grappes sans erreur  (vrai rho = 0.0, R = 400)
+estimateur                                        moyenne  mediane  %indef  P(>0.1)
+ANOVA poolee (1 moyenne)                            0.310    0.299       0     100%
+ANOVA stratifiee (toutes strates)                   0.249    0.238       0     100%
+ANOVA stratifiee (strates a 0 evt exclues)         -0.002   -0.015       0      12%
+Moy. ANOVA par strate, poids = nb erreurs          -0.002   -0.015       0      12%
+FC pooled (1 moyenne)                               0.297    0.287       0     100%
+FC a p_s par strate                                -0.012   -0.025       0      10%
+Moy. FC par strate, poids = nb erreurs             -0.012   -0.025       0      10%
+FC a p_s par strate, corrige (point fixe)          -0.002   -0.015       0      12%
+GEE moment, p_s par strate                         -0.014   -0.025       0       6%
+MV beta-binomiale, p_s par strate                   0.027    0.000       0       9%
+
+### D2 rho=0 : idem mais strates grandes grappes p=.003 (rares, non nulles)  (vrai rho = 0.0, R = 400)
+estimateur                                        moyenne  mediane  %indef  P(>0.1)
+ANOVA poolee (1 moyenne)                            0.205    0.199       0      97%
+ANOVA stratifiee (toutes strates)                   0.161    0.151       0      88%
+ANOVA stratifiee (strates a 0 evt exclues)          0.159    0.149       0      88%
+Moy. ANOVA par strate, poids = nb erreurs           0.004   -0.005       0       7%
+FC pooled (1 moyenne)                               0.195    0.190       0      96%
+FC a p_s par strate                                -0.003   -0.010       0       4%
+Moy. FC par strate, poids = nb erreurs             -0.003   -0.012       0       6%
+FC a p_s par strate, corrige (point fixe)           0.004   -0.004       0       6%
+GEE moment, p_s par strate                         -0.001   -0.002       0       0%
+MV beta-binomiale, p_s par strate                   0.001    0.000       0       0%
+
+### D1bis rho=0.3 : configuration D1, vraie correlation 0.3  (vrai rho = 0.3, R = 400)
+estimateur                                        moyenne  mediane  %indef  P(>0.1)
+ANOVA poolee (1 moyenne)                            0.488    0.493       0     100%
+ANOVA stratifiee (toutes strates)                   0.452    0.449       0     100%
+ANOVA stratifiee (strates a 0 evt exclues)          0.258    0.248       0      77%
+Moy. ANOVA par strate, poids = nb erreurs           0.258    0.248       0      77%
+FC pooled (1 moyenne)                               0.474    0.477       0     100%
+FC a p_s par strate                                 0.245    0.234       0      76%
+Moy. FC par strate, poids = nb erreurs              0.245    0.234       0      76%
+FC a p_s par strate, corrige (point fixe)           0.258    0.248       0      77%
+GEE moment, p_s par strate                          0.237    0.208       0      76%
+MV beta-binomiale, p_s par strate                   0.261    0.253       0      80%
+
+### O1 rho=0.3 : 4 strates p=.02/.05/.08/.10, 12 grappes chacune, tailles 2-150  (vrai rho = 0.3, R = 400)
+estimateur                                        moyenne  mediane  %indef  P(>0.1)
+ANOVA poolee (1 moyenne)                            0.289    0.285       0      95%
+ANOVA stratifiee (toutes strates)                   0.283    0.282       0      94%
+ANOVA stratifiee (strates a 0 evt exclues)          0.283    0.284       0      94%
+Moy. ANOVA par strate, poids = nb erreurs           0.282    0.277       0      94%
+FC pooled (1 moyenne)                               0.279    0.275       0      94%
+FC a p_s par strate                                 0.246    0.241       0      92%
+Moy. FC par strate, poids = nb erreurs              0.249    0.243       0      92%
+FC a p_s par strate, corrige (point fixe)           0.282    0.284       0      94%
+GEE moment, p_s par strate                          0.144    0.122       0      61%
+MV beta-binomiale, p_s par strate                   0.273    0.281       0      95%
+
+### O2 rho=0.1 : idem O1  (vrai rho = 0.1, R = 400)
+estimateur                                        moyenne  mediane  %indef  P(>0.1)
+ANOVA poolee (1 moyenne)                            0.111    0.103       0      52%
+ANOVA stratifiee (toutes strates)                   0.098    0.089       0      40%
+ANOVA stratifiee (strates a 0 evt exclues)          0.098    0.089       0      40%
+Moy. ANOVA par strate, poids = nb erreurs           0.097    0.088       0      39%
+FC pooled (1 moyenne)                               0.106    0.098       0      49%
+FC a p_s par strate                                 0.080    0.071       0      26%
+Moy. FC par strate, poids = nb erreurs              0.080    0.072       0      26%
+FC a p_s par strate, corrige (point fixe)           0.097    0.088       0      40%
+GEE moment, p_s par strate                          0.054    0.047       0       9%
+MV beta-binomiale, p_s par strate                   0.088    0.082       0      31%
+
+### O4 rho=0.05 : idem O1  (vrai rho = 0.05, R = 400)
+estimateur                                        moyenne  mediane  %indef  P(>0.1)
+ANOVA poolee (1 moyenne)                            0.065    0.061       0      10%
+ANOVA stratifiee (toutes strates)                   0.050    0.048       0       4%
+ANOVA stratifiee (strates a 0 evt exclues)          0.050    0.048       0       4%
+Moy. ANOVA par strate, poids = nb erreurs           0.049    0.048       0       4%
+FC pooled (1 moyenne)                               0.061    0.057       0       8%
+FC a p_s par strate                                 0.039    0.038       0       1%
+Moy. FC par strate, poids = nb erreurs              0.039    0.038       0       1%
+FC a p_s par strate, corrige (point fixe)           0.049    0.047       0       4%
+GEE moment, p_s par strate                          0.028    0.026       0       0%
+MV beta-binomiale, p_s par strate                   0.042    0.040       0       2%
+
+### O3 rho=0.3 : petites grappes p=.10 + grandes grappes p=.02  (vrai rho = 0.3, R = 400)
+estimateur                                        moyenne  mediane  %indef  P(>0.1)
+ANOVA poolee (1 moyenne)                            0.313    0.291       0      98%
+ANOVA stratifiee (toutes strates)                   0.301    0.281       0      98%
+ANOVA stratifiee (strates a 0 evt exclues)          0.289    0.275       0      96%
+Moy. ANOVA par strate, poids = nb erreurs           0.247    0.217       0      89%
+FC pooled (1 moyenne)                               0.301    0.278       0      97%
+FC a p_s par strate                                 0.221    0.187       0      85%
+Moy. FC par strate, poids = nb erreurs              0.229    0.204       0      86%
+FC a p_s par strate, corrige (point fixe)           0.241    0.208       0      88%
+GEE moment, p_s par strate                          0.133    0.099       0      49%
+MV beta-binomiale, p_s par strate                   0.276    0.268       0      91%

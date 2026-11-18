@@ -1,0 +1,290 @@
+# AVERTISSEMENT : essai à blanc du rejeu final sur les parties de développement du pilote, partage fictif tiré d'une valeur de balise de test, graine de développement. Ces chiffres n'ont AUCUNE valeur de preuve (PLAN_EXPERIENCE.md, 5.16, point 6).
+analyse,type_suite,environnement,modele,modele_Y,mode,regle,type,niveau,n_rep,n_rep_periodes,periodes_moy,max_constatees,part_rep_plus_d_une,constatees_moy,ratees_moy,verdict,mode_resistance
+principale,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+principale,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,aucun (constat immédiat)
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-haiku-5-5,claude-opus-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-sonnet-5-5,claude-opus-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,aviation,claude-opus-5-5,claude-sonnet-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-haiku-5-5,claude-opus-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-sonnet-5-5,claude-opus-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,annoncé,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,annoncé,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-tout,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-régulier,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,silencieux,A½,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,commerce,claude-opus-5-5,claude-sonnet-5-5,silencieux,A¼,ARG,fort,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-sonnet-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-haiku-5-5,claude-opus-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-sonnet-5-5,claude-opus-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-haiku-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,annoncé,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,annoncé,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,annoncé,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-tout,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,silencieux,B-régulier,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,silencieux,A½,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10
+résistance retard10,scénario,WorkBench,claude-opus-5-5,claude-sonnet-5-5,silencieux,A¼,DUR,moyen,2000,0,0.0,0,0.0,0.0,0.0,passe,retard10

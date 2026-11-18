@@ -1,0 +1,779 @@
+[
+ {
+  "environnement": "WorkBench",
+  "tache": "multi_domain:179",
+  "alertes": [
+   {
+    "alerte": "workbench-807f86c6ffba",
+    "cas": "a3",
+    "preuve": "a3 : consigne (Énoncé de la tâche) : « Also schedule a half-hour meeting called 'Discuss average session duration' with them at the first time I can do tomorrow » ; Actions attendues de la tâche : « (vide) ».",
+    "justification": "La consigne demande la réunion dans une phrase séparée et inconditionnelle, alors que les actions attendues sont vides : l'agent qui suit la consigne doit créer cette réunion, et il l'a placée au premier créneau libre du lendemain.",
+    "vague": 1
+   }
+  ]
+ },
+ {
+  "environnement": "aviation",
+  "tache": "29",
+  "alertes": [
+   {
+    "alerte": "aviation-93d067127a53",
+    "cas": "a4",
+    "preuve": "a4 : sources vérifiées une à une. Consigne du client (Énoncé de la tâche) : aucun moyen de paiement n'est mentionné (« You only want early flights… », « You also want to add 1 checked bag. »), rien ne désigne la Visa 6521. Données (Conversation, message 7, get_user_details) : quatre moyens au profil, « credit_card_7686643 »…« credit_card_8003957 »…« credit_card_8782472 », « gift_card_6468981 », aucun désigné par défaut. Règlement (Book flight, Payment) : « All payment methods must already be in user profile for safety reasons. » — aucune règle n'impose la carte d'origine pour une nouvelle réservation. Action attendue n°3 : payment_methods=[{\"amount\": 282, \"payment_id\": \"credit_card_8003957\"}].",
+    "justification": "Le seul écart est le moyen de paiement credit_card_8003957 de l'action attendue, qu'aucune source ne permet de déterminer ; l'agent a utilisé la carte choisie par le client, présente dans son profil.",
+    "vague": 2
+   },
+   {
+    "alerte": "aviation-f5c9580e9812",
+    "cas": "a4",
+    "preuve": "a4 : Énoncé de la tâche — la consigne ne dit rien de l'assurance pour la nouvelle réservation (seulement « Since you took insurance for this trip, you want change fees waived »). Données — rien dans get_user_details ni get_reservation_details ne fixe ce choix. Règlement — « The agent should ask if the user wants to buy the travel insurance. » Conversation, message 16 : « For insurance, yes, I'd like to keep the coverage on the new trip ». Action attendue n°3 : book_reservation(... payment_methods=[{\"amount\": 282, ...}], ... insurance=\"no\").",
+    "justification": "L'argument comparé insurance=\"no\" (et le montant 282 qui en découle) ne se déduit ni de la consigne, ni des données, ni du règlement, qui laisse le choix de l'assurance au client ; l'agent a demandé et appliqué la réponse du client.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "banque",
+  "tache": "task_026",
+  "alertes": [
+   {
+    "alerte": "banque-282894d41702",
+    "cas": "a1",
+    "preuve": "a1 : Règlement entier : « All instructions will be found here or in the knowledge base. » ; Conversation, message 13 (KB, doc_credit_cards_credit_cards_(general)_007) : « All credit card rewards points are rounded down to the nearest whole number. [...] the system always truncates (floors) fractional points rather than rounding to the nearest integer. » ; message 16 : « Earn 10.0% cash back on eligible travel and software purchases » ; message 12 : « txn_a8f1c2d3e411 [...] Business Silver Rewards Card [...] transaction_amount: $149.99 [...] transaction_date: 09/15/2025 [...] category: Software » (149,99 × 10 % = 1499,9 points, arrondi inférieur 1499) ; Actions attendues : « 7. update_transaction_rewards_3847(transaction_id=\"txn_a8f1c2d3e411\", new_rewards_earned=\"1500 points\") ».",
+    "justification": "L'action attendue n°7 fixe 1500 points pour un achat logiciel de 149,99 $ à 10 % (Business Silver, hors promo), alors que la règle d'arrondi de la base de connaissances, lue avant toute écriture, impose l'arrondi inférieur, soit 1499 points comme l'a écrit l'agent.",
+    "vague": 2
+   },
+   {
+    "alerte": "banque-4b27280ff4d7",
+    "cas": "a1",
+    "preuve": "a1 : Règlement entier, Guideline 1 : « All instructions will be found here or in the knowledge base. » ; Conversation, message 24 (outil, KB_search, doc_credit_cards_credit_cards_(general)_007) : « All credit card rewards points are rounded down to the nearest whole number. When calculating points earned on a purchase, the system always truncates (floors) fractional points rather than rounding to the nearest integer. [...] a $99.99 purchase at 2.5% cash back would calculate to 249.975 points but would award 249 points. » ; message 19 : txn_a8f1c2d3e411, Business Silver Rewards Card, Zoom Video, transaction_amount: $149.99, transaction_date: 09/15/2025, category: Software ; message 25 : « Travel and software purchases that normally earn 10.0% » (promo de 6 mois depuis l'ouverture du 02/13/2025, donc close au 15/09/2025) ; Actions attendues : « 7. update_transaction_rewards_3847(transaction_id=\"txn_a8f1c2d3e411\", new_rewards_earned=\"1500 points\") ».",
+    "justification": "L'action attendue n°7 inscrit 1500 points pour un achat logiciel de 149,99 $ au taux de 10 % (1499,9 points), alors que la politique d'arrondi de la base de connaissances, à laquelle renvoie le règlement, impose de tronquer à 1499 : l'écriture de l'agent est la seule conforme.",
+    "vague": 2
+   },
+   {
+    "alerte": "banque-917f063bdd51",
+    "cas": "a1",
+    "preuve": "a1 : Règlement entier : \"All instructions will be found here or in the knowledge base.\" ; Conversation, message 13 (KB doc_credit_cards_credit_cards_(general)_007) : \"All credit card rewards points are rounded down to the nearest whole number. When calculating points earned on a purchase, the system always truncates (floors) fractional points rather than rounding to the nearest integer.\" ; message 15 : \"Earn 10.0% cash back on eligible travel and software purchases\" ; message 12 : \"txn_a8f1c2d3e411 ... Business Silver Rewards Card ... Zoom Video ... transaction_amount: $149.99 ... transaction_date: 09/15/2025 ... category: Software\" ; message 11 : \"date_of_account_open: 02/13/2025\" ; action attendue n°7 : update_transaction_rewards_3847(transaction_id=\"txn_a8f1c2d3e411\", new_rewards_earned=\"1500 points\")",
+    "justification": "L'action attendue n°7 fixe 1500 points alors que la règle d'arrondi de la base de connaissances, à laquelle renvoie le règlement, impose la troncature et donne 1499 points pour 149,99 $ à 10 % hors promotion (compte ouvert le 02/13/2025, promotion de 6 mois échue avant le 09/15/2025, Zoom absent des exclusions).",
+    "vague": 2
+   },
+   {
+    "alerte": "banque-b953b44ab5c1",
+    "cas": "a1",
+    "preuve": "a1 : Règlement entier, Guidelines 1 : « All instructions will be found here or in the knowledge base. » ; base de connaissances citée dans la conversation, message 33, doc_credit_cards_credit_cards_(general)_007 : « All credit card rewards points are rounded down to the nearest whole number. When calculating points earned on a purchase, the system always truncates (floors) fractional points rather than rounding to the nearest integer. [...] a $99.99 purchase at 2.5% cash back would calculate to 249.975 points but would award 249 points. This rounding policy applies consistently across all credit card types and reward categories. » ; message 13 : txn_a8f1c2d3e411, Business Silver Rewards Card, Zoom Video, transaction_amount: $149.99, category: Software, transaction_date: 09/15/2025 (compte ouvert le 02/13/2025 d'après le message 12, donc hors des 6 mois de promotion, taux de 10 % selon doc_business_credit_cards_business_silver_rewards_card_002, message 15) ; action attendue : « 7. update_transaction_rewards_3847(transaction_id=\"txn_a8f1c2d3e411\", new_rewards_earned=\"1500 points\") ».",
+    "justification": "L'action attendue n°7 (1500 points) contredit la règle d'arrondi à l'unité inférieure de la base de connaissances, que le règlement rend obligatoire : 149,99 $ à 10 % donnent 1499,9 points, donc 1499 points, ce qu'a écrit l'agent.",
+    "vague": 2
+   },
+   {
+    "alerte": "banque-d0172fe4e229",
+    "cas": "a1",
+    "preuve": "a1 : règlement, Guidelines 1 : « All instructions will be found here or in the knowledge base. » ; base de connaissances, conversation message 13, doc_credit_cards_credit_cards_(general)_007 : « All credit card rewards points are rounded down to the nearest whole number. When calculating points earned on a purchase, the system always truncates (floors) fractional points rather than rounding to the nearest integer. » ; données, message 18 : txn_a8f1c2d3e411, Business Silver Rewards Card, Zoom Video, transaction_amount: $149.99, category: Software ; message 20 : « Earn 10.0% cash back on eligible travel and software purchases » ; action attendue 7 : update_transaction_rewards_3847(transaction_id=\"txn_a8f1c2d3e411\", new_rewards_earned=\"1500 points\")",
+    "justification": "L'action attendue n°7 fixe 1500 points pour un achat logiciel de 149,99 $ à 10 %, soit 1499,9 points, alors que la règle d'arrondi de la base de connaissances, lue dans la fiche et rendue applicable par le règlement, impose l'arrondi inférieur, ce qui donne 1499 comme l'a écrit l'agent.",
+    "vague": 1
+   }
+  ]
+ },
+ {
+  "environnement": "banque",
+  "tache": "task_056",
+  "alertes": [
+   {
+    "alerte": "banque-5d28ecbcca6a",
+    "cas": "a1",
+    "preuve": "a1 : Conversation, message 4 (outil, KB_search), doc « Internal: Opening Business Savings Accounts », section « Agent Tool Instructions », « ### Tool: open_bank_account_4821 … How to call: - Set account_type to 'savings'. - Set account_class to the exact official name provided by the customer » ; Règlement, Guidelines 1 : « All instructions will be found here or in the knowledge base. » ; Actions attendues : « 6. open_bank_account_4821(user_id=\"b5e8f2a1c9\", account_type=\"business_savings\", account_class=\"Silver Plus Saver Account\") ».",
+    "justification": "L'action attendue n°6 utilise account_type=\"business_savings\" alors que la procédure de la base de connaissances (partie du règlement selon la consigne 1 de l'agent) ordonne explicitement account_type 'savings' pour ouvrir un compte épargne entreprise, ce que l'agent a fait.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "banque",
+  "tache": "task_082",
+  "alertes": [
+   {
+    "alerte": "banque-1376895385f1",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, point 7 : \"Green Fee-Free card: \"I'd like to keep using this card but maybe with a new number? Can you reissue it?\"\" ; Actions attendues, n°16 : file_debit_card_transaction_dispute_6281(... account_id=\"chk_mc47a2b9e1_gff\", card_id=\"dbc_mc47a2b9e1_gff\", ... card_action=\"close_and_reissue\" ...) ; seule commande attendue, n°20 : order_debit_card_5739(... account_id=\"chk_mc47a2b9e1_blue\" ...), aucune pour chk_mc47a2b9e1_gff.",
+    "justification": "La consigne du client demande la réémission de la carte Green Fee-Free et l'action attendue n°16 fixe card_action=close_and_reissue pour cette carte, mais les actions attendues ne prévoient de commande de carte que pour le compte Blue, si bien qu'un agent qui suit le client ne peut pas les atteindre.",
+    "vague": 2
+   },
+   {
+    "alerte": "banque-5df28838bdb8",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, point 7 : « Green Fee-Free card: \"I'd like to keep using this card but maybe with a new number? Can you reissue it?\" » ; Actions attendues n°16 : « file_debit_card_transaction_dispute_6281(transaction_id=\"btxn_d74e8a798f95\", ... card_id=\"dbc_mc47a2b9e1_gff\", ... card_action=\"close_and_reissue\" ...) », et aucune action close_debit_card_4721 sur dbc_mc47a2b9e1_gff (seule la n°18 sur dbc_mc47a2b9e1_blue) ; base de connaissances lue par l'agent, message 4 : « This parameter records metadata only; the agent must separately perform the indicated card action after filing the dispute. » ; message 61 du client : « Yes, close card 7391 now so nobody can use it again. »",
+    "justification": "La consigne demande la réémission de la carte Green Fee-Free, et l'action attendue n°16 lui donne card_action close_and_reissue, mais aucune action attendue ne ferme cette carte : un agent qui suit le client et la base de connaissances ne peut pas atteindre les actions attendues.",
+    "vague": 2
+   },
+   {
+    "alerte": "banque-713a7f227d31",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, point 7 : « Green Fee-Free card: \"I'd like to keep using this card but maybe with a new number? Can you reissue it?\" » ; Actions attendues n°16 : file_debit_card_transaction_dispute_6281(... card_id=\"dbc_mc47a2b9e1_gff\", dispute_category=\"card_not_present_fraud\", ... card_action=\"close_and_reissue\" ...), et la seule fermeture attendue est n°18 : close_debit_card_4721(card_id=\"dbc_mc47a2b9e1_blue\", reason=\"lost\") ; Conversation, message 4 (outil, avant toute écriture) : « **Note:** This parameter records metadata only; the agent must separately perform the indicated card action after filing the dispute. » et « 'card_not_present_fraud' → 'close_and_reissue' » ; message 63 (outil) : « Ask customer for the reason they want to close the card (select from: lost, stolen, fraud_suspected, damaged, no_longer_needed, account_closing) » ; message 65 (client) : « Yes, please close the Green Fee-Free card ending in 7391 now. »",
+    "justification": "La consigne du client demande de réémettre la carte Green avec un nouveau numéro et l'action attendue n°16 enregistre card_action=\"close_and_reissue\" pour cette carte, mais aucune action attendue ne ferme la carte Green : un agent qui suit le client et la règle de la base lue avant l'écriture (« the agent must separately perform the indicated card action ») ne peut pas atteindre les actions attendues.",
+    "vague": 2
+   },
+   {
+    "alerte": "banque-9b20de5d9de6",
+    "cas": "a4",
+    "preuve": "a4 : (1) Énoncé de la tâche : la seule réponse prévue sur un PIN concerne la carte Blue (« If asked about PIN: \"This is embarrassing, but yes, I had my PIN written on a sticky note in my wallet\" ») ; pour la carte Green (point 6) seuls sont prévus « If asked about card possession » et « If asked about police report », rien sur le PIN. (2) État initial propre à la tâche : l'enregistrement dbc_mc47a2b9e1_gff n'a aucun champ PIN. (3) Règlement entier : aucune règle sur pin_compromised. (4) Conversation, message 4, article « Filing a Debit Card Transaction Dispute » : « pin_compromised (string) - Ask: \"Do you believe your PIN may have been compromised?\" ... 'unknown': Customer unsure ». Action attendue n°16 : pin_compromised=\"no\".",
+    "justification": "La valeur attendue pin_compromised=\"no\" pour la carte Green ne se trouve dans aucune source : la consigne du client ne dit rien du PIN de cette carte, les données n'ont pas de champ PIN, et la règle de la base montrée dans la fiche dit de demander au client ; l'agent a demandé et noté la réponse « pas sûr ».",
+    "vague": 2
+   },
+   {
+    "alerte": "banque-b4936152715d",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, point 7 : \"Green Fee-Free card: 'I'd like to keep using this card but maybe with a new number? Can you reissue it?'\" ; Actions attendues : \"16. file_debit_card_transaction_dispute_6281(... card_id='dbc_mc47a2b9e1_gff' ... dispute_category='card_not_present_fraud' ... card_action='close_and_reissue' ...)\" puis seulement \"18. close_debit_card_4721(card_id='dbc_mc47a2b9e1_blue', reason='lost')\" et \"20. order_debit_card_5739(... account_id='chk_mc47a2b9e1_blue' ...)\", aucune action sur la carte gff ; Conversation, message 4 (lecture de la base avant toute écriture) : \"This parameter records metadata only; the agent must separately perform the indicated card action after filing the dispute.\"",
+    "justification": "La consigne du client demande que la carte Green Fee-Free soit réémise avec un nouveau numéro et l'action attendue n°16 enregistre card_action close_and_reissue pour cette carte, mais les actions attendues ne contiennent aucune clôture ni réémission de dbc_mc47a2b9e1_gff, si bien qu'un agent qui suit le client et la règle de la base ne peut pas les atteindre.",
+    "vague": 2
+   },
+   {
+    "alerte": "banque-d86c8cd05d58",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, point 7 : « Green Fee-Free card: \"I'd like to keep using this card but maybe with a new number? Can you reissue it?\" » ; Actions attendues : 16. file_debit_card_transaction_dispute_6281(... account_id=\"chk_mc47a2b9e1_gff\", card_id=\"dbc_mc47a2b9e1_gff\", ... dispute_category=\"card_not_present_fraud\", ... card_action=\"close_and_reissue\" ...) alors que la seule commande attendue est 20. order_debit_card_5739(... account_id=\"chk_mc47a2b9e1_blue\" ...) ; base de connaissances lue avant toute écriture (message 4, outil) : « 'card_not_present_fraud' → 'close_and_reissue' » et « the agent must separately perform the indicated card action after filing the dispute ».",
+    "justification": "La consigne du client demande la réémission de la carte Green Fee-Free et l'action attendue 16 enregistre elle-même card_action=\"close_and_reissue\" pour cette carte, mais aucune action attendue ne commande de carte sur chk_mc47a2b9e1_gff : un agent qui suit le client ne peut pas atteindre exactement les actions attendues.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "banque",
+  "tache": "task_083",
+  "alertes": [
+   {
+    "alerte": "banque-d172326872ad",
+    "cas": "a1",
+    "preuve": "a1 : Règlement entier, Guidelines 1 : \"All instructions will be found here or in the knowledge base.\" ; Conversation, message 4 (outil, KB_search) : \"**Note:** This parameter records metadata only; the agent must separately perform the indicated card action after filing the dispute.\" et \"'unauthorized_transaction' → 'freeze_pending_investigation'\" et \"when performing the actual card action after filing all disputes, use the MOST SEVERE action across all disputes [...] but then call freeze_debit_card_3892 (the most severe action) once for the card.\" ; Actions attendues, n° 10 : file_debit_card_transaction_dispute_6281(... card_id=\"dbc_dk83f5c2a1_gff\", dispute_category=\"unauthorized_transaction\", ... card_action=\"freeze_pending_investigation\"), et aucune action attendue freeze_debit_card_3892 ; État initial : dbc_dk83f5c2a1_gff \"status\": \"ACTIVE\".",
+    "justification": "La base de connaissances, source d'instructions désignée par le règlement, oblige à geler la carte après le dépôt d'un litige unauthorized_transaction, alors que les actions attendues omettent ce gel tout en prescrivant card_action=freeze_pending_investigation pour cette même carte.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "banque",
+  "tache": "task_091",
+  "alertes": [
+   {
+    "alerte": "banque-50c35c48338f",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, point 20 : \"If agent asks about replacement card preferences for shipping or card type: 'I want the most premium free option for both.'\" ; conversation, message 63 (base de connaissances) : \"PREMIUM TIER (Evergreen Account)\" ; message 61 (base de connaissances) : \"PREMIUM TIER: ... Free expedited shipping on all replacements (delivery_fee: $0 for both STANDARD and EXPEDITED) ... Rush shipping available (delivery_fee: $35)\" et \"PREMIUM TIER: - CLASSIC design: design_fee $0 - PREMIUM design (metallic silver): design_fee $0 (complimentary) - CUSTOM design (uploaded image): design_fee $15\" ; action attendue n°15 : order_debit_card_5739(... delivery_option=\"STANDARD\", delivery_fee=0, card_design=\"CLASSIC\", design_fee=0 ...).",
+    "justification": "La consigne du client exige l'option premium gratuite pour la livraison et le design, or pour un compte Evergreen (palier PREMIUM) l'expédition EXPEDITED et le design PREMIUM sont gratuits, donc l'action attendue STANDARD/CLASSIC contredit la consigne et l'agent a fait ce que voulait le client.",
+    "vague": 1
+   },
+   {
+    "alerte": "banque-e32f104b5419",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, point 20 : « If agent asks about replacement card preferences for shipping or card type: \"I want the most premium free option for both.\" » ; action attendue n°15 : order_debit_card_5739(... delivery_option=\"STANDARD\", delivery_fee=0, card_design=\"CLASSIC\", design_fee=0 ...). État initial : \"account_id\": \"chk_tw34a7d9e2_evergreen\", \"level\": \"Evergreen Account\". Base de connaissances lue avant l'écriture (conversation) : « PREMIUM TIER (Evergreen Account) » ; « PREMIUM TIER: ... Free expedited shipping on all replacements (delivery_fee: $0 for both STANDARD and EXPEDITED) » ; « PREMIUM TIER: ... PREMIUM design (metallic silver): design_fee $0 (complimentary) ». Réponse de l'outil, message 76 : « Total Fees: $0 (No additional charges) ».",
+    "justification": "Le compte Evergreen est du palier Premium, où l'envoi express et le design PREMIUM sont gratuits : la consigne du client (« l'option premium gratuite la plus haut de gamme pour les deux ») exige EXPEDITED/PREMIUM, alors que l'action attendue impose STANDARD/CLASSIC.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "commerce",
+  "tache": "105",
+  "alertes": [
+   {
+    "alerte": "commerce-36e51e59bf27",
+    "cas": "a1",
+    "preuve": "a1 : règlement, Exchange delivered order : \"If the user provides a gift card, it must have enough balance to cover the price difference.\" Action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\"). Conversation, message 13 (lecture avant toute écriture) : \"payment_methods\": {\"gift_card_7245904\": {... \"balance\": 17.0}} ; message 9 : 3761330360 \"price\": 101.12, 9647374798 \"price\": 109.58 ; message 7 : 7292993796 \"price\": 94.8 (x2), soit une différence de 21,1 (message 15).",
+    "justification": "L'action attendue fait payer 21,10 $ de différence par une carte cadeau qui n'a que 17,00 $, ce que le règlement interdit, et c'est le seul moyen de paiement du compte.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-4947a553ce76",
+    "cas": "a1",
+    "preuve": "a1 : Règlement, Exchange delivered order : « The user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference. » ; action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\") ; conversation message 14 (lecture avant toute écriture) : \"gift_card_7245904\": {\"source\": \"gift_card\", \"id\": \"gift_card_7245904\", \"balance\": 17.0} ; message 10 : 3761330360 \"price\": 101.12, 9647374798 \"price\": 109.58 ; message 8 : deux 7292993796 à \"price\": 94.8, d'où une différence de 210.70 − 189.60 = 21.10 > 17.00.",
+    "justification": "L'action attendue impose l'échange des deux bouilloires payé par une carte cadeau dont le solde ne couvre pas la différence, ce que le règlement interdit explicitement.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-5f9eea52b78b",
+    "cas": "a2",
+    "preuve": "a2 : action attendue n°1 exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\") ; outil (message 18) : \"gift_card_7245904\": {\"source\": \"gift_card\", \"id\": \"gift_card_7245904\", \"balance\": 17.0} ; différence = (101.12 - 94.8) + (109.58 - 94.8) = 21.10 > 17.00 ; règlement : \"If the user provides a gift card, it must have enough balance to cover the price difference.\" ; l'écriture refusée n'a rien modifié (message 22, commande inchangée).",
+    "justification": "L'appel de l'agent est identique à l'action attendue, et cette action ne peut pas réussir car le solde de la carte cadeau ne couvre pas la différence de prix.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-a0fc0b03078c",
+    "cas": "a2",
+    "preuve": "a2 : Conversation, message 12 (lecture avant toute écriture) : \"3761330360\" … \"price\": 101.12 et \"9647374798\" … \"price\": 109.58 ; message 8 : deux articles 7292993796 à \"price\": 94.8, soit une différence de 21,10 $. Message 24 (lecture faite après une écriture refusée, donc sans changement) : \"gift_card_7245904\": {\"source\": \"gift_card\", \"id\": \"gift_card_7245904\", \"balance\": 17.0}, seul moyen de paiement. Action attendue 1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\"). Règlement : \"If the user provides a gift card, it must have enough balance to cover the price difference.\" Message 20, réponse de l'outil au même appel : \"Error: Insufficient gift card balance to pay for the price difference\".",
+    "justification": "L'action attendue, identique à l'appel de l'agent, ne peut pas réussir : le solde de la carte cadeau ne couvre pas la différence de prix de 21,10 $.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-b23bd593eaee",
+    "cas": "a2",
+    "preuve": "a2 : action attendue exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\") ; prix dans get_product_details (message 12) : 3761330360 \"price\": 101.12, 9647374798 \"price\": 109.58, contre 94.8 pour 7292993796, soit 21,10 de différence ; get_user_details (message 20, après un appel refusé donc sans effet) : \"gift_card_7245904\": {\"source\": \"gift_card\", \"id\": \"gift_card_7245904\", \"balance\": 17.0}, seul moyen de paiement ; réponse de l'outil (message 16) : \"Error: Insufficient gift card balance to pay for the price difference\"",
+    "justification": "L'appel de l'agent est identique champ par champ à l'action attendue et l'outil l'a refusé faute de solde : l'action attendue ne peut pas réussir sur les données.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-c61898db0027",
+    "cas": "a1",
+    "preuve": "a1 : Règlement entier, Exchange delivered order : « The user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference. » ; action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\") ; conversation, message 18 (lecture avant toute écriture) : \"gift_card_7245904\": {\"source\": \"gift_card\", \"id\": \"gift_card_7245904\", \"balance\": 17.0} ; message 12 : 3761330360 price 101.12, 9647374798 price 109.58 ; message 8 : 7292993796 price 94.8, soit (101.12-94.8)+(109.58-94.8)=21.10 > 17.00.",
+    "justification": "L'action attendue échange les deux bouilloires avec une différence de 21,10 $ sur une carte cadeau dont le solde lu avant toute écriture est de 17,00 $, ce que le règlement interdit.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-d37c70bb645e",
+    "cas": "a1",
+    "preuve": "a1 : Règlement, Exchange delivered order : « The user must provide a payment method to pay or receive refund of the price difference. If the user provides a gift card, it must have enough balance to cover the price difference. » ; Conversation 16 (lecture avant toute écriture) : « \"gift_card_7245904\": {\"source\": \"gift_card\", \"id\": \"gift_card_7245904\", \"balance\": 17.0} » ; Conversation 12 : 3761330360 à 101.12 et 9647374798 à 109.58, article d'origine à 94.8 (différence 6,32 + 14,78 = 21,10) ; Action attendue 1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\").",
+    "justification": "L'action attendue fait payer une différence de 21,10 $ par une carte cadeau dont le solde initial est de 17,00 $, ce que le règlement interdit.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-d95804aad52b",
+    "cas": "a1",
+    "preuve": "a1 : règlement (Exchange delivered order) : « If the user provides a gift card, it must have enough balance to cover the price difference. » ; action attendue 1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\") ; lecture avant écriture (message 16) : \"gift_card_7245904\": {... \"balance\": 17.0} ; prix (message 10) : 3761330360 à 101.12, 9647374798 à 109.58, contre 94.8 l'original.",
+    "justification": "L'échange attendu des deux bouilloires payé par la carte cadeau viole le règlement, car le solde de 17,00 $ ne couvre pas l'écart de 21,10 $.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-db23fa62121c",
+    "cas": "a1",
+    "preuve": "a1 : Règlement, Exchange delivered order : \"If the user provides a gift card, it must have enough balance to cover the price difference.\" Action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\"). Lecture avant toute écriture, message 8 : \"gift_card_7245904\": {..., \"balance\": 17.0} ; message 9 : prix 94.8 chacun ; message 13 : 3761330360 \"price\": 101.12, 9647374798 \"price\": 109.58 ; différence 6,32 + 14,78 = 21,10 > 17,00.",
+    "justification": "L'action attendue fait payer une différence de 21,10 $ par une carte cadeau dont le solde initial est de 17,00 $, ce que le règlement interdit explicitement.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-e34d5e440aaf",
+    "cas": "a1",
+    "preuve": "a1 : Règlement entier, section Exchange delivered order : « If the user provides a gift card, it must have enough balance to cover the price difference. » Action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\"). Données (conversation, message 13, lecture avant écriture) : \"gift_card_7245904\": {\"source\": \"gift_card\", \"id\": \"gift_card_7245904\", \"balance\": 17.0} ; message 12 : prix 101.12 et 109.58 contre 94.8 chacun, soit 21,10 $ de différence.",
+    "justification": "L'action attendue fait payer une différence de 21,10 $ par une carte cadeau dont le solde lu avant toute écriture n'est que de 17 $, ce que le règlement interdit explicitement.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-e8e70e3d4a65",
+    "cas": "a2",
+    "preuve": "a2 : Conversation, message 18 (get_user_details, aucune écriture effective avant, l'appel du message 15 ayant été refusé sans effet, cf. message 24 identique au message 8) : \"gift_card_7245904\": {\"source\": \"gift_card\", \"id\": \"gift_card_7245904\", \"balance\": 17.0}. Message 12 : 3761330360 \"price\": 101.12, 9647374798 \"price\": 109.58, article d'origine 94.8, soit une différence de 21,10. Action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\"). Règlement : \"If the user provides a gift card, it must have enough balance to cover the price difference.\" Outil, message 16 : \"Error: Insufficient gift card balance to pay for the price difference\"",
+    "justification": "L'action attendue impose de payer la différence de 21,10 $ avec une carte cadeau dont le solde n'est que de 17,00 $, ce qui est impossible sur les données et interdit par le règlement.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-ea521d2ec072",
+    "cas": "a2",
+    "preuve": "a2 : lectures faites avant toute écriture (conversation, messages 12 et 14) : get_product_details donne \"3761330360\" ... \"price\": 101.12 et \"9647374798\" ... \"price\": 109.58, l'article d'origine \"7292993796\" ... \"price\": 94.8 ; get_user_details donne \"gift_card_7245904\": {\"source\": \"gift_card\", \"id\": \"gift_card_7245904\", \"balance\": 17.0}. Différence totale 6,32 + 14,78 = 21,10 > 17,00. Action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4316152\", item_ids=[\"7292993796\", \"7292993796\"], new_item_ids=[\"3761330360\", \"9647374798\"], payment_method_id=\"gift_card_7245904\"). Règlement : \"If the user provides a gift card, it must have enough balance to cover the price difference.\"",
+    "justification": "L'échange attendu des deux bouilloires coûte 21,10 $ de différence, que la carte cadeau imposée (solde 17,00 $) ne peut pas couvrir : l'action attendue est impossible sur les données initiales.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "commerce",
+  "tache": "32",
+  "alertes": [
+   {
+    "alerte": "commerce-c9c2066b4336",
+    "cas": "a4",
+    "preuve": "a4 : consigne du client (énoncé) : \"Also cancel the boot and kettle, and return the sneaker.\" sans aucun motif ; données (get_order_details #W5481803, message 16) : aucun champ de motif ; règlement (Cancel pending order) : \"the reason (either 'no longer needed' or 'ordered by mistake')\" sans règle pour choisir ; action attendue n°11 : cancel_pending_order(order_id=\"#W5481803\", reason=\"no longer needed\").",
+    "justification": "Le motif d'annulation attendu « no longer needed » pour la commande des bottes et de la bouilloire ne se déduit d'aucune source, et l'agent a appliqué le motif autorisé que la cliente a choisi.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "commerce",
+  "tache": "38",
+  "alertes": [
+   {
+    "alerte": "commerce-11062dad7497",
+    "cas": "a4",
+    "preuve": "a4 : Énoncé de la tâche : « you wonder if the agent can just cancel the order so that you can order again » (aucune raison d'annulation donnée) ; Règlement entier : « the reason (either 'no longer needed' or 'ordered by mistake') for cancellation » (les deux permises, aucune règle ne choisit) ; données : get_order_details renvoie « cancel_reason\": null ». Action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se déduit ni de la consigne du client, ni des données, ni du règlement, qui admet les deux raisons.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-1b4f3f3e0416",
+    "cas": "a4",
+    "preuve": "a4 : consigne du client (Énoncé de la tâche) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucun motif indiqué ; données (get_order_details, message 12) : « \"cancel_reason\": null » ; règlement : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — aucune règle ne choisit entre les deux ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "Le motif d'annulation attendu « no longer needed » ne figure nulle part dans la consigne du client, ni dans les données, ni dans une règle qui le déterminerait ; l'agent a utilisé le motif autorisé que le client a explicitement choisi.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-1c27482eef65",
+    "cas": "a4",
+    "preuve": "a4 : consigne du client (Énoncé de la tâche) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucun motif indiqué ; données (get_order_details, message 14) : « \"cancel_reason\": null » ; règlement : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — aucune règle ne choisit entre les deux ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "Le motif d'annulation attendu « no longer needed » ne figure nulle part dans la consigne du client, ni dans les données, ni dans une règle qui le déterminerait ; l'agent a utilisé le motif autorisé que le client a explicitement choisi.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-1c4575c97eac",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « you wonder if the agent can just cancel the order so that you can order again » — aucune raison indiquée ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') » — pas de choix imposé ; données : get_order_details (message 16) montre « cancel_reason\": null » ; client (message 30) : « I'll go with \"ordered by mistake\" as the reason » ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se déduit ni de la consigne du client, ni des données, ni du règlement, qui admet les deux raisons ; l'agent a suivi la raison choisie et confirmée par le client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-2089f94ec20a",
+    "cas": "a4",
+    "preuve": "a4 : Énoncé de la tâche, reason_for_call : « If not, you wonder if the agent can just cancel the order so that you can order again. » (aucune raison indiquée ; task_instructions et known_info muets) ; données : get_order_details (message 14, lecture avant écriture) « \"cancel_reason\": null » ; règlement, Cancel pending order : « the reason (either 'no longer needed' or 'ordered by mistake') » sans critère de choix ; action attendue 4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » n'est fixée ni par la consigne du client, ni par les données, ni par le règlement qui admet deux raisons ; l'agent a pris celle donnée par le client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-21636afbba2b",
+    "cas": "a4",
+    "preuve": "a4 : sources vérifiées une à une. (1) Consigne (Énoncé de la tâche, reason_for_call) : « If not, you wonder if the agent can just cancel the order so that you can order again. » ; known_info et task_instructions ne donnent aucune raison d'annulation. (2) Données : get_order_details (message 14) montre \"cancel_reason\": null, aucune raison enregistrée. (3) Règlement, Cancel pending order : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » ; aucune règle ne fixe laquelle. Action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se déduit ni de la consigne du client, ni des données, ni du règlement, qui laisse le choix entre deux raisons.",
+    "vague": 1
+   },
+   {
+    "alerte": "commerce-552c7ef92baf",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucun motif donné ; règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — les deux admis, aucune règle ne fixe le choix ; données (outil, message 14) : commande #W9348897 « cancel_reason »: null ; client (message 28) : « Let's use \"ordered by mistake,\" I guess. » ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "Le motif d'annulation attendu « no longer needed » ne se tire ni de la consigne, ni des données, ni du règlement, qui admet les deux motifs ; l'agent a pris celui que le client a choisi.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-67dc1771cf15",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucun motif fixé ; règlement : « the reason (either 'no longer needed' or 'ordered by mistake') » — aucun choix imposé ; données (outil, message 14) : cancel_reason null, rien n'indique le motif ; conversation message 28 : « The reason is I ordered by mistake » ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "Le motif attendu « no longer needed » ne se déduit d'aucune source : la consigne ne fixe pas de motif, le règlement admet les deux, et le client a dit « ordered by mistake ».",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-6cff92198501",
+    "cas": "a4",
+    "preuve": "a4 : consigne du client (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison n'y est donnée ; données (get_order_details, message 14) : « cancel_reason\": null » — rien ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') » — aucune règle ne choisit entre les deux ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se déduit ni de la consigne du client, ni des données, ni du règlement, qui admet les deux raisons ; l'agent a pris celle que le client a choisie.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-6dc916e49ca9",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison d'annulation indiquée ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') » — aucune règle ne choisit entre les deux ; données (get_order_details, message 14) : \"cancel_reason\": null ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne découle ni de la consigne du client, ni des données, ni d'une règle du règlement, qui laisse les deux raisons au choix du client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-708b9bca6bb1",
+    "cas": "a4",
+    "preuve": "a4 : consigne du client (Énoncé de la tâche) : « If not, you wonder if the agent can just cancel the order so that you can order again. », aucune raison indiquée ; règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. », aucune règle de choix ; données (get_order_details, message 14) : « \"cancel_reason\": null » ; client, message 32 : « \"Ordered by mistake,\" I guess, since I want to reorder it. Yes, go ahead and cancel it. » ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison d'annulation attendue (no longer needed) ne peut se déduire ni de la consigne du client, ni des données, ni du règlement, qui admet les deux raisons sans dire laquelle choisir ; l'agent a demandé la raison au client et a appliqué celle qu'il a donnée.",
+    "vague": 1
+   },
+   {
+    "alerte": "commerce-7272cebd5c58",
+    "cas": "a4",
+    "preuve": "a4 : Énoncé de la tâche (consigne) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison d'annulation n'y figure ; Données (message 14, get_order_details) : « \"status\": \"pending\" ... \"cancel_reason\": null » — aucune raison ; Règlement, Cancel pending order : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — aucune règle ne choisit entre les deux ; Action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison « no longer needed » attendue ne se déduit ni de la consigne, ni des données, ni du règlement, et l'agent a repris la raison donnée par le client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-787b14030e3a",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé de la tâche) : « you wonder if the agent can just cancel the order so that you can order again » (aucune raison indiquée) ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') » (aucun critère pour choisir) ; outils : get_order_details renvoie « \"cancel_reason\": null » ; le client a choisi lui-même (message 27) : « Reason would be \"ordered by mistake,\" I guess. »",
+    "justification": "La raison attendue « no longer needed » ne se déduit d'aucune source : la consigne ne donne pas de raison et dit au contraire que le client veut recommander, le règlement laisse le choix entre deux raisons, et aucun outil ne fournit la raison.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-816d59dbcefe",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucun motif indiqué, rien dans known_info ni task_instructions ; données : la commande #W9348897 (message 14) ne porte aucun motif ; règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — aucune règle ne choisit l'un des deux ; action attendue 4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "Le motif d'annulation attendu « no longer needed » ne se déduit ni de la consigne du client, ni des données, ni du règlement, qui admet les deux motifs ; l'agent a repris le motif donné par le client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-825010ac30d8",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé de la tâche) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison indiquée ; données : aucune lecture d'outil ne fournit de raison ; règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — pas de règle qui impose l'une ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\") ; client, message 28 : « The reason is \"ordered by mistake.\" Yes, go ahead. »",
+    "justification": "La raison attendue « no longer needed » ne peut venir ni de la consigne du client, ni des données, ni du règlement, qui laisse le choix entre deux raisons ; le client a donné « ordered by mistake » et l'agent l'a suivi.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-8e27c251e9de",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucun motif indiqué ; règlement : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — aucune règle ne fixe l'un des deux ; données (get_order_details #W9348897, message 14) : « cancel_reason\": null » ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\") ; client, message 30 : « \"Ordered by mistake\" works, I guess. Yeah, yes, go ahead and cancel it. »",
+    "justification": "Le motif d'annulation attendu « no longer needed » ne figure nulle part : la consigne ne donne aucun motif, les données n'en contiennent pas et le règlement laisse le choix entre deux, si bien que le client simulé a légitimement choisi « ordered by mistake ».",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-93966f9a18fd",
+    "cas": "a4",
+    "preuve": "a4 : consigne du client (Énoncé de la tâche) : « If not, you wonder if the agent can just cancel the order so that you can order again. » : aucun motif d'annulation donné ; règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » : aucune règle ne fixe lequel ; données (conversation, message 16, lecture avant toute écriture) : « \"cancel_reason\": null » ; client, message 28 : « The reason is \"ordered by mistake\". » ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "Le motif attendu « no longer needed » ne se tire ni de la consigne du client, ni des données, ni du règlement, qui laisse le choix entre deux motifs ; le client simulé a choisi l'autre.",
+    "vague": 1
+   },
+   {
+    "alerte": "commerce-a549e72b16e6",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé de la tâche) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison d'annulation n'y figure ; données (Conversation, message 14) : \"cancel_reason\": null ; règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — aucune règle n'impose l'une plutôt que l'autre ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne peut être obtenue d'aucune source : la consigne ne donne aucune raison, les données n'en contiennent pas et le règlement laisse le choix entre deux raisons.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-ae8e8e2f375f",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé de la tâche) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucun motif d'annulation indiqué, et vouloir recommander n'implique pas « no longer needed » ; données (Conversation, message 12) : « \"cancel_reason\": null » ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') for cancellation » — aucune règle ne choisit entre les deux ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "Le motif comparé « no longer needed » ne se déduit ni de la consigne du client, ni des données, ni d'une règle du règlement, qui admet deux motifs sans en imposer un.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-b0a82766e1a8",
+    "cas": "a4",
+    "preuve": "a4 : consigne du client (Énoncé de la tâche) : « you wonder if the agent can just cancel the order so that you can order again » — aucune raison donnée ; données (get_order_details, message 13) : \"cancel_reason\": null ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') for cancellation » — les deux permises ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\") ; client, message 29 : « Ordered by mistake is the reason, I guess. »",
+    "justification": "La raison attendue « no longer needed » ne se trouve ni dans la consigne, ni dans les données, ni dans le règlement, qui admet les deux raisons ; le client a donné « ordered by mistake ».",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-b857a2069e5b",
+    "cas": "a4",
+    "preuve": "a4 : sources vérifiées une à une. Consigne du client (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » : aucune raison d'annulation n'y figure. Données (Conversation, message 14, get_order_details) : \"cancel_reason\": null, aucune raison dans les données. Règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » : les deux valeurs sont permises, aucune n'est imposée. Action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison d'annulation attendue (« no longer needed ») ne se trouve ni dans la consigne du client, ni dans les données, ni dans une règle du règlement, qui admet les deux raisons ; le client a lui-même donné « ordered by mistake » et l'a confirmé.",
+    "vague": 1
+   },
+   {
+    "alerte": "commerce-c4c8646282e4",
+    "cas": "a4",
+    "preuve": "a4 : sources vérifiées une à une — Énoncé de la tâche : \"you wonder if the agent can just cancel the order so that you can order again\" (aucune raison donnée) ; données (outil 14) : \"cancel_reason\": null, aucune raison ; Règlement, Cancel pending order : \"the reason (either 'no longer needed' or 'ordered by mistake') for cancellation\" (aucune règle ne fixe l'une plutôt que l'autre) ; Actions attendues : \"4. cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\")\"",
+    "justification": "La raison attendue « no longer needed » ne se déduit ni de la consigne du client (qui veut annuler pour recommander), ni des données, ni du règlement qui admet les deux raisons ; le client a choisi « ordered by mistake », raison permise.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-c85d4218995f",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé de la tâche) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison d'annulation n'y figure ; données (conversation, message 14, lecture avant écriture) : « \"cancel_reason\": null » ; règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — aucune des deux n'est imposée ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se déduit d'aucune source : la consigne ne donne pas de raison et dit même que le client veut recommander, les données n'en portent pas, et le règlement autorise deux raisons sans en désigner une.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-ca5e56d7a76c",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « you wonder if the agent can just cancel the order so that you can order again » — aucune raison indiquée ; données (message 14) : commande #W9348897 « cancel_reason »: null, rien sur la raison ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') » — aucune des deux n'est imposée ; action attendue 4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se déduit ni de la consigne, ni des données, ni du règlement, qui admet les deux raisons ; l'agent a annulé la bonne commande avec la raison choisie par le client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-d3d409085fed",
+    "cas": "a4",
+    "preuve": "a4 : Consigne du client (Énoncé de la tâche) : « If not, you wonder if the agent can just cancel the order so that you can order again. » Aucun motif d'annulation n'y figure. known_info et task_instructions : nom, code postal, e-mail, ton, sans motif. Données (get_order_details, message 14) : « cancel_reason: null ». Règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. », sans règle qui choisisse l'un des deux. Action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "Le motif d'annulation attendu (« no longer needed ») ne se déduit ni de la consigne du client, ni des données, ni du règlement, qui admet les deux motifs ; l'agent a enregistré celui que le client a confirmé.",
+    "vague": 1
+   },
+   {
+    "alerte": "commerce-d6c0edc4e359",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « you wonder if the agent can just cancel the order so that you can order again » — aucune raison donnée ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') » — aucune règle ne choisit ; données (get_order_details, message 14) : \"cancel_reason\": null ; action attendue 4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se déduit d'aucune source : la consigne ne donne pas de raison, le règlement en admet deux, et le client a choisi l'autre.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-d7c1e5946138",
+    "cas": "a4",
+    "preuve": "a4 : consigne (reason_for_call) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison d'annulation dans reason_for_call, known_info ni task_instructions ; règlement : « the reason (either 'no longer needed' or 'ordered by mistake') » sans critère de choix ; données : get_order_details renvoie « \"cancel_reason\": null » ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se trouve ni dans la consigne du client, ni dans les données, ni dans une règle qui choisirait entre les deux raisons permises.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-d825fecc2ef6",
+    "cas": "a4",
+    "preuve": "a4 : consigne (reason_for_call) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison d'annulation dans reason_for_call, known_info ni task_instructions ; règlement : « the reason (either 'no longer needed' or 'ordered by mistake') » sans critère de choix ; données : get_order_details renvoie « \"cancel_reason\": null » ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se trouve ni dans la consigne du client, ni dans les données, ni dans une règle qui choisirait entre les deux raisons permises.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-d92ad1419144",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « you wonder if the agent can just cancel the order so that you can order again » — aucune raison nommée ; règlement : « the reason (either 'no longer needed' or 'ordered by mistake') » — aucune règle ne départage ; données : aucune raison dans la commande (\"cancel_reason\": null) ; action attendue 4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se tire d'aucune source : la consigne ne fixe pas de raison, le règlement en permet deux sans choisir, et le client a choisi l'autre.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-ddc47fbe9619",
+    "cas": "a4",
+    "preuve": "a4 : Énoncé de la tâche, reason_for_call : « If not, you wonder if the agent can just cancel the order so that you can order again. » (aucune raison n'est donnée ; known_info et task_instructions n'en donnent pas non plus) ; Règlement entier, Cancel pending order : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » (aucune règle ne choisit entre les deux) ; données : get_order_details (message 16) renvoie « cancel_reason\": null » ; action attendue 4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison d'annulation attendue « no longer needed » ne peut venir ni de la consigne du client, ni des données, ni du règlement, qui admet les deux raisons.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-e0cfc9045ce7",
+    "cas": "a4",
+    "preuve": "a4 : consigne du client (Énoncé) : « you wonder if the agent can just cancel the order so that you can order again » — aucune raison donnée ; données : commande #W9348897 « cancel_reason\": null » (Conversation, 14) ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') » — aucune règle ne choisit entre les deux ; action attendue n°4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se déduit ni de la consigne, ni des données, ni du règlement, qui admet les deux raisons ; l'agent a pris celle que le client a confirmée.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-eef8af285aa9",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison indiquée ; données (message 11) : \"cancel_reason\": null ; règlement (Cancel pending order) : « the reason (either 'no longer needed' or 'ordered by mistake') » — les deux sont permises ; client (message 26) : « Okay, the reason is \"ordered by mistake.\" » ; action attendue 4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » n'est fixée par aucune source : la consigne du client n'en donne pas, le règlement en autorise deux, et l'agent a utilisé celle que le client a choisie.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-fb8d3a546b17",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » — aucune raison donnée ; données : la commande #W9348897 ne porte aucune raison (cancel_reason null) ; règlement (Cancel pending order) : « either 'no longer needed' or 'ordered by mistake' » — aucune règle ne fixe le choix ; action attendue 4 : cancel_pending_order(order_id=\"#W9348897\", reason=\"no longer needed\") ; conversation message 25 : « Reason would be \"ordered by mistake,\" I guess. »",
+    "justification": "La raison d'annulation attendue « no longer needed » ne figure nulle part dans la consigne du client, qui ne donne aucune raison, et l'agent a suivi la raison explicitement choisie et confirmée par le client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-fffb6cbf05a6",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If not, you wonder if the agent can just cancel the order so that you can order again. » (aucun motif) ; règlement : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » ; données : aucun champ de motif ; client (message 29) : « I'll go with \"ordered by mistake.\" » ; action attendue n°4 reason=\"no longer needed\".",
+    "justification": "Le motif « no longer needed » de l'action attendue ne découle ni de la consigne, ni des données, ni du règlement, qui admet les deux motifs ; le client a lui-même choisi « ordered by mistake ».",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "commerce",
+  "tache": "52",
+  "alertes": [
+   {
+    "alerte": "commerce-969898441007",
+    "cas": "a3",
+    "preuve": "a3 : consigne (énoncé) : \"ensure all the other specifications of the camera to be exchanged are the same, except for the zoom capacity which has to be maximized\" ; action attendue 5 : exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"9228757377\"], ...) ; données (message 17, lecture avant toute écriture) : article d'origine \"5996159312\": {\"resolution\": \"24MP\", \"zoom\": \"3x\", \"storage\": \"SD card\"} contre \"9228757377\": {\"resolution\": \"30MP\", \"zoom\": \"10x\", \"storage\": \"SD card\"}, et la seule variante 24MP 10x \"5484530610\" est \"CF card\", \"available\": false",
+    "justification": "La consigne exige que toutes les autres caractéristiques restent identiques, alors que l'action attendue change la résolution de 24MP à 30MP, si bien qu'un agent qui suit le client ne peut pas atteindre l'échange attendu.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-c08a2a134ea0",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche : « ensure all the other specifications of the camera to be exchanged are the same, except for the zoom capacity which has to be maximized » ; action attendue 5 : exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"9228757377\"], payment_method_id=\"paypal_8194385\") ; conversation, message 17 : 5996159312 = « resolution: 24MP, zoom: 3x, storage: SD card », 9228757377 = « resolution: 30MP, zoom: 10x, storage: SD card ».",
+    "justification": "La consigne exige que toutes les autres caractéristiques restent identiques sauf le zoom, alors que l'échange attendu change aussi la résolution (24MP vers 30MP) : aucun agent fidèle au client ne peut atteindre l'action attendue.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "commerce",
+  "tache": "64",
+  "alertes": [
+   {
+    "alerte": "commerce-fff0e597eba8",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « You want to exchange the camera for the highest resolution, waterproof camera that you can get with the previous purchaced price. » (aucune couleur) ; données (message 19) : « 6700049080 »: 4K, waterproof yes, black, available true, 466.75 et « 6117189161 »: 4K, waterproof yes, silver, available true, 481.5 ; règlement : aucun paragraphe ne départage les couleurs ; action attendue n°8 new_item_ids=[\"6700049080\"].",
+    "justification": "La couleur noire de l'article attendu n'est déterminée ni par la consigne, ni par les données, ni par le règlement : deux variantes 4K étanches disponibles sous le prix d'origine satisfont la demande.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "commerce",
+  "tache": "66",
+  "alertes": [
+   {
+    "alerte": "commerce-11c1c62a49a4",
+    "cas": "a4",
+    "preuve": "a4 : Énoncé de la tâche : « If there are any issues, cancel the entire order. » (aucune raison d'annulation donnée) ; Règlement entier : « the reason (either 'no longer needed' or 'ordered by mistake') for cancellation » (les deux permises) ; données : get_order_details renvoie « cancel_reason\": null ». Action attendue n°5 : cancel_pending_order(order_id=\"#W3361211\", reason=\"no longer needed\").",
+    "justification": "La raison attendue « no longer needed » ne se déduit ni de la consigne du client, ni des données, ni du règlement, qui admet les deux raisons.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-23a851857f96",
+    "cas": "a4",
+    "preuve": "a4 : (1) Énoncé de la tâche : « If there are any issues, cancel the entire order. » et task_instructions : « . » — aucune raison indiquée ; (2) Règlement entier, Cancel pending order : « the reason (either 'no longer needed' or 'ordered by mistake') for cancellation » — les deux sont permises, aucune règle n'impose l'une ; (3) données : get_order_details #W3361211 renvoie « \"cancel_reason\": null » — rien n'indique la raison. Action attendue n°5 : cancel_pending_order(order_id=\"#W3361211\", reason=\"no longer needed\").",
+    "justification": "La raison d'annulation attendue « no longer needed » ne peut être tirée ni de la consigne du client, ni des données, ni du règlement, qui admet deux raisons.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-257f22375ff2",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé de la tâche) : « If there are any issues, cancel the entire order. » — aucune raison d'annulation n'y figure ; données (Conversation, message 12) : la commande #W3361211 ne porte aucune raison ; règlement (Règlement entier) : « the reason (either 'no longer needed' or 'ordered by mistake') for cancellation » — les deux valeurs sont permises sans règle de choix ; action attendue n°5 : cancel_pending_order(order_id=\"#W3361211\", reason=\"no longer needed\").",
+    "justification": "La raison d'annulation attendue « no longer needed » ne se déduit ni de la consigne du client, ni des données, ni du règlement, qui autorise les deux raisons ; l'agent a repris celle que le client a donnée.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-2c9e7801c787",
+    "cas": "a4",
+    "preuve": "a4 : consigne du client (Énoncé) : « If there are any issues, cancel the entire order. » sans motif ; données (message 10) : \"cancel_reason\": null ; règlement (Règlement entier) : « the reason (either 'no longer needed' or 'ordered by mistake') » ; action attendue n°5 : cancel_pending_order(order_id=\"#W3361211\", reason=\"no longer needed\").",
+    "justification": "Le motif « no longer needed » attendu ne peut être tiré ni de la consigne, ni des données, ni du règlement qui autorise les deux motifs ; l'agent a suivi le motif choisi par le client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-38a646e75dbd",
+    "cas": "a4",
+    "preuve": "a4 : Énoncé de la tâche, seule mention : \"If there are any issues, cancel the entire order.\" (aucun motif) ; données (messages 12 et 17) : commande #W3361211 \"cancel_reason\": null ; règlement, Cancel pending order : \"the reason (either 'no longer needed' or 'ordered by mistake') for cancellation\" sans critère de choix ; Actions attendues : \"5. cancel_pending_order(order_id=\"#W3361211\", reason=\"no longer needed\")\" ; conversation, message 23 : \"Okay, the reason is \"ordered by mistake.\"\"",
+    "justification": "Le motif d'annulation attendu ne se trouve ni dans la consigne du client, ni dans les données, ni dans une règle qui choisirait entre les deux motifs permis, et l'agent a repris le motif donné par le client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-82394eeb8c8a",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé de la tâche) : « If there are any issues, cancel the entire order. » — aucune raison indiquée ; données : aucune lecture d'outil ne fournit de raison ; règlement (Cancel pending order) : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — pas de règle qui impose l'une ; action attendue n°5 : cancel_pending_order(order_id=\"#W3361211\", reason=\"no longer needed\") ; client, message 15 : « The reason is that I ordered it by mistake. »",
+    "justification": "La raison attendue « no longer needed » ne peut venir ni de la consigne du client, ni des données, ni du règlement, qui laisse le choix entre deux raisons ; le client a donné « ordered by mistake » et l'agent l'a suivi.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-be4b79fb7626",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If there are any issues, cancel the entire order. » — aucune raison d'annulation indiquée ; règlement : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — les deux valeurs sont permises, aucune n'est imposée ; données (message 12, outil) : \"cancel_reason\": null. Action attendue n°5 : cancel_pending_order(order_id=\"#W3361211\", reason=\"no longer needed\").",
+    "justification": "La raison « no longer needed » exigée par l'action attendue ne se déduit d'aucune source : la consigne ne donne aucune raison, les données n'en contiennent pas et le règlement admet les deux valeurs.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-bea48447d122",
+    "cas": "a4",
+    "preuve": "a4 : consigne (Énoncé) : « If there are any issues, cancel the entire order. » — aucune raison d'annulation indiquée ; règlement : « The user needs to confirm the order id and the reason (either 'no longer needed' or 'ordered by mistake') for cancellation. » — les deux valeurs sont permises, aucune n'est imposée ; données (message 12, outil) : \"cancel_reason\": null. Action attendue n°5 : cancel_pending_order(order_id=\"#W3361211\", reason=\"no longer needed\").",
+    "justification": "La raison « no longer needed » exigée par l'action attendue ne se déduit d'aucune source : la consigne ne donne aucune raison, les données n'en contiennent pas et le règlement admet les deux valeurs.",
+    "vague": 2
+   }
+  ]
+ },
+ {
+  "environnement": "commerce",
+  "tache": "98",
+  "alertes": [
+   {
+    "alerte": "commerce-01725a95ed24",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; Conversation, message 14 : la commande #W3916020 a été payée avec \"credit_card_8105988\" ; Actions attendues : « 2. exchange_delivered_order_items(order_id=\"#W3916020\", item_ids=[\"7758198585\", \"4068787148\"], new_item_ids=[\"5606522780\", \"6245746168\"], payment_method_id=\"credit_card_8105988\") » ; Règlement : « The user must provide a payment method to pay or receive refund of the price difference. » (aucune obligation d'utiliser la carte d'origine).",
+    "justification": "La consigne demande au client de préférer l'autre carte pour le paiement ou le remboursement, alors que l'action attendue impose la carte d'origine ; l'agent a suivi le client sans enfreindre le règlement.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-132d01150810",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, reason_for_call : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; Conversation, message 12 (lecture avant toute écriture) : #W4689314 « payment_history\": [{\"transaction_type\": \"payment\", \"amount\": 2895.55, \"payment_method_id\": \"credit_card_8105988\"}] » ; message 8 : deux cartes seulement, credit_card_3951670 (visa) et credit_card_8105988 (mastercard) ; Actions attendues, n°1 : exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"8363011723\"], payment_method_id=\"credit_card_8105988\").",
+    "justification": "La consigne demande la carte autre que celle d'origine (Mastercard credit_card_8105988, qui a payé la commande), alors que l'action attendue impose cette carte d'origine : un agent qui suit le client ne peut pas l'atteindre.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-315a9888f134",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé : \"If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method.\" ; outil msg 12 : #W3916020 payé par \"credit_card_8105988\" ; profil msg 8 : autre carte \"credit_card_3951670\" (visa 6791) ; action attendue n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\") ; règlement : \"The user must provide a payment method to pay or receive refund of the price difference.\"",
+    "justification": "La consigne impose de préférer l'autre carte que celle d'origine (Mastercard 8105988), alors que l'action attendue rembourse sur cette Mastercard ; l'agent a suivi le client avec la Visa 3951670, ce que le règlement permet.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-32786ff124a4",
+    "cas": "a3",
+    "preuve": "a3 : énoncé de la tâche : \"If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method.\" ; la commande #W3916020 a été payée avec \"payment_method_id\": \"credit_card_8105988\" (message 12), et l'autre carte du client est credit_card_3951670 (message 8) ; or l'action attendue n°2 porte payment_method_id=\"credit_card_8105988\".",
+    "justification": "La consigne du client impose l'autre carte que celle de la commande, alors que l'action attendue utilise la carte de la commande.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-376da7136f46",
+    "cas": "a3",
+    "preuve": "a3 : consigne : \"If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method.\" Action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4689314\", ..., payment_method_id=\"credit_card_8105988\"). Conversation, message 12 (lecture avant écriture) : #W4689314 \"payment_history\": [{\"transaction_type\": \"payment\", ... \"payment_method_id\": \"credit_card_8105988\"}] ; message 8 : le compte n'a que deux cartes, credit_card_3951670 et credit_card_8105988.",
+    "justification": "La consigne demande l'autre carte que celle qui a payé les commandes, soit la Visa credit_card_3951670, alors que l'action attendue rembourse sur la Mastercard credit_card_8105988 qui les a payées.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-387d8ba3b50e",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche : \"If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method.\" ; conversation, message 10 : commande #W4689314 payée avec \"payment_method_id\": \"credit_card_8105988\", et message 6 : l'autre carte est \"credit_card_3951670\" ; Actions attendues : \"1. exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"8363011723\"], payment_method_id=\"credit_card_8105988\")\" ; règlement, Exchange delivered order : \"The user must provide a payment method to pay or receive refund of the price difference.\"",
+    "justification": "La consigne demande que l'échange soit payé ou remboursé sur l'autre carte que celle de la commande, alors que l'action attendue impose la carte d'origine, ce que le règlement n'exige pas pour un échange.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-3c6f965c3fbe",
+    "cas": "a3",
+    "preuve": "a3 : consigne (Énoncé de la tâche) : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; données (conversation, message 10, lecture avant toute écriture) : commande #W4689314 payée par \"payment_method_id\": \"credit_card_8105988\", l'utilisateur n'ayant que deux cartes (credit_card_3951670 et credit_card_8105988, message 8) ; action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"8363011723\"], payment_method_id=\"credit_card_8105988\").",
+    "justification": "La consigne du client demande l'autre carte que celle de la commande, alors que l'action attendue rembourse sur la carte d'origine de la commande ; un agent qui suit le client ne peut pas l'atteindre.",
+    "vague": 1
+   },
+   {
+    "alerte": "commerce-59fb078050f4",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; Conversation, message 14 (lecture avant écriture) : #W3916020 \"payment_history\": [{\"transaction_type\": \"payment\", \"amount\": 1969.22, \"payment_method_id\": \"credit_card_8105988\"}] ; message 10 : seules cartes \"credit_card_3951670\" (visa) et \"credit_card_8105988\" (mastercard) ; Actions attendues n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\")",
+    "justification": "La consigne demande au client de préférer l'autre carte que celle de la commande (Mastercard credit_card_8105988, qui a payé #W3916020), soit la Visa credit_card_3951670, alors que l'action attendue impose la Mastercard ; aucun paragraphe du règlement ne restreint le moyen de paiement d'un échange.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-5abaee5870d8",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; Conversation, message 14 (lecture avant écriture) : #W3916020 \"payment_history\": [{\"transaction_type\": \"payment\", \"amount\": 1969.22, \"payment_method_id\": \"credit_card_8105988\"}] ; message 8 : seules cartes \"credit_card_3951670\" (visa) et \"credit_card_8105988\" (mastercard) ; Actions attendues n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\")",
+    "justification": "La consigne demande au client de préférer l'autre carte que celle de la commande (Mastercard credit_card_8105988, qui a payé #W3916020), soit la Visa credit_card_3951670, alors que l'action attendue impose la Mastercard ; aucun paragraphe du règlement ne restreint le moyen de paiement d'un échange.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-5c70842707c1",
+    "cas": "a3",
+    "preuve": "a3 : consigne, reason_for_call : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; conversation, message 8 (outil) : deux cartes seulement, credit_card_3951670 (visa) et credit_card_8105988 (mastercard) ; message 12 (outil) : commande #W3916020 payée avec credit_card_8105988 ; action attendue n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\") ; règlement, Exchange delivered order : « The user must provide a payment method to pay or receive refund of the price difference. »",
+    "justification": "La consigne demande au client de préférer l'autre carte que celle de la commande (Mastercard 8105988), soit la Visa 3951670, alors que l'action attendue rembourse sur la Mastercard ; le règlement n'impose pas le moyen d'origine pour un échange.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-6c90dd3087d4",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, reason_for_call : \"If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method.\" ; Actions attendues n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\") ; message 14 (outil, lecture avant écriture) : #W3916020 \"payment_method_id\": \"credit_card_8105988\" ; message 8 : l'autre carte est \"credit_card_3951670\", \"brand\": \"visa\" ; règlement : \"The user must provide a payment method to pay or receive refund of the price difference.\"",
+    "justification": "La consigne du client demande d'utiliser l'autre carte que celle d'origine (Mastercard credit_card_8105988), alors que l'action attendue impose justement cette carte d'origine ; l'agent a suivi le client et le règlement.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-71346e5c3b7d",
+    "cas": "a3",
+    "preuve": "a3 : Consigne (Énoncé, reason_for_call) : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » Données (message 10) : deux cartes, « credit_card_3951670 » (visa 6791) et « credit_card_8105988 » (mastercard 8484) ; commande #W3916020 (message 15) payée « payment_method_id\": \"credit_card_8105988\" ». Action attendue n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\").",
+    "justification": "La consigne impose au client de demander l'autre carte que celle d'origine, alors que l'action attendue rembourse sur la carte d'origine credit_card_8105988 : la consigne contredit l'action attendue.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-7e28dad1dae4",
+    "cas": "a3",
+    "preuve": "a3 : consigne du client : \"If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method.\" ; action attendue n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\") ; état lu avant écriture (message 15) : \"payment_history\": [{\"transaction_type\": \"payment\", \"amount\": 1969.22, \"payment_method_id\": \"credit_card_8105988\"}], l'autre carte du profil (message 10) étant \"credit_card_3951670\" (visa 6791).",
+    "justification": "La consigne demande que le remboursement aille sur l'autre carte que celle de la commande (Mastercard credit_card_8105988), alors que l'action attendue impose cette même Mastercard ; l'agent a suivi le client et le règlement.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-919a6b3d2549",
+    "cas": "a3",
+    "preuve": "a3 : consigne (reason_for_call) : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; action attendue n°1 : exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"8363011723\"], payment_method_id=\"credit_card_8105988\") ; règlement (Exchange delivered order) : « The user must provide a payment method to pay or receive refund of the price difference. » ; get_user_details (message 8) : cartes credit_card_3951670 (visa) et credit_card_8105988 (mastercard), commande payée par credit_card_8105988 (message 10).",
+    "justification": "La consigne demande que le client préfère l'autre carte (Visa credit_card_3951670) comme moyen de paiement ou de remboursement, alors que l'action attendue impose la carte d'origine credit_card_8105988 ; un agent qui suit le client et le règlement ne peut pas l'atteindre.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-c41427571d9e",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche : \"If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method.\" ; conversation, outil 10 : \"payment_method_id\": \"credit_card_8105988\" (paiement d'origine de #W4689314), outil 8 : autre carte \"credit_card_3951670\" ; Actions attendues : \"1. exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"8363011723\"], payment_method_id=\"credit_card_8105988\")\" ; Règlement, Exchange delivered order : \"The user must provide a payment method to pay or receive refund of the price difference.\"",
+    "justification": "La consigne demande l'autre carte que l'originale (Mastercard 8105988) pour le paiement ou remboursement, alors que l'action attendue utilise précisément la carte d'origine ; l'agent a suivi le client et le règlement d'échange n'impose pas la méthode d'origine.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-c89b4f4cf297",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, reason_for_call : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; Actions attendues, n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", item_ids=[\"7758198585\", \"4068787148\"], new_item_ids=[\"5606522780\", \"6245746168\"], payment_method_id=\"credit_card_8105988\") ; Conversation, message 12 (lecture avant écriture) : \"payment_history\": [{\"transaction_type\": \"payment\", \"amount\": 1969.22, \"payment_method_id\": \"credit_card_8105988\"}], et message 8 : deux cartes, credit_card_3951670 (visa 6791) et credit_card_8105988 (mastercard 8484) ; Règlement, Exchange delivered order : « The user must provide a payment method to pay or receive refund of the price difference. »",
+    "justification": "La consigne du client impose de préférer l'autre carte que la carte d'origine (Mastercard credit_card_8105988), alors que l'action attendue verse le remboursement sur cette carte d'origine ; l'agent a suivi le client et le règlement n'impose pas le moyen d'origine pour un échange.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-c98db4ffd565",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, reason_for_call : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; Conversation, message 14 (lecture avant toute écriture) : commande #W3916020 payée par « payment_method_id\": \"credit_card_8105988\" » ; Actions attendues n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\") ; Règlement, Exchange delivered order : « The user must provide a payment method to pay or receive refund of the price difference. »",
+    "justification": "La consigne du client demande de préférer l'autre carte que celle de la commande, alors que l'action attendue rembourse sur la carte d'origine credit_card_8105988 ; l'agent a suivi le client avec credit_card_3951670, ce que le règlement permet.",
+    "vague": 1
+   },
+   {
+    "alerte": "commerce-ccc7a2573d51",
+    "cas": "a3",
+    "preuve": "a3 : consigne du client : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; données, message 12 : #W4689314 payé par \"payment_method_id\": \"credit_card_8105988\" ; message 8 : cartes credit_card_3951670 (visa 6791) et credit_card_8105988 (mastercard 8484) ; règlement, Exchange delivered order : « The user must provide a payment method to pay or receive refund of the price difference. » ; action attendue 1 : exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"8363011723\"], payment_method_id=\"credit_card_8105988\")",
+    "justification": "La consigne demande que le remboursement aille sur l'autre carte que celle des commandes livrées (la Visa credit_card_3951670), alors que l'action attendue impose la Mastercard d'origine ; le règlement laisse le client choisir le moyen de paiement de l'échange, donc un agent qui suit le client et le règlement ne peut pas atteindre l'action attendue.",
+    "vague": 1
+   },
+   {
+    "alerte": "commerce-d5d9ef7a6232",
+    "cas": "a3",
+    "preuve": "a3 : consigne : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; action attendue n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\") ; message 12 (outil, lecture avant écriture) : paiement de #W3916020 par « credit_card_8105988 », l'autre carte du profil étant « credit_card_3951670 » (message 6) ; règlement, Exchange delivered order : « The user must provide a payment method to pay or receive refund of the price difference. »",
+    "justification": "La consigne demande au client de préférer l'autre carte pour paiement ou remboursement, alors que l'action attendue rembourse sur la carte d'origine credit_card_8105988 ; un agent qui suit le client ne peut pas l'atteindre.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-df9fe3d04e38",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; données (message 14) : commande #W3916020 payée \"payment_method_id\": \"credit_card_8105988\" ; l'autre carte du profil (message 8) est \"credit_card_3951670\" ; action attendue n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\").",
+    "justification": "La consigne impose au client de demander l'autre carte que la Mastercard d'origine, alors que l'action attendue rembourse sur cette Mastercard, ce qui rend l'action attendue inatteignable en suivant le client.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-e64f756a21db",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; données (message 14) : commande #W3916020 payée par \"credit_card_8105988\", l'autre carte du profil étant \"credit_card_3951670\" ; action attendue n°2 : exchange_delivered_order_items(order_id=\"#W3916020\", ..., payment_method_id=\"credit_card_8105988\") ; Règlement, Exchange delivered order : « The user must provide a payment method to pay or receive refund of the price difference. »",
+    "justification": "La consigne du client impose de préférer l'autre carte que celle de la commande pour le remboursement, alors que l'action attendue rembourse sur la carte d'origine ; le règlement d'échange ne limite pas le moyen de paiement à l'original.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-ef79d1226462",
+    "cas": "a3",
+    "preuve": "a3 : consigne (Énoncé) : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; données (message 12) : \"payment_history\": [{\"transaction_type\": \"payment\", \"amount\": 2895.55, \"payment_method_id\": \"credit_card_8105988\"}], l'autre carte étant credit_card_3951670 (message 8) ; action attendue 1 : exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"8363011723\"], payment_method_id=\"credit_card_8105988\").",
+    "justification": "La consigne demande de préférer l'autre carte que celle d'origine (Mastercard credit_card_8105988), alors que l'action attendue utilise justement cette carte d'origine.",
+    "vague": 2
+   },
+   {
+    "alerte": "commerce-f6cc1a92dbbd",
+    "cas": "a3",
+    "preuve": "a3 : Énoncé de la tâche, reason_for_call : « If the agent asks for confirmation, mention that you'd prefer the other card as payment or refund method. » ; Conversation, message 12 : commande #W4689314 payée avec « payment_method_id\": \"credit_card_8105988\" » (l'autre carte du profil, message 8, est credit_card_3951670) ; Actions attendues n°1 : exchange_delivered_order_items(order_id=\"#W4689314\", item_ids=[\"5996159312\"], new_item_ids=[\"8363011723\"], payment_method_id=\"credit_card_8105988\").",
+    "justification": "La consigne demande que le client préfère l'autre carte que celle d'origine pour le paiement ou remboursement, alors que l'action attendue impose la carte d'origine credit_card_8105988 : un agent qui suit le client ne peut pas l'atteindre.",
+    "vague": 1
+   }
+  ]
+ }
+]

@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper and the data deposit."
+title: "Earned Autonomy for AI Agents: A Pre-registered Error-Budget Test of Per-Action-Type Delegation"
+authors:
+  - family-names: Dubief
+    given-names: Otsoa
+    orcid: "https://orcid.org/0009-0002-7322-7575"
+    affiliation: "Independent researcher"
+    email: otsoa.dubief@gmail.com
+date-released: 2026-11-17
+license: MIT
+repository-code: "https://github.com/otsoa-dubief/earned-autonomy"
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24321214
+    description: "Outputs of the pre-registered final replay (Zenodo; files under embargo until the paper is posted)"
+  - type: doi
+    value: 10.5281/zenodo.24331243
+    description: "Code (Zenodo archive of the repository)"
+  - type: doi
+    value: 10.5281/zenodo.24331245
+    description: "Raw data: the 68,990 files of the verdict-freeze manifest (Zenodo)"
+  - type: url
+    value: "https://osf.io/vycge/"
+    description: "Preregistration (OSF; under embargo until the paper is posted)"
+keywords:
+  - AI agents
+  - delegation
+  - earned autonomy
+  - error budget
+  - continuous sampling
+  - pre-registration

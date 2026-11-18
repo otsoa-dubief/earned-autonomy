@@ -1,0 +1,10 @@
+# AVERTISSEMENT : bout en bout sur les 120 parties de développement du pilote (pilote/etape2/2026-11-05_07-50-58/), avec un partage fictif calculé par banc/tirage/tirage_public.py à partir d'une valeur de balise de test (aucune balise réelle interrogée). Ces chiffres n'ont AUCUNE valeur de preuve et ne sont pas des résultats de l'expérience (PLAN_EXPERIENCE.md, 3.1 et 5.16, point 6).
+environnement,moitie,taches,taches_retirees,taches_jouees,ecritures_faible,ecritures_moyen,ecritures_fort
+WorkBench,calibration,4,0,4,8,3,0
+WorkBench,confirmation,6,0,6,12,6,0
+aviation,calibration,5,0,5,0,3,3
+aviation,confirmation,5,0,5,0,0,21
+banque,calibration,5,0,5,46,0,0
+banque,confirmation,5,0,5,16,0,0
+commerce,calibration,5,0,5,3,0,18
+commerce,confirmation,5,0,5,3,0,6

@@ -1,0 +1,7 @@
+melange,niveau,part,barre,un_sur,budget,N_B_regulier,N_B_tout,N_B_regulier_allonge,N_B_tout_allonge,pm3_A_degats,pm3_A_degats_sur_barre
+bureau,faible,0.21,0.0250627,39.9,0.5,15,41,19,52,0.0787344,3.1415
+bureau,moyen,0.16,0.00328947,304,0.05,118,319,148,399,0.0698349,21.2298
+bureau,fort,0.136,0.000386997,2584,0.005,1001,2719,1252,3399,0.00780391,20.1653
+service_client,faible,0.08,0.0657895,15.2,0.5,6,15,8,19,0.204759,3.11234
+service_client,moyen,0.22,0.00239234,418,0.05,162,439,203,549,0.0488905,20.4362
+service_client,fort,0.232,0.00022686,4408,0.005,1707,4639,2134,5799,0.00457096,20.1488

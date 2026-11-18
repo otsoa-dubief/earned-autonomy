@@ -1,0 +1,11 @@
+# EXPLORATOIRE : analyse après le verdict, sans effet sur l'étiquette préenregistrée (R4). Écrite par outils/analyses_exploratoires.py le 17/11/2026.
+environnement,modele,type,niveau,part_palier2,taux_reserve_entiere,erreurs_executees_puis_signalees_pour_100
+commerce,claude-haiku-5-5,ECR,faible,0.34,0.0241,0.819
+commerce,claude-sonnet-5-5,ECR,faible,0.199,0.0,0.0
+commerce,claude-opus-5-5,ECR,faible,0.426,0.0366,1.56
+banque,claude-haiku-5-5,ECR,faible,0.694,0.0323,2.24
+banque,claude-sonnet-5-5,ECR,faible,0.278,0.3,8.346
+banque,claude-opus-5-5,ECR,faible,0.528,0.123,6.487
+WorkBench,claude-haiku-5-5,ECR,faible,0.63,0.0988,6.223
+WorkBench,claude-sonnet-5-5,ECR,faible,0.813,0.0625,5.083
+WorkBench,claude-opus-5-5,ECR,faible,0.812,0.0571,4.637

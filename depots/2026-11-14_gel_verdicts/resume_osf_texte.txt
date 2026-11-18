@@ -1,0 +1,26 @@
+Earned autonomy for AI agents: freeze of the confirmed verdicts
+
+This registration freezes, by their SHA-256 fingerprints, every input of the final confirmatory computation of the study preregistered at https://osf.io/vycge/ (OSF Preregistration, submitted on 10 November 2026). It is made after the last data-collection wave and before the public random draw that splits the reserved tasks between the calibration and confirmation sets (plan, section 3.4). The data themselves are not part of this registration. They will be published with the results, and anyone can check them against the fingerprints listed here.
+
+FILES
+
+• manifeste_verdicts.txt: one line "sha256  path" per file, sorted, with paths relative to the experiment folder. It lists 68,990 files: the complete output of both waves (episode traces, typed actions, per-action verdicts, costs, attempt logs, game plans, task success), the review of every automated alert (2,529 alerts in wave 2 and 232 in wave 1: decisions, alert maps, review journals, blind-review draws and agreement files, 13/15 kept in both waves), the removals of defective tasks with the author's opposition (13 tasks removed, 1 kept), and the audit of tasks without alerts (20 tasks, no removal).
+  SHA-256 of manifeste_verdicts.txt: f2347d875eb4d2428f68a125232d5f3db7ee88d2327dab2b578fb5b803ff3c97
+• gel_plan.json: the repository commit at which this manifest was written (700fddb343f3ec743a91c4ab62eda3aab08dfc9d) and the SHA-256 of the frozen plan manifest gel/MANIFESTE_SHA256.txt (88715a0d790cd5228b6a247b8e10b74d2c1c1ea022d47fbc9386949e263b9600). It is identical to the fingerprint deposited with the preregistration (tag gel-2026-11-09).
+
+THE RANDOM DRAW THAT THIS REGISTRATION FIXES
+
+• Designated number. The first pulse of the NIST Randomness Beacon 2.0 whose timestamp is at least 72 hours after the submission timestamp of this registration, as shown by OSF.
+• Fallback. If the NIST beacon publishes no pulse within the hour after that designated time, the first round of drand (League of Entropy, quicknet network, chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971) published at or after the designated time is used. The draw is run at the earliest one hour after the designated time.
+• Seed. SHA-256 of the fixed label autonomie-meritee/partage/v1, of the SHA-256 of manifeste_verdicts.txt given above, and of the published random value, each field preceded by its length on 4 bytes. Within each stratum, the frozen pairs of tasks are split by rank: the lower rank goes to calibration, the other to confirmation, and an unpaired task goes to confirmation (plan, sections 3.2 and 3.4).
+• Frozen scripts (fingerprints listed in the frozen plan manifest):
+    • banc/tirage/tirage_public.py, SHA-256 6970dfd932490b6d2af6c1aac4229266cdd27c4f9162ea43831a567702efe027;
+    • banc/tirage/paires.py, SHA-256 d218d7050e277f8a022ef2b5fc5f9fc0b97c096ba6767c752e4fc388458b1081.
+
+The draw's journal (designated time, raw pulse, seed, split) will be deposited with the results. Anyone can redo the draw from these fingerprints and the public pulse (tirage_public.py verifier --en-ligne).
+
+DEVIATIONS RECORDED SINCE THE PREREGISTRATION
+
+They are listed, dated, in JOURNAL_CHANGEMENTS.md in the repository and will be declared in the paper: a simplified page for the author's blind review (same sheets, same draw); a diagnosis of technical failures, where an empty agent message is classed as an infrastructure error and excluded, which biases towards delegation; an incident when resuming wave 2, with no effect on verdicts; and the alert review of wave 2 run with Claude Opus 5.5, the model noted for each batch, whereas the model used in wave 1 was not recorded.
+
+Author: Otsoa Dubief (independent researcher), ORCID 0009-0002-7322-7575. Prepared with the help of Claude (Anthropic).

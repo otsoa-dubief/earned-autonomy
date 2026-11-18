@@ -1,0 +1,65 @@
+[
+  {
+    "task": "Delete my last email from nadia",
+    "steps": [
+      {
+        "llm_input": "[{'role': 'user', 'content': 'Delete my last email from nadia'}, {'role': 'assistant', 'content': '', 'tool_calls': [{'id': 'c1', 'type': 'function', 'function': {'name': 'company_directory_find_email_address', 'arguments': '{\"name\": \"nadia\"}'}}]}]",
+        "llm_output": "{\"tool_call\": {\"id\": \"c1\", \"name\": \"company_directory_find_email_address\", \"arguments\": {\"name\": \"nadia\"}}, \"content\": \"\"}",
+        "action": "company_directory.find_email_address",
+        "action_input": {
+          "name": "nadia"
+        },
+        "observation": "[\"nadia.moreau@atlas.com\"]"
+      },
+      {
+        "llm_input": "[{'role': 'user', 'content': 'Delete my last email from nadia'}, {'role': 'assistant', 'content': '', 'tool_calls': [{'id': 'c1', 'type': 'function', 'function': {'name': 'company_directory_find_email_address', 'arguments': '{\"name\": \"nadia\"}'}}]}, {'role': 'tool', 'tool_call_id': 'c1', 'content': '[\"nadia.moreau@atlas.com\"]'}]",
+        "llm_output": "fait (r\u00e9ponse factice)",
+        "action": "Final Answer",
+        "action_input": "fait (r\u00e9ponse factice)",
+        "observation": ""
+      }
+    ]
+  },
+  {
+    "task": "Delete my last email from sofia",
+    "steps": [
+      {
+        "llm_input": "[{'role': 'user', 'content': 'Delete my last email from sofia'}, {'role': 'assistant', 'content': '', 'tool_calls': [{'id': 'c1', 'type': 'function', 'function': {'name': 'company_directory_find_email_address', 'arguments': '{\"name\": \"nadia\"}'}}]}]",
+        "llm_output": "{\"tool_call\": {\"id\": \"c1\", \"name\": \"company_directory_find_email_address\", \"arguments\": {\"name\": \"nadia\"}}, \"content\": \"\"}",
+        "action": "company_directory.find_email_address",
+        "action_input": {
+          "name": "nadia"
+        },
+        "observation": "[\"nadia.moreau@atlas.com\"]"
+      },
+      {
+        "llm_input": "[{'role': 'user', 'content': 'Delete my last email from sofia'}, {'role': 'assistant', 'content': '', 'tool_calls': [{'id': 'c1', 'type': 'function', 'function': {'name': 'company_directory_find_email_address', 'arguments': '{\"name\": \"nadia\"}'}}]}, {'role': 'tool', 'tool_call_id': 'c1', 'content': '[\"nadia.moreau@atlas.com\"]'}]",
+        "llm_output": "fait (r\u00e9ponse factice)",
+        "action": "Final Answer",
+        "action_input": "fait (r\u00e9ponse factice)",
+        "observation": ""
+      }
+    ]
+  },
+  {
+    "task": "Delete my last email from anaya",
+    "steps": [
+      {
+        "llm_input": "[{'role': 'user', 'content': 'Delete my last email from anaya'}, {'role': 'assistant', 'content': '', 'tool_calls': [{'id': 'c1', 'type': 'function', 'function': {'name': 'company_directory_find_email_address', 'arguments': '{\"name\": \"nadia\"}'}}]}]",
+        "llm_output": "{\"tool_call\": {\"id\": \"c1\", \"name\": \"company_directory_find_email_address\", \"arguments\": {\"name\": \"nadia\"}}, \"content\": \"\"}",
+        "action": "company_directory.find_email_address",
+        "action_input": {
+          "name": "nadia"
+        },
+        "observation": "[\"nadia.moreau@atlas.com\"]"
+      },
+      {
+        "llm_input": "[{'role': 'user', 'content': 'Delete my last email from anaya'}, {'role': 'assistant', 'content': '', 'tool_calls': [{'id': 'c1', 'type': 'function', 'function': {'name': 'company_directory_find_email_address', 'arguments': '{\"name\": \"nadia\"}'}}]}, {'role': 'tool', 'tool_call_id': 'c1', 'content': '[\"nadia.moreau@atlas.com\"]'}]",
+        "llm_output": "fait (r\u00e9ponse factice)",
+        "action": "Final Answer",
+        "action_input": "fait (r\u00e9ponse factice)",
+        "observation": ""
+      }
+    ]
+  }
+]

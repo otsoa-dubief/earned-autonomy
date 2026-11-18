@@ -1,0 +1,564 @@
+{
+ "graine": 20261104,
+ "horizons": {
+  "court": {
+   "T": 3000,
+   "R": 5000,
+   "bloc": 5000
+  },
+  "long": {
+   "T": 150000,
+   "R": 1000,
+   "bloc": 200
+  }
+ },
+ "n_boot": 2000,
+ "travailleurs": 8,
+ "numpy": "2.5.4",
+ "duree_s": 1386.0,
+ "n_taches": 108,
+ "n_relances": 3,
+ "filtre_agents": null,
+ "durees_taches": {
+  "long|bureau|A0": {
+   "flux": 6.770073890686035,
+   "moteur": 152.50060105323792,
+   "total": 188.77951002120972
+  },
+  "long|bureau|A0d": {
+   "flux": 6.34273099899292,
+   "moteur": 170.46209692955017,
+   "total": 205.4136791229248
+  },
+  "long|bureau|A1": {
+   "flux": 6.7023231983184814,
+   "moteur": 183.73071694374084,
+   "total": 219.51784586906433
+  },
+  "long|bureau|A2": {
+   "flux": 6.835468053817749,
+   "moteur": 198.0770058631897,
+   "total": 235.27687883377075
+  },
+  "long|bureau|A6b": {
+   "flux": 6.417217016220093,
+   "moteur": 198.38707304000854,
+   "total": 235.43753099441528
+  },
+  "long|bureau|bord_faible_pireBreg": {
+   "flux": 6.799252033233643,
+   "moteur": 165.24423694610596,
+   "total": 200.88361501693726
+  },
+  "long|bureau|bord_faible_1.5barre": {
+   "flux": 6.831086158752441,
+   "moteur": 164.13972401618958,
+   "total": 200.2530300617218
+  },
+  "long|bureau|bord_faible_3barre": {
+   "flux": 6.742296934127808,
+   "moteur": 166.16333317756653,
+   "total": 201.7430441379547
+  },
+  "long|bureau|bord_moyen_pireBreg": {
+   "flux": 5.458827018737793,
+   "moteur": 179.02667617797852,
+   "total": 212.48530793190002
+  },
+  "long|bureau|bord_moyen_1.5barre": {
+   "flux": 5.3822021484375,
+   "moteur": 174.57453107833862,
+   "total": 208.15992498397827
+  },
+  "long|bureau|bord_moyen_3barre": {
+   "flux": 5.402050971984863,
+   "moteur": 181.8152711391449,
+   "total": 215.67105317115784
+  },
+  "long|bureau|bord_fort_pireBreg": {
+   "flux": 5.409355878829956,
+   "moteur": 159.36943793296814,
+   "total": 193.14589381217957
+  },
+  "long|bureau|bord_fort_1.5barre": {
+   "flux": 5.565484046936035,
+   "moteur": 157.79753923416138,
+   "total": 191.697448015213
+  },
+  "long|bureau|bord_fort_3barre": {
+   "flux": 5.673705816268921,
+   "moteur": 158.35268020629883,
+   "total": 192.2834689617157
+  },
+  "long|bureau|bordD_faible_pireBreg": {
+   "flux": 5.704020977020264,
+   "moteur": 156.2717480659485,
+   "total": 191.45215392112732
+  },
+  "long|bureau|bordD_faible_1.5barre": {
+   "flux": 5.552468299865723,
+   "moteur": 156.4109468460083,
+   "total": 191.35887002944946
+  },
+  "long|bureau|bordD_faible_3barre": {
+   "flux": 5.612084865570068,
+   "moteur": 159.71216011047363,
+   "total": 194.29619574546814
+  },
+  "long|bureau|bordD_moyen_pireBreg": {
+   "flux": 5.559473991394043,
+   "moteur": 167.0690770149231,
+   "total": 201.19455695152283
+  },
+  "long|bureau|bordD_moyen_1.5barre": {
+   "flux": 5.5776777267456055,
+   "moteur": 163.36967706680298,
+   "total": 197.54543685913086
+  },
+  "long|bureau|bordD_moyen_3barre": {
+   "flux": 5.557510852813721,
+   "moteur": 168.42682194709778,
+   "total": 201.9890058040619
+  },
+  "long|bureau|bordD_fort_pireBreg": {
+   "flux": 5.4687769412994385,
+   "moteur": 153.84836101531982,
+   "total": 187.77120804786682
+  },
+  "long|bureau|bordD_fort_1.5barre": {
+   "flux": 5.5452048778533936,
+   "moteur": 152.52274107933044,
+   "total": 186.42097783088684
+  },
+  "long|bureau|bordD_fort_3barre": {
+   "flux": 5.545114994049072,
+   "moteur": 153.07431888580322,
+   "total": 186.82607507705688
+  },
+  "long|service_client|A0": {
+   "flux": 5.784714221954346,
+   "moteur": 150.83865690231323,
+   "total": 184.72763204574585
+  },
+  "long|service_client|A0d": {
+   "flux": 5.64134669303894,
+   "moteur": 162.35738801956177,
+   "total": 195.93909096717834
+  },
+  "long|service_client|A1": {
+   "flux": 5.5033581256866455,
+   "moteur": 177.02007412910461,
+   "total": 209.94007015228271
+  },
+  "long|service_client|A2": {
+   "flux": 5.525007247924805,
+   "moteur": 186.8474509716034,
+   "total": 220.00346517562866
+  },
+  "long|service_client|A6b": {
+   "flux": 5.531652927398682,
+   "moteur": 180.03992009162903,
+   "total": 213.33013701438904
+  },
+  "long|service_client|bord_faible_pireBreg": {
+   "flux": 5.450809955596924,
+   "moteur": 156.17681503295898,
+   "total": 189.2311999797821
+  },
+  "long|service_client|bord_faible_1.5barre": {
+   "flux": 5.647075653076172,
+   "moteur": 154.78101015090942,
+   "total": 188.0049388408661
+  },
+  "long|service_client|bord_faible_3barre": {
+   "flux": 5.642397880554199,
+   "moteur": 156.08083510398865,
+   "total": 189.1242778301239
+  },
+  "long|service_client|bord_moyen_pireBreg": {
+   "flux": 5.586681842803955,
+   "moteur": 168.7711000442505,
+   "total": 201.9618136882782
+  },
+  "long|service_client|bord_moyen_1.5barre": {
+   "flux": 5.474728107452393,
+   "moteur": 169.0257339477539,
+   "total": 202.37514424324036
+  },
+  "long|service_client|bord_moyen_3barre": {
+   "flux": 5.417659282684326,
+   "moteur": 176.4848918914795,
+   "total": 209.39616513252258
+  },
+  "long|service_client|bord_fort_pireBreg": {
+   "flux": 5.351750135421753,
+   "moteur": 154.00627398490906,
+   "total": 187.21041893959045
+  },
+  "long|service_client|bord_fort_1.5barre": {
+   "flux": 5.371935844421387,
+   "moteur": 153.25653409957886,
+   "total": 186.58818101882935
+  },
+  "long|service_client|bord_fort_3barre": {
+   "flux": 5.621652841567993,
+   "moteur": 156.3768129348755,
+   "total": 189.39933896064758
+  },
+  "long|service_client|bordD_faible_pireBreg": {
+   "flux": 5.501458168029785,
+   "moteur": 158.4286060333252,
+   "total": 191.3985641002655
+  },
+  "long|service_client|bordD_faible_1.5barre": {
+   "flux": 5.512006998062134,
+   "moteur": 158.37590098381042,
+   "total": 191.3126368522644
+  },
+  "long|service_client|bordD_faible_3barre": {
+   "flux": 5.567863702774048,
+   "moteur": 156.47765517234802,
+   "total": 190.10717391967773
+  },
+  "long|service_client|bordD_moyen_pireBreg": {
+   "flux": 5.409990072250366,
+   "moteur": 166.0044128894806,
+   "total": 199.7125461101532
+  },
+  "long|service_client|bordD_moyen_1.5barre": {
+   "flux": 5.350062131881714,
+   "moteur": 164.97826480865479,
+   "total": 198.6613700389862
+  },
+  "long|service_client|bordD_moyen_3barre": {
+   "flux": 5.388943910598755,
+   "moteur": 167.58154296875,
+   "total": 201.15478491783142
+  },
+  "long|service_client|bordD_fort_pireBreg": {
+   "flux": 5.391052007675171,
+   "moteur": 156.82920622825623,
+   "total": 190.57014203071594
+  },
+  "long|service_client|bordD_fort_1.5barre": {
+   "flux": 5.383934259414673,
+   "moteur": 154.48827290534973,
+   "total": 188.71982407569885
+  },
+  "long|service_client|bordD_fort_3barre": {
+   "flux": 5.420783281326294,
+   "moteur": 155.71382570266724,
+   "total": 190.03030920028687
+  },
+  "court|bureau|A1": {
+   "flux": 0.5766808986663818,
+   "moteur": 17.68839406967163,
+   "total": 21.3170747756958
+  },
+  "court|bureau|A2": {
+   "flux": 0.5859737396240234,
+   "moteur": 18.866087198257446,
+   "total": 22.53727674484253
+  },
+  "court|bureau|A3": {
+   "flux": 0.5434591770172119,
+   "moteur": 19.11423373222351,
+   "total": 22.760742902755737
+  },
+  "court|bureau|A4": {
+   "flux": 0.5489192008972168,
+   "moteur": 19.78520393371582,
+   "total": 23.581918001174927
+  },
+  "court|bureau|A5": {
+   "flux": 0.525428056716919,
+   "moteur": 18.596888780593872,
+   "total": 22.14282202720642
+  },
+  "court|bureau|A6a": {
+   "flux": 0.5457119941711426,
+   "moteur": 19.047659158706665,
+   "total": 22.76991105079651
+  },
+  "court|bureau|A6b": {
+   "flux": 0.5537381172180176,
+   "moteur": 18.476457834243774,
+   "total": 22.064380884170532
+  },
+  "court|bureau|A7": {
+   "flux": 0.5503568649291992,
+   "moteur": 17.910515069961548,
+   "total": 21.516814947128296
+  },
+  "court|bureau|A8": {
+   "flux": 0.5386416912078857,
+   "moteur": 17.99628186225891,
+   "total": 21.508662700653076
+  },
+  "court|bureau|A2-calibre": {
+   "flux": 0.5406370162963867,
+   "moteur": 17.450718879699707,
+   "total": 21.07537603378296
+  },
+  "court|bureau|A2-abusif": {
+   "flux": 0.5361528396606445,
+   "moteur": 16.245264291763306,
+   "total": 19.809531927108765
+  },
+  "court|bureau|A4-calibre": {
+   "flux": 0.5562300682067871,
+   "moteur": 18.09731101989746,
+   "total": 21.682284116744995
+  },
+  "court|bureau|A4-abusif": {
+   "flux": 0.5396847724914551,
+   "moteur": 16.29641103744507,
+   "total": 19.825629949569702
+  },
+  "court|bureau|bord_faible_pireBreg": {
+   "flux": 0.5444798469543457,
+   "moteur": 16.24281406402588,
+   "total": 19.652812957763672
+  },
+  "court|bureau|bord_faible_1.5barre": {
+   "flux": 0.5603640079498291,
+   "moteur": 14.382317781448364,
+   "total": 17.836769104003906
+  },
+  "court|bureau|bord_faible_3barre": {
+   "flux": 0.5352208614349365,
+   "moteur": 14.311614990234375,
+   "total": 17.782156944274902
+  },
+  "court|bureau|bord_moyen_pireBreg": {
+   "flux": 0.5755288600921631,
+   "moteur": 17.044013023376465,
+   "total": 20.945148944854736
+  },
+  "court|bureau|bord_moyen_1.5barre": {
+   "flux": 0.5609180927276611,
+   "moteur": 18.5574791431427,
+   "total": 22.477638244628906
+  },
+  "court|bureau|bord_moyen_3barre": {
+   "flux": 0.5395369529724121,
+   "moteur": 19.508550882339478,
+   "total": 23.342643976211548
+  },
+  "court|bureau|bord_fort_pireBreg": {
+   "flux": 0.5458738803863525,
+   "moteur": 18.745117902755737,
+   "total": 22.65271806716919
+  },
+  "court|bureau|bord_fort_1.5barre": {
+   "flux": 0.5369868278503418,
+   "moteur": 19.325917959213257,
+   "total": 23.0375759601593
+  },
+  "court|bureau|bord_fort_3barre": {
+   "flux": 0.5488500595092773,
+   "moteur": 19.364618062973022,
+   "total": 23.06114101409912
+  },
+  "court|bureau|bordD_faible_pireBreg": {
+   "flux": 0.5943059921264648,
+   "moteur": 18.977093935012817,
+   "total": 23.001584768295288
+  },
+  "court|bureau|bordD_faible_1.5barre": {
+   "flux": 0.5828108787536621,
+   "moteur": 19.071449041366577,
+   "total": 23.042699575424194
+  },
+  "court|bureau|bordD_faible_3barre": {
+   "flux": 0.5640890598297119,
+   "moteur": 18.933950901031494,
+   "total": 22.983047008514404
+  },
+  "court|bureau|bordD_moyen_pireBreg": {
+   "flux": 0.5229299068450928,
+   "moteur": 19.445878982543945,
+   "total": 23.377891063690186
+  },
+  "court|bureau|bordD_moyen_1.5barre": {
+   "flux": 0.5443580150604248,
+   "moteur": 20.12894296646118,
+   "total": 23.9031400680542
+  },
+  "court|bureau|bordD_moyen_3barre": {
+   "flux": 0.5486750602722168,
+   "moteur": 18.95391583442688,
+   "total": 22.747631072998047
+  },
+  "court|bureau|bordD_fort_pireBreg": {
+   "flux": 0.5375962257385254,
+   "moteur": 19.632290840148926,
+   "total": 23.16661810874939
+  },
+  "court|bureau|bordD_fort_1.5barre": {
+   "flux": 0.5452299118041992,
+   "moteur": 19.413720846176147,
+   "total": 22.988698720932007
+  },
+  "court|bureau|bordD_fort_3barre": {
+   "flux": 0.5533688068389893,
+   "moteur": 19.306119918823242,
+   "total": 22.99591588973999
+  },
+  "court|service_client|A1": {
+   "flux": 0.5601317882537842,
+   "moteur": 19.747457027435303,
+   "total": 23.486271858215332
+  },
+  "court|service_client|A2": {
+   "flux": 0.5890610218048096,
+   "moteur": 19.680705070495605,
+   "total": 23.44246006011963
+  },
+  "court|service_client|A3": {
+   "flux": 0.5755908489227295,
+   "moteur": 16.829675912857056,
+   "total": 20.652246952056885
+  },
+  "court|service_client|A4": {
+   "flux": 0.5427300930023193,
+   "moteur": 18.034068822860718,
+   "total": 21.84640383720398
+  },
+  "court|service_client|A5": {
+   "flux": 0.5518128871917725,
+   "moteur": 19.99878239631653,
+   "total": 23.635308027267456
+  },
+  "court|service_client|A6a": {
+   "flux": 0.5641930103302002,
+   "moteur": 19.237476110458374,
+   "total": 22.835920095443726
+  },
+  "court|service_client|A6b": {
+   "flux": 0.5630447864532471,
+   "moteur": 19.317190885543823,
+   "total": 22.872930765151978
+  },
+  "court|service_client|A7": {
+   "flux": 0.5542371273040771,
+   "moteur": 16.870293855667114,
+   "total": 20.675121068954468
+  },
+  "court|service_client|A8": {
+   "flux": 0.5534868240356445,
+   "moteur": 19.273755073547363,
+   "total": 23.201939821243286
+  },
+  "court|service_client|A2-calibre": {
+   "flux": 0.6129441261291504,
+   "moteur": 19.14130473136902,
+   "total": 23.094016075134277
+  },
+  "court|service_client|A2-abusif": {
+   "flux": 0.5660710334777832,
+   "moteur": 18.590691804885864,
+   "total": 22.478920936584473
+  },
+  "court|service_client|A4-calibre": {
+   "flux": 0.5511727333068848,
+   "moteur": 17.82956314086914,
+   "total": 21.800018787384033
+  },
+  "court|service_client|A4-abusif": {
+   "flux": 0.5600130558013916,
+   "moteur": 16.821735858917236,
+   "total": 20.704236030578613
+  },
+  "court|service_client|bord_faible_pireBreg": {
+   "flux": 0.5618550777435303,
+   "moteur": 18.784551858901978,
+   "total": 22.407537937164307
+  },
+  "court|service_client|bord_faible_1.5barre": {
+   "flux": 0.572429895401001,
+   "moteur": 19.045653104782104,
+   "total": 22.891968965530396
+  },
+  "court|service_client|bord_faible_3barre": {
+   "flux": 0.57122802734375,
+   "moteur": 18.84128999710083,
+   "total": 22.523576021194458
+  },
+  "court|service_client|bord_moyen_pireBreg": {
+   "flux": 0.5904970169067383,
+   "moteur": 18.845330953598022,
+   "total": 22.72379994392395
+  },
+  "court|service_client|bord_moyen_1.5barre": {
+   "flux": 0.5678510665893555,
+   "moteur": 19.034772872924805,
+   "total": 22.983887195587158
+  },
+  "court|service_client|bord_moyen_3barre": {
+   "flux": 0.5539288520812988,
+   "moteur": 19.464177131652832,
+   "total": 23.32655692100525
+  },
+  "court|service_client|bord_fort_pireBreg": {
+   "flux": 0.5675010681152344,
+   "moteur": 18.735127210617065,
+   "total": 22.60956120491028
+  },
+  "court|service_client|bord_fort_1.5barre": {
+   "flux": 0.5494751930236816,
+   "moteur": 19.188350915908813,
+   "total": 23.006680011749268
+  },
+  "court|service_client|bord_fort_3barre": {
+   "flux": 0.5617992877960205,
+   "moteur": 18.69436287879944,
+   "total": 22.487343072891235
+  },
+  "court|service_client|bordD_faible_pireBreg": {
+   "flux": 0.5865747928619385,
+   "moteur": 20.092172145843506,
+   "total": 23.824020862579346
+  },
+  "court|service_client|bordD_faible_1.5barre": {
+   "flux": 0.5670530796051025,
+   "moteur": 20.135406970977783,
+   "total": 23.949172973632812
+  },
+  "court|service_client|bordD_faible_3barre": {
+   "flux": 0.5791161060333252,
+   "moteur": 18.905866861343384,
+   "total": 22.65081810951233
+  },
+  "court|service_client|bordD_moyen_pireBreg": {
+   "flux": 0.5549890995025635,
+   "moteur": 18.956660985946655,
+   "total": 22.416625022888184
+  },
+  "court|service_client|bordD_moyen_1.5barre": {
+   "flux": 0.5695888996124268,
+   "moteur": 17.98142695426941,
+   "total": 21.30343198776245
+  },
+  "court|service_client|bordD_moyen_3barre": {
+   "flux": 0.5690600872039795,
+   "moteur": 16.634126663208008,
+   "total": 19.82219696044922
+  },
+  "court|service_client|bordD_fort_pireBreg": {
+   "flux": 0.5512690544128418,
+   "moteur": 16.209858894348145,
+   "total": 19.292556047439575
+  },
+  "court|service_client|bordD_fort_1.5barre": {
+   "flux": 0.5676729679107666,
+   "moteur": 15.341248035430908,
+   "total": 18.37950086593628
+  },
+  "court|service_client|bordD_fort_3barre": {
+   "flux": 0.5626418590545654,
+   "moteur": 14.4547860622406,
+   "total": 17.487088203430176
+  }
+ }
+}

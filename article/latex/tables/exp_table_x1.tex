@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table X1. Episodes excluded for an empty agent message, counted as errors (Exploratory, dated 17 November 2026; \texttt{A\_ecart\_avec\_exclusions.csv})}
+\label{tab:exp_table_x1}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllllllll}
+\toprule
+environment & model & type & level & added & rate before & rate after & established before & established after \\
+\midrule
+banking & haiku-5-5 & DUR & medium & 14 & 44.9 \% & 47.3 \% & True & True \\
+banking & haiku-5-5 & MSG & low & 1 & 27.7 \% & 27.9 \% & True & True \\
+banking & haiku-5-5 & ARG & high & 7 & 53.5 \% & 55.0 \% & True & True \\
+banking & opus-5-5 & GAR & high & 2 & 0.0 \% & 40.0 \% & False & True \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny 91 episodes were excluded after two failed attempts, all caused by an empty agent message (9 in wave 1, 82 in wave 2). On the calibration half, counting each as one confirmed error at the highest-stakes write type expected by its task adds 24 errors (2 episodes without an identifiable expected type), all in banking. Established excesses go from 20 to 21; the new one rests on 5 writes.}
+\end{table}

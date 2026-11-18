@@ -1,0 +1,18 @@
+{
+ "statut": "terminé",
+ "debut": "2026-11-08 09:08:23",
+ "graine": 2026110705,
+ "rang": 10,
+ "repetitions": 400,
+ "monde": "A",
+ "python": "3.14.9",
+ "numpy": "2.5.4",
+ "empreintes": {
+  "CONFIRMATION.md": "2f5d7e84fbe2ee2e404dadb75625871a9797afd70b918d9603556075ff48496d",
+  "confirmation.py": "8417426480de480fa0da575517a62307915a015ba70b725b4b852281e52c1957",
+  "maxt_niveau.py": "550d78986e2084d6c3a9429b4451ac8716114a0152e0947b495703983e8a83dc"
+ },
+ "fin": "2026-11-08 10:46:27",
+ "duree_s": 5883.2,
+ "donnees": "0c6a4bcd4cf561619d8d91a8259e833b86425affebc59e2cf0c63d7b6f7407bb"
+}

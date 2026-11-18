@@ -1,0 +1,30 @@
+# AVERTISSEMENT : essai à blanc du rejeu final sur les parties de développement du pilote, partage fictif tiré d'une valeur de balise de test, graine de développement. Ces chiffres n'ont AUCUNE valeur de preuve (PLAN_EXPERIENCE.md, 5.16, point 6).
+mode,type_suite,regle,echecs,pire_rapport_hi,alerte
+e = 0,bilan du mode,B-tout,0,0.0,False
+e = 0,bilan du mode,B-régulier,0,0.0,
+e = 0,bilan du mode,A½,0,0.0,
+e = 0,bilan du mode,A¼,0,0.0,
+e = 0.02,bilan du mode,B-tout,0,0.0,False
+e = 0.02,bilan du mode,B-régulier,0,0.0,
+e = 0.02,bilan du mode,A½,0,0.0,
+e = 0.02,bilan du mode,A¼,0,0.0,
+e = 0.1,bilan du mode,B-tout,0,0.0,False
+e = 0.1,bilan du mode,B-régulier,0,0.0,
+e = 0.1,bilan du mode,A½,0,0.0,
+e = 0.1,bilan du mode,A¼,0,0.0,
+verdicts bruts,bilan du mode,B-tout,0,0.0,False
+verdicts bruts,bilan du mode,B-régulier,0,0.0,
+verdicts bruts,bilan du mode,A½,0,0.0,
+verdicts bruts,bilan du mode,A¼,0,0.0,
+rate10,bilan du mode,B-tout,0,0.0,False
+rate10,bilan du mode,B-régulier,0,0.0,
+rate10,bilan du mode,A½,0,0.0,
+rate10,bilan du mode,A¼,0,0.0,
+retard10,bilan du mode,B-tout,0,0.0,False
+retard10,bilan du mode,B-régulier,0,0.0,
+retard10,bilan du mode,A½,0,0.0,
+retard10,bilan du mode,A¼,0,0.0,
+groupees,bilan du mode,B-tout,0,0.0,False
+groupees,bilan du mode,B-régulier,0,0.0,
+groupees,bilan du mode,A½,0,0.0,
+groupees,bilan du mode,A¼,0,0.0,

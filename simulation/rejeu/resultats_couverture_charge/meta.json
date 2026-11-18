@@ -1,0 +1,60 @@
+{
+ "objet": "simulation de couverture, différence appariée de charge (PLAN_EXPERIENCE.md, 5.13, Q13)",
+ "donnees": "synthétiques seulement",
+ "graine": 2026110531,
+ "rhos": [
+  0.0,
+  0.1,
+  0.3,
+  0.5,
+  0.7,
+  0.9
+ ],
+ "G": [
+  20,
+  40,
+  90
+ ],
+ "reglage_critere": [
+  0.25,
+  0.15
+ ],
+ "reglages_rapportes": [
+  [
+   0.45,
+   0.05
+  ],
+  [
+   0.1,
+   0.1
+  ]
+ ],
+ "tailles": [
+  1,
+  2,
+  3,
+  4,
+  6,
+  8,
+  12,
+  16,
+  24,
+  32
+ ],
+ "n_jeux": 5000,
+ "B": 2000,
+ "paquet": 10,
+ "seuil": 0.93,
+ "empreinte_code": {
+  "couverture_charge.py": "f283e162dcc4e5fb90a5862b6dda9433145a69f16726a33327b0c0a6d385604b",
+  "couverture.py": "5bef357f67a38c92ec7239f8db34b750686e806c0b32ae1e8f0b9dfd252d04cb",
+  "intervalles.py": "96a224592969cf9c10baa4f84554de35e277cc076865351bc57351ae1eb5a9a4"
+ },
+ "python": "3.14.9",
+ "numpy": "2.5.4",
+ "scipy": "1.18.1",
+ "machine": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+ "debut": "2026-11-05 20:34:03 +0100",
+ "duree_s": 34.5,
+ "travailleurs": 14
+}

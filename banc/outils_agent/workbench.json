@@ -1,0 +1,654 @@
+{
+ "banc": "workbench",
+ "commit": "49c7dfd",
+ "environnement": "workbench",
+ "domaine": "tous",
+ "reglages": {
+  "tool_selection": "all",
+  "structured_outputs": true
+ },
+ "outils": [
+  {
+   "type": "function",
+   "function": {
+    "name": "email_send_email",
+    "description": "\nSends an email to the specified recipient.\n\nParameters\n----------\nrecipient : str, optional\n    Email address of the recipient.\nsubject : str, optional\n    Subject line of the email.\nbody : str, optional\n    Body content of the email.\n\nReturns\n-------\nmessage : str\n    Confirmation message of the email being sent.\n\nExamples\n--------\n>>> email.send_email(\"jane@example.com\", \"Meeting Reminder\", \"Don't forget our meeting at 10am tomorrow.\")\n\"Email sent successfully.\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "recipient": {
+       "type": "string",
+       "description": "Recipient"
+      },
+      "subject": {
+       "type": "string",
+       "description": "Subject"
+      },
+      "body": {
+       "type": "string",
+       "description": "Body"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "email_delete_email",
+    "description": "\nDeletes an email by its ID.\n\nParameters\n----------\nemail_id : str, optional\n    Unique ID of the email to be deleted.\n\nReturns\n-------\nmessage : str\n    Message indicating whether the deletion was successful.\n\nExamples\n--------\n>>> email.delete_email(\"12345678\")\n\"Email deleted successfully.\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "email_id": {
+       "type": "string",
+       "description": "Email Id"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "email_forward_email",
+    "description": "\nForwards an email to the specified recipient.\n\nParameters\n----------\nemail_id : str, optional\n    Unique ID of the email to be forwarded.\nrecipient : str, optional\n    Email address of the recipient.\n\nReturns\n-------\nmessage : str\n    Message indicating whether the email was forwarded successfully.\n\nExamples\n--------\n>>> email.forward_email(\"12345678\", \"jane@example.com\")\n\"Email forwarded successfully.\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "email_id": {
+       "type": "string",
+       "description": "Email Id"
+      },
+      "recipient": {
+       "type": "string",
+       "description": "Recipient"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "email_reply_email",
+    "description": "\nReplies to an email by its ID.\n\nParameters\n----------\nemail_id : str, optional\n    Unique ID of the email to be replied.\nbody : str, optional\n    Body content of the email.\n\nReturns\n-------\nmessage : str\n    Confirmation message of the email being replied.\n\nExamples\n--------\n>>> email.reply_email(\"12345678\", \"Thank you for the update.\")\n\"Email replied successfully.\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "email_id": {
+       "type": "string",
+       "description": "Email Id"
+      },
+      "body": {
+       "type": "string",
+       "description": "Body"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "email_get_email_information_by_id",
+    "description": "\nRetrieves specific details of an email by its ID.\n\nParameters\n----------\nemail_id : str, optional\n    Unique ID of the email.\nfield : str, optional\n    Specific field to return. Available fields: \"email_id\", \"sender\", \"subject\", \"sent_date\", \"body\", \"inbox/outbox\".\n\nReturns\n-------\nemail_information : dict\n    Information of the specified email for the given ID and field.\n\nExamples\n--------\n>>> email.get_email_information_by_id(\"12345678\", \"subject\")\n{{\"subject\": \"Project Update\"}}\n\n>>> email.get_email_information_by_id(\"12345678\", \"sent_date\")\n{{\"sent_date\": \"2024-01-10 09:30:00\"}}\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "email_id": {
+       "type": "string",
+       "description": "Email Id"
+      },
+      "field": {
+       "type": "string",
+       "description": "Field"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "email_search_emails",
+    "description": "\nSearches for emails matching the given query across subject, body, or sender fields.\nThe function matches an email if all words in the query appear in any of these fields.\n\nParameters\n----------\nquery : str, optional\n    Search query, matching terms in subject, body, or sender fields.\ndate_min : str, optional\n    Lower date limit for the email's sent date (inclusive). Format: \"YYYY-MM-DD\"\ndate_max : str, optional\n    Upper date limit for the email's sent date (inclusive). Format: \"YYYY-MM-DD\"\n\nReturns\n-------\nemails : list\n    List of emails matching the query criteria. Returns at most 5 emails.\n\nExamples\n--------\n>>> email.search_emails(\"Project Update\")\n[{{\"email_id\": \"12345678\", \"inbox/outbox\": \"inbox\", \"subject\": \"Project Update\", \"sender/recipient\": \"jane@example.com\", \"sent_datetime\": \"2024-01-10 09:30:00\", \"body\": \"Please find the project update attached.\"}}]\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "query": {
+       "type": "string",
+       "description": "Query"
+      },
+      "date_min": {
+       "type": "string",
+       "description": "Date Min"
+      },
+      "date_max": {
+       "type": "string",
+       "description": "Date Max"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "calendar_create_event",
+    "description": "\nCreates a new event.\n\nParameters\n----------\nevent_name: str, optional\n    Name of the event.\nparticipant_email: str, optional\n    Email of the participant.\nevent_start: str, optional\n    Start time of the event. Format: \"YYYY-MM-DD HH:MM:SS\"\nduration: str, optional\n    Duration of the event in minutes.\n\nReturns\n-------\nevent_id : str\n    ID of the newly created event.\n\nExamples\n--------\n>>> calendar.create_event(\"Meeting with Sam\", \"sam@example.com\", \"2021-06-01 13:00:00\", \"60\")\n\"00000000\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "event_name": {
+       "type": "string",
+       "description": "Event Name"
+      },
+      "participant_email": {
+       "type": "string",
+       "description": "Participant Email"
+      },
+      "event_start": {
+       "type": "string",
+       "description": "Event Start"
+      },
+      "duration": {
+       "type": "string",
+       "description": "Duration"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "calendar_delete_event",
+    "description": "\nDeletes an event.\n\nParameters\n----------\nevent_id: str, optional\n    8-digit ID of the event.\n\nReturns\n-------\nmessage : str\n    Message indicating whether the deletion was successful.\n\nExamples\n--------\n>>> calendar.delete_event(\"00000000\")\n\"Event deleted successfully.\"\n\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "event_id": {
+       "type": "string",
+       "description": "Event Id"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "calendar_update_event",
+    "description": "\nUpdates an event.\n\nParameters\n----------\nevent_id: str, optional\n    8-digit ID of the event.\nfield: str, optional\n    Field to update. Available fields are: \"event_name\", \"participant_email\", \"event_start\", \"duration\".\nnew_value: str, optional\n    New value for the field.\n\nReturns\n-------\nmessage : str\n    Message indicating whether the update was successful.\n\nExamples\n--------\n>>> calendar.update_event(\"00000000\", \"event_name\", \"New Event Name\")\n\"Event updated successfully.\"\n\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "event_id": {
+       "type": "string",
+       "description": "Event Id"
+      },
+      "field": {
+       "type": "string",
+       "description": "Field"
+      },
+      "new_value": {
+       "type": "string",
+       "description": "New Value"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "calendar_get_event_information_by_id",
+    "description": "\nReturns the event for a given ID.\n\nParameters\n----------\nevent_id : str, optional\n    8-digit ID of the event.\nfield : str, optional\n    Field to return. Available fields are: \"event_id\", \"event_name\", \"participant_email\", \"event_start\", \"duration\"\n\nReturns\n-------\nevent : dict\n    Event information for the given ID and field.\n\n\nExamples\n--------\n>>> calendar.get_event_information_by_id(\"00000000\", \"event_name\")\n{{\"event_name\": \"Meeting with Sam\"}}\n\n>>> calendar.get_event_information_by_id(\"00000000\", \"event_start\")\n{{\"event_start\": \"2021-06-01 13:00:00\"}}\n\n>>> calendar.get_event_information_by_id(\"00000000\", \"duration\")\n{{\"duration\": \"60\"}}\n\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "event_id": {
+       "type": "string",
+       "description": "Event Id"
+      },
+      "field": {
+       "type": "string",
+       "description": "Field"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "calendar_search_events",
+    "description": "\nReturns the events for a given query.\n\nParameters\n----------\nquery: str, optional\n    Query to search for. Terms will be matched in the event_name and participant_email fields.\ntime_min: str, optional\n    Lower bound (inclusive) for an event's end time to filter by. Format: \"YYYY-MM-DD HH:MM:SS\"\ntime_max: str, optional\n    Upper bound (inclusive) for an event's start time to filter by. Format: \"YYYY-MM-DD HH:MM:SS\n\nReturns\n-------\nevents : list\n    List of events matching the query. Returns at most 5 events.\n\nExamples\n--------\n>>> calendar.search_events(\"Sam\")\n[{{\"event_id\": \"00000000\", \"event_name\": \"Meeting with Sam\", \"participant_email: \"sam@example.com\", \"event_start\": \"2021-06-01 13:00:00\", \"duration\": \"60\"}},\n{{\"event_id\": \"00000001\", \"event_name\": \"Lunch with Sam\", \"participant_email\": \"sam@example.com\", \"event_start\": \"2021-06-01 13:00:00\", \"duration\": \"30}}\"\n]\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "query": {
+       "type": "string",
+       "description": "Query"
+      },
+      "time_min": {
+       "type": "string",
+       "description": "Time Min"
+      },
+      "time_max": {
+       "type": "string",
+       "description": "Time Max"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "analytics_create_plot",
+    "description": "\nPlots the analytics data for a given time range and value.\n\nParameters\n----------\ntime_min : str, optional\n    Start date of the time range. Date format is \"YYYY-MM-DD\".\ntime_max : str, optional\n    End date of the time range. Date format is \"YYYY-MM-DD\".\nvalue_to_plot : str, optional\n    Value to plot. Available values are: \"total_visits\", \"session_duration_seconds\", \"user_engaged\", \"visits_direct\", \"visits_referral\", \"visits_search_engine\", \"visits_social_media\"\nplot_type : str, optional\n    Type of plot. Can be \"bar\", \"line\", \"scatter\" or \"histogram\"\n\nReturns\n-------\nfile_path : str\n    Path to the plot file. Filename is {{time_min}}_{{time_max}}_{{value_to_plot}}_{{plot_type}}.png.\n\nExamples\n--------\n>>> analytics.create_plot(\"2023-10-01\", \"2023-12-31\", \"total_visits\")\n\"plots/2023-10-01_2023-12-31_total_visits.png\"\n\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "time_min": {
+       "type": "string",
+       "description": "Time Min"
+      },
+      "time_max": {
+       "type": "string",
+       "description": "Time Max"
+      },
+      "value_to_plot": {
+       "type": "string",
+       "description": "Value To Plot"
+      },
+      "plot_type": {
+       "type": "string",
+       "description": "Plot Type"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "analytics_engaged_users_count",
+    "description": "\nReturns the number of engaged users within a specified time range.\n\nParameters\n----------\ntime_min : str, optional\n    Start date of the time range. Date format is \"YYYY-MM-DD\".\ntime_max : str, optional\n    End date of the time range. Date format is \"YYYY-MM-DD\".\n\nReturns\n-------\nengaged_users : dict\n    Number of engaged users in the specified time range.\n\nExamples\n--------\n>>> analytics.engaged_users_count(\"2023-10-01\", \"2023-10-06\")\n{{\"2023-10-01\": 1, \"2023-10-02\": 2, \"2023-10-03\": 2, \"2023-10-04\": 1, \"2023-10-05\": 0, \"2023-10-06\": 4}}\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "time_min": {
+       "type": "string",
+       "description": "Time Min"
+      },
+      "time_max": {
+       "type": "string",
+       "description": "Time Max"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "analytics_get_visitor_information_by_id",
+    "description": "\nReturns the analytics data for a given visitor ID.\n\nParameters\n----------\nvisitor_id : str, optional\n    ID of the visitor.\n\nReturns\n-------\nvisitor_data : dict\n    Analytics data for the given visitor ID.\n\nExamples\n--------\n>>> analytics.get_visitor_information_by_id(\"000\")\n{{\"date_of_visit\": \"2023-10-01\", \"visitor_id\": \"000\", \"page_views\": \"3\", \"session_duration_seconds\": \"10.0\", \"traffic_source\": \"search engine\", \"user_engaged\": \"False\"}}\n\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "visitor_id": {
+       "type": "string",
+       "description": "Visitor Id"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "analytics_traffic_source_count",
+    "description": "\nReturns the number of visits from a specific traffic source within a specified time range.\n\nParameters\n----------\ntime_min : str, optional\n    Start date of the time range. Date format is \"YYYY-MM-DD\".\ntime_max : str, optional\n    End date of the time range. Date format is \"YYYY-MM-DD\".\ntraffic_source : str, optional\n    Traffic source to filter the visits. Available values are: \"direct\", \"referral\", \"search engine\", \"social media\"\n\nReturns\n-------\ntraffic_source_visits : dict\n    Number of visits from the specified traffic source in the specified time range.\n\nExamples\n--------\n>>> analytics.traffic_source_count(\"2023-10-01\", \"2023-10-06\", \"search engine\")\n{{\"2023-10-01\": 0, \"2023-10-02\": 1, \"2023-10-03\": 0, \"2023-10-04\": 3, \"2023-10-05\": 2, \"2023-10-06\": 4}}\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "time_min": {
+       "type": "string",
+       "description": "Time Min"
+      },
+      "time_max": {
+       "type": "string",
+       "description": "Time Max"
+      },
+      "traffic_source": {
+       "type": "string",
+       "description": "Traffic Source"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "analytics_total_visits_count",
+    "description": "\nReturns the total number of visits within a specified time range.\n\nParameters\n----------\ntime_min : str, optional\n    Start date of the time range. Date format is \"YYYY-MM-DD\".\ntime_max : str, optional\n    End date of the time range. Date format is \"YYYY-MM-DD\".\n\nReturns\n-------\ntotal_visits : dict\n    Total number of visits in the specified time range.\n\nExamples\n--------\n>>> analytics.total_visits_count(\"2023-10-01\", \"2023-10-06\")\n{{\"2023-10-01\": 1, \"2023-10-02\": 2, \"2023-10-03\": 3, \"2023-10-04\": 1, \"2023-10-05\": 0, \"2023-10-06\": 4}}\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "time_min": {
+       "type": "string",
+       "description": "Time Min"
+      },
+      "time_max": {
+       "type": "string",
+       "description": "Time Max"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "analytics_get_average_session_duration",
+    "description": "\nReturns the average session duration within a specified time range.\n\nParameters\n----------\ntime_min : str, optional\n    Start date of the time range. Date format is \"YYYY-MM-DD\".\ntime_max : str, optional\n    End date of the time range. Date format is \"YYYY-MM-DD\".\n\nReturns\n-------\naverage_session_duration : float\n    Average session duration in seconds in the specified time range.\n\nExamples\n--------\n>>> analytics.get_average_session_duration(\"2023-10-01\", \"2023-10-06\")\n{{\"2023-10-01\": 10.0, \"2023-10-02\": 20.5, \"2023-10-03\": 32.8, \"2023-10-04\": 40.2, \"2023-10-05\": 5.3, \"2023-10-06\": 53.0}}\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "time_min": {
+       "type": "string",
+       "description": "Time Min"
+      },
+      "time_max": {
+       "type": "string",
+       "description": "Time Max"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "project_management_create_task",
+    "description": "\nCreates a new task.\n\nParameters\n----------\ntask_name : str\n    Name of the task.\nassigned_to_email : str\n    Email address of the person assigned to the task.\nlist_name : str\n    Name of the list the task belongs to. One of: \"Backlog\", \"In Progress\", \"In Review\", \"Completed\".\ndue_date : str\n    Due date of the task in \"YYYY-MM-DD\" format.\nboard : str\n    Name of the board the task belongs to. One of: \"Back end\", \"Front end\", \"Design\".\n\nReturns\n-------\ntask_id : str\n    8-digit ID of the new task.\n\nExamples\n--------\n>>> project_management.create_task(\"Integrate API service with frontend\", \"sam@example.com\", \"In progress\", \"2023-06-01\", \"Front end\")\n\"00000001\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "task_name": {
+       "type": "string",
+       "description": "Task Name"
+      },
+      "assigned_to_email": {
+       "type": "string",
+       "description": "Assigned To Email"
+      },
+      "list_name": {
+       "type": "string",
+       "description": "List Name"
+      },
+      "due_date": {
+       "type": "string",
+       "description": "Due Date"
+      },
+      "board": {
+       "type": "string",
+       "description": "Board"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "project_management_delete_task",
+    "description": "\nDeletes a task by ID.\n\nParameters\n----------\ntask_id : str\n    8-digit ID of the task.\n\nReturns\n-------\nmessage : str\n    Message indicating the status of the deletion.\n\nExamples\n--------\n>>> project_management.delete_task(\"00000000\")\n\"Task deleted successfully.\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "task_id": {
+       "type": "string",
+       "description": "Task Id"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "project_management_update_task",
+    "description": "\nUpdates a task by ID.\n\nParameters\n----------\ntask_id : str\n    8-digit ID of the task.\nfield : str\n    Field to update. Available fields are: \"task_name\", \"assigned_to_email\", \"list_name\", \"due_date\", \"board\"\nnew_value : str\n    New value for the field. When field is \"list_name\", one of: \"Backlog\", \"In Progress\", \"In Review\", \"Completed\". When field is \"board\", one of: \"Back end\", \"Front end\", \"Design\".\n\nReturns\n-------\nmessage : str\n    Message indicating the status of the update.\n\nExamples\n--------\n>>> project_management.update_task(\"00000000\", \"task_name\", \"New Task Name\")\n\"Task updated successfully.\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "task_id": {
+       "type": "string",
+       "description": "Task Id"
+      },
+      "field": {
+       "type": "string",
+       "description": "Field"
+      },
+      "new_value": {
+       "type": "string",
+       "description": "New Value"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "project_management_get_task_information_by_id",
+    "description": "\nReturns the task infomration for a given ID.\n\nParameters\n----------\ntask_id : str, optional\n    8-digit ID of the task.\nfield : str, optional\n    Field to return. Available fields are: \"task_id\", \"task_name\", \"assigned_to_email\", \"list_name\", \"due_date\", \"board\"\n\nReturns\n-------\ntask : dict\n    Task information for the given ID and field.\n\nExamples\n--------\n>>> project_management.get_task_information_by_id(\"00000000\", \"task_name\")\n{{\"task_name\": \"Refactor code\"}}\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "task_id": {
+       "type": "string",
+       "description": "Task Id"
+      },
+      "field": {
+       "type": "string",
+       "description": "Field"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "project_management_search_tasks",
+    "description": "\nSearches for tasks based on the given parameters.\n\nParameters\n----------\ntask_name : str, optional\n    Name of the task.\nassigned_to_email : str, optional\n    Email address of the person assigned to the task.\nlist_name : str, optional\n    Name of the list the task belongs to. One of: \"Backlog\", \"In Progress\", \"In Review\", \"Completed\".\ndue_date : str, optional\n    Due date of the task in \"YYYY-MM-DD\" format.\nboard : str, optional\n    Name of the board the task belongs to. One of: \"Back end\", \"Front end\", \"Design\".\n\nReturns\n-------\ntasks : list\n    List of tasks matching the given parameters. Returns at most 200 tasks.\n\nExamples\n--------\n>>> project_management.search_tasks(\"Refactor code\", \"tishtrya@example.com\" \"In progress\", \"2023-06-01\", \"Front end\")\n{{\"task_id\": \"00000000\", \"task_name\": \"Refactor code\", \"assigned_to_email\": \"tishtrya@example.com\", \"list_name\": \"In Progress\", \"due_date\": \"2023-06-01\", \"board\": \"Front End\"}}\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "task_name": {
+       "type": "string",
+       "description": "Task Name"
+      },
+      "assigned_to_email": {
+       "type": "string",
+       "description": "Assigned To Email"
+      },
+      "list_name": {
+       "type": "string",
+       "description": "List Name"
+      },
+      "due_date": {
+       "type": "string",
+       "description": "Due Date"
+      },
+      "board": {
+       "type": "string",
+       "description": "Board"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "customer_relationship_manager_update_customer",
+    "description": "\nUpdates a customer record by ID.\n\nParameters\n----------\ncustomer_id : str\n    ID of the customer.\nfield : str\n    Field to update. Available fields are: \"customer_name\", \"assigned_to_email\", \"customer_email\", \"customer_phone\", \"last_contact_date\", \"product_interest\", \"status\", \"notes\", \"follow_up_by\"\nnew_value : str\n    New value for the field. When field is \"status\", one of: \"Qualified\", \"Won\", \"Lost\", \"Lead\", \"Proposal\". When field is \"product_interest\", one of: \"Software\", \"Hardware\", \"Services\", \"Consulting\", \"Training\".\n\nReturns\n-------\nmessage : str\n    Message indicating the status of the update.\n\nExamples\n--------\n>>> crm.update_customer(\"00000001\", \"status\", \"Won\")\n\"Customer updated successfully.\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "customer_id": {
+       "type": "string",
+       "description": "Customer Id"
+      },
+      "field": {
+       "type": "string",
+       "description": "Field"
+      },
+      "new_value": {
+       "type": "string",
+       "description": "New Value"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "customer_relationship_manager_add_customer",
+    "description": "\nAdds a new customer record.\n\nParameters\n----------\ncustomer_name : str\n    Name of the customer.\nassigned_to_email : str\n    Email address of the person assigned to the customer.\nstatus : str\n    Current status of the customer. One of: \"Qualified\", \"Won\", \"Lost\", \"Lead\", \"Proposal\"\ncustomer_email : str, optional\n    Email address of the customer.\ncustomer_phone : str, optional\n    Phone number of the customer.\nlast_contact_date : str, optional\n    The last date the customer was contacted. Format: \"YYYY-MM-DD\"\nproduct_interest : str, optional\n    Product interest of the customer. One of: \"Software\", \"Hardware\", \"Services\", \"Consulting\", \"Training\"\nnotes : str, optional, optional\n    Notes about the customer.\nfollow_up_by : str, optional\n    Date for the next follow up. Format: \"YYYY-MM-DD\"\n\nReturns\n-------\ncustomer_id : str\n    ID of the new customer.\n\nExamples\n--------\n>>> crm.add_customer(\"Sam Smith\", \"sam@example.com\", \"Lead\", \"sam.smith@example.com\", \"123-456-7890\", \"2023-01-01\", \"Software\")\n\"00000201\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "customer_name": {
+       "type": "string",
+       "description": "Customer Name"
+      },
+      "assigned_to_email": {
+       "type": "string",
+       "description": "Assigned To Email"
+      },
+      "status": {
+       "type": "string",
+       "description": "Status"
+      },
+      "customer_email": {
+       "type": "string",
+       "description": "Customer Email"
+      },
+      "customer_phone": {
+       "type": "string",
+       "description": "Customer Phone"
+      },
+      "last_contact_date": {
+       "type": "string",
+       "description": "Last Contact Date"
+      },
+      "product_interest": {
+       "type": "string",
+       "description": "Product Interest"
+      },
+      "notes": {
+       "type": "string",
+       "description": "Notes"
+      },
+      "follow_up_by": {
+       "type": "string",
+       "description": "Follow Up By"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "customer_relationship_manager_delete_customer",
+    "description": "\nDeletes a customer record by ID.\n\nParameters\n----------\ncustomer_id : str\n    ID of the customer.\n\nReturns\n-------\nmessage : str\n    Message indicating the status of the deletion.\n\nExamples\n--------\n>>> crm.delete_customer(\"00000001\")\n\"Customer deleted successfully.\"\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "customer_id": {
+       "type": "string",
+       "description": "Customer Id"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "customer_relationship_manager_search_customers",
+    "description": "\nSearches for customers based on the given parameters.\n\nParameters\n----------\ncustomer_name : str, optional\n    Name of the customer.\ncustomer_email : str, optional\n    Email address of the customer.\nproduct_interest : str, optional\n    Product interest of the customer. One of: \"Software\", \"Hardware\", \"Services\", \"Consulting\", \"Training\".\nstatus : str, optional\n    Current status of the customer. One of: \"Qualified\", \"Won\", \"Lost\", \"Lead\", \"Proposal\".\nassigned_to_email : str, optional\n    Email address of the person assigned to the customer.\nlast_contact_date_min : str, optional\n    Minimum last contact date. Format: \"YYYY-MM-DD\"\nlast_contact_date_max : str, optional\n    Maximum last contact date. Format: \"YYYY-MM-DD\"\nfollow_up_by_min : str, optional\n    Minimum follow up date. Format: \"YYYY-MM-DD\"\nfollow_up_by_max : str, optional\n    Maximum follow up date. Format: \"YYYY-MM-DD\"\n\nReturns\n-------\ncustomers : list\n    List of customers matching the given parameters. Returns at most 5 customers.\n\nExamples\n--------\n>>> crm.search_customers(customer_name=\"John\")\n{{\"customer_id\": \"00000001\", \"assigned_to_email\": \"sam@example.com\", \"customer_name\": \"John Smith\",\n\"customer_email\": \"john.smith@example.com\", \"customer_phone\": \"123-456-7890\", \"last_contact_date\": \"2023-01-01\",\n\"product_interest\": \"Software\", \"status\": \"Qualified\", \"follow_up_by\": \"2023-01-15\", \"notes\": \"Had a call on 2023-01-01. \"}}\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "customer_name": {
+       "type": "string",
+       "description": "Customer Name"
+      },
+      "customer_email": {
+       "type": "string",
+       "description": "Customer Email"
+      },
+      "product_interest": {
+       "type": "string",
+       "description": "Product Interest"
+      },
+      "status": {
+       "type": "string",
+       "description": "Status"
+      },
+      "assigned_to_email": {
+       "type": "string",
+       "description": "Assigned To Email"
+      },
+      "last_contact_date_min": {
+       "type": "string",
+       "description": "Last Contact Date Min"
+      },
+      "last_contact_date_max": {
+       "type": "string",
+       "description": "Last Contact Date Max"
+      },
+      "follow_up_by_min": {
+       "type": "string",
+       "description": "Follow Up By Min"
+      },
+      "follow_up_by_max": {
+       "type": "string",
+       "description": "Follow Up By Max"
+      }
+     }
+    }
+   }
+  },
+  {
+   "type": "function",
+   "function": {
+    "name": "company_directory_find_email_address",
+    "description": "\nFinds the email address of an employee by their name.\n\nParameters\n----------\nname : str, optional\n    Name of the person.\n\nReturns\n-------\nemail_address : list[str]\n    Email addresses of the person.\n\nExamples\n--------\n>>> directory.find_email_address(\"John\")\n[\"john.smith@example.com\"]\n",
+    "parameters": {
+     "type": "object",
+     "properties": {
+      "name": {
+       "type": "string",
+       "description": "Name"
+      }
+     }
+    }
+   }
+  }
+ ],
+ "nombre_outils": 27,
+ "empreinte_sha256": "d6f756e5c86be28f0c50e30b22bb4a8b5c1818db6680854f573768c4c403a836"
+}

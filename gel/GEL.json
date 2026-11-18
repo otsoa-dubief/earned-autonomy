@@ -1,0 +1,40 @@
+{
+ "date": "2026-11-09 22:35:13 +0100",
+ "commit": "cb9cbce5831e7a83eff06a8150efdfc1cb7ab3d5",
+ "G0": 9879107140414210923,
+ "bancs": {
+  "externe/tau2-bench": {
+   "commit": "033bf082f48e4a3c6a1256208e93cf2ce9c3bb6f",
+   "propre": true
+  },
+  "externe/WorkBench": {
+   "commit": "49c7dfd00c03d384ec59ea57374f50b766aa5613",
+   "propre": true
+  }
+ },
+ "environnements": {
+  "simulation": {
+   "python": "3.14.9",
+   "fichier": "gel/environnements/simulation.txt"
+  },
+  "tau2-bench": {
+   "python": "3.12.13",
+   "fichier": "gel/environnements/tau2-bench.txt"
+  },
+  "WorkBench": {
+   "python": "3.14.9",
+   "fichier": "gel/environnements/WorkBench.txt"
+  }
+ },
+ "etat_au_gel": {
+  "JOURNAL_CHANGEMENTS.md": "50fd78b61c73e74c6688289e356058a3b123b81d1fe1e1769cf3ed9331de89d5",
+  "SUIVI.md": "2f6a178fc343828f3a75af9a318ee71931d0a45c0ce107ef7f287434ca0c676c",
+  "CADRE.md": "28fbdd3c7b47bee99939a6e7f72406cc5c713adfecafeb4b202f6c5c9ed5614f"
+ },
+ "plateforme": {
+  "systeme": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "machine": "arm64",
+  "processeur": "arm"
+ },
+ "verification": "simulation/.venv/bin/python gel/manifeste.py --verifier"
+}

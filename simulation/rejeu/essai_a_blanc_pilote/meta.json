@@ -1,0 +1,163 @@
+{
+ "avertissement": "essai à blanc du rejeu final sur les parties de développement du pilote, partage fictif tiré d'une valeur de balise de test, graine de développement. Ces chiffres n'ont AUCUNE valeur de preuve (PLAN_EXPERIENCE.md, 5.16, point 6).",
+ "G0": 20261105,
+ "R0": 2000,
+ "B": 2000,
+ "K": 10,
+ "valeurs_e": [
+  0.05,
+  0.0,
+  0.02,
+  0.1
+ ],
+ "methode_intervalle": {
+  "retenue": "iii",
+  "nom": "jackknife-t par tâche",
+  "seconde": "percentile",
+  "repli": false,
+  "G_sur": "20",
+  "zone_echec": [],
+  "source": "simulation/rejeu/resultats_couverture_charge",
+  "historique": "resultats_couverture/ (première simulation, dégâts rares)"
+ },
+ "etiquette": "R5",
+ "processus": 2,
+ "config_rejeu_sha256": "9e6f1365862e3f61c8f1e3c0a796c1cffc64a56e136ab1ac98138be63eb58731",
+ "table_outils_sha256": "d4a8e29b15d9a8b1f1f39759b5b2ffe4565c85da446a36e8d3503b6504397c71",
+ "partage": {
+  "calibration": {
+   "WorkBench": [
+    "calendar:10",
+    "customer_relationship_manager:25",
+    "email:0",
+    "project_management:11"
+   ],
+   "aviation": [
+    "13",
+    "21",
+    "32",
+    "41",
+    "5"
+   ],
+   "banque": [
+    "task_016",
+    "task_017",
+    "task_018",
+    "task_020",
+    "task_024"
+   ],
+   "commerce": [
+    "102",
+    "12",
+    "15",
+    "27",
+    "29"
+   ]
+  },
+  "confirmation": {
+   "WorkBench": [
+    "analytics:10",
+    "calendar:105",
+    "customer_relationship_manager:15",
+    "email:13",
+    "multi_domain:10",
+    "project_management:13"
+   ],
+   "aviation": [
+    "11",
+    "23",
+    "31",
+    "39",
+    "46"
+   ],
+   "banque": [
+    "task_003",
+    "task_006",
+    "task_019",
+    "task_034",
+    "task_035"
+   ],
+   "commerce": [
+    "0",
+    "17",
+    "24",
+    "25",
+    "3"
+   ]
+  }
+ },
+ "duree_s": 706.1,
+ "entrees": {
+  "dossiers": [
+   "/Users/Otsoa/dev/autonomie-meritee/pilote/etape2/2026-11-05_07-50-58"
+  ],
+  "actions_typees_sha256": [
+   "f80b7160663a937a93dc1627832768388cf860e13fe14f5fd5331561bec12adb"
+  ],
+  "cout_sha256": [
+   "7b5df8b7dbc715d4b8bffe71d12b812f0054482f4d80a804da7e795e21e82109"
+  ],
+  "reussite_sha256": [
+   "683f2629f6343d70aec01b0be46b5c0e707f181606c158b33d5bb42e8623b455"
+  ],
+  "lanceur": {
+   "tentatives": {
+    "gardée": 120
+   },
+   "exclues": {},
+   "exclues_par_configuration": {},
+   "relances": 0,
+   "gardees_par_vague": {
+    "?": 120
+   }
+  },
+  "partage": "/Users/Otsoa/dev/autonomie-meritee/simulation/rejeu/essai_a_blanc_pilote/partage_essai.json",
+  "partage_sha256": "b148fbb773fc51a58572f930fad1579ba912976dee6bc6d048da57e53fc60425",
+  "vagues": {
+   "pilote-2": {
+    "decisions": "/Users/Otsoa/dev/autonomie-meritee/pilote/etape2/2026-11-05_07-50-58/relecture/decisions.csv",
+    "decisions_sha256": "c77fc87355289177fc2c7de1015227f5a3cb5f4ac27e8e0aad452256f4f0ee3c",
+    "alertes": "/Users/Otsoa/dev/autonomie-meritee/pilote/etape2/2026-11-05_07-50-58/relecture/alertes.json",
+    "bilan": null,
+    "bilan_sha256": null
+   }
+  },
+  "taches_retirees": [],
+  "essai_a_blanc": true,
+  "gel_plan": null,
+  "oppositions_motif_a": [],
+  "manifeste_verdicts_sha256": null
+ },
+ "python": "3.14.9",
+ "numpy": "2.5.4",
+ "scipy": "1.18.1",
+ "machine": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+ "ecrit_le": "2026-11-08 02:09:24 +0100",
+ "empreintes_code": {
+  "__init__.py": "e64989e594d2c5502b7a783ef5fe225b92cb5b4109101e6ecf8edd0b12472f31",
+  "analyse.py": "9412ff41b4b167e74ddbd361f725ebe9912053fddd8eb9747e60c5fe35daf50b",
+  "bout_en_bout.py": "2e9a3851018e361e7cae601cb69f16112d345d2a7e97dcc065ae7dad1faefb83",
+  "classes.py": "fcc9bf0d63ba2c556b0c93d423665da10b3900a65d20bd4ea25d07c7fac7f269",
+  "config_rejeu.py": "44171e48c8bd6a5bc3260cefb71b9d78754e09e6dc56b041619761fa9e2b8682",
+  "controle_presque_nul.py": "3c536bf7fb81fba05bc6b2ef8a721845c77cee2706e73731fb0958333245deb8",
+  "couverture.py": "5bef357f67a38c92ec7239f8db34b750686e806c0b32ae1e8f0b9dfd252d04cb",
+  "couverture_charge.py": "f283e162dcc4e5fb90a5862b6dda9433145a69f16726a33327b0c0a6d385604b",
+  "decision.py": "57fe6e980315ed241aff03d150a9f4eaaca89178c53425963d5c3c95244f2dbf",
+  "entrees.py": "24aa7f7ac7f4c341faea606e155d02ad09b3d81e58bf5dea5311463aec245655",
+  "epreuves.py": "2dbe811a197cba8b7dea4d28216caacc20b610cdc277404de470f511966aab27",
+  "essais.py": "153578474ecc5c953184ee9b73fb3cff50a2b8efd80484300733bbfb82038596",
+  "intervalles.py": "96a224592969cf9c10baa4f84554de35e277cc076865351bc57351ae1eb5a9a4",
+  "lots.py": "6b08463459fbafe630bb13f116f10be72a881d282e54676515f823886b9f9219",
+  "maxt.py": "a31fb26b82f0f6665bece8c67f9caa5276d0ca18121c57039f35156d60da520b",
+  "mesures.py": "0df08d48518706c005323eaec948a214b5d5aca5497dcdfe572b32797c429f01",
+  "moteur.py": "3441cb45217afc5a9bb17867815caf907eeea0796c1b45244ec3a66d90c3ec72",
+  "pipeline.py": "ce4019c0a802eb9bdb7c5d4229541f282edf216aa73eb007fea556be373d8655",
+  "preuves.py": "62e746a1dab136e9c4edd3df24dd347f7c34101dc65ecab644c53320f1fc073c",
+  "regles.py": "c8f1837b267dbcb380929ece052ca124ef69253f2de17f816a88ae2425d2db51",
+  "rejeu.py": "a8c10c7e6b90753a94ad6bb57ed9d0d6536ca7ac4fcab7ba134513ea431464ce",
+  "sorties.py": "4d5b2bd1e9d1fb23d140374f3cc773fa7f75121a12e945fe48bfccec0abf962a",
+  "suites.py": "69c36b86ec316dd632a6530538bd43bfea8987218497a72608d983356641a32f",
+  "temoins.py": "448cceb822e8f14bf179d06b8f3fbc95cb8de58790ae9901fa13230d19b20f88",
+  "types_regle.py": "9b41e9ecb44096c8dabddd9dcebc08b58a06e374b21d09ca0b2f61232bfa59c2"
+ }
+}

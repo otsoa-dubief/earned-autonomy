@@ -1,0 +1,340 @@
+{
+ "id": "24321214",
+ "created": "2026-11-17T17:27:44.069688+00:00",
+ "updated": "2026-11-17T17:35:47.422924+00:00",
+ "revision_id": 11,
+ "parent": {
+  "id": "24321213",
+  "access": {
+   "grants": [],
+   "owned_by": {
+    "user": "2021115"
+   },
+   "links": [],
+   "settings": {
+    "allow_user_requests": false,
+    "allow_guest_requests": false,
+    "accept_conditions_text": null,
+    "secret_link_expiration": 0
+   }
+  },
+  "communities": {},
+  "pids": {}
+ },
+ "versions": {
+  "is_latest": false,
+  "is_latest_draft": true,
+  "index": 1
+ },
+ "is_published": false,
+ "is_draft": true,
+ "expires_at": "2026-11-17 17:27:44.069666+00:00",
+ "pids": {},
+ "metadata": {
+  "resource_type": {
+   "id": "dataset",
+   "title": {
+    "de": "Datensatz",
+    "en": "Dataset"
+   }
+  },
+  "creators": [
+   {
+    "person_or_org": {
+     "type": "personal",
+     "name": "Dubief, Otsoa",
+     "given_name": "Otsoa",
+     "family_name": "Dubief",
+     "identifiers": [
+      {
+       "identifier": "0009-0002-7322-7575",
+       "scheme": "orcid"
+      }
+     ]
+    },
+    "affiliations": [
+     {
+      "name": "Independent researcher"
+     }
+    ]
+   }
+  ],
+  "title": "Earned Autonomy for AI Agents: outputs of the pre-registered final replay, exploratory analyses and public draw log",
+  "publisher": "Zenodo",
+  "publication_date": "2026-11-17",
+  "subjects": [
+   {
+    "subject": "AI agents"
+   },
+   {
+    "subject": "delegation"
+   },
+   {
+    "subject": "earned autonomy"
+   },
+   {
+    "subject": "error budget"
+   },
+   {
+    "subject": "continuous sampling"
+   },
+   {
+    "subject": "pre-registration"
+   },
+   {
+    "subject": "replay outputs"
+   }
+  ],
+  "languages": [
+   {
+    "id": "eng",
+    "title": {
+     "en": "English"
+    }
+   },
+   {
+    "id": "fra",
+    "title": {
+     "en": "French"
+    }
+   }
+  ],
+  "related_identifiers": [
+   {
+    "identifier": "https://osf.io/vycge/",
+    "scheme": "url",
+    "relation_type": {
+     "id": "isdocumentedby",
+     "title": {
+      "de": "Wird dokumentiert von",
+      "en": "Is documented by"
+     }
+    }
+   },
+   {
+    "identifier": "https://osf.io/cusv6/",
+    "scheme": "url",
+    "relation_type": {
+     "id": "isderivedfrom",
+     "title": {
+      "de": "Wird abgeleitet von",
+      "en": "Is derived from"
+     }
+    }
+   },
+   {
+    "identifier": "https://osf.io/7ju3c/",
+    "scheme": "url",
+    "relation_type": {
+     "id": "references",
+     "title": {
+      "de": "Referenziert",
+      "en": "References"
+     }
+    }
+   }
+  ],
+  "version": "1.0",
+  "rights": [
+   {
+    "id": "cc-by-4.0",
+    "title": {
+     "en": "Creative Commons Attribution 4.0 International"
+    },
+    "description": {
+     "en": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+    },
+    "icon": "cc-by-icon",
+    "props": {
+     "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+     "scheme": "spdx"
+    }
+   },
+   {
+    "id": "mit",
+    "title": {
+     "en": "MIT License"
+    },
+    "description": {
+     "en": "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code."
+    },
+    "props": {
+     "url": "https://opensource.org/licenses/MIT",
+     "scheme": "spdx"
+    }
+   }
+  ],
+  "description": "<p>Output files of the final confirmatory replay of the pre-registered study \"Earned Autonomy for AI Agents: A Pre-registered Error-Budget Test of Per-Action-Type Delegation\" (OSF registrations, under embargo until the paper is posted: priority record 7ju3c, preregistration vycge, verdict freeze cusv6).</p>\n<p>The archive holds the outputs of the final replay, the exploratory analyses run after the verdict, the files and log of the public draw of the calibration/confirmation split with the frozen inputs needed to redo the draw, the logs of the replay runs, and SHA-256 fingerprints of every file. The paper is not included.</p>\n<p>The files are under embargo and will be opened when the paper is posted; no result is stated here until then. SHA-256 of the archive (earned_autonomy_results_2026-11-17.zip, 3,660,293 bytes): 7e8f8a7d9ac92d3a1f7a961c53c17d872f8cfdf5a98744c4a29400ed1f5be6b3. Once the files are open, anyone can check that they are the files deposited on 17 November 2026.</p>\n<p>Text and data under CC BY 4.0; code under the MIT licence.</p>",
+  "additional_descriptions": [
+   {
+    "description": "<p>Use of AI tools: Claude models (Anthropic), through Claude Code, were used under the author's direction to write the code that produced these outputs, to draft the documentation in the archive, and to review automated alerts; the agents evaluated in the study are also Claude models. The author takes full responsibility for all contents.</p>",
+    "type": {
+     "id": "notes",
+     "title": {
+      "de": "Anmerkungen",
+      "en": "Notes"
+     }
+    }
+   }
+  ]
+ },
+ "custom_fields": {},
+ "access": {
+  "record": "public",
+  "files": "restricted",
+  "embargo": {
+   "active": true,
+   "until": "2030-11-04",
+   "reason": "Files will be opened by the author when the paper is posted."
+  },
+  "status": "embargoed"
+ },
+ "files": {
+  "enabled": true,
+  "order": [],
+  "count": 1,
+  "total_bytes": 3660293,
+  "entries": {
+   "earned_autonomy_results_2026-11-17.zip": {
+    "id": "28e4724e-2b8c-4b02-95da-e582aad32082",
+    "checksum": "md5:23551142e7c0fd2c4c0c52fe23493619",
+    "ext": "zip",
+    "size": 3660293,
+    "mimetype": "application/zip",
+    "storage_class": "L",
+    "key": "earned_autonomy_results_2026-11-17.zip",
+    "metadata": {},
+    "access": {
+     "hidden": false
+    }
+   }
+  }
+ },
+ "media_files": {
+  "enabled": false,
+  "order": [],
+  "count": 0,
+  "total_bytes": 0,
+  "entries": {}
+ },
+ "status": "draft",
+ "ui": {
+  "publication_date_l10n_medium": "Nov 17, 2026",
+  "publication_date_l10n_long": "November 17, 2026",
+  "created_date_l10n_long": "November 17, 2026",
+  "updated_date_l10n_long": "November 17, 2026",
+  "resource_type": {
+   "id": "dataset",
+   "title_l10n": "Dataset"
+  },
+  "custom_fields": {},
+  "access_status": {
+   "id": "embargoed",
+   "title_l10n": "Embargoed",
+   "description_l10n": "The files will be made publicly available on November 4, 2030.",
+   "icon": "outline clock",
+   "embargo_date_l10n": "November 4, 2030",
+   "message_class": "warning"
+  },
+  "creators": {
+   "creators": [
+    {
+     "person_or_org": {
+      "type": "personal",
+      "name": "Dubief, Otsoa",
+      "given_name": "Otsoa",
+      "family_name": "Dubief",
+      "identifiers": [
+       {
+        "identifier": "0009-0002-7322-7575",
+        "scheme": "orcid"
+       }
+      ]
+     },
+     "affiliations": [
+      [
+       1,
+       "Independent researcher"
+      ]
+     ]
+    }
+   ],
+   "affiliations": [
+    [
+     1,
+     "Independent researcher",
+     null
+    ]
+   ]
+  },
+  "languages": [
+   {
+    "id": "eng",
+    "title_l10n": "English"
+   },
+   {
+    "id": "fra",
+    "title_l10n": "French"
+   }
+  ],
+  "description_stripped": "Output files of the final confirmatory replay of the pre-registered study \"Earned Autonomy for AI Agents: A Pre-registered Error-Budget Test of Per-Action-Type Delegation\" (OSF registrations, under embargo until the paper is posted: priority record 7ju3c, preregistration vycge, verdict freeze cusv6).\n\nThe archive holds the outputs of the final replay, the exploratory analyses run after the verdict, the files and log of the public draw of the calibration/confirmation split with the frozen inputs needed to redo the draw, the logs of the replay runs, and SHA-256 fingerprints of every file. The paper is not included.\n\nThe files are under embargo and will be opened when the paper is posted; no result is stated here until then. SHA-256 of the archive (earned_autonomy_results_2026-11-17.zip, 3,660,293 bytes): 7e8f8a7d9ac92d3a1f7a961c53c17d872f8cfdf5a98744c4a29400ed1f5be6b3. Once the files are open, anyone can check that they are the files deposited on 17 November 2026.\n\nText and data under CC BY 4.0; code under the MIT licence.",
+  "version": "1.0",
+  "related_identifiers": [
+   {
+    "identifier": "https://osf.io/vycge/",
+    "relation_type": {
+     "id": "isdocumentedby",
+     "title_l10n": "Is documented by"
+    },
+    "scheme": "url"
+   },
+   {
+    "identifier": "https://osf.io/cusv6/",
+    "relation_type": {
+     "id": "isderivedfrom",
+     "title_l10n": "Is derived from"
+    },
+    "scheme": "url"
+   },
+   {
+    "identifier": "https://osf.io/7ju3c/",
+    "relation_type": {
+     "id": "references",
+     "title_l10n": "References"
+    },
+    "scheme": "url"
+   }
+  ],
+  "additional_descriptions": [
+   {
+    "description": "<p>Use of AI tools: Claude models (Anthropic), through Claude Code, were used under the author's direction to write the code that produced these outputs, to draft the documentation in the archive, and to review automated alerts; the agents evaluated in the study are also Claude models. The author takes full responsibility for all contents.</p>",
+    "type": {
+     "id": "notes",
+     "title_l10n": "Notes"
+    }
+   }
+  ],
+  "rights": [
+   {
+    "id": "cc-by-4.0",
+    "title_l10n": "Creative Commons Attribution 4.0 International",
+    "description_l10n": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited.",
+    "icon": "cc-by-icon",
+    "props": {
+     "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+     "scheme": "spdx"
+    }
+   },
+   {
+    "id": "mit",
+    "title_l10n": "MIT License",
+    "description_l10n": "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.",
+    "props": {
+     "url": "https://opensource.org/licenses/MIT",
+     "scheme": "spdx"
+    }
+   }
+  ],
+  "is_draft": true
+ }
+}

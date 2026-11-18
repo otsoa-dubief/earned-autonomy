@@ -1,0 +1,30 @@
+# Gel de l'exploration E1 : 2026-11-04 18:55:35 +0100
+# sha256 du plan et du code, écrit avant la grille complète (PLAN_EXPLORATION_E1.md, section 6).
+# Vérification : .venv/bin/python gel_e1.py --verifier
+ef303aa2361243281bc36b2ab9f4917b5f8a9ed4322526363883386b46296a2b  PLAN_EXPLORATION_E1.md
+b983dd52796bfaca7244889f5337827f2d5bfbf744eb74eb316aa46e18336158  etalonnage_e1.json
+99d1a4e42a8e31d8362dbb10d9ae2d7b3dcb54a19de174c1dffb0fac90f8efe2  config.py
+d431c8fc993ae227d94a6f1fe3e0332b838a2e3c4cc8880a5d3cd58645880a26  config_e1.py
+a5f5a6d9194964b43d3649d6869564d08d8b146b909668d982748584490b8db5  ecrire_resultats.py
+a5625cc0b3288fab18b12569d1153e6a8da3897b07e06ef183c4b88636bb8f6b  ecrire_resultats_e1.py
+5b9b3f33a9e5721756c309add1387261d8371ca61d09e35f24cfe9406cea7fae  etalonnage_e1.py
+092b5338f807cb254815168be69b9da8b350d2d98c09ca72b5a06750c9662d9e  executer.py
+e68eb92ec34207dd9fd7705ce17d74ca6bfb8f7e66a2274c59938e1711a1d525  executer_e1.py
+4f21c6769f4e45ace18a9b947e0198f709e2032d5b3199549f6fbb9783085c99  flux.py
+938f9219cfcbc94dbc09be2bcbc563e12c8c82a289d22714a002a35a029bca21  gel_e1.py
+440070fc12983ab9579321e2b7fa21861fea7e3ae3ebada39087727d88c89641  mesures.py
+8e4739f129616f94f029fbe41a6ed9ae5f02fea5535499691ca1cfa8101103b2  rapport.py
+3e0fa20ed8c10b0f65149ef9f9082eb78c3cdb88bccdea904cdfd65302c918ac  regle.py
+a550735408a46ae32f2f1684ee719761ab5b500ef2fc1ad7024fbfebbc2f45bd  regle_e1.py
+61c8cc2cbe5cee46f919d3fbb1a72887c6ea9749bdabf99942a11d4c6f80cd80  sprt.py
+db1a4fec6300381807b577f3591f864820d6f9a928da5aa6e22d6b51a3e61ef3  temoins.py
+c14e668d5405e68ee34b3572ef50e8f3733343c7d3c4f80ab3205bb851928afe  tests/conftest.py
+d492c217e7f499eefdcd3efb20ed717b83574a37f657fcce1ccb4c16525dbf7a  tests/test_e1.py
+22b5c7cf7010effb5e229eaf7528a8862ebda55e160859490f803e6207e9bf7f  tests/test_section8.py
+869b45af8ce56d8dc267d42e6b35c741c01c4981ff7788bb90302c547d93de93  explorations/verif_barre_2026-11-04.py
+
+# Après la grille (correctif E1-b) : 2026-11-04 19:34:43 +0100
+# Deux défauts de rapport corrigés sans relancer la grille (figure 1 et mesure 3 selon la lecture E1-a), un test pour chacun.
+# Les empreintes d'origine ci-dessus ne sont pas réécrites ; pour ces deux fichiers, les empreintes ci-dessous font foi (gel_e1.py --verifier lit la dernière).
+7f9356d970f16992d4f53831c3c2e5efad2fe5edcc5f3adf48309dd00e0ebb4a  ecrire_resultats_e1.py
+2671a01e3f483db5a5c31bdaac315b7e7b4562265e02cf138e5c62c126ec83e8  tests/test_e1.py

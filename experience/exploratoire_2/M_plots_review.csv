@@ -1,0 +1,7 @@
+# EXPLORATORY: analysis after the verdict, no effect on the pre-registered label (R4). Written by outils/analyses_exploratoires_2.py on 18/11/2026.
+decision,case,alerts
+confirmed,end on 30 Nov,144
+confirmed,other,11
+lifted,end on 30 Nov,177
+lifted,other,19
+tasks decided both ways,of 46 plot tasks,40

@@ -1,0 +1,10 @@
+# AVERTISSEMENT : essai à blanc du rejeu final sur les parties de développement du pilote, partage fictif tiré d'une valeur de balise de test, graine de développement. Ces chiffres n'ont AUCUNE valeur de preuve (PLAN_EXPERIENCE.md, 5.16, point 6).
+environnement,moitie,taches,taches_retirees,taches_jouees,ecritures_faible,ecritures_moyen,ecritures_fort
+WorkBench,calibration,4,0,4,8,3,0
+WorkBench,confirmation,6,0,6,12,6,0
+aviation,calibration,5,0,5,0,3,3
+aviation,confirmation,5,0,5,0,0,21
+banque,calibration,5,0,5,46,0,0
+banque,confirmation,5,0,5,16,0,0
+commerce,calibration,5,0,5,3,0,18
+commerce,confirmation,5,0,5,3,0,6

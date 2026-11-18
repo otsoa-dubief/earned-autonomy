@@ -1,0 +1,44 @@
+{
+ "methode_retenue": "iii",
+ "nom": "jackknife-t par tâche",
+ "repli": false,
+ "seuil": 0.93,
+ "G_sur": 20,
+ "zone_echec": [],
+ "pire_couverture": {
+  "i": 0.9058,
+  "ii": 0.9164,
+  "iii": 0.933
+ },
+ "methode_seconde": "percentile",
+ "reglage_critere": [
+  0.25,
+  0.15
+ ],
+ "rapportes_sans_effet": {
+  "(0.45, 0.05)": {
+   "methode": "ii",
+   "repli": false,
+   "pire": {
+    "i": 0.9084,
+    "ii": 0.94,
+    "iii": 0.923
+   },
+   "G_sur": 20,
+   "zone_echec": [],
+   "seuil": 0.93
+  },
+  "(0.1, 0.1)": {
+   "methode": "iii",
+   "repli": false,
+   "pire": {
+    "i": 0.9276,
+    "ii": 0.8796,
+    "iii": 0.942
+   },
+   "G_sur": 20,
+   "zone_echec": [],
+   "seuil": 0.93
+  }
+ }
+}

@@ -1,0 +1,48 @@
+[   139 s] 1/36 A 1 confirmée
+[   140 s] 2/36 A 2 confirmée
+[   141 s] 3/36 A 3 confirmée
+[   142 s] 4/36 D-piege 0 confirmée
+[   143 s] 5/36 A 0 confirmée
+[   146 s] 6/36 D-piege 2 confirmée
+[   150 s] 7/36 D-piege 3 confirmée
+[   166 s] 8/36 E 0 confirmée
+[   167 s] 9/36 D-piege 1 confirmée
+[   174 s] 10/36 E 2 confirmée
+[   175 s] 11/36 E 3 confirmée
+[   181 s] 12/36 E 1 confirmée
+[   277 s] 13/36 D-piege 4 confirmée
+[   282 s] 14/36 E 5 confirmée
+[   283 s] 15/36 A 4 confirmée
+[   289 s] 16/36 A 6 confirmée
+[   298 s] 17/36 D-piege 5 confirmée
+[   300 s] 18/36 A 5 confirmée
+[   304 s] 19/36 D-piege 6 confirmée
+[   314 s] 20/36 A 7 confirmée
+[   315 s] 21/36 E 4 confirmée
+[   317 s] 22/36 E 6 confirmée
+[   347 s] 23/36 E 7 confirmée
+[   352 s] 24/36 D-piege 7 confirmée
+[   395 s] 25/36 A 8 confirmée
+[   412 s] 26/36 A 9 confirmée
+[   420 s] 27/36 D-piege 9 confirmée
+[   426 s] 28/36 D-piege 8 confirmée
+[   452 s] 29/36 E 10 confirmée
+[   452 s] 30/36 D-piege 10 confirmée
+[   453 s] 31/36 A 10 confirmée
+[   458 s] 32/36 E 8 confirmée
+[   458 s] 33/36 A 11 confirmée
+[   469 s] 34/36 E 9 confirmée
+[   477 s] 35/36 D-piege 11 confirmée
+[   497 s] 36/36 E 11 confirmée
+# Cellules jugées de B-tout portées par une seule tâche (sorties de `une_tache.py`)
+
+| Monde | répétitions | avec ≥ 1 cellule jugée à une tâche porteuse | dont sans variation bootstrap | dont estimation > 0 | dépassement établi sur une telle cellule |
+|---|---|---|---|---|---|
+| A | 12 | 6 | 5 | 2 | 0 |
+| E | 12 | 3 | 2 | 1 | 0 |
+| D-piege | 12 | 0 | 0 | 0 | 0 |
+
+Lieux des cellules jugées à une tâche porteuse (genre, environnement, niveau : cellules) : config aviation faible : 9, scenario aviation faible : 90.
+
+Écritures du niveau dans ces cellules : médiane 60, de 20 à 60.
+code de sortie 0

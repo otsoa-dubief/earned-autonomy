@@ -1,0 +1,16 @@
+lecture,regle,tient,charge_classement,n_couples,marge_pire_cellule,cellules_hors_budget,episodes_hors_decision5,retenue
+amendement_E1a,A½,True,78.5856,55,0.739352,0,0,False
+amendement_E1a,A¼,True,77.9697,55,0.769668,0,0,False
+amendement_E1a,A-dégâts,False,64.4337,55,-0.16595,6,0,False
+amendement_E1a,B-régulier,True,63.8072,55,0.048904,0,0,True
+amendement_E1a,B-tout,True,72.7156,55,0.545066,0,0,False
+ancienne_fenetre_courte,A½,True,78.5856,55,0.739352,0,0,False
+ancienne_fenetre_courte,A¼,True,77.9697,55,0.719106,0,0,False
+ancienne_fenetre_courte,A-dégâts,False,64.4337,55,-0.841348,16,0,False
+ancienne_fenetre_courte,B-régulier,False,63.8072,55,-0.664272,7,0,False
+ancienne_fenetre_courte,B-tout,True,72.7156,55,0.545066,0,0,True
+amendement_E1a_classement_long,A½,True,59.3489,46,0.739352,0,0,False
+amendement_E1a_classement_long,A¼,True,57.799,46,0.769668,0,0,False
+amendement_E1a_classement_long,A-dégâts,False,31.4081,46,-0.16595,6,0,False
+amendement_E1a_classement_long,B-régulier,True,33.6429,46,0.048904,0,0,True
+amendement_E1a_classement_long,B-tout,True,44.913,46,0.545066,0,0,False

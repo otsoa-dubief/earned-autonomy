@@ -1,0 +1,99 @@
+identifiant,valeur,unite,fichier,colonne_ou_ligne,statut
+etiquette,R4,,experience/rejeu_final/decision.csv,élément « étiquette finale »,préenregistré
+couverture_instrument,0.9868,part,experience/rejeu_final/decision.csv,"point 0, détail",préenregistré
+R4_ecritures,914,écritures,experience/rejeu_final/ecart.csv,"principal, WorkBench, haiku, ECR, n",préenregistré
+R4_erreurs,79,erreurs,experience/rejeu_final/ecart.csv,"principal, WorkBench, haiku, ECR, x",préenregistré
+R4_taux,0.08643,proportion,experience/rejeu_final/ecart.csv,… taux,préenregistré
+R4_barre,0.007575,proportion,experience/rejeu_final/ecart.csv,… barre,préenregistré
+R4_borne_basse_rho1,0.04141,proportion,experience/rejeu_final/ecart.csv,… borne_basse,préenregistré
+R4_neff_rho1,81.61,écritures,experience/rejeu_final/ecart.csv,… n_eff_preuve,préenregistré
+R4_neff_fois_barre,0.74,,experience/rejeu_final/ecart.csv,… n_eff × barre,préenregistré
+R4_rho_chapeau,0.8190040900476975,,experience/rejeu_final/ecart.csv,… rho,préenregistré
+R4_taches_porteuses,134,tâches,experience/rejeu_final/ecart.csv,… taches_porteuses,préenregistré
+types_observes,40,types,experience/rejeu_final/ecart.csv,"principal, n > 0",préenregistré
+types_etablis,20,types,experience/rejeu_final/ecart.csv,"principal, depassement_etabli",préenregistré
+types_zero_erreur,13,types,experience/rejeu_final/ecart.csv,"principal, x = 0",préenregistré
+erreurs_confirmees_calibration,1067,erreurs,experience/rejeu_final/ecart.csv,"principal, somme de x",préenregistré
+cellules_budget_btout,"180 (21 sans objet, 108 tenues, 51 jugées dont 6 non testables, 0 dépassement)",cellules,experience/rejeu_final/decision.csv,"point 1, détail",préenregistré
+temoin_liste_fixe,9 cellules sur 60,cellules,experience/rejeu_final/decision.csv,point 2 : témoin liste_fixe,préenregistré
+temoin_tri_risque,18 cellules sur 60,cellules,experience/rejeu_final/decision.csv,point 2 : témoin tri_risque,préenregistré
+accord_vague1,13/15,fiches,experience/vague1/2026-11-10_06-19-06/relecture/accord.json,"accords, total",préenregistré
+accord_vague2,13/15,fiches,experience/vague2/2026-11-10_19-53-13/relecture/accord.json,"accords, total",préenregistré
+alertes_relues_total,2761,alertes,experience/rejeu_final/decision.csv,instrument : alertes,préenregistré
+taches_retirees,12,tâches,experience/rejeu_final/decision.csv,instrument : tâches retirées,préenregistré
+exclusions_message_vide,91,parties,experience/exploratoire/A_parties_exclues.csv,nombre de lignes,exploratoire
+etablis_avec_exclusions,21,types,experience/exploratoire/A_ecart_avec_exclusions.csv,etabli_avec_exclusions,exploratoire
+sensibilite_R4,63 %,part,experience/exploratoire/C_sensibilite_fausses_confirmations.csv,WorkBench haiku ECR,exploratoire
+sensibilite_banque_opus_msg,0 %,part,experience/exploratoire/C_sensibilite_fausses_confirmations.csv,banque opus MSG,exploratoire
+refusees_parmi_erreurs,104/1067,erreurs,experience/exploratoire/E_refusees_parmi_erreurs.csv,somme,exploratoire
+rho_intervalle_R4,"0,800 [0,660 ; 0,924], 9,6 % > 0,885",,experience/exploratoire/G_intervalle_rho.csv,WorkBench haiku,exploratoire
+depense_vague2_usd,765.07,USD,experience/vague2/2026-11-10_19-53-13/rapport_vague.txt,« Dépensé dans la vague »,préenregistré
+parties_vague2,13081,parties,experience/vague2/2026-11-10_19-53-13/rapport_vague.txt,section 2 (colonne jouées ; 0 non jouée),préenregistré
+exclusions_banque_haiku,77,parties,experience/exploratoire/A_parties_exclues.csv,"environnement=banque, modele=haiku",préenregistré (compte) ; cause lue après coup
+exclusions_total,91,parties,experience/exploratoire/A_parties_exclues.csv,nombre de lignes,préenregistré (compte)
+parties_prevues,14266,parties,PLAN_EXPERIENCE.md ; experience/vague1/*/rapport_vague.txt,1 185 + 13 081,préenregistré
+parties_vague1,1185,parties,experience/vague1/*/rapport_vague.txt,colonne jouées,préenregistré (compte)
+cout_total_usd,837.19,USD,"SUIVI.md (13/11, rapport_vague.txt vague 2)","72,13 + 765,07",préenregistré (compte)
+cout_estime_usd,"595,73 (517 à 674)",USD,PLAN_EXPERIENCE.md,l. 175,préenregistré
+couverture_banque_vagues,"0,930 / 0,925",part,rapport_vague.txt des vagues 1 et 2,banque,préenregistré (compte)
+alertes_confirmees,1991,alertes,experience/rejeu_final/decision.csv,instrument : alertes,préenregistré
+alertes_levees,770,alertes,experience/rejeu_final/decision.csv,"a 75, b 78, c 331, d 283, sans motif 3",préenregistré
+audit_sans_alerte,0/21,écritures,experience/audit_sans_alerte/audit_conclusion.txt,total,préenregistré
+impulsion_nist,2031457,impulsion,experience/tirage/impulsion.json,url,préenregistré
+reussite_plages,"WB 94,9-99,3 ; avi 81,7-92,5 ; com 84,0-92,8 ; banque 18,3-50,9",%,experience/rejeu_final/reussite_taches.csv,taux,préenregistré (descriptif)
+cellules_jugees,51,cellules,experience/rejeu_final/budget.csv,"B-tout, principale, e=0,05, statut non réfutée",préenregistré
+cellules_non_eprouvees,108,cellules,experience/rejeu_final/budget.csv,"statut tenue, non mise à l'épreuve",préenregistré
+cellules_sans_objet,21,cellules,experience/rejeu_final/budget.csv,statut sans objet,préenregistré
+c_etoile_btout,"7,01",,experience/rejeu_final/budget.csv,c_etoile,préenregistré
+rapport_max_budget,"0,38",fois le budget,experience/rejeu_final/budget.csv,"max rapport, 51 cellules jugées",préenregistré (descriptif)
+borne_haute_max_budget,"1,67",fois le budget,experience/rejeu_final/budget.csv,"hi/budget, aviation sonnet→opus silencieux",préenregistré (descriptif)
+mentions_fragile,27,cellules,experience/rejeu_final/decision.csv,mention « fragile »,préenregistré
+retrait_periodes,0,périodes,experience/rejeu_final/derive.csv,"max_constatees, principale et retard10",préenregistré
+types_indetermines,20,types,experience/rejeu_final/ecart.csv,"principal, classe",préenregistré
+etablis_par_niveau,"faible 7, moyen 3, fort 10",types,experience/rejeu_final/ecart.csv,"principal, niveau × classe",préenregistré (descriptif)
+borne_basse_sur_barre_faible_hors_banque,"2,7 à 5,5",,experience/rejeu_final/ecart.csv,"borne_basse/barre, WorkBench ECR",préenregistré (descriptif)
+borne_basse_sur_barre_fort_hors_banque,10 à 248,,experience/rejeu_final/ecart.csv,"borne_basse/barre, ARG aviation et commerce",préenregistré (descriptif)
+banque_opus_msg_marge,"1,165 % contre 1,161 %",proportion,experience/rejeu_final/ecart.csv,"borne_basse, barre",préenregistré (descriptif)
+etablis_sous_rho_chapeau,21,types,experience/rejeu_final/ecart.csv,classe_sous_hypothese,préenregistré (descriptif)
+banque_opus_ecr_rho_bascule,"0,924",,experience/rejeu_final/ecart.csv,rho_bascule,préenregistré (descriptif)
+reserve_entiere_au_dessus,22 sur 41,types,experience/rejeu_final/ecart.csv,calibration et confirmation,descriptif
+volume_certification_fort,33 956 à 36 009,réussites,experience/rejeu_final/ecart.csv,"volume_certification, ARG aviation et commerce",préenregistré
+charge_workbench,"65,5 / 54,9 / 55,1",validations pour 100,experience/rejeu_final/charges.csv,"B-tout, hors lectures",préenregistré (descriptif)
+part_palier2_ecr_workbench,63 % / 81 % / 81 %,part,experience/rejeu_final/volume.csv,"part_p2, confirmation",préenregistré (descriptif)
+palier2_executees_puis_signalees_wb,"4,6 à 6,2",erreurs pour 100,experience/exploratoire/F_erreurs_palier2_approx.csv,WorkBench ECR,exploratoire
+temoins_exces_wb_haiku,"liste 5,5 (11×) ; tri 5,8 (12×)",dégâts pour 100,experience/rejeu_final/budget.csv,"exces_100_ecritures, rapport",préenregistré (descriptif)
+temoins_exces_banque_haiku_tri,"10,2 (20×)",dégâts pour 100,experience/rejeu_final/budget.csv,tri_risque,préenregistré (descriptif)
+derive_periodes_autonomie,0,périodes,experience/rejeu_final/derive.csv,"periodes_moy, principale B-tout",préenregistré
+regles_secondaires_pire_borne,"B-rég 2,21 ; A½ 0,39 ; A¼ 0,43 ; B-tout 1,67",fois le budget,experience/rejeu_final/choix.csv,pire borne haute,préenregistré
+alerte_resistance,"1,65 à 1,68 (2,34 retard10)",fois le budget,experience/rejeu_final/resistance.csv,bilan du mode,préenregistré
+parties_analysees,13623,parties,experience/rejeu_final/reussite_taches.csv,somme de parties,préenregistré (compte)
+retrait_commerce_delai,61 et 40 ; centile 95 : 226 et 108,écritures,experience/rejeu_final/retrait.csv,"B-tout, principale, commerce ECR faible, silencieux, lecture secondaire",préenregistré
+retrait_commerce_autonomies_nouvelles,85 % à 100 %,part,experience/rejeu_final/retrait.csv,part_autonomies_nouvelles,préenregistré
+scenarios_juges,"44 (WB 10, banque 12, aviation 10, commerce 12) ; 22 fragiles",cellules,experience/rejeu_final/budget.csv,"B-tout, principale, e=0,05, scénario, non réfutée",préenregistré
+borne_construction_au_dessus,"24 sur 51 (WB 11, banque 13), jusqu'à 1,08",cellules,experience/rejeu_final/budget.csv,borne_construction > budget,préenregistré (descriptif)
+garantie_banque_msg,"Opus 4,3 % (11,8 % après jonction) ; Sonnet 8,3 % après jonction ; Haiku ≤ 0,4 %",part des répétitions,experience/rejeu_final/garantie.csv,"part_rep_palier3, B-tout",préenregistré (descriptif)
+garantie_workbench_ecr,"≤ 0,2 %",part des répétitions,experience/rejeu_final/garantie.csv,"part_rep_palier3, B-tout",préenregistré (descriptif)
+types_avec_erreurs_non_etablis,7,types,experience/rejeu_final/ecart.csv,"principal, indéterminé, x > 0",préenregistré (descriptif)
+sensibilite_fort,commerce 70-79 % ; aviation 31-55 %,part,experience/exploratoire/C_sensibilite_fausses_confirmations.csv,niveau fort hors banque,exploratoire
+seuil_jugeabilite,"0,6905 ; R4 0,740 ; WB/Opus verdicts bruts 0,6930",,experience/rejeu_final/ecart.csv,n_eff × barre,préenregistré
+plafond_vague1_usd,90.00,USD,experience/vague1/2026-11-10_06-19-06/rapport_vague.txt,« plafond : 90.0000 USD »,préenregistré (accord d'Otsoa)
+plafond_permis_vague1_usd,90.78,USD,PLAN_EXPERIENCE.md,2.5 (calculé par le lanceur),préenregistré
+neff_rho_hat_R4,97.7,écritures,article/FORMULATION_VERDICT.md,n_eff = 97,72 sous ρ̂ = 0,819,préenregistré
+neff_rho1_R4,81.6,écritures,article/resultats/tables.md,Table 6 WorkBench haiku ECR n_eff (ρ=1),préenregistré
+produit_rho1_R4,0.618,,calcul 81,6 × 0,007575,Table 6,ajouté après les résultats
+R4_a_tort_simulation,2.8,%,REGLE.md,amendement du 7 novembre,préenregistré
+couverture_jackknife_budget,0.549,,PLAN_EXPERIENCE.md,5.13 première simulation,préenregistré
+tolerance_R4_X2,63,%,article/resultats/tables_exploratoires.md,Table X2 WorkBench haiku ECR,exploratoire
+excedents_perdus_65pct,9,types,article/resultats/tables_exploratoires.md,Table X2 : seuils ≤ 65 % (0 à 63),exploratoire
+reussies_parmi_erreurs_WB_haiku,63.9,%,article/resultats/tables_exploratoires.md,Table X3,exploratoire
+taux_ARG_confirmation,1.2 ; 7.7,%,article/resultats/tables.md,Table 6 bis moins Table 6 (commerce opus ; aviation opus),descriptif
+taux_ARG_reserve,3.8 ; 8.0,%,article/resultats/tables.md,Table 6 bis (commerce opus ; aviation haiku),descriptif
+taux_ECR_WB_confirmation,5.9 ; 11.0,%,article/resultats/tables.md,Table 6 bis moins Table 6 (WorkBench opus ; haiku),descriptif
+relecture_fortes_non_declenchee,0,alertes,experience/vague*/*/relecture/accord.json,drapeau_enjeu_fort = false et alertes_a_relire = [] dans les deux vagues,préenregistré (plan 4.4)
+graphiques_erreurs_type_juge,56 ; 48 ; 79,erreurs,experience/exploratoire_2/M_plots_sensitivity.csv,plot_errors ; end_date_only ; errors (engine decisions),exploratoire (18/11)
+graphiques_levees_confirmees,177 ; 144,alertes,experience/exploratoire_2/M_plots_review.csv,end on 30 Nov : lifted ; confirmed,exploratoire (18/11)
+graphiques_taches_deux_sens,40/46,tâches,experience/exploratoire_2/M_plots_review.csv,tasks decided both ways,exploratoire (18/11)
+type_juge_dates_levees,31 ; 3.4 ; 0.86 ; 29,erreurs ; % ; % ; erreurs,experience/exploratoire_2/M_plots_sensitivity.csv,end-date-only cases lifted ; min_errors_established,exploratoire (18/11)
+type_juge_dates_fenetres_levees,27,erreurs,experience/exploratoire_2/M_plots_sensitivity.csv,end-date and window-shift cases lifted (non établi),exploratoire (18/11)
+reussite_vs_erreurs_WB,63.9 ; 81.8,%,experience/exploratoire_2/I_success_and_action_errors.csv,share_successful_among_with_error WorkBench,exploratoire (18/11)
+echouees_sans_erreur,47.1 ; 76.5,%,experience/exploratoire_2/I_success_and_action_errors.csv,share_without_error_among_failed (min ; max),exploratoire (18/11)

@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table 9. Stress tests: summary per mode (plan 5.11; no effect on the label)}
+\label{tab:table_9}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllll}
+\toprule
+mode & rule & failures (established excess) & worst upper bound / budget & alert (B-all) \\
+\midrule
+e = 0 & B-all (main) & 0 & 1.68 & True \\
+e = 0 & B-regular & 0 & 2.31 & -- \\
+e = 0 & A$\frac12$ & 0 & 0.43 & -- \\
+e = 0 & A$\frac14$ & 0 & 0.44 & -- \\
+e = 0.02 & B-all (main) & 0 & 1.68 & True \\
+e = 0.02 & B-regular & 0 & 2.24 & -- \\
+e = 0.02 & A$\frac12$ & 0 & 0.42 & -- \\
+e = 0.02 & A$\frac14$ & 0 & 0.44 & -- \\
+e = 0.1 & B-all (main) & 0 & 1.65 & True \\
+e = 0.1 & B-regular & 0 & 2.08 & -- \\
+e = 0.1 & A$\frac12$ & 0 & 0.38 & -- \\
+e = 0.1 & A$\frac14$ & 0 & 0.43 & -- \\
+raw verdicts & B-all (main) & 0 & 1.67 & True \\
+raw verdicts & B-regular & 0 & 4.24 & -- \\
+raw verdicts & A$\frac12$ & 0 & 0.23 & -- \\
+raw verdicts & A$\frac14$ & 0 & 0.43 & -- \\
+miss10 & B-all (main) & 0 & 1.67 & True \\
+miss10 & B-regular & 0 & 2.41 & -- \\
+miss10 & A$\frac12$ & 0 & 0.44 & -- \\
+miss10 & A$\frac14$ & 0 & 0.43 & -- \\
+delay10 & B-all (main) & 0 & 2.34 & True \\
+delay10 & B-regular & 4 & 7.87 & -- \\
+delay10 & A$\frac12$ & 0 & 0.65 & -- \\
+delay10 & A$\frac14$ & 0 & 1.06 & -- \\
+grouped misses & B-all (main) & 0 & 1.67 & True \\
+grouped misses & B-regular & 0 & 3.02 & -- \\
+grouped misses & A$\frac12$ & 0 & 0.46 & -- \\
+grouped misses & A$\frac14$ & 0 & 0.55 & -- \\
+\bottomrule
+\end{tabular}}
+\end{table}

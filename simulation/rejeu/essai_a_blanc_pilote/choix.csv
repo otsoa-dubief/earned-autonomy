@@ -1,0 +1,7 @@
+# AVERTISSEMENT : essai à blanc du rejeu final sur les parties de développement du pilote, partage fictif tiré d'une valeur de balise de test, graine de développement. Ces chiffres n'ont AUCUNE valeur de preuve (PLAN_EXPERIENCE.md, 5.16, point 6).
+regle,n_cellules,echecs,tient,pire,marge,charge,retenue,motif,note
+B-tout,0,0,True,0.0,1.0,,False,,
+B-régulier,0,0,True,0.0,1.0,,False,,
+A½,0,0,True,0.0,1.0,,False,,
+A¼,0,0,True,0.0,1.0,,False,,
+(résultat),,,,,,,,charge moyenne non calculable (aucune configuration délégable),"résultat secondaire : ne change pas la règle principale (1.3, point 4)"

@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table 4. Symmetry between halves}
+\label{tab:table_4}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llllllll}
+\toprule
+environment & half & tasks & removed & played (removed tasks included) & writes low & writes medium & writes high \\
+\midrule
+WorkBench & calibration & 276 & 0 & 276 & 1795 & 735 & 0 \\
+WorkBench & confirmation & 276 & 0 & 276 & 1942 & 624 & 0 \\
+airline & calibration & 20 & 1 & 20 & 107 & 98 & 542 \\
+airline & confirmation & 20 & 0 & 20 & 62 & 127 & 1166 \\
+banking & calibration & 38 & 2 & 38 & 995 & 668 & 423 \\
+banking & confirmation & 39 & 3 & 39 & 1047 & 553 & 339 \\
+retail & calibration & 45 & 3 & 45 & 887 & 0 & 3768 \\
+retail & confirmation & 46 & 3 & 46 & 934 & 1 & 4032 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny \emph{Note: the airline halves are unbalanced at high stakes (542 writes in calibration against 1,166 in confirmation, with 20 tasks per half).}}
+\end{table}

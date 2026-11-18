@@ -1,0 +1,22 @@
+# AVERTISSEMENT : bout en bout sur les 120 parties de développement du pilote (pilote/etape2/2026-11-05_07-50-58/), avec un partage fictif calculé par banc/tirage/tirage_public.py à partir d'une valeur de balise de test (aucune balise réelle interrogée). Ces chiffres n'ont AUCUNE valeur de preuve et ne sont pas des résultats de l'expérience (PLAN_EXPERIENCE.md, 3.1 et 5.16, point 6).
+type_suite,environnement,modele,modele_Y,mode,regle,type,phase,part_rep_palier3,lo,hi,methode,lo_seconde,hi_seconde,seuil,note
+configuration,commerce,claude-haiku-5-5,,,B-tout,ARG,configuration constante,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+configuration,commerce,claude-haiku-5-5,,,B-régulier,ARG,configuration constante,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+configuration,commerce,claude-haiku-5-5,,,A½,ARG,configuration constante,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+configuration,commerce,claude-haiku-5-5,,,A¼,ARG,configuration constante,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A½,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,annoncé,A¼,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A½,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-sonnet-5-5,claude-haiku-5-5,silencieux,A¼,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,B-tout,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,B-régulier,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,A½,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-opus-5-5,claude-haiku-5-5,annoncé,A¼,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,B-tout,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,B-régulier,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,A½,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration
+scénario,commerce,claude-opus-5-5,claude-haiku-5-5,silencieux,A¼,ARG,après la jonction,0.0,0.0,0.0,iii,0.0,0.0,0.05,mesurée sans seuil (décision 5) ; classe « au-dessus » au jeu de calibration

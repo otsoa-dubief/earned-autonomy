@@ -1,0 +1,433 @@
+{
+ "nature": "audit des tâches sans alerte",
+ "sources": [
+  {
+   "dossier": "experience/vague1/2026-11-10_06-19-06",
+   "cout_sha256": "c8018b0b31307f9b90aad4002b3b82a7b691e8802c3893e839e782c4a64170cf",
+   "actions_typees_sha256": "479223e5410fd89b2303ad5a1514af772ac9606ffbe00d599428a911e1a1045a"
+  },
+  {
+   "dossier": "experience/vague2/2026-11-10_19-53-13",
+   "cout_sha256": "3610ac4b43f6f5c4836f6be3ad2a958634a9dde63342ef390d1503b1115ea2fc",
+   "actions_typees_sha256": "4ce4e89b75b6c06bb5369be02e91b245b66786c166a713112b597ff1659079f9"
+  }
+ ],
+ "taches_jouees": {
+  "WorkBench": 552,
+  "aviation": 40,
+  "banque": 77,
+  "commerce": 91
+ },
+ "population": {
+  "WorkBench": 476,
+  "aviation": 18,
+  "banque": 14,
+  "commerce": 30
+ },
+ "tirees": {
+  "WorkBench": 5,
+  "aviation": 5,
+  "banque": 5,
+  "commerce": 5
+ },
+ "fiches": [
+  {
+   "id": "audit-workbench-3ec40bd4bfe4",
+   "environnement": "WorkBench",
+   "tache": "project_management:24",
+   "partie": "claude-haiku-5-5_all_2026-11-11_16-23-53:0",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/workbench-WorkBench-haiku-p02-project_management_24",
+   "avec_ecriture": true,
+   "parties_candidates": 7,
+   "ecritures_comptees": 3,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 6,
+     "outil": "project_management.update_task"
+    },
+    {
+     "numero": 2,
+     "message": 8,
+     "outil": "project_management.update_task"
+    },
+    {
+     "numero": 3,
+     "message": 10,
+     "outil": "project_management.update_task"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "7432371015411c3f1c7b89f4c539248343240125f406e1b6a94f613b8e871ba8"
+  },
+  {
+   "id": "audit-workbench-fc394a58f2a6",
+   "environnement": "WorkBench",
+   "tache": "customer_relationship_manager:1",
+   "partie": "claude-haiku-5-5_all_2026-11-12_13-19-19:0",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/workbench-WorkBench-haiku-p04-customer_relationship_manager_1",
+   "avec_ecriture": true,
+   "parties_candidates": 7,
+   "ecritures_comptees": 1,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 4,
+     "outil": "customer_relationship_manager.update_customer"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "cb075e24c066a6cdea2ee9c98cc906c80c69d7f52e8c4223f5fd881a1c8a465d"
+  },
+  {
+   "id": "audit-workbench-06ef0f22fe91",
+   "environnement": "WorkBench",
+   "tache": "calendar:68",
+   "partie": "claude-haiku-5-5_all_2026-11-13_07-29-57:0",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/workbench-WorkBench-haiku-p05-calendar_68",
+   "avec_ecriture": false,
+   "parties_candidates": 7,
+   "ecritures_comptees": 0,
+   "ecritures": [],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "5aa78c4113cb139ed07c5cd81c4af676c295f5468f9ba082b29a412002ad892f"
+  },
+  {
+   "id": "audit-workbench-9cd1e6b575a9",
+   "environnement": "WorkBench",
+   "tache": "email:1",
+   "partie": "claude-haiku-5-5_all_2026-11-12_21-43-22:0",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/workbench-WorkBench-haiku-p05-email_1",
+   "avec_ecriture": true,
+   "parties_candidates": 7,
+   "ecritures_comptees": 1,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 4,
+     "outil": "email.delete_email"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "3f5988425513690d5f1c5f5cecc6e8d08566546385816afa2b5bede33ad2ea0e"
+  },
+  {
+   "id": "audit-workbench-40c0dc012628",
+   "environnement": "WorkBench",
+   "tache": "customer_relationship_manager:43",
+   "partie": "claude-haiku-5-5_all_2026-11-11_06-26-37:0",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/workbench-WorkBench-haiku-p02-customer_relationship_manager_43",
+   "avec_ecriture": true,
+   "parties_candidates": 7,
+   "ecritures_comptees": 3,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 8,
+     "outil": "customer_relationship_manager.update_customer"
+    },
+    {
+     "numero": 2,
+     "message": 10,
+     "outil": "customer_relationship_manager.update_customer"
+    },
+    {
+     "numero": 3,
+     "message": 12,
+     "outil": "customer_relationship_manager.update_customer"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "f40c279eca7ecfd7080ac2e0d4c94ff4010c1b496d39324f1cb9f4c9a9bbb0f9"
+  },
+  {
+   "id": "audit-aviation-3a83f1db58bf",
+   "environnement": "aviation",
+   "tache": "22",
+   "partie": "99a2bb75-f71b-4d1b-95a3-8097a53bc668",
+   "dossier_partie": "experience/vague1/2026-11-10_06-19-06/parties/tau2-aviation-haiku-p02-22",
+   "avec_ecriture": true,
+   "parties_candidates": 38,
+   "ecritures_comptees": 3,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 18,
+     "outil": "update_reservation_passengers"
+    },
+    {
+     "numero": 2,
+     "message": 20,
+     "outil": "update_reservation_flights"
+    },
+    {
+     "numero": 3,
+     "message": 22,
+     "outil": "update_reservation_baggages"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "61b824597eddc0f49ec104e1e84149fdb10e3b709db6f98984f64fc9af30372d"
+  },
+  {
+   "id": "audit-aviation-66f9344e8ccf",
+   "environnement": "aviation",
+   "tache": "26",
+   "partie": "747050cb-a40d-425f-9ed4-53819f410059",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-aviation-haiku-p19-26",
+   "avec_ecriture": false,
+   "parties_candidates": 70,
+   "ecritures_comptees": 0,
+   "ecritures": [],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "fcc31a414cc91dd4acbc2d1e6f5b3e853de5268392318d21af125ea5f4b36faf"
+  },
+  {
+   "id": "audit-aviation-31557ab46e6a",
+   "environnement": "aviation",
+   "tache": "28",
+   "partie": "97f6af33-1c7e-4b2c-9073-35d52ad977d0",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-aviation-haiku-p38-28",
+   "avec_ecriture": false,
+   "parties_candidates": 70,
+   "ecritures_comptees": 0,
+   "ecritures": [],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "eb20d66da456b0471dcca79b4cef85e6672e86f3213580967252d819d47ba499"
+  },
+  {
+   "id": "audit-aviation-46116c8d9eb3",
+   "environnement": "aviation",
+   "tache": "43",
+   "partie": "ff8ba06f-564c-4beb-a769-115f8786581c",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-aviation-haiku-p12-43",
+   "avec_ecriture": false,
+   "parties_candidates": 70,
+   "ecritures_comptees": 0,
+   "ecritures": [],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "dd887a3319d4b11748a5bf49c763904aa84bbb41b923c9f07b0eaa226378e059"
+  },
+  {
+   "id": "audit-aviation-9cc583a097a6",
+   "environnement": "aviation",
+   "tache": "2",
+   "partie": "f0eabef0-e0db-4fa6-ae8f-8a30215e124e",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-aviation-haiku-p35-2-t2",
+   "avec_ecriture": false,
+   "parties_candidates": 68,
+   "ecritures_comptees": 0,
+   "ecritures": [],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "99b30b8380372adff95d293d4afc35138e5bfa2a8c75fda9d4178b2fa3a5d664"
+  },
+  {
+   "id": "audit-banque-30bb2904a263",
+   "environnement": "banque",
+   "tache": "task_001",
+   "partie": "774ade3b-798d-4283-948c-dc9ff545d7d4",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-banque-haiku-p02-task_001",
+   "avec_ecriture": false,
+   "parties_candidates": 16,
+   "ecritures_comptees": 0,
+   "ecritures": [],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "f4d0ef2087e67fe6f8d82a5d22b9c3c12542ca6712ab1c6201551cb8f1201942"
+  },
+  {
+   "id": "audit-banque-3a54d325ca0e",
+   "environnement": "banque",
+   "tache": "task_028",
+   "partie": "3acd1706-552b-4c40-934b-ab6d2b39eaa0",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-banque-haiku-p02-task_028",
+   "avec_ecriture": true,
+   "parties_candidates": 16,
+   "ecritures_comptees": 2,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 11,
+     "outil": "log_verification"
+    },
+    {
+     "numero": 2,
+     "message": 32,
+     "outil": "give_discoverable_user_tool"
+    }
+   ],
+   "sans_effet": 3,
+   "avertissements": [],
+   "fiche_sha256": "863a87ac61b4865f4c9a97370060a5bc474f7112ed43f86c09dc484ff55cec8b"
+  },
+  {
+   "id": "audit-banque-1aefa6b743c9",
+   "environnement": "banque",
+   "tache": "task_014",
+   "partie": "7dfe5a3f-f6be-4b00-b153-78c02faec7d9",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-banque-haiku-p04-task_014",
+   "avec_ecriture": false,
+   "parties_candidates": 16,
+   "ecritures_comptees": 0,
+   "ecritures": [],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "8702a2ba886f9ff2e38bc22dd9c41812913a6425d0d74e6b9e972972280c7bc9"
+  },
+  {
+   "id": "audit-banque-062448a98edb",
+   "environnement": "banque",
+   "tache": "task_002",
+   "partie": "575bb2e8-d903-48df-995c-328ee75e9cb0",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-banque-sonnet-p02-task_002",
+   "avec_ecriture": false,
+   "parties_candidates": 16,
+   "ecritures_comptees": 0,
+   "ecritures": [],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "27ae8cb4e4406a769e7a3eeb9c5a0b78b299cc82dc10cd6bc010a5b82fe2fbf4"
+  },
+  {
+   "id": "audit-banque-e2017b5e6642",
+   "environnement": "banque",
+   "tache": "task_005",
+   "partie": "3c9309e6-4ece-4055-88a2-5b2ed81f73a5",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-banque-sonnet-p03-task_005",
+   "avec_ecriture": true,
+   "parties_candidates": 4,
+   "ecritures_comptees": 2,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 23,
+     "outil": "log_verification"
+    },
+    {
+     "numero": 2,
+     "message": 27,
+     "outil": "change_user_email"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "617b9ac3afa5b2ab358b9126ea7a774d7e07845fe76ad08cb9388e1b762fa157"
+  },
+  {
+   "id": "audit-commerce-d6c0e0c9ffa7",
+   "environnement": "commerce",
+   "tache": "58",
+   "partie": "45a12bf5-bf51-4606-8202-2a2d4af3d8a2",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-commerce-haiku-p15-58",
+   "avec_ecriture": true,
+   "parties_candidates": 70,
+   "ecritures_comptees": 1,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 22,
+     "outil": "exchange_delivered_order_items"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "4460a3e0e457cb2fc8ddcbd6e98eef46b0d5c5e676d5d9cf6335894d67bf90ca"
+  },
+  {
+   "id": "audit-commerce-7b7e617b0afb",
+   "environnement": "commerce",
+   "tache": "1",
+   "partie": "53d33f9f-cb2c-42c0-8077-482abe2eca42",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-commerce-haiku-p13-1",
+   "avec_ecriture": true,
+   "parties_candidates": 21,
+   "ecritures_comptees": 1,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 16,
+     "outil": "exchange_delivered_order_items"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "ac2fc398a61f23189321e097067fbcbc8fe74a929b6e56171d16e34126ae44cd"
+  },
+  {
+   "id": "audit-commerce-972e915e25f1",
+   "environnement": "commerce",
+   "tache": "107",
+   "partie": "f347c0b5-4888-4a56-9376-a6e60ee4c083",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-commerce-haiku-p24-107",
+   "avec_ecriture": true,
+   "parties_candidates": 70,
+   "ecritures_comptees": 2,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 22,
+     "outil": "exchange_delivered_order_items"
+    },
+    {
+     "numero": 2,
+     "message": 28,
+     "outil": "exchange_delivered_order_items"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "55feed8ec38aa5bead18a67fed66dadd9eebb1468cfeef0aef8ea2b140b16585"
+  },
+  {
+   "id": "audit-commerce-795940bc9aac",
+   "environnement": "commerce",
+   "tache": "70",
+   "partie": "6a18d1ab-5e20-40dc-8e77-f247944bf56b",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-commerce-sonnet-p04-70",
+   "avec_ecriture": true,
+   "parties_candidates": 70,
+   "ecritures_comptees": 1,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 18,
+     "outil": "exchange_delivered_order_items"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "be17fa6b03bb744c9842b7fbf312d93fcc43d8f79d2412fb64b6eb9d031ece9a"
+  },
+  {
+   "id": "audit-commerce-8efef76affab",
+   "environnement": "commerce",
+   "tache": "40",
+   "partie": "14b51321-2c11-42ec-b3fc-500d2ccb6da1",
+   "dossier_partie": "experience/vague2/2026-11-10_19-53-13/parties/tau2-commerce-haiku-p42-40",
+   "avec_ecriture": true,
+   "parties_candidates": 70,
+   "ecritures_comptees": 1,
+   "ecritures": [
+    {
+     "numero": 1,
+     "message": 15,
+     "outil": "modify_pending_order_payment"
+    }
+   ],
+   "sans_effet": 0,
+   "avertissements": [],
+   "fiche_sha256": "007d11ea6014d8fff3422f1ac8d1333470b8980a5456ba858c1cf4305a3849fe"
+  }
+ ],
+ "graine": 998440046776264487
+}

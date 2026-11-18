@@ -1,0 +1,12 @@
+Audit des tâches sans alerte (PLAN_EXPERIENCE.md, 4.5)
+
+Retraits (0) : tâches défectueuses, retirées avec toutes leurs actions.
+
+Erreurs invisibles (écritures jugées justes que le règlement ou la demande du client contredit) :
+- WorkBench : 0 sur 8 écritures lues, dans 5 fiches (0.00 %) ; 476 tâches sans alerte.
+- aviation : 0 sur 3 écritures lues, dans 5 fiches (0.00 %) ; 18 tâches sans alerte.
+- banque : 0 sur 4 écritures lues, dans 5 fiches (0.00 %) ; 14 tâches sans alerte.
+- commerce : 0 sur 6 écritures lues, dans 5 fiches (0.00 %) ; 30 tâches sans alerte.
+Taux global, pondéré par le nombre de tâches sans alerte de chaque environnement : 0.00 %.
+
+Cette mesure ne change aucun verdict.

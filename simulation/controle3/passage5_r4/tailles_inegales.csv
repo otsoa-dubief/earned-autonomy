@@ -1,0 +1,31 @@
+profil,barre,multiple,taches,ecritures,n_eff_preuve,etablis,n
+300 tâches de 7,WorkBench faible,1.0,300,2100,300.0,5597,200000
+300 tâches de 7,WorkBench faible,0.5,300,2100,300.0,224,200000
+300 tâches de 7,commerce faible,1.0,300,2100,300.0,6003,200000
+300 tâches de 7,commerce faible,0.5,300,2100,300.0,15,200000
+300 tâches de 7,WorkBench moyen,1.0,300,2100,300.0,3149,200000
+300 tâches de 7,WorkBench moyen,0.5,300,2100,300.0,465,200000
+300 tâches géométriques (moyenne 3),WorkBench faible,1.0,300,1006,176.006,6518,200000
+300 tâches géométriques (moyenne 3),WorkBench faible,0.5,300,1006,176.006,940,200000
+300 tâches géométriques (moyenne 3),commerce faible,1.0,300,1006,176.006,7856,200000
+300 tâches géométriques (moyenne 3),commerce faible,0.5,300,1006,176.006,174,200000
+300 tâches géométriques (moyenne 3),WorkBench moyen,1.0,300,1006,176.006,5711,200000
+300 tâches géométriques (moyenne 3),WorkBench moyen,0.5,300,1006,176.006,2193,200000
+"300 tâches de Pareto (1,5 ; max 200)",WorkBench faible,1.0,300,722,75.395,6637,200000
+"300 tâches de Pareto (1,5 ; max 200)",WorkBench faible,0.5,300,722,75.395,2693,200000
+"300 tâches de Pareto (1,5 ; max 200)",commerce faible,1.0,300,722,75.395,10076,200000
+"300 tâches de Pareto (1,5 ; max 200)",commerce faible,0.5,300,722,75.395,2266,200000
+"300 tâches de Pareto (1,5 ; max 200)",WorkBench moyen,1.0,300,722,75.395,3391,200000
+"300 tâches de Pareto (1,5 ; max 200)",WorkBench moyen,0.5,300,722,75.395,1519,200000
+100 tâches de 1 et 1 de 100,WorkBench faible,1.0,101,200,3.96,1514,200000
+100 tâches de 1 et 1 de 100,WorkBench faible,0.5,101,200,3.96,727,200000
+100 tâches de 1 et 1 de 100,commerce faible,1.0,101,200,3.96,5239,200000
+100 tâches de 1 et 1 de 100,commerce faible,0.5,101,200,3.96,2685,200000
+100 tâches de 1 et 1 de 100,WorkBench moyen,1.0,101,200,3.96,354,200000
+100 tâches de 1 et 1 de 100,WorkBench moyen,0.5,101,200,3.96,179,200000
+100 tâches de 1 et 3 de 100,WorkBench faible,1.0,103,400,5.316,4449,200000
+100 tâches de 1 et 3 de 100,WorkBench faible,0.5,103,400,5.316,2220,200000
+100 tâches de 1 et 3 de 100,commerce faible,1.0,103,400,5.316,4567,200000
+100 tâches de 1 et 3 de 100,commerce faible,0.5,103,400,5.316,482,200000
+100 tâches de 1 et 3 de 100,WorkBench moyen,1.0,103,400,5.316,1019,200000
+100 tâches de 1 et 3 de 100,WorkBench moyen,0.5,103,400,5.316,549,200000

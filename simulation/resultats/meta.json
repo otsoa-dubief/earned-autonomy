@@ -1,0 +1,16 @@
+{
+  "version_regle": "v2",
+  "graine": 20261104,
+  "horizon": 3000,
+  "r_cas": 1000,
+  "r_cles": 5000,
+  "duree_s": 168.8,
+  "numpy": "2.5.4",
+  "reglage_principal": "depart α=5 %",
+  "valeurs_e": [
+    0.0,
+    0.02,
+    0.05,
+    0.1
+  ]
+}

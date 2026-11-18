@@ -1,0 +1,53 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table 6. Delegation gap per configuration and action type (main version, calibration half)}
+\label{tab:table_6}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llllllllllllllll}
+\toprule
+environment & model & type & level & writes & confirmed errors & rate & bar & rate / bar & n\_eff ($\rho$=1) & lower bound ($\rho$=1) & $\hat\rho$ & n\_eff $\times$ bar & class & judgeable & note \\
+\midrule
+WorkBench & haiku-5-5 & ECR & low & 914 & 79 & 0.0864 & 0.00757 & 11.41 & 81.6 & 0.0414 & 0.819 & 0.740 & above & True &  \\
+WorkBench & haiku-5-5 & DUR & medium & 523 & 2 & 0.0038 & 0.00172 & 2.22 & 21.2 & 0.0000 & 0.819 & 0.044 & undetermined & False &  \\
+WorkBench & haiku-5-5 & MSG & low & 292 & 2 & 0.0068 & 0.00757 & 0.90 & 50.1 & 0.0000 & 0.819 & 0.446 & undetermined & False &  \\
+WorkBench & opus-5-5 & ECR & low & 182 & 10 & 0.0549 & 0.00757 & 7.25 & 80.0 & 0.0202 & 1.000 & 0.606 & above & False &  \\
+WorkBench & opus-5-5 & DUR & medium & 106 & 0 & 0.0000 & 0.00172 & 0.00 & 20.9 & 0.0000 & 1.000 & 0.036 & undetermined & False & no error observed \\
+WorkBench & opus-5-5 & MSG & low & 58 & 0 & 0.0000 & 0.00757 & 0.00 & 49.5 & 0.0000 & 1.000 & 0.375 & undetermined & False & no error observed \\
+WorkBench & sonnet-5-5 & ECR & low & 181 & 11 & 0.0608 & 0.00757 & 8.02 & 79.7 & 0.0238 & 1.000 & 0.604 & above & False &  \\
+WorkBench & sonnet-5-5 & DUR & medium & 106 & 0 & 0.0000 & 0.00172 & 0.00 & 20.9 & 0.0000 & 1.000 & 0.036 & undetermined & False & no error observed \\
+WorkBench & sonnet-5-5 & MSG & low & 58 & 0 & 0.0000 & 0.00757 & 0.00 & 49.5 & 0.0000 & 1.000 & 0.375 & undetermined & False & no error observed \\
+airline & haiku-5-5 & ECR & low & 67 & 0 & 0.0000 & 0.08596 & 0.00 & 1.6 & 0.0000 & 0.402 & 0.340 & undetermined & False & no error observed \\
+airline & haiku-5-5 & DUR & medium & 49 & 1 & 0.0204 & 0.00516 & 3.96 & 1.8 & 0.0000 & 0.402 & 0.022 & undetermined & False &  \\
+airline & haiku-5-5 & ARG & high & 308 & 41 & 0.1331 & 0.00008 & 1600.12 & 7.1 & 0.0058 & 0.402 & 0.001 & above & False &  \\
+airline & opus-5-5 & ECR & low & 20 & 0 & 0.0000 & 0.08596 & 0.00 & 2.0 & 0.0000 & 0.402 & 0.372 & undetermined & False & no error observed \\
+airline & opus-5-5 & DUR & medium & 20 & 0 & 0.0000 & 0.00516 & 0.00 & 2.0 & 0.0000 & 0.402 & 0.022 & undetermined & False & no error observed \\
+airline & opus-5-5 & ARG & high & 71 & 6 & 0.0845 & 0.00008 & 1015.81 & 7.3 & 0.0009 & 0.402 & 0.001 & above & False &  \\
+airline & sonnet-5-5 & ECR & low & 20 & 0 & 0.0000 & 0.08596 & 0.00 & 2.0 & 0.0000 & 0.402 & 0.372 & undetermined & False & no error observed \\
+airline & sonnet-5-5 & DUR & medium & 20 & 0 & 0.0000 & 0.00516 & 0.00 & 2.0 & 0.0000 & 0.402 & 0.022 & undetermined & False & no error observed \\
+airline & sonnet-5-5 & ARG & high & 72 & 8 & 0.1111 & 0.00008 & 1335.60 & 7.4 & 0.0033 & 0.402 & 0.001 & above & False &  \\
+banking & haiku-5-5 & ECR & low & 152 & 3 & 0.0197 & 0.01161 & 1.70 & 5.2 & 0.0000 & 0.402 & 0.144 & undetermined & False &  \\
+banking & haiku-5-5 & DUR & medium & 314 & 141 & 0.4490 & 0.00157 & 285.96 & 11.8 & 0.2033 & 0.402 & 0.044 & above & False &  \\
+banking & haiku-5-5 & MSG & low & 358 & 99 & 0.2765 & 0.01161 & 23.82 & 25.4 & 0.1378 & 0.402 & 0.663 & above & False &  \\
+banking & haiku-5-5 & ARG & high & 202 & 108 & 0.5347 & 0.00041 & 1311.66 & 11.7 & 0.2706 & 0.402 & 0.011 & above & False &  \\
+banking & haiku-5-5 & GAR & high & 10 & 0 & 0.0000 & 0.00041 & 0.00 & 1.0 & 0.0000 & 0.402 & 0.001 & undetermined & False & no error observed \\
+banking & haiku-5-5 & ILL & high & 2 & 2 & 1.0000 & 0.00041 & 2453.30 & 2.0 & 0.2236 & 0.402 & 0.001 & above & False & tiny n \\
+banking & opus-5-5 & ECR & low & 74 & 12 & 0.1622 & 0.01161 & 13.97 & 6.6 & 0.0098 & 0.431 & 0.159 & undetermined & False &  \\
+banking & opus-5-5 & DUR & medium & 123 & 35 & 0.2846 & 0.00157 & 181.21 & 13.9 & 0.1027 & 0.431 & 0.044 & above & False &  \\
+banking & opus-5-5 & MSG & low & 124 & 10 & 0.0806 & 0.01161 & 6.95 & 21.1 & 0.0117 & 0.431 & 0.464 & above & False &  \\
+banking & opus-5-5 & ARG & high & 80 & 38 & 0.4750 & 0.00041 & 1165.32 & 11.7 & 0.2222 & 0.431 & 0.009 & above & False &  \\
+banking & opus-5-5 & GAR & high & 3 & 0 & 0.0000 & 0.00041 & 0.00 & 1.0 & 0.0000 & 0.431 & 0.001 & undetermined & False & no error observed; tiny n \\
+banking & sonnet-5-5 & ECR & low & 89 & 29 & 0.3258 & 0.01161 & 28.06 & 6.3 & 0.0633 & 0.473 & 0.143 & above & False &  \\
+banking & sonnet-5-5 & DUR & medium & 128 & 53 & 0.4141 & 0.00157 & 263.68 & 12.0 & 0.1795 & 0.473 & 0.036 & above & False &  \\
+banking & sonnet-5-5 & MSG & low & 124 & 14 & 0.1129 & 0.01161 & 9.72 & 21.8 & 0.0261 & 0.473 & 0.448 & above & False &  \\
+banking & sonnet-5-5 & ARG & high & 75 & 42 & 0.5600 & 0.00041 & 1373.85 & 12.1 & 0.2962 & 0.473 & 0.009 & above & False &  \\
+banking & sonnet-5-5 & GAR & high & 6 & 0 & 0.0000 & 0.00041 & 0.00 & 2.0 & 0.0000 & 0.473 & 0.001 & undetermined & False & no error observed; tiny n \\
+retail & haiku-5-5 & ECR & low & 632 & 20 & 0.0316 & 0.02647 & 1.20 & 6.7 & 0.0000 & 0.402 & 0.436 & undetermined & False &  \\
+retail & haiku-5-5 & ARG & high & 2511 & 231 & 0.0920 & 0.00009 & 1042.79 & 27.7 & 0.0219 & 0.402 & 0.006 & above & False &  \\
+retail & opus-5-5 & ECR & low & 132 & 5 & 0.0379 & 0.02647 & 1.43 & 6.7 & 0.0000 & 0.416 & 0.399 & undetermined & False &  \\
+retail & opus-5-5 & ARG & high & 492 & 32 & 0.0650 & 0.00009 & 737.25 & 26.6 & 0.0096 & 0.416 & 0.005 & above & False &  \\
+retail & sonnet-5-5 & ECR & low & 122 & 0 & 0.0000 & 0.02647 & 0.00 & 7.0 & 0.0000 & 0.433 & 0.397 & undetermined & False & no error observed \\
+retail & sonnet-5-5 & ARG & high & 496 & 33 & 0.0665 & 0.00009 & 754.16 & 27.2 & 0.0104 & 0.433 & 0.005 & above & False &  \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny \emph{n\_eff $\times$ bar $\geq$ 0.6905 (about ln 2; exact criterion 1 $-$ 2\textasciicircum{}($-$1/n\_eff) $\leq$ bar) makes a type judgeable; that product uses n\_eff under $\hat\rho$ (column $\hat\rho$), not the $\rho$ = 1 column (for WorkBench/Haiku ECR: 97.7 $\times$ bar = 0.740, against 81.6 $\times$ bar = 0.618 at $\rho$ = 1); an excess is established when the one-sided 95 \% Clopper-Pearson lower bound on the effective size at $\rho$ = 1 exceeds the bar (no multiplicity correction).}}
+\end{table}

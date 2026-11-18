@@ -1,0 +1,390 @@
+{
+ "version": "autonomie-meritee/rejeu/config/v1",
+ "statut": "Décidé (Otsoa, 09/11) : figé au gel avec le plan (PLAN_EXPERIENCE.md, 5.2, point 6 ; G0 tirée au gel)",
+ "sources": {
+  "formules": "PLAN_EXPERIENCE.md, annexe A1 ; REGLE.md, section du 5 novembre, points 8 et 9",
+  "volumes": "banc/TABLE_OUTILS.md, « Volumes » et ligne sur les plafonnées (typage v1)",
+  "secours": "simulation/config.py, MELANGES_BRUTS (profil E1 rapporté aux écritures)"
+ },
+ "table_outils_sha256": "d4a8e29b15d9a8b1f1f39759b5b2ffe4565c85da446a36e8d3503b6504397c71",
+ "budget_pour_100_ecritures": {
+  "faible": "1/2",
+  "moyen": "1/20",
+  "fort": "1/200"
+ },
+ "d": "19/20",
+ "facteur_validateur_barre": "19/20",
+ "volumes_attendus": {
+  "aviation": {
+   "ecritures_typees": 49,
+   "faible": 3,
+   "moyen": 5,
+   "fort": 31,
+   "detail": "faible 3 (réversible) ; moyen 5 (durable) ; fort 41 argent − 10 plafonnées"
+  },
+  "commerce": {
+   "ecritures_typees": 176,
+   "faible": 35,
+   "moyen": 0,
+   "fort": 105,
+   "detail": "faible 35 (réversible) ; moyen 0 (secours) ; fort 141 argent − 36 plafonnées"
+  },
+  "banque": {
+   "ecritures_typees": 364,
+   "faible": 165,
+   "moyen": 122,
+   "fort": 47,
+   "detail": "faible 61 réversible + 104 message interne ; moyen 122 (durable) ; fort 71 argent − 30 plafonnées + 6 garde-fou"
+  },
+  "WorkBench": {
+   "ecritures_typees": 947,
+   "faible": 658,
+   "moyen": 289,
+   "fort": 0,
+   "detail": "faible 508 réversible + 150 message interne ; moyen 289 (durable) ; fort 0 (secours)"
+  }
+ },
+ "profil_secours": {
+  "aviation": "service_client",
+  "commerce": "service_client",
+  "banque": "service_client",
+  "WorkBench": "bureau"
+ },
+ "q": {
+  "aviation": {
+   "faible": "3/49",
+   "moyen": "5/49",
+   "fort": "31/49"
+  },
+  "commerce": {
+   "faible": "35/176",
+   "moyen": "11/30",
+   "fort": "105/176"
+  },
+  "banque": {
+   "faible": "165/364",
+   "moyen": "61/182",
+   "fort": "47/364"
+  },
+  "WorkBench": {
+   "faible": "658/947",
+   "moyen": "289/947",
+   "fort": "68/275"
+  }
+ },
+ "secours": {
+  "aviation": {
+   "faible": false,
+   "moyen": false,
+   "fort": false
+  },
+  "commerce": {
+   "faible": false,
+   "moyen": true,
+   "fort": false
+  },
+  "banque": {
+   "faible": false,
+   "moyen": false,
+   "fort": false
+  },
+  "WorkBench": {
+   "faible": false,
+   "moyen": false,
+   "fort": true
+  }
+ },
+ "barres": {
+  "aviation": {
+   "faible": "49/570",
+   "moyen": "49/9500",
+   "fort": "49/589000"
+  },
+  "commerce": {
+   "faible": "88/3325",
+   "moyen": "3/2090",
+   "fort": "22/249375"
+  },
+  "banque": {
+   "faible": "182/15675",
+   "moyen": "91/57950",
+   "fort": "91/223250"
+  },
+  "WorkBench": {
+   "faible": "947/125020",
+   "moyen": "947/549100",
+   "fort": "11/51680"
+  }
+ },
+ "N_b_tout": {
+  "aviation": {
+   "faible": 12,
+   "moyen": 204,
+   "fort": 12653
+  },
+  "commerce": {
+   "faible": 39,
+   "moyen": 733,
+   "fort": 11931
+  },
+  "banque": {
+   "faible": 90,
+   "moyen": 670,
+   "fort": 2582
+  },
+  "WorkBench": {
+   "faible": 138,
+   "moyen": 610,
+   "fort": 4945
+  }
+ },
+ "N_b_regulier": {
+  "aviation": {
+   "faible": 5,
+   "moyen": 75,
+   "fort": 4655
+  },
+  "commerce": {
+   "faible": 15,
+   "moyen": 270,
+   "fort": 4389
+  },
+  "banque": {
+   "faible": 33,
+   "moyen": 247,
+   "fort": 950
+  },
+  "WorkBench": {
+   "faible": 51,
+   "moyen": 225,
+   "fort": 1819
+  }
+ },
+ "N_b_tout_allonge": {
+  "aviation": {
+   "faible": 15,
+   "moyen": 255,
+   "fort": 15817
+  },
+  "commerce": {
+   "faible": 49,
+   "moyen": 917,
+   "fort": 14914
+  },
+  "banque": {
+   "faible": 113,
+   "moyen": 838,
+   "fort": 3228
+  },
+  "WorkBench": {
+   "faible": 173,
+   "moyen": 763,
+   "fort": 6182
+  }
+ },
+ "N_b_regulier_allonge": {
+  "aviation": {
+   "faible": 7,
+   "moyen": 94,
+   "fort": 5819
+  },
+  "commerce": {
+   "faible": 19,
+   "moyen": 338,
+   "fort": 5487
+  },
+  "banque": {
+   "faible": 42,
+   "moyen": 309,
+   "fort": 1188
+  },
+  "WorkBench": {
+   "faible": 64,
+   "moyen": 282,
+   "fort": 2274
+  }
+ },
+ "certification": {
+  "aviation": {
+   "faible": 34,
+   "moyen": 580,
+   "fort": 36009
+  },
+  "commerce": {
+   "faible": 112,
+   "moyen": 2086,
+   "fort": 33956
+  },
+  "banque": {
+   "faible": 257,
+   "moyen": 1907,
+   "fort": 7348
+  },
+  "WorkBench": {
+   "faible": 394,
+   "moyen": 1736,
+   "fort": 14073
+  }
+ },
+ "e": {
+  "principal": 0.05,
+  "complements": [
+   0.0,
+   0.02,
+   0.1
+  ]
+ },
+ "epreuves": {
+  "variantes": 3,
+  "attente": 50
+ },
+ "graines": {
+  "G0": 9879107140414210923,
+  "G0_developpement": 20261105,
+  "usages": {
+   "reechantillonnage": 1,
+   "ordre": 2,
+   "validateur": 3,
+   "epreuves": 4,
+   "resistance": 5,
+   "hasard_apparie": 6,
+   "reussite": 7
+  },
+  "jeux": {
+   "confirmation": 0,
+   "calibration": 1,
+   "reserve": 2,
+   "developpement": 3
+  },
+  "couches": {
+   "R0": 0,
+   "bootstrap": 1
+  },
+  "disposition": [
+   "G0",
+   "usage",
+   "environnement",
+   "modele",
+   "scenario",
+   "couche",
+   "repetition",
+   "jeu",
+   "ordre"
+  ]
+ },
+ "lettre_point_8": {
+  "source": "REGLE.md, point 8 ; PLAN_EXPERIENCE.md, Q8 (lecture A) ; comptes du pilote, étape 2",
+  "comptes_pilote": {
+   "aviation": {
+    "lectures": 207,
+    "preparations": 0,
+    "doutes": 14,
+    "actions": 248
+   },
+   "commerce": {
+    "lectures": 183,
+    "preparations": 0,
+    "doutes": 8,
+    "actions": 221
+   },
+   "banque": {
+    "lectures": 331,
+    "preparations": 3,
+    "doutes": 22,
+    "actions": 418
+   },
+   "WorkBench": {
+    "lectures": 40,
+    "preparations": 0,
+    "doutes": 0,
+    "actions": 69
+   }
+  },
+  "part_hors_ecritures": {
+   "aviation": "221/248",
+   "commerce": "191/221",
+   "banque": "178/209",
+   "WorkBench": "40/69"
+  },
+  "barres": {
+   "aviation": {
+    "faible": "6076/7695",
+    "moyen": "3038/64125",
+    "fort": "49/64125"
+   },
+   "commerce": {
+    "faible": "9724/49875",
+    "moyen": "1/418",
+    "fort": "2431/3740625"
+   },
+   "banque": {
+    "faible": "182/2325",
+    "moyen": "1001/94550",
+    "fort": "1001/364250"
+   },
+   "WorkBench": {
+    "faible": "65343/3625580",
+    "moyen": "65343/15923900",
+    "fort": "1/2584"
+   }
+  },
+  "secours": {
+   "aviation": {
+    "faible": false,
+    "moyen": false,
+    "fort": false
+   },
+   "commerce": {
+    "faible": false,
+    "moyen": true,
+    "fort": false
+   },
+   "banque": {
+    "faible": false,
+    "moyen": false,
+    "fort": false
+   },
+   "WorkBench": {
+    "faible": false,
+    "moyen": false,
+    "fort": true
+   }
+  },
+  "N_b_tout": {
+   "aviation": {
+    "faible": 1,
+    "moyen": 22,
+    "fort": 1377
+   },
+   "commerce": {
+    "faible": 5,
+    "moyen": 439,
+    "fort": 1619
+   },
+   "banque": {
+    "faible": 13,
+    "moyen": 99,
+    "fort": 383
+   },
+   "WorkBench": {
+    "faible": 58,
+    "moyen": 256,
+    "fort": 2719
+   }
+  }
+ },
+ "R0": 2000,
+ "B": 2000,
+ "K": 10,
+ "environnements": [
+  "aviation",
+  "commerce",
+  "banque",
+  "WorkBench"
+ ],
+ "modeles": [
+  "claude-haiku-5-5",
+  "claude-sonnet-5-5",
+  "claude-opus-5-5"
+ ]
+}

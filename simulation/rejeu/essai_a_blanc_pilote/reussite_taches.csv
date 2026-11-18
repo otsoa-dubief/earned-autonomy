@@ -1,0 +1,26 @@
+# AVERTISSEMENT : essai à blanc du rejeu final sur les parties de développement du pilote, partage fictif tiré d'une valeur de balise de test, graine de développement. Ces chiffres n'ont AUCUNE valeur de preuve (PLAN_EXPERIENCE.md, 5.16, point 6).
+jeu,environnement,modele,parties,reussies,taux,lo_wilson,hi_wilson,lo_bootstrap,hi_bootstrap,lo,hi,taches
+calibration,WorkBench,claude-haiku-5-5,4,4,1.0,0.5101091635454027,1.0,1.0,1.0,0.5101091635454027,1.0,4
+calibration,WorkBench,claude-sonnet-5-5,4,4,1.0,0.5101091635454027,1.0,1.0,1.0,0.5101091635454027,1.0,4
+calibration,WorkBench,claude-opus-5-5,4,3,0.75,0.30064184258240184,0.9544127391902995,0.25,1.0,0.25,1.0,4
+calibration,aviation,claude-haiku-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+calibration,aviation,claude-sonnet-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+calibration,aviation,claude-opus-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+calibration,banque,claude-haiku-5-5,5,2,0.4,0.11762077423264783,0.769275718723987,0.0,0.8,0.0,0.8,5
+calibration,banque,claude-sonnet-5-5,5,3,0.6,0.2307242812760128,0.882379225767352,0.2,1.0,0.2,1.0,5
+calibration,banque,claude-opus-5-5,5,3,0.6,0.2307242812760128,0.882379225767352,0.2,1.0,0.2,1.0,5
+calibration,commerce,claude-haiku-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+calibration,commerce,claude-sonnet-5-5,5,5,1.0,0.5655175352168251,1.0,1.0,1.0,0.5655175352168251,1.0,5
+calibration,commerce,claude-opus-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+confirmation,WorkBench,claude-haiku-5-5,6,6,1.0,0.6096657120978346,1.0,1.0,1.0,0.6096657120978346,1.0,6
+confirmation,WorkBench,claude-sonnet-5-5,6,6,1.0,0.6096657120978346,1.0,1.0,1.0,0.6096657120978346,1.0,6
+confirmation,WorkBench,claude-opus-5-5,6,6,1.0,0.6096657120978346,1.0,1.0,1.0,0.6096657120978346,1.0,6
+confirmation,aviation,claude-haiku-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+confirmation,aviation,claude-sonnet-5-5,5,3,0.6,0.2307242812760128,0.882379225767352,0.2,1.0,0.2,1.0,5
+confirmation,aviation,claude-opus-5-5,5,3,0.6,0.2307242812760128,0.882379225767352,0.2,1.0,0.2,1.0,5
+confirmation,banque,claude-haiku-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+confirmation,banque,claude-sonnet-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+confirmation,banque,claude-opus-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+confirmation,commerce,claude-haiku-5-5,5,5,1.0,0.5655175352168251,1.0,1.0,1.0,0.5655175352168251,1.0,5
+confirmation,commerce,claude-sonnet-5-5,5,4,0.8,0.37553462976252533,0.9637758913675698,0.4,1.0,0.37553462976252533,1.0,5
+confirmation,commerce,claude-opus-5-5,5,5,1.0,0.5655175352168251,1.0,1.0,1.0,0.5655175352168251,1.0,5

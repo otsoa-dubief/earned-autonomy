@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\scriptsize
+\caption*{Table X5. Errors executed then flagged at tier 2 under B-all, approximation (Exploratory, dated 17 November 2026; \texttt{F\_erreurs\_palier2\_approx.csv})}
+\label{tab:exp_table_x5}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{llllll}
+\toprule
+environment & model & type & share at tier 2 & error rate (whole reserve) & errors per 100 writes \\
+\midrule
+retail & haiku-5-5 & ECR & 34.0 \% & 2.41 \% & 0.819 \\
+retail & sonnet-5-5 & ECR & 19.9 \% & 0.00 \% & 0.0 \\
+retail & opus-5-5 & ECR & 42.6 \% & 3.66 \% & 1.56 \\
+banking & haiku-5-5 & ECR & 69.4 \% & 3.23 \% & 2.24 \\
+banking & sonnet-5-5 & ECR & 27.8 \% & 30.00 \% & 8.346 \\
+banking & opus-5-5 & ECR & 52.8 \% & 12.30 \% & 6.487 \\
+WorkBench & haiku-5-5 & ECR & 63.0 \% & 9.88 \% & 6.223 \\
+WorkBench & sonnet-5-5 & ECR & 81.3 \% & 6.25 \% & 5.083 \\
+WorkBench & opus-5-5 & ECR & 81.2 \% & 5.71 \% & 4.637 \\
+\bottomrule
+\end{tabular}}
+\par\smallskip\parbox{\linewidth}{\tiny Whole-reserve error rate $\times$ share of writes at tier 2 on the confirmation half, per 100 writes of the type. At tier 2 these errors are executed before being flagged.}
+\end{table}
